@@ -4634,7 +4634,7 @@
 		},
 		"oc_arantxa": {
 			"country": "ES",
-			"language": "eu",
+			"language": "es",
 			"gender": "F",
 			"arg": [4, 22, 1],
 			"source": "vocalware",
@@ -4753,36 +4753,36 @@
 			"desc": "Jamal"
 		},	
 		"google_chai_ling": {
-			"country": "CN",
+			"country": "TW",
 			"language": "zh",
 			"gender": "F",
 			"arg": [7, 10, 1],
 			"source": "vocalware",
-			"desc": "Chia-Ling (Taiwan)"
+			"desc": "Chia-Ling"
 		},
 		"google_chai_hao": {
-			"country": "CN",
+			"country": "TW",
 			"language": "zh",
 			"gender": "M",
 			"arg": [7, 10, 2],
 			"source": "vocalware",
-			"desc": "Chia-Hao (Taiwan)"
+			"desc": "Chia-Hao"
 		},
 		"google_yan": {
-			"country": "CN",
+			"country": "HK",
 			"language": "zh",
 			"gender": "F",
 			"arg": [7, 10, 3],
 			"source": "vocalware",
-			"desc": "Yan (Cantonese)"
+			"desc": "Yan"
 		},
 		"google_chan": {
-			"country": "CN",
+			"country": "HK",
 			"language": "zh",
 			"gender": "M",
 			"arg": [7, 10, 4],
 			"source": "vocalware",
-			"desc": "Chan (Cantonese)"
+			"desc": "Chan"
 		},
 		"google_pavla": {
 			"country": "CZ",
@@ -5232,6 +5232,22 @@
 			"arg": "es-US-Wavenet-C",
 			"desc": "Martin"
 		},		
+ 		"google_jolien": {
+			"country": "NL",
+			"language": "nl",
+			"gender": "F",
+			"source": "pollypluswavenet",
+			"arg": "nl-BE-Wavenet-C",
+			"desc": "Jolien"
+		},
+ 		"google_ward": {
+			"country": "NL",
+			"language": "nl",
+			"gender": "M",
+			"source": "pollypluswavenet",
+			"arg": "nl-BE-Wavenet-D",
+			"desc": "Ward"
+		},
  		"google_heosu": {
 			"country": "KR",
 			"language": "ko",
@@ -5286,7 +5302,7 @@
 			"gender": "F",
 			"source": "pollypluswavenet",
 			"arg": "sv-SE-Wavenet-D",
-			"desc": "Hedvig"
+			"desc": "Hedvig (Google)"
 		},
  		"google_nils": {
 			"country": "SE",
@@ -5478,7 +5494,7 @@
 			"gender": "F",
 			"source": "pollypluswavenet",
 			"arg": "ru-RU-Wavenet-E",
-			"desc": "Katerina"
+			"desc": "Katerina (Google)"
 		},
  		"google_miray": {
 			"country": "TR",
@@ -5649,12 +5665,12 @@
 			"desc": "Mingli"
 		},
  		"google_xin-de": {
-			"country": "CN",
+			"country": "TW",
 			"language": "zh",
 			"gender": "M",
 			"source": "pollypluswavenet",
 			"arg": "cmn-TW-Wavenet-C",
-			"desc": "Xin-De (Taiwan)"
+			"desc": "Xin-De"
 		},
  		"google_linh": {
 			"country": "VN",
@@ -5736,13 +5752,13 @@
 			"arg": "ro-RO-Wavenet-B",
 			"desc": "Andreea"
 		},
-		"af": {
+		"google_sonya": {
 			"country": "ZA",
 			"language": "af",
 			"gender": "F",
 			"source": "googletranslate",
 			"arg": "af",
-			"desc": "Afrikaans female"
+			"desc": "Sonya"
 		},
 		"sq": {
 			"country": "AL",
@@ -5752,6 +5768,14 @@
 			"arg": "sq",
 			"desc": "Albanian male"
 		},
+   		"am": {
+			"country": "ET",
+			"language": "am",
+			"gender": "F",
+			"source": "googletranslate",
+			"arg": "am",
+			"desc": "Amharic female"
+		},
 		"ar": {
 			"country": "SA",
 			"language": "ar",
@@ -5759,6 +5783,14 @@
 			"source": "googletranslate",
 			"arg": "ar",
 			"desc": "Arabic female"
+		},
+		"google_irati": {
+			"country": "ES",
+			"language": "es",
+			"gender": "F",
+			"source": "googletranslate",
+			"arg": "eu",
+			"desc": "Irati"
 		},
 		"bn-bd": {
 			"country": "IN",
@@ -5776,37 +5808,45 @@
 			"arg": "bs",
 			"desc": "Bosnian male"
 		},
-		"bg": {
+		"google_nikolina": {
 			"country": "BG",
 			"language": "bg",
 			"gender": "F",
 			"source": "googletranslate",
 			"arg": "bg",
-			"desc": "Bulgarian female"
+			"desc": "Nikolina"
 		},
-		"ca": {
+		"google_mei": {
+			"country": "CH",
+			"language": "zh",
+			"gender": "F",
+			"source": "googletranslate",
+			"arg": "yue",
+			"desc": "Mei"
+		},
+		"google_martina": {
 			"country": "ES",
 			"language": "ca",
 			"gender": "F",
 			"source": "googletranslate",
 			"arg": "ca",
-			"desc": "Catalan female"
+			"desc": "Martina"
 		},
-		"zh-CN": {
-			"country": "CN",
-			"language": "zh",
-			"gender": "F",
-			"source": "googletranslate",
-			"arg": "zh-CN",
-			"desc": "Chinese female"
-		},
-		"zh-TW": {
+		"google_teng-wei": {
 			"country": "TW",
 			"language": "zh",
 			"gender": "F",
 			"source": "googletranslate",
 			"arg": "zh-TW",
-			"desc": "Taiwanese female"
+			"desc": "Teng-Wei"
+		},
+		"google_jialan": {
+			"country": "CN",
+			"language": "zh",
+			"gender": "F",
+			"source": "googletranslate",
+			"arg": "zh-CN",
+			"desc": "Jialan"
 		},
 		"hr": {
 			"country": "HR",
@@ -5816,29 +5856,29 @@
 			"arg": "hr",
 			"desc": "Croatian female"
 		},
-		"cs-CZ": {
+		"google_silvia": {
 			"country": "CZ",
 			"language": "cs",
 			"gender": "F",
 			"source": "googletranslate",
 			"arg": "cs-CZ",
-			"desc": "Czech female"
+			"desc": "Silvia"
 		},
-		"da-DK": {
+		"google_marie": {
 			"country": "DK",
 			"language": "da",
 			"gender": "F",
 			"source": "googletranslate",
 			"arg": "da-DK",
-			"desc": "Danish female"
+			"desc": "Marie (Google)"
 		},
-		"nl-NL": {
+		"google_annemieke": {
 			"country": "NL",
 			"language": "nl",
 			"gender": "F",
 			"source": "googletranslate",
 			"arg": "nl-NL",
-			"desc": "Dutch female"
+			"desc": "Annemieke"
 		},
 		"en-AU": {
 			"country": "AU",
@@ -5888,45 +5928,53 @@
 			"arg": "fil-PH",
 			"desc": "Filipino female"
 		},
-		"fi-FI": {
+		"google_marianne": {
 			"country": "FI",
 			"language": "fi",
 			"gender": "F",
 			"source": "googletranslate",
 			"arg": "fi-FI",
-			"desc": "Finnish female"
+			"desc": "Marianne"
 		},
-		"fr-FR": {
+		"google_yvonne": {
 			"country": "FR",
 			"language": "fr",
 			"gender": "F",
 			"source": "googletranslate",
 			"arg": "fr-FR",
-			"desc": "French female"
+			"desc": "Yvonne"
 		},
-		"fr-CA": {
+		"google_madeleine": {
 			"country": "CA",
 			"language": "fr",
 			"gender": "F",
 			"source": "googletranslate",
 			"arg": "fr-CA",
-			"desc": "Canadian female"
+			"desc": "Madeleine"
 		},
-		"de-DE": {
+		"google_xoana": {
+			"country": "ES",
+			"language": "es",
+			"gender": "F",
+			"source": "googletranslate",
+			"arg": "es",
+			"desc": "Xoana"
+		},
+		"google_karolina": {
 			"country": "DE",
 			"language": "de",
 			"gender": "F",
 			"source": "googletranslate",
 			"arg": "de-DE",
-			"desc": "German female"
+			"desc": "Karolina"
 		},
-		"el-GR": {
+		"google_thalia": {
 			"country": "GR",
 			"language": "el",
 			"gender": "F",
 			"source": "googletranslate",
 			"arg": "el-GR",
-			"desc": "Greek female"
+			"desc": "Thalia"
 		},
 		"gu-IN": {
 			"country": "IN",
@@ -5936,6 +5984,14 @@
 			"arg": "gu-IN",
 			"desc": "Gujarati female"
 		},
+   		"ha-NG": {
+			"country": "NG",
+			"language": "ha",
+			"gender": "F",
+			"source": "googletranslate",
+			"arg": "ha-NG",
+			"desc": "Hausa female"
+		},
 		"he-IL": {
 			"country": "IL",
 			"language": "he",
@@ -5944,54 +6000,54 @@
 			"arg": "he-IL",
 			"desc": "Hebrew female"
 		},
-		"hi-IN": {
+		"google_sneha": {
 			"country": "IN",
 			"language": "hi",
 			"gender": "F",
 			"source": "googletranslate",
 			"arg": "hi-IN",
-			"desc": "Hindi female"
+			"desc": "Sneha"
 		},    
- 		"hu-HU": {
+ 		"google_ishtevan": {
 			"country": "HU",
 			"language": "hu",
 			"gender": "F",
 			"source": "googletranslate",
 			"arg": "hu-HU",
-			"desc": "Hungarian female"
+			"desc": "Ishtevan"
 		},    
- 		"is-IS": {
+ 		"google_helga": {
 			"country": "IS",
 			"language": "is",
 			"gender": "F",
 			"source": "googletranslate",
 			"arg": "is-IS",
-			"desc": "Icelandic female"
+			"desc": "Helga"
 		},  
- 		"id-ID": {
+ 		"google_indah": {
 			"country": "ID",
 			"language": "id",
 			"gender": "F",
 			"source": "googletranslate",
 			"arg": "id-ID",
-			"desc": "Indonesian female"
+			"desc": "Indah"
 		},    
- 		"it-IT": {
+ 		"google_luca": {
 			"country": "IT",
 			"language": "it",
 			"gender": "M",
 			"source": "googletranslate",
 			"arg": "it-IT",
-			"desc": "Italian male"
+			"desc": "Luca (Google)"
 		},    
- 		"ja-JP": {
+ 		"google_koharu": {
 			"country": "JP",
 			"language": "ja",
 			"gender": "F",
 			"source": "googletranslate",
 			"arg": "ja-JP",
-			"desc": "Japanese female"
-		},    
+			"desc": "Koharu"
+		},     
  		"jv": {
 			"country": "JV",
 			"language": "jv",
@@ -6016,14 +6072,14 @@
 			"arg": "km",
 			"desc": "Khmer female"
 		},    
- 		"ko-KR": {
+ 		"google_dohyun": {
 			"country": "KR",
 			"language": "ko",
 			"gender": "M",
 			"source": "googletranslate",
 			"arg": "ko-KR",
-			"desc": "Korean male"
-		},    
+			"desc": "Dohyun"
+		},       
  		"la": {
 			"country": "LA",
 			"language": "la",
@@ -6031,15 +6087,23 @@
 			"source": "googletranslate",
 			"arg": "la",
 			"desc": "Latin male"
-		},    
- 		"lv-LV": {
+		},      
+ 		"google_juris": {
 			"country": "LV",
 			"language": "lv",
 			"gender": "M",
 			"source": "googletranslate",
 			"arg": "lv-LV",
-			"desc": "Latvian male"
-		},    
+			"desc": "Juris"
+		},        
+ 		"google_nojus": {
+			"country": "LT",
+			"language": "lt",
+			"gender": "M",
+			"source": "googletranslate",
+			"arg": "lt",
+			"desc": "Nojus"
+		},  
  		"ms-MY": {
 			"country": "MY",
 			"language": "ms",
@@ -6080,21 +6144,21 @@
 			"arg": "ne-NE",
 			"desc": "Nepali female"
 		},
- 		"nb-NO": {
+ 		"google_malena": {
 			"country": "no",
 			"language": "no",
 			"gender": "F",
 			"source": "googletranslate",
 			"arg": "nb-NO",
-			"desc": "Norwegian female"
+			"desc": "Malena"
 		},
- 		"pl-PL": {
+ 		"google_tomasz": {
 			"country": "PL",
 			"language": "pl",
 			"gender": "M",
 			"source": "googletranslate",
 			"arg": "pl-PL",
-			"desc": "Polish male"
+			"desc": "Tomasz"
 		},
  		"pt-BR": {
 			"country": "BR",
@@ -6104,21 +6168,21 @@
 			"arg": "pt-BR",
 			"desc": "Brazilian female"
 		},
- 		"pt-PT": {
-			"country": "BR",
+ 		"google_beatriz": {
+			"country": "PT",
 			"language": "pt",
 			"gender": "F",
 			"source": "googletranslate",
 			"arg": "pt-PT",
-			"desc": "Portuguese female"
+			"desc": "Beatriz"
 		},
- 		"ro-RO": {
+ 		"google_mihaela": {
 			"country": "RO",
 			"language": "ro",
 			"gender": "F",
 			"source": "googletranslate",
 			"arg": "ro-RO",
-			"desc": "Romanian female"
+			"desc": "Mihaela"
 		},
  		"ru-RU": {
 			"country": "RU",
@@ -6128,13 +6192,13 @@
 			"arg": "ru-RU",
 			"desc": "Russian female"
 		},
- 		"sr-RS": {
+ 		"google_aleksandra": {
 			"country": "RS",
 			"language": "sr",
 			"gender": "F",
 			"source": "googletranslate",
 			"arg": "sr-RS",
-			"desc": "Serbian female"
+			"desc": "Aleksandra"
 		},
  		"si": {
 			"country": "SI",
@@ -6144,29 +6208,29 @@
 			"arg": "si",
 			"desc": "Sinhala female"
 		},
- 		"sk-SK": {
+ 		"google_natalia": {
 			"country": "SK",
 			"language": "sk",
 			"gender": "F",
 			"source": "googletranslate",
 			"arg": "sk-SK",
-			"desc": "Slovak female"
+			"desc": "Natalia"
 		},
- 		"es-ES": {
+ 		"google_rosalinda": {
 			"country": "ES",
 			"language": "es",
 			"gender": "F",
 			"source": "googletranslate",
 			"arg": "es-ES",
-			"desc": "Spanish female"
+			"desc": "Rosalinda"
 		},
- 		"es-MX": {
+ 		"google_paloma": {
 			"country": "MX",
 			"language": "es",
 			"gender": "F",
 			"source": "googletranslate",
 			"arg": "es-MX",
-			"desc": "Mexico female"
+			"desc": "Paloma"
 		},
  		"su": {
 			"country": "SU",
@@ -6184,13 +6248,13 @@
 			"arg": "sv-SE",
 			"desc": "Swahili female"
 		},
-  		"sv-SE": {
+  		"google_linnea": {
 			"country": "SE",
 			"language": "sv",
 			"gender": "F",
 			"source": "googletranslate",
 			"arg": "sv-SE",
-			"desc": "Swedish female"
+			"desc": "Linnea"
 		},
    		"ta-IN": {
 			"country": "IN",
@@ -6208,7 +6272,7 @@
 			"arg": "te-IN",
 			"desc": "Telugu female"
 		},
-   		"th-TH": {
+   		"google_": {
 			"country": "th",
 			"language": "th",
 			"gender": "F",
@@ -6216,37 +6280,45 @@
 			"arg": "th-TH",
 			"desc": "Thai female"
 		},
-   		"tr-TR": {
-			"country": "TR",
-			"language": "tr",
+   		"google_mali": {
+			"country": "th",
+			"language": "th",
 			"gender": "F",
 			"source": "googletranslate",
-			"arg": "tr-TR",
-			"desc": "Turkish female"
-		},
-   		"uk-UA": {
+			"arg": "th-TH",
+			"desc": "Mali"
+		}, 
+   		"google_vladislava": {
 			"country": "UA",
 			"language": "uk",
 			"gender": "F",
 			"source": "googletranslate",
 			"arg": "uk-UA",
-			"desc": "Ukrainian female"
-		},
-   		"ur": {
-			"country": "UR",
+			"desc": "Vladislava"
+		},    
+ 		"google_yasmeen": {
+			"country": "IN",
 			"language": "ur",
 			"gender": "F",
 			"source": "googletranslate",
 			"arg": "ur",
-			"desc": "Urdu female"
-		},
-   		"vi-VN": {
+			"desc": "Yasmeen"
+		},    
+ 		"google_thao": {
 			"country": "VN",
 			"language": "vi",
 			"gender": "F",
 			"source": "googletranslate",
 			"arg": "vi-VN",
-			"desc": "Vietnamese female"
+			"desc": "Thao"
+		}, 
+		"google_lowri": {
+			"country": "GB",
+			"language": "cy",
+			"gender": "F",
+			"source": "googletranslate",
+			"arg": "cy",
+			"desc": "Lowri"
 		},
  		"michael": {
 			"country": "US",
@@ -9910,87 +9982,85 @@
 		}
 	},
 	"languages": {
-	    	"hi": "Hindi",
-	    	"ku": "Kurdish",
-	    	"az": "Azerbaijani",
-	    	"ur": "Urdu",
-			"mt": "Maltese",
-			"th": "Thai",
-			"el": "Greek",
-			"mk": "Macedonian",
-			"fi": "Finnish",
-        	"eu": "Basque",
-			"ps": "Pashto",
-        	"bn": "Bengali",
-        	"bho": "Bhojpuri",
-			"kk": "Kazakh",
-			"uz": "Uzbek",
-			"ka": "Georgian",
-        	"bg": "Bulgarian",
-			"ar": "Arabic",
-			"lo": "Lao",
-        	"hu": "Hungarian",
-        	"cs": "Czech",
-			"de": "German",
-        	"id": "Indonesian",
-			"fr": "French",
-			"zu": "Zulu",
-			"mm": "Mongolian",
-        	"sk": "Slovak",
-			"da": "Danish",
-        	"sq": "Albanian",
-			"en": "English",
-			"vi": "Vietnamese",
-			"es": "Spanish",
-			"ca": "Catalan",
-			"hr": "Croatian",
-        	"he": "Hebrew",
-        	"ru": "Russian",
-        	"ms": "Malay",
-        	"gu": "Gujarati",
-        	"su": "Sundanese",
-        	"sw": "Swahili",
-        	"ne": "Nepali",
-        	"et": "Estonian",
-			"it": "Italian",
-        	"ml": "Malayalam",
-        	"mr": "Marathi",
-        	"fa": "Persian",
-        	"ta": "Tamil",
-        	"kn": "Kannada",
+			"af": "Afrikaans",
 			"am": "Amharic",
-        	"jv": "Javanese",
-        	"te": "Telugu",
-        	"bs": "Bosnian",
-        	"la": "Latin",
-        	"km": "Khmer",
-        	"si": "Sinhala",
-        	"gd": "Gaelic",
-        	"sr": "Serbian",
-        	"sl": "Slovenian",
-        	"is": "Icelandic",
-        	"fo": "Faroese",
-        	"fil": "Filipino",
-        	"lv": "Latvian",
-        	"lt": "Lithuanian",
-			"tr": "Turkish",
-        	"af": "Afrikaans",
-			"so": "Somali",
-			"zh": "Chinese",
-			"uk": "Ukrainian",
-			"ja": "Japanese",
-			"ro": "Romanian",
-			"no": "Norwegian",
-			"pt": "Portuguese",
-			"eo": "Esparanto",
-			"gl": "Galician",
-			"sv": "Swedish",
-			"ko": "Korean",
-			"pl": "Polish",
-			"nl": "Dutch",
+			"ar": "Arabic",
+			"az": "Azerbaijani",
+			"bg": "Bulgarian",
+			"bho": "Bhojpuri",
+			"bn": "Bengali",
+			"bs": "Bosnian",
+			"ca": "Catalan",
+			"cs": "Czech",
 			"cy": "Welsh",
+			"da": "Danish",
+			"de": "German",
+			"el": "Greek",
+			"en": "English",
+			"eo": "Esperanto",
+			"es": "Spanish",
+			"et": "Estonian",
+			"fa": "Persian",
+			"fi": "Finnish",
+			"fil": "Filipino",
+			"fo": "Faroese",
+			"fr": "French",
 			"ga": "Irish",
-			"my": "Myanmar",
-			"se": "Sami"
+			"gd": "Gaelic",
+			"gu": "Gujarati",
+			"ha": "Hausa"
+			"he": "Hebrew",
+	    	"hi": "Hindi",
+	    	"hr": "Croatian",
+	    	"hu": "Hungarian",
+	    	"id": "Indonesian",
+	    	"is": "Icelandic",
+	    	"it": "Italian",
+	    	"ja": "Japanese",
+	    	"jv": "Javanese",
+	    	"ka": "Georgian",
+	    	"kk": "Kazakh",
+	    	"km": "Khmer",
+	    	"kn": "Kannada",
+	    	"ko": "Korean",
+	    	"ku": "Kurdish",
+	    	"la": "Latin",
+	    	"lo": "Lao",
+	    	"lt": "Lithuanian",
+	    	"lv": "Latvian",
+	    	"mk": "Macedonian",
+	    	"ml": "Malayalam",
+	    	"mm": "Mongolian",
+	    	"mr": "Marathi",
+	    	"ms": "Malay",
+	    	"mt": "Maltese",
+	    	"my": "Myanmar",
+	    	"ne": "Nepali",
+	    	"nl": "Dutch",
+	    	"no": "Norwegian",
+	    	"pl": "Polish",
+	    	"ps": "Pashto",
+	    	"pt": "Portuguese",
+	    	"ro": "Romanian",
+	    	"ru": "Russian",
+	    	"si": "Sinhala",
+	    	"sk": "Slovak",
+	    	"sl": "Slovenian",
+	    	"so": "Somali",
+	    	"sq": "Albanian",
+	    	"sr": "Serbian",
+	    	"su": "Sundanese",
+	    	"sv": "Swedish",
+	    	"sw": "Swahili",
+	    	"ta": "Tamil",
+	    	"te": "Telugu",
+	    	"th": "Thai",
+	    	"tr": "Turkish",
+	    	"uk": "Ukrainian",
+	    	"ur": "Urdu",
+	    	"uz": "Uzbek",
+	    	"vi": "Vietnamese",
+	    	"zh": "Chinese",
+	    	"zu": "Zulu",
 	}
 }

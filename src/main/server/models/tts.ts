@@ -375,7 +375,8 @@ export default function processVoice(
 						headers: {
 							"Content-Type": "application/x-www-form-urlencoded",
 							"Content-Length": Buffer.byteLength(body),
-							"User-Agent": "Mozilla/5.0"
+							"User-Agent": "Mozilla/5.0",
+							"Referer": `https://readloud.net${voice.arg}`
 						}
 					}, (res) => {
 						let buffers = [];

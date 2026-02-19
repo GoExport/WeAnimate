@@ -339,7 +339,7 @@ group.route("POST", "/goapi/saveSound/", async (req, res) => {
 			filepath = temppath;
 		}
 		const ffdata = await asyncFfprobe(filepath);
-		const duration = Math.floor(ffdata.format.duration * 1e3);
+		const duration = Math.floor(ffdata.format.duration * 1000);
 		const meta = {
 			duration: duration,
 			type: "sound",
@@ -356,9 +356,10 @@ group.route("POST", "/goapi/saveSound/", async (req, res) => {
 		const safeTitle = (meta.title || "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 		const responseXml = `<asset><id>${id}</id><enc_asset_id>${id}</enc_asset_id><type>sound</type><subtype>voiceover</subtype><title>${safeTitle}</title><published>1</published><tags>speech</tags><duration>${duration}</duration><downloadtype>progressive</downloadtype><file>${id}</file></asset>`;
 		res.setHeader("Content-Type", "text/html; charset=UTF-8");
-		res.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+		res.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, proxy-revalidate");
 		res.setHeader("Pragma", "no-cache");
 		res.setHeader("Expires", "0");
+		res.setHeader("Surrogate-Control", "content=\"no-store\"");
 		res.end(`0${responseXml}`);
 	} catch (e) {
 		console.error("Mic save post-processing error:", e);

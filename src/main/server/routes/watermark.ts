@@ -39,12 +39,12 @@ group.route("POST", "/api/watermark/set_default", (req, res) => {
 	if (typeof id == "undefined") {
 		id = "none";
 	} else if (id != "0vTLbQy9hG7k" && !WatermarkModel.exists(id)) {
-		return res.status(404).json({ msg:"watermark not exist!" });
+		return res.status(404).json({ msg:"Watermark does not exist" });
 	}
 
 	Settings.defaultWatermark = id;
 	res.end();
-	res.log("Default watermark set to #" + id);
+	res.log("Default watermark set to " + id);
 });
 
 group.route("GET", "/api/watermark/list", (req, res) => {
@@ -103,25 +103,23 @@ group.route("POST", "/goapi/getMovieInfo/", (req, res) => {
 	const mId = req.body.movieId;
 	const movie = Database.get("movies", mId);
 	if (!movie) {
-		return res.status(400).end("1Movie not found.");
+		return res.status(400).end("Movie not found");
 	}
-
 	const wId = movie.data.watermark;
 	res.setHeader("Content-Type", "application/xml");
 	res.end(`${XML_HEADER}<watermarks>${
-		typeof wId == "undefined" ?
-			// no watermark
-			`<watermark style="octanuary"/>` : wId == "0vTLbQy9hG7k" ?
-				// default watermark
-				"" :
-				// custom watermark
-				`<watermark>${url}/watermarks/${wId}</watermark>`
-	}</watermarks>`);
+    (typeof wId == "undefined" || wId == "none") ?
+        `<watermark style=""/>` : 
+        (wId == "0vTLbQy9hG7k") ?
+            "" :
+            `<watermark>${url}/watermarks/${wId}</watermark>`
+}</watermarks>`);
+
 });
 
 group.route("POST", "/api/watermark/save", async (req, res) => {
 	if (WatermarkModel.list().length >= 20) {
-		return res.status(400).json({msg:"Maximum # of watermarks reached"});
+		return res.status(400).json({msg:"Maximum number of watermarks reached"});
 	}
 
 	const file = req.files.image;
@@ -133,7 +131,6 @@ group.route("POST", "/api/watermark/save", async (req, res) => {
 	const { filepath } = file;
 	let ext = (await fromFile(filepath))?.ext;
 	if (typeof ext === "undefined") {
-		// filetype couldn't be determined
 		return res.status(400).json({msg:"File type could not be determined"});
 	}
 

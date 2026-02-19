@@ -50,7 +50,7 @@ group.route("POST", "/goapi/convertTextToSoundAsset/", async (req, res) => {
 		});
 		try {
 			const ffdata = await asyncFfprobe(filepath) as FfprobeData;
-			const duration = Math.floor(ffdata.format.duration * 1000);
+			const duration = Math.floor(ffdata.format.duration * 1e3);
 			const meta: Partial<Asset> = {
 				duration,
 				type: "sound",
@@ -59,9 +59,11 @@ group.route("POST", "/goapi/convertTextToSoundAsset/", async (req, res) => {
 			};
 			const id = await AssetModel.save(filepath, "mp3", meta);
 			
-			process.nextTick(() => {
-				if (fs.existsSync(filepath)) fs.unlinkSync(filepath);
-			});
+			setTimeout(() => {
+				if (fs.existsSync(filepath)) {
+					fs.unlinkSync(filepath);
+				}
+			}, 1000);
 			const safeTitle = meta.title.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 			const responseXml = `<asset><id>${id}</id><enc_asset_id>${id}</enc_asset_id><type>sound</type><subtype>tts</subtype><title>${safeTitle}</title><published>0</published><tags></tags><duration>${duration}</duration><downloadtype>progressive</downloadtype><file>${id}</file></asset>`;
 			res.setHeader("Content-Type", "text/html; charset=UTF-8");

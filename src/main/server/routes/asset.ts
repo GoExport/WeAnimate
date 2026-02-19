@@ -339,7 +339,7 @@ group.route("POST", "/goapi/saveSound/", async (req, res) => {
 			filepath = temppath;
 		}
 		const ffdata = await asyncFfprobe(filepath);
-		const duration = Math.floor(ffdata.format.duration * 1000);
+		const duration = Math.floor(ffdata.format.duration * 1e3);
 		const meta = {
 			duration: duration,
 			type: "sound",

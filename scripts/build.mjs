@@ -98,13 +98,13 @@ if (process.argv.includes("--dev")) {
 		join(import.meta.dirname, "./fixModules.js"),
 		join(import.meta.dirname, "../dist/scripts/fixModules.js"),
 	);
-	console.log("Copying Flash Player version 34.0.0.137 to the build folder");
+	console.log("Copying Flash Player version 34.0.0.118 to the build folder");
 	const flashSource = join(import.meta.dirname, "../extensions");
 	const flashDest = join(import.meta.dirname, "../dist/extensions");
 
 	if (existsSync(flashSource)) {
 		cpSync(flashSource, flashDest, { recursive: true });
-		console.log("✅ Flash Player version 34.0.0.137 has been successfully copied");
+		console.log("✅ Flash Player version 34.0.0.118 has been successfully copied");
 	} else {
 		console.warn("⚠️ Flash Player is not found at " + flashSource);
 	}

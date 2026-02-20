@@ -74,11 +74,11 @@ switch (process.platform) {
 		break;
 	}
 	default: {
-		throw new Error("You are running Wrapper offline on an unsupported platform.");
+		throw new Error("You are running Wrapper offline on an unsupported platform");
 	}
 }
 app.commandLine.appendSwitch("ppapi-flash-path", join(__dirname, pluginName));
-app.commandLine.appendSwitch("ppapi-flash-version", "34.0.0.137");
+app.commandLine.appendSwitch("ppapi-flash-version", "34.0.0.118");
 
 app.commandLine.appendSwitch("disable-http-cache");
 

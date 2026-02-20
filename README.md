@@ -24,7 +24,7 @@ This version is a complete overhaul of the original 2.1.0 source code. Over 40+ 
 - Ghost errors purged: Removed fake/misleading error messages that appeared during normal operation on the console
 ### 💻 Compatibility and performance
 - Native x86 support: First-ever stable build for Windows x86 and Linux x86 architectures
-- Flash 34 integration: Upgraded to Clean Flash 34.0.0.137 (from 32.0.0.137) for better stability and performance
+- Flash 34 integration: Upgraded to Clean Flash 34.0.0.1118 (from 32.0.0.371) for better stability and performance
 - Dependency purge: Removed heavy and unnecessary dev-tools like mocha, supertest, nodemon, and brotli to reduce package size and overhead
 - FFprobe upgrade: Updated from 1.4.1 to 2.1.1 for better asset handling
 ### UI polish:

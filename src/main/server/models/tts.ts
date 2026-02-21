@@ -361,43 +361,45 @@ export default function processVoice(
 					break;
 				}
 				case "readloud": {
-					const body = new URLSearchParams({
-						but1: text,
-						butS: "0",
-						butP: "0",
-						butPauses: "0",
-						butt0: "Submit",
-					}).toString();
-					const req = https.request({
+				  const body = new URLSearchParams({
+					but1: text,
+					butS: 0,
+					butP: 0,
+					butPauses: 0,
+					butt0: "Submit",
+				  }).toString();
+				  const req = https
+					.request(
+					  {
 						hostname: "readloud.net",
 						path: voice.arg,
 						method: "POST",
 						headers: {
-							"Content-Type": "application/x-www-form-urlencoded",
-							"Content-Length": Buffer.byteLength(body),
-							"User-Agent": "Mozilla/5.0",
-							"Referer": `https://readloud.net${voice.arg}`
-						}
-					}, (res) => {
+						  "Content-Type": "application/x-www-form-urlencoded",
+						},
+					  },
+					  (r) => {
+						if (r.statusCode !== 200) return reject(`Readloud error: HTTP ${r.statusCode}`);
 						let buffers = [];
-						res.on("error", reject);
-						res.on("data", (chunk) => buffers.push(chunk));
-						res.on("end", () => {
-							const html = Buffer.concat(buffers).toString();
-							const beg = html.indexOf("/tmp/");
-							if (beg === -1) return reject("Readloud error: MP3 link not found in HTML");
-							const end = html.indexOf(".mp3", beg) + 4;
-							const sub = html.substring(beg, end).trim();
-							if (sub.length > 0) {
-								https.get(`https://readloud.net${sub}`, resolve).on("error", reject);
-							} else {
-								reject("Readloud error: Empty MP3 path");
-							}
+						r.on("error", (e) => rej(e));
+						r.on("data", (b) => buffers.push(b));
+						r.on("end", () => {
+						  const html = Buffer.concat(buffers);
+						  const beg = html.indexOf("/tmp/");
+						  if (beg === -1) return reject("Readloud error: MP3 link not found in response");
+						  const end = html.indexOf("mp3", beg) + 3;
+						  const sub = html.subarray(beg, end).toString();
+						  if (!sub || sub === "mp3") return reject("Readloud error: Invalid MP3 path");
+						  https.get(`https://readloud.net${sub}`, (r2) => {
+							r2.on("error", (e) => reject(e));
+							resolve(r2);
+						  });
 						});
-					});
-					req.on("error", reject);
-					req.end(body);
-					break;
+					  }
+					)
+					.on("error", (e) => reject(e));
+				  req.end(body);
+				  break;
 				}
 				case "sapi4": {
 					const q = new URLSearchParams({

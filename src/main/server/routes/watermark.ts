@@ -3,9 +3,10 @@ import Database from "../../storage/database";
 import fileTypes from "../data/allowed_file_types.json";
 import { extensions, FileExtension, fromFile, mimeTypes } from "file-type";
 import { Group } from "@octanuary/httpz";
+import { Readable } from "stream";
+import { execSync } from "child_process";
 import MovieModel from "../models/movie.js";
 import Settings from "../../storage/settings";
-import jimp from "jimp";
 import WatermarkModel from "../models/watermark";
 
 type S = ReadStream | Readable;
@@ -21,12 +22,10 @@ group.route("POST", /\/goapi\/assignwatermark\/movie\/([\S]+)\/([\S]+)/, (req, r
 	if (wId == "0dhteqDBt5nY" || wId == "none") {
 		wId = "none";
 	}
-	
 	if (mId === "0") {
 		Settings.defaultWatermark = wId;
 		return res.end("0");
 	}
-
 	if (MovieModel.setWatermark(mId, wId)) {
 		res.end("0");
 	} else {
@@ -74,13 +73,11 @@ group.route("POST", "/goapi/getUserWatermarks/", (req, res) => {
 		list.map((w) => `<watermark id="${w.id}" thumbnail="${url}/watermarks/${w.id}"/>`).join("")
 	}${wId !== null ? `<preview>${wId}</preview>` : ""}</watermarks>`);
 });
-
 group.route("GET", /^\/watermarks\/([\S]*)$/, (req, res) => {
 	let id = req.matches[1];
 	if (!id) {
 		return res.status(400).end();
 	}
-
 	try {
 		const ext = (id.split(".")[1] || "xml") as FileExtension;
 		const extensionIndex = [...extensions].indexOf(ext);
@@ -116,58 +113,54 @@ group.route("POST", "/goapi/getMovieInfo/", (req, res) => {
 }</watermarks>`);
 
 });
-
 group.route("POST", "/api/watermark/save", async (req, res) => {
 	if (WatermarkModel.list().length >= 20) {
 		return res.status(400).json({msg:"Maximum number of watermarks reached"});
 	}
-
 	const file = req.files.image;
 	if (typeof file === "undefined") {
 		return res.status(400).json({msg:"Missing required parameters"});
 	}
-
 	let id = req.body.id;
 	const { filepath } = file;
 	let ext = (await fromFile(filepath))?.ext;
 	if (typeof ext === "undefined") {
 		return res.status(400).json({msg:"File type could not be determined"});
 	}
-
 	if (fileTypes["watermark"].indexOf(ext) < 0) {
 		return res.status(400).json({msg:"Invalid file type"});
 	}
-
 	let stream:S;
 	if (ext == "webp" || ext == "tif" || ext == "avif") {
-		ext = "png";
-		const image = await Jimp.read(filepath);
-		const buffer = await image.getBufferAsync(Jimp.MIME_PNG);
-		stream = Readable.from(buffer);
+		try {
+			const buffer = execSync(`ffmpeg -i "${filepath}" -f image2pipe -vcodec png -`);
+			stream = Readable.from(buffer);
+			finalExt = "png";
+		} catch (err) {
+			console.error("FFmpeg conversion error:", err);
+			return res.status(500).json({msg:"Conversion failed"});
+		}
 	} else {
 		stream = createReadStream(filepath);
+		finalExt = ext;
 	}
 	if (stream instanceof ReadStream) {
 		stream.pause();
 	}
-
-	id = await WatermarkModel.save(stream, ext, id);
+	id = await WatermarkModel.save(stream, finalExt, id);
 	res.json({
 		id,
 		thumbnail: `${url}/watermarks/${id}`
 	});
 });
-
 group.route("POST", "/api/watermark/delete", (req, res) => {
 	const id = req.body.id;
 	if (typeof id == "undefined") {
 		return res.status(404).json({ msg:"Missing required fields" });
 	}
-
 	if (Settings.defaultWatermark == id) {
 		Settings.defaultWatermark = "none";
 	}
-
 	WatermarkModel.delete(id);
 	res.end();
 	res.log("Deleted watermark " + id);

@@ -11,7 +11,7 @@ This project is important for archival purposes, as the ability to use the legac
 ### 🚀 Wrapper offline 2.1.4 (The ultimate bugfix)  
 This version is a complete overhaul of the original 2.1.0 source code. Over 40+ critical bugs have been fixed, unnecessary dependencies removed, and the core packages swapped for maximum compatibility and portability
 ### 🛠️ Major architectural changes
-- Sharp → Jimp migration: Replaced the binary-heavy Sharp with Jimp that is written in pure JavaScript. This enables 100% native Windows 7 support without needing VxKex or any kernel extensions
+- Sharp → FFmpeg migration: Replaced the binary-heavy Sharp with FFmpeg as that is a Wrapper offline dependency anyways. This enables 100% native Windows 7 support without needing VxKex or any kernel extensions
 - Pure portability: Separated temp and userdata from %APPDATA%. All data now stays within the program’s resources folder, leaving ZERO footprint in your appdata folder
 - Nodezip → AdmZip: Swapped the unreliable nodezip for AdmZip for stable ZIP compression and metadata handling
 - Automated build process: Fully automated the build script that handles asset relocation, icon selection (ICO/PNG/ICNS) and multi-arch packaging in a single go

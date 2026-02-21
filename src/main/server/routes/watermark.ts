@@ -136,8 +136,6 @@ group.route("POST", "/api/watermark/save", async (req, res) => {
 	let stream:S;
 	if (ext == "webp" || ext == "tif" || ext == "avif") {
 		try {
-			const safeFfmpeg = ffmpegPath.replace(/\\/g, "/");
-            const safeFile = filepath.replace(/\\/g, "/");
 			const buffer = execSync(`"${ffmpegPath}" -hide_banner -loglevel error -i "${filepath}" -f image2pipe -vcodec png -`);
 			stream = Readable.from(buffer);
 			finalExt = "png";

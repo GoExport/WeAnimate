@@ -5,6 +5,8 @@ import { extensions, FileExtension, fromFile, mimeTypes } from "file-type";
 import { Group } from "@octanuary/httpz";
 import { Readable } from "stream";
 import { execSync } from "child_process";
+import { path as ffmpegPath } from "@ffmpeg-installer/ffmpeg";
+import { path as ffprobePath } from "@ffprobe-installer/ffprobe";
 import MovieModel from "../models/movie.js";
 import Settings from "../../storage/settings";
 import WatermarkModel from "../models/watermark";
@@ -124,6 +126,7 @@ group.route("POST", "/api/watermark/save", async (req, res) => {
 	let id = req.body.id;
 	const { filepath } = file;
 	let ext = (await fromFile(filepath))?.ext;
+	let finalExt = ext;
 	if (typeof ext === "undefined") {
 		return res.status(400).json({msg:"File type could not be determined"});
 	}
@@ -133,7 +136,9 @@ group.route("POST", "/api/watermark/save", async (req, res) => {
 	let stream:S;
 	if (ext == "webp" || ext == "tif" || ext == "avif") {
 		try {
-			const buffer = execSync(`ffmpeg -hide_banner -loglevel error -i "${filepath}" -f image2pipe -vcodec png -`);
+			const safeFfmpeg = ffmpegPath.replace(/\\/g, "/");
+            const safeFile = filepath.replace(/\\/g, "/");
+			const buffer = execSync(`"${ffmpegPath}" -hide_banner -loglevel error -i "${filepath}" -f image2pipe -vcodec png -`);
 			stream = Readable.from(buffer);
 			finalExt = "png";
 		} catch (err) {

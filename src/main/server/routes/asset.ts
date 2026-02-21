@@ -12,7 +12,6 @@ import httpz from "@octanuary/httpz";
 import MovieModel, { Starter } from "../models/movie";
 import path from "path";
 import { promisify } from "util";
-import Jimp from "jimp";
 import { randomBytes } from "crypto";
 import { Readable } from "stream";
 
@@ -173,133 +172,139 @@ group.route("POST", "/api_v2/asset/update/", (req, res) => {
 		res.status(500).json({status:"error"});
 	}
 });
+const { execSync } = require("child_process");
+const { Readable } = require("stream");
+const fs = require("fs");
+const path = require("path");
+
 group.route("POST", "/api/asset/upload", async (req, res) => {
-	const file = req.files.import;
-	if (typeof file === "undefined" || !req.body.type || !req.body.subtype) {
-		return res.status(400).json({msg:"Missing required parameters"});
-	}
-	const { filepath } = file;
-	const filename = path.parse(file.originalFilename).name;
-	const ext = (await fromFile(filepath))?.ext;
-	if (typeof ext === "undefined") {
-		return res.status(400).json({msg:"File type could not be determined"});
-	}
-	let info:Partial<Asset> = {
-		type: req.body.type,
-		subtype: req.body.subtype,
-		title: req.body.name || filename
-	}, stream;
+    const file = req.files.import;
+    if (typeof file === "undefined" || !req.body.type || !req.body.subtype) {
+        return res.status(400).json({ msg: "Missing required parameters" });
+    }
+    const { filepath } = file;
+    const filename = path.parse(file.originalFilename).name;
+    const ext = (await fromFile(filepath))?.ext;
 
-	const ok = info.subtype == "video" ? "video" : info.type;
-	if ((fileTypes[ok] || []).indexOf(ext) < 0) {
-		return res.status(400).json({msg:"Invalid file type"});
-	}
-	try {
-		switch (info.type) {
-			case "bg": {
-				if (info.type == "bg" && ext != "swf") {
-					const image = await Jimp.read(filepath);
-						const buffer = await image
-            						.resize(550, 354) 
-            						.getBufferAsync(Jimp.MIME_PNG);
+    if (typeof ext === "undefined") {
+        return res.status(400).json({ msg: "File type could not be determined" });
+    }
+    let info: Partial<Asset> = {
+        type: req.body.type,
+        subtype: req.body.subtype,
+        title: req.body.name || filename
+    };
+    let stream;
+    let finalExt = ext;
+    const ok = info.subtype == "video" ? "video" : info.type;
+    if ((fileTypes[ok] || []).indexOf(ext) < 0) {
+        return res.status(400).json({ msg: "Invalid file type" });
+    }
+    if (ext !== "swf" && ["webp", "tif", "avif"].includes(ext)) {
+        try {
+            const buffer = execSync(`ffmpeg -i "${filepath}" -f image2pipe -vcodec png -`);
+            stream = Readable.from(buffer);
+            finalExt = "png";
+        } catch (err) {
+            console.error("FFmpeg conversion error:", err);
+            return res.status(500).json({ msg: "Conversion failed" });
+        }
+    }
+    try {
+        switch (info.type) {
+            case "bg": {
+				if (finalExt != "swf") {
+					try {
+						const buffer = execSync(`ffmpeg -i "${filepath}" -vf scale=550:354 -f image2pipe -vcodec png -`);
 						stream = Readable.from(buffer);
+						finalExt = "png";
+					} catch (err) {
+						console.error("FFmpeg resize error:", err);
+						return res.status(500).json({msg:"Failed to process background"});
+					}
 				} else {
 					stream = fs.createReadStream(filepath);
 				}
-
-				if (stream instanceof fs.ReadStream) {
-        				stream.pause();
-    				}
-				info.id = await AssetModel.save(stream, ext == "swf" ? ext : "png", info);
+				info.id = await AssetModel.save(stream, finalExt, info);
 				break;
 			}
-			case "sound": {
-				if (ext != "mp3") {
-					stream = await fileUtil.convertToMp3(filepath, ext);
-				} else {
-					stream = fs.createReadStream(filepath);
-				}
-				const temppath = path.join(Directories.asset, `${randomBytes(16).toString("hex")}.mp3`);
-				const writeStream = fs.createWriteStream(temppath);
-				await new Promise(async (resolve, reject) => {
-					setTimeout(() => {
-						writeStream.close();
-						fs.unlinkSync(temppath);
-						return reject("read stream timed out");
-					}, 1.2e+6);
-					stream.on("end", resolve).pipe(writeStream)
-				});
-				const ffdata = await asyncFfprobe(temppath) as FfprobeData;
-				info.duration = Math.floor(ffdata.format.duration * 1e3);
-				info.id = await AssetModel.save(temppath, "mp3", info);
-				if (fs.existsSync(temppath)) fs.unlinkSync(temppath);
-			}
-			case "prop": {
-				if (info.subtype == "video") {
-					const asyncFfprobe = promisify(ffprobe);
-					const data = await asyncFfprobe(filepath) as FfprobeData;
-					info.width = data.streams[0].width || data.streams[1].width;
-					info.height = data.streams[0].height || data.streams[1].width;
+            case "sound": {
+                let soundStream;
+                if (ext != "mp3") {
+                    soundStream = await fileUtil.convertToMp3(filepath, ext);
+                } else {
+                    soundStream = fs.createReadStream(filepath);
+                }
+                const temppath = path.join(Directories.asset, `${randomBytes(16).toString("hex")}.mp3`);
+                const writeStream = fs.createWriteStream(temppath);
+                await new Promise((resolve, reject) => {
+                    const timer = setTimeout(() => {
+                        writeStream.close();
+                        if (fs.existsSync(temppath)) fs.unlinkSync(temppath);
+                        return reject("Read stream timed out");
+                    }, 1.2e+6);
+                    soundStream.on("end", () => {
+                        clearTimeout(timer);
+                        resolve(true);
+                    }).pipe(writeStream);
+                });
+                const ffdata = await asyncFfprobe(temppath) as FfprobeData;
+                info.duration = Math.floor(ffdata.format.duration * 1e3);
+                info.id = await AssetModel.save(temppath, "mp3", info);
+                if (fs.existsSync(temppath)) fs.unlinkSync(temppath);
+                break;
+            }
+            case "prop": {
+                if (info.subtype == "video") {
+                    const asyncFfprobe = promisify(ffprobe);
+                    const data = await asyncFfprobe(filepath) as FfprobeData;
+                    info.width = data.streams[0].width || (data.streams[1] ? data.streams[1].width : 0);
+                    info.height = data.streams[0].height || (data.streams[1] ? data.streams[1].height : 0);
+                    const temppath = path.join(Directories.asset, `${randomBytes(16).toString("hex")}.flv`);
+                    await new Promise((resolve, rej) => {
+                        Ffmpeg(filepath)
+                            .output(temppath)
+                            .on("end", resolve)
+                            .on("error", rej)
+                            .run();
+                    });
+                    info.id = await AssetModel.save(temppath, "flv", info);
+                    if (fs.existsSync(temppath)) fs.unlinkSync(temppath);
+                    const thumbPath = path.join(AssetModel.folder, info.id.slice(0, -3) + "png");
+                    await new Promise((resolve, rej) => {
+                        Ffmpeg(filepath)
+                            .seek("0:00")
+                            .output(thumbPath)
+                            .outputOptions("-frames", "1")
+                            .on("end", resolve)
+                            .on("error", rej)
+                            .run();
+                    });
+                } else if (info.subtype == "0") {
+                    let { ptype } = req.body;
+                    info.ptype = ["placeable", "wearable", "holdable"].includes(ptype) ? ptype : "placeable";
+                    if (!stream) {
+                        stream = fs.createReadStream(filepath);
+                    }
 
-					const temppath = path.join(Directories.asset, `${randomBytes(16).toString("hex")}.flv`);
-					await new Promise(async (resolve, rej) => {	
-						Ffmpeg(filepath)
-							.output(temppath)
-							.on("end", resolve)
-							.on("error", rej)
-							.run();
-					});
-					info.id = await AssetModel.save(temppath, "flv", info);
-					if (fs.existsSync(temppath)) fs.unlinkSync(temppath); 
+                    if (stream instanceof fs.ReadStream) {
+                        stream.pause();
+                    }
+                    info.id = await AssetModel.save(stream, finalExt, info);
+                }
+                break;
+            }
 
-					const command = Ffmpeg(filepath)
-						.seek("0:00")
-						.output(path.join(AssetModel.folder, info.id.slice(0, -3) + "png"))
-						.outputOptions("-frames", "1");
-					await new Promise(async (resolve, rej) => {
-						command
-							.on("end", resolve)
-							.on("error", rej)
-							.run();
-					});
-				} else if (info.subtype == "0") {
-					let { ptype } = req.body;
-					switch (ptype) {
-						case "placeable":
-						case "wearable":
-						case "holdable":
-							info.ptype = ptype;
-							break;
-						default:
-							info.ptype = "placeable";
-					}
-					if (ext == "webp" || ext == "tif" || ext == "avif") {
-						const image = await Jimp.read(filepath);
-        					const buffer = await image.getBufferAsync(Jimp.MIME_PNG);
-        					stream = Readable.from(buffer);
-						var finalExt = "png";
-					} else {
-						stream = fs.createReadStream(filepath);
-						var finalExt = ext;
-					}
-					if (stream instanceof fs.ReadStream) {
-        					stream.pause();
-    					}
-					info.id = await AssetModel.save(stream, ext, info);
-				}
-				break;
-			}
-			default: {
-				return res.status(400).json({msg:"Invalid asset type"});
-			}
-		}
-		res.json(info);
-	} catch (e) {
-		console.error(req.parsedUrl.pathname, "failed. Error:", e);
-		res.status(500).json({status:"error"});
-		return;
-	}
-})
+            default: {
+                return res.status(400).json({ msg: "Invalid asset type" });
+            }
+        }
+        res.json(info);
+    } catch (e) {
+        console.error(req.parsedUrl.pathname, "failed. Error:", e);
+        res.status(500).json({ status: "error" });
+    }
+});
 group.route("POST", "/goapi/saveSound/", async (req, res) => {
 	let isRecord = req.body.bytes ? true : false;
 

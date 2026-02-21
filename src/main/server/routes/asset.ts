@@ -202,7 +202,7 @@ group.route("POST", "/api/asset/upload", async (req, res) => {
     }
     if (ext !== "swf" && ["webp", "tif", "avif"].includes(ext)) {
         try {
-            const buffer = execSync(`ffmpeg -i "${filepath}" -f image2pipe -vcodec png -`);
+            const buffer = execSync(`ffmpeg -hide_banner -loglevel error -i "${filepath}" -f image2pipe -vcodec png -`)
             stream = Readable.from(buffer);
             finalExt = "png";
         } catch (err) {
@@ -215,7 +215,7 @@ group.route("POST", "/api/asset/upload", async (req, res) => {
             case "bg": {
 				if (finalExt != "swf") {
 					try {
-						const buffer = execSync(`ffmpeg -i "${filepath}" -vf scale=550:354 -f image2pipe -vcodec png -`);
+						const buffer = execSync(`ffmpeg -hide_banner -loglevel error -i "${filepath}" -f image2pipe -vcodec png -`);
 						stream = Readable.from(buffer);
 						finalExt = "png";
 					} catch (err) {

@@ -133,7 +133,7 @@ group.route("POST", "/api/watermark/save", async (req, res) => {
 	let stream:S;
 	if (ext == "webp" || ext == "tif" || ext == "avif") {
 		try {
-			const buffer = execSync(`ffmpeg -i "${filepath}" -f image2pipe -vcodec png -`);
+			const buffer = execSync(`ffmpeg -hide_banner -loglevel error -i "${filepath}" -f image2pipe -vcodec png -`);
 			stream = Readable.from(buffer);
 			finalExt = "png";
 		} catch (err) {

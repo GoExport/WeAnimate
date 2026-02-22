@@ -77,7 +77,7 @@ FFmpeg is under the GNU GPLv2 license, which grants similar rights, but has some
 | Benson | The original developer of Wrapper offline|
 | DanielBitten | Upgraded TTS endpoints and voices |
 | It'sJay | Saving every asset |
-| Octanuary | Rewriting the source code in Vue and TypeScript |
+| Octanuary | The main developer. Rewriting the source code in Vue and TypeScript |
 | VisualPlugin | The developer of GoAnimate wrapper |
 | [Vyond](https://www.vyond.com) | The creators of GoAnimate |
 | [Whispery](https://www.youtube.com/channel/UCVgwK9guSmcb3GkYLBzAbgA) | Fixing issues with Windows 11 and macOS |

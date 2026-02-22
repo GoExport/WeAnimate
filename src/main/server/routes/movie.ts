@@ -176,29 +176,42 @@ group.route("POST", "/api/movie/delete", async (req, res) => {
 	}
 	res.end()
 });
-group.route("POST", "/api/movie/upload", (req, res) => {
+group.route("POST", "/api/movie/upload", async (req, res) => {
 	const file = req.files.import;
 	const isStarter = req.body.is_starter === "1" || req.body.is_starter === "true";
 	if (typeof file == "undefined") {
-		return res.status(400).json({ msg: "No file selected" });
+		return res.status(400).json({ msg: "No files selected" });
 	}
-	const path = file.filepath, buffer = fs.readFileSync(path);
-	if (
-		file.mimetype !== "application/x-zip-compressed" &&
-		file.mimetype !== "application/zip" &&
-		!buffer.subarray(0, 4).equals(
-			Buffer.from([0x50, 0x4b, 0x03, 0x04])
-		)
-	) {
-		return res.status(400).json({ msg: "Movie is not a ZIP" });
+	const charPath = file.filepath;
+	const buffer = fs.readFileSync(charPath);
+	const isZip = buffer.subarray(0, 4).equals(Buffer.from([0x50, 0x4b, 0x03, 0x04]));
+	if (!isZip) {
+		if (fs.existsSync(charPath)) fs.unlinkSync(charPath);
+		console.error("Movie upload blocked: Not a GoAnimate ZIP video");
+		return res.status(400).json({ msg: "The file is invalid" });
 	}
-	MovieModel.upload(buffer, isStarter).then((id) => {
-		fs.unlinkSync(path);
+	try {
+		const zip = new AdmZip(buffer);
+		const zipEntries = zip.getEntries();
+		const hasUgc = zipEntries.some(e => e.entryName === "ugc.xml");
+		const hasMovie = zipEntries.some(e => e.entryName === "movie.xml");
+
+		if (!hasUgc || !hasMovie) {
+			if (fs.existsSync(charPath)) fs.unlinkSync(charPath);
+			console.error(`Movie upload blocked: Missing required XMLs (ugc: ${hasUgc}, movie: ${hasMovie})`);
+			return res.status(400).json({ msg: "Invalid project file, there is no ugc.xml inside the ZIP" });
+		}
+		const id = await MovieModel.upload(buffer, isStarter);
+		if (fs.existsSync(charPath)) fs.unlinkSync(charPath);
+		
+		console.log(`[Success] Movie imported: ${id}`);
 		res.json({ status: "Movie imported successfully", id: id });
-	}).catch((err) => {
-		console.error("Import error:", err);
-		res.status(500).json({ msg: null });
-	});
+
+	} catch (err) {
+		console.error("Movie import error:", err);
+		if (fs.existsSync(charPath)) fs.unlinkSync(charPath);
+		res.status(500).json({ msg: "An error happened during video importation" });
+	}
 });
 group.route(
 	"*",

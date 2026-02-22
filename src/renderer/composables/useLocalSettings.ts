@@ -7,9 +7,8 @@ class LocalSettings {
 	} = {
 		DARK_MODE: true,
 		ON_MOVIE_DCLICK: "play",
-		ON_MOVIE_UPLOAD: "play"
+		ON_MOVIE_UPLOAD: "none"
 	};
-
 	constructor() {
 		for (const setting in this.settings) {
 			const value = localStorage.getItem(setting);
@@ -20,18 +19,15 @@ class LocalSettings {
 			this.settings[setting] = isBool ? value == "true" : value;
 		}
 	}
-
 	static get instance() {
 		if (!this._instance) {
 			this._instance = new LocalSettings();
 		}
 		return this._instance;
 	}
-
 	private saveSetting(id:keyof typeof LocalSettings.instance.settings) {
 		localStorage.setItem(id, this.settings[id].toString());
 	}
-
 	get darkMode() {
 		return this.settings["DARK_MODE"];
 	}
@@ -39,7 +35,6 @@ class LocalSettings {
 		this.settings["DARK_MODE"] = newValue;
 		this.saveSetting("DARK_MODE");
 	}
-
 	get onMovieDclick() {
 		return this.settings["ON_MOVIE_DCLICK"];
 	}
@@ -47,7 +42,6 @@ class LocalSettings {
 		this.settings["ON_MOVIE_DCLICK"] = newValue;
 		this.saveSetting("ON_MOVIE_DCLICK");
 	}
-
 	get onMovieUpload() {
 		return this.settings["ON_MOVIE_UPLOAD"];
 	}
@@ -56,7 +50,6 @@ class LocalSettings {
 		this.saveSetting("ON_MOVIE_UPLOAD");
 	}
 }
-
 export default function useLocalSettings() {
 	return LocalSettings.instance;
 };

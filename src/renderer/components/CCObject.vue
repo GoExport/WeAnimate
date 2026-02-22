@@ -9,16 +9,13 @@ import {
 } from "../utils/AppInit";
 import extractCharThemeId from "../utils/extractCharThemeId";
 import { onMounted, onUnmounted, ref, useTemplateRef } from "vue";
-
 const emit = defineEmits<{
-
 	ccEnter: [],
 	charSaved: [string],
 }>();
 const props = defineProps<{
 	strictThemeUpload?: boolean
 }>();
-
 const ccObject = useTemplateRef("cc-object");
 const showObject = ref(false);
 let swfUrl:string;
@@ -40,23 +37,19 @@ let params:Params = {
 	allowScriptAccess: "always",
 	movie: ""
 };
-
 onMounted(() => {
-
 	window.typeSelected = function typeSelected(type:string) {
 		showObject.value = false;
 		setTimeout(() => {
 			createCharacter(params.flashvars.themeId, type);
 		}, 55);
 	};
-
 	window.copyClicked = function copyClicked(assetId:string) {
 		showObject.value = false;
 		setTimeout(() => {
 			copyCharacter(params.flashvars.themeId, assetId);
 		}, 55);
 	};
-
 	window.characterSaved = function characterSaved(id:string) {
 		reset();
 		setTimeout(() => {
@@ -65,18 +58,10 @@ onMounted(() => {
 	};
 });
 onUnmounted(() => {
-
 	delete window.typeSelected;
-
 	delete window.copyClicked;
-
 	delete window.characterSaved;
 });
-
-/**
- * called when a file is dropped into the cc
- * @param e drag event
- */
 function fileDropped(e:DragEvent) {
 	const reader = new FileReader();
 	reader.onload = (e2) => {
@@ -92,44 +77,36 @@ function fileDropped(e:DragEvent) {
 	};
 	reader.readAsText(e.dataTransfer.files[0]);
 }
-
 function getXml(): string {
-	//@ts-ignore
 	return swfUrl.endsWith("cc.swf") ? ccObject.value.getXml() : "";
 }
-
 function displayCreator() {
 	emit("ccEnter");
 	swfUrl = swfUrlBase + "/cc.swf";
 	params.movie = swfUrl;
 	showObject.value = true;
 }
-
 function displayBrowser(themeId:string) {
 	swfUrl = swfUrlBase + "/cc_browser.swf";
 	params.flashvars.themeId = themeId;
 	params.movie = swfUrl;
 	showObject.value = true;
 }
-
 function createCharacter(themeId:string, bs:string) {
 	params.flashvars.themeId = themeId;
 	params.flashvars.bs = bs;
 	displayCreator();
 }
-
 function copyCharacter(themeId:string, assetId:string) {
 	params.flashvars.themeId = themeId;
 	params.flashvars.original_asset_id = assetId;
 	displayCreator();
 }
-
 function uploadCharacter(themeId:string, xmlData:string) {
 	params.flashvars.themeId = themeId;
 	params.flashvars.xml_data = xmlData;
 	displayCreator();
 }
-
 function reset() {
 	delete params.flashvars.bs;
 	delete params.flashvars.themeId;
@@ -139,7 +116,6 @@ function reset() {
 	showObject.value = false;
 	swfUrl = "";
 }
-
 defineExpose({
 	displayBrowser,
 	createCharacter,
@@ -149,7 +125,6 @@ defineExpose({
 	reset
 });
 </script>
-
 <template>
 	<object v-if="showObject"
 		id="cc_object"

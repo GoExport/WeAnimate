@@ -3,7 +3,6 @@ table.list_tree tbody tr.movie td.title img {
 	width: calc(calc(calc(v-bind("zoomLevel + 'px'") - 20px) / 9) * 16);
 }
 </style>
-
 <script setup lang="ts">
 import { apiServer } from "../utils/AppInit";
 import type { FieldIdOf, ListFieldColumn, SelectedListSort } from "../interfaces/ListTypes";
@@ -22,11 +21,9 @@ import {
 } from "vue";
 import useListStore from "../composables/useListStore";
 import { useRoute } from "vue-router";
-
 const listTree = useTemplateRef("list-tree");
 const { pendingRefresh, zoomLevel } = useListStore();
 const route = useRoute();
-
 const currentFolder = ref<string>();
 const isLoading = ref(false);
 let listPage:"movie"|"starter";
@@ -34,9 +31,7 @@ const movieList = ref<{
 	folders: [],
 	entries: Movie[]
 }>();
-
 const navbarEntries = ref<NavbarEntry[]>([]);
-
 let columnWidths = JSON.parse(localStorage.getItem("movie_list-columnWidths")) ??
 	{ "title":250, "id":100, "duration":100, "date":180 };
 let columns:ListFieldColumn<Movie>[] = [
@@ -57,7 +52,6 @@ let columns:ListFieldColumn<Movie>[] = [
 		width: ref(columnWidths["date"]),
 	}
 ];
-
 const selectedSort = ref<SelectedListSort<Movie>>(
 	JSON.parse(localStorage.getItem("movie_list-selectedSort")) ??
 		{
@@ -65,14 +59,12 @@ const selectedSort = ref<SelectedListSort<Movie>>(
 			descending: true
 		}
 );
-
 function initList() {
 	movieList.value = {
 		folders: [],
 		entries: [],
 	};
 }
-
 function timestampToSeconds(time:string) {
 	const nums = time.split(":").map((v) => Number(v));
 	for (const index in nums) {
@@ -82,7 +74,6 @@ function timestampToSeconds(time:string) {
 		nums[index + 1] += nums[index] * 60;
 	}
 }
-
 function movieSortCb(movie1:Movie, movie2:Movie): number {
 	let mul = toValue(selectedSort).descending ? 1 : -1;
 	const sortOption = toValue(selectedSort).id;
@@ -92,7 +83,6 @@ function movieSortCb(movie1:Movie, movie2:Movie): number {
 			return movie1[sortOption].localeCompare(movie2[sortOption]) * mul;
 		}
 		case "duration": {
-			// hehehehehe sex
 			const secs1 = timestampToSeconds(movie1.duration);
 			const secs2 = timestampToSeconds(movie2.duration);
 			return (secs2 - secs1) * mul;
@@ -104,7 +94,6 @@ function movieSortCb(movie1:Movie, movie2:Movie): number {
 		}
 	}
 }
-
 function changeSort(newSort:FieldIdOf<Movie>) {
 	if (selectedSort.value.id == newSort) {
 		selectedSort.value.descending = !selectedSort.value.descending;
@@ -117,12 +106,10 @@ function changeSort(newSort:FieldIdOf<Movie>) {
 	localStorage.setItem("movie_list-selectedSort", JSON.stringify(toValue(selectedSort)));
 	movieList.value.entries = movieList.value.entries.sort(movieSortCb);
 }
-
 function columnResized(id:FieldIdOf<Movie>, newWidth:number) {
 	columnWidths[id] = newWidth;
 	localStorage.setItem("movie_list-columnWidths", JSON.stringify(columnWidths));
 }
-
 function getMovieTree(filter:"starter"): Promise<{
 	list_data: {
 		folders: [],
@@ -144,7 +131,6 @@ function getMovieTree(filter:"movie"|"starter", folderId?:string) {
 				return;
 			}
 			let responseJson = JSON.parse(this.responseText);
-
 			let parentFolderEntries: NavbarEntry[] | void;
 			if (filter == "movie") {
 				parentFolderEntries = responseJson.folder_path.map(v => ({
@@ -168,7 +154,6 @@ function getMovieTree(filter:"movie"|"starter", folderId?:string) {
 		xhttp.send();
 	});
 }
-
 async function routeUpdated() {
 	listTree.value.resetSelection();
 	initList();
@@ -179,7 +164,6 @@ async function routeUpdated() {
 	isLoading.value = true;
 	await loadMovieList();
 }
-
 async function loadMovieList() {
 	if (listPage == "movie") {
 		const response = await getMovieTree(listPage, toValue(currentFolder));
@@ -206,17 +190,13 @@ async function loadMovieList() {
 		isLoading.value = false;
 	}, 80);
 }
-
 watch(() => pendingRefresh.value, routeUpdated);
 watch(() => route.path, routeUpdated);
 onMounted(async () => {
 	routeUpdated();
 });
-
 initList();
-
 </script>
-
 <template>
 	<div>
 		<Navbar
@@ -228,7 +208,6 @@ initList();
 				viewMode: true,
 				zoom: true
 			}"/>
-
 		<div class="page_contents">
 			<ListTree
 				:class="{

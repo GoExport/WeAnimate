@@ -9,11 +9,9 @@ import type { Watermark } from "../../main/server/models/watermark";
 export type Folder = {
 	id: string,
 	title: string,
-	/** folder color as a hex code, (ie. "ff00ff") */
 	color: string,
 	parent_id: string,
 };
-
 type DatabaseJson = {
 	version: string,
 	assets: Asset[],
@@ -21,13 +19,11 @@ type DatabaseJson = {
 	movie_folders: Folder[],
 	watermarks: Watermark[],
 };
-
 type ArrayKey<T> = {
 	[K in keyof T]: T[K] extends any[] ? K : never
 }[keyof T];
 export type DBJsonArrayKey = ArrayKey<DatabaseJson>;
 type DBJsonArrayProp<K extends DBJsonArrayKey> = DatabaseJson[K][number];
-
 export class Database {
 	private path = join(Directories.saved, "database.json");
 	private json:DatabaseJson = {
@@ -38,7 +34,6 @@ export class Database {
 		watermarks: [],
 	};
 	private static _instance:Database;
-
 	constructor() {
 		if (!existsSync(this.path)) {
 			console.warn("Database doesn't exist! Creating...");
@@ -69,19 +64,16 @@ export class Database {
 			console.log(`Database upgraded from ${oldVer} to v2.1.1`);
 		}
 	}
-
 	static get instance() {
 		if (!Database._instance) {
 			Database._instance = new Database();
 		}
 		return Database._instance;
 	}
-
-	private refresh() { // refresh the database vars
+	private refresh() {
 		const data = readFileSync(this.path);
 		this.json = JSON.parse(data.toString());
 	}
-
 	private save(newData:DatabaseJson) {
 		try {
 			writeFileSync(this.path, JSON.stringify(newData, null, "\t"));
@@ -89,25 +81,21 @@ export class Database {
 			console.error("Error saving DB:", err);
 		}
 	}
-
 	delete(from:DBJsonArrayKey, id:string) {
 		const object = this.get(from, id);
 		if (object == false) {
 			return false;
 		}
 		const index = object.index;
-
 		this.json[from].splice(index, 1);
 		this.save(this.json);
 		return true;
 	}
-
 	get<K extends DBJsonArrayKey>(from:K, id:string): {
 		data: DBJsonArrayProp<K>,
 		index: number
 	} | false {
 		this.refresh();
-
 		const category = this.json[from];
 		let index:number;
 		const object = category.find((i, ind) => {
@@ -119,19 +107,16 @@ export class Database {
 		if (!object) {
 			return false;
 		}
-
 		return {
 			data: object,
 			index: index
 		}
 	}
-
 	insert<K extends DBJsonArrayKey>(into:K, data:DBJsonArrayProp<K>) {
 		this.refresh();
 		this.json[into].unshift(data as Folder & Asset & Movie & Watermark);
 		this.save(this.json);
 	}
-
 	select<K extends DBJsonArrayKey>(
 		from:K,
 		where?:Record<string, string | string[]>
@@ -152,20 +137,17 @@ export class Database {
 		});
 		return filtered;
 	}
-
 	update<K extends DBJsonArrayKey>(from:K, id:string, data:Partial<DBJsonArrayProp<K>>): boolean {
 		const object = this.get(from, id);
 		if (object == false) {
 			return false;
 		}
 		const index = object.index;
-
 		Object.assign(this.json[from][index], data);
 		this.save(this.json);
 		return true;
 	}
 };
-
 export function generateId() {
 	return crypto.randomBytes(4).toString("hex");
 }

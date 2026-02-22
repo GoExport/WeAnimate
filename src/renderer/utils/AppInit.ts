@@ -6,16 +6,7 @@ export interface Params {
 	wmode?: string,
 }
 export type Flashvars = Record<string, string>;
-
-/**
- * url to the api server
- */
-//@ts-ignore
 export const apiServer = `${import.meta.env.VITE_API_SERVER_HOST}:${import.meta.env.VITE_API_SERVER_PORT}`;
-/**
- * static server url
- */
-//@ts-ignore
 export const staticServer = `${import.meta.env.VITE_STATIC_SERVER_HOST}:${import.meta.env.VITE_STATIC_SERVER_PORT}`;
 export const staticPaths = {
 	//@ts-ignore
@@ -26,17 +17,7 @@ export const staticPaths = {
 	clientUrl: import.meta.env.VITE_CLIENT_URL,
 };
 export const swfUrlBase = staticServer + staticPaths.swfUrl;
-/**
- * wrapper version
- */
-//@ts-pmo
-//@ts-ignore
 export const wrapperVer = import.meta.env.VITE_WRAPPER_VER;
-
-/**
- * converts an object to a query string
- * @param table parameter value
- */
 export function toAttrString(table:Record<string, string> | string) {
 	return typeof (table) == "object" ? new URLSearchParams(table).toString() : table.replace(/"/g, "\\\"");
 }

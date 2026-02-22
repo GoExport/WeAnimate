@@ -44,20 +44,15 @@ const header = process.env.XML_HEADER;
 
 export default class AssetModel {
 	static folder = directories.asset;
-
 	static delete(id:string) {
 		const asset = Database.get("assets", id);
 		if (!asset) {
 			throw "404";
 		}
 		Database.delete("assets", id);
-
 		const { type, subtype } = asset.data;
-		// char ids don't have a file extension so we'll need to add it
 		if (type == "char") id += ".xml";
 		fs.unlinkSync(path.join(this.folder, id));
-
-		// delete video and char thumbnails
 		if (
 			type == "char" ||
 			subtype == "video"
@@ -66,14 +61,12 @@ export default class AssetModel {
 			fs.unlinkSync(path.join(this.folder, thumbId));
 		}
 	};
-
 	static load(id:string, returnBuffer:false): fs.ReadStream
 	static load(id:string, returnBuffer:true): Buffer
 	static load(id:string, returnBuffer = false): fs.ReadStream | Buffer {
 		if (!this.exists(id)) {
 			throw "404";
 		}
-
 		const filepath = path.join(this.folder, id);
 		let data;
 		if (returnBuffer) {
@@ -83,7 +76,6 @@ export default class AssetModel {
 		}
 		return data;
 	};
-
 	static list(filters:Partial<Asset>, returnXml:true): string
 	static list(filters:Partial<Asset>, returnXml:false): Asset[]
 	static list(returnXml:true): string
@@ -99,7 +91,6 @@ export default class AssetModel {
 				returnXml = param2;
 			}
 		}
-
 		const files = Database.select("assets", filters);
 		if (returnXml) {
 			return `${
@@ -110,7 +101,6 @@ export default class AssetModel {
 		}
 		return files;
 	};
-
 	static getInfo(id:string): Asset {
 		const info = Database.get("assets", id);
 		if (info == false) {
@@ -118,14 +108,12 @@ export default class AssetModel {
 		}
 		return info.data;
 	}
-
 	static updateInfo(id:string, info:Partial<Asset>): void {
 		const success = Database.update("assets", id, info);
 		if (!success) {
 			throw "404";
 		}
 	}
-
 	static exists(id:string, checkDBInstead = false) {
 		if (checkDBInstead) {
 			const asset = Database.get("assets", id);
@@ -135,12 +123,9 @@ export default class AssetModel {
 		const exists = fs.existsSync(filepath);
 		return exists;
 	};
-
 	static meta2Xml(v:Asset | Starter) {
 		const apiServer = `${process.env.API_SERVER_HOST}:${process.env.API_SERVER_PORT}`;
-		// sanitize stuff
 		v.title = (v.title || "").replace(/"/g, "&quot;");
-
 		let xml;
 		switch (v.type) {
 			case "char": {
@@ -173,7 +158,6 @@ export default class AssetModel {
 		}
 		return xml;
 	};
-
 	static save(
 		data:fs.ReadStream | Buffer | string,
 		idOrExt:string,
@@ -186,21 +170,19 @@ export default class AssetModel {
 				info.id = `${generateId()}.${idOrExt}`;
 			}
 			Database.insert("assets", info as Asset)
-
 			let writeStream = fs.createWriteStream(path.join(this.folder, info.id));
 			if (Buffer.isBuffer(data)) { // 
 				writeStream.write(data, (e) => {
 					if (e && e != null) return rej(e);
 					res(info.id);
 				});
-			} else { // stream
+			} else {
 				if (typeof data == "string") { // file path
 					data = fs.createReadStream(data);
 					data.pause();
 				}
 				data.resume();
 				data.pipe(writeStream);
-				// wait for the stream to end
 				data.on("end", () => res(info.id));
 			}
 		});

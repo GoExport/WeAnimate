@@ -1,5 +1,4 @@
 const env = Object.assign(process.env, require("../../env.json"), require("../../config.json"));
-
 import { app, BrowserWindow, Menu, shell, ipcMain } from "electron";
 import { createWriteStream } from "fs";
 import Directories from "./storage/directories";
@@ -9,7 +8,6 @@ import settings from "./storage/settings";
 import { startAll } from "./server/index";
 import { writeFileSync, existsSync } from "fs";
 import { join } from "path";
-
 const customTempPath = join(__dirname, "temp");
 app.setPath("userData", customTempPath);
 (() => {
@@ -26,9 +24,7 @@ app.setPath("userData", customTempPath);
 	}
 })();
 const IS_DEV = app.commandLine.getSwitchValue("dev").length > 0;
-
 startAll();
-
 const PRELOAD_SOURCE = `const { contextBridge, ipcRenderer } = require("electron");
 contextBridge.exposeInMainWorld("appWindow", {
 	goHome: () => ipcRenderer.send("go-home"),
@@ -44,7 +40,6 @@ const getPreloadPath = () => {
 };
 const preloadPath = join(__dirname, "preload.js"); 
 writeFileSync(preloadPath, PRELOAD_SOURCE, "utf8");
-
 if (settings.saveLogFiles) {
 	const filePath = join(Directories.log, new Date().valueOf() + ".txt");
 	const writeStream = createWriteStream(filePath);
@@ -57,7 +52,6 @@ if (settings.saveLogFiles) {
 		writeStream.close();
 	});
 }
-
 let pluginName:string;
 switch (process.platform) {
 	case "win32": {
@@ -79,15 +73,11 @@ switch (process.platform) {
 }
 app.commandLine.appendSwitch("ppapi-flash-path", join(__dirname, pluginName));
 app.commandLine.appendSwitch("ppapi-flash-version", "34.0.0.118");
-
 app.commandLine.appendSwitch("disable-http-cache");
-
 let mainWindow:BrowserWindow;
 let root:string;
 const createWindow = () => {
-
 	let iconPath: string;
-
 		if (process.platform === 'win32') {
     			iconPath = join(__dirname, 'favicon.ico');
 		} else if (process.platform === 'darwin') {
@@ -95,7 +85,6 @@ const createWindow = () => {
 		} else {
     			iconPath = join(__dirname, 'favicon.png');
 		}
-
 	mainWindow = new BrowserWindow({
 		width: 1280,
 		height: 720,
@@ -109,7 +98,6 @@ const createWindow = () => {
 		}
 	});
 	setMenuBar(mainWindow);
-
 	ipcMain.on("exit", () => process.exit(0));
 	ipcMain.on("open-discord", openDiscord);
 	ipcMain.on("open-faq", openFaq);
@@ -118,7 +106,6 @@ const createWindow = () => {
 	ipcMain.on("go-home", () => {
     mainWindow.loadURL(root);
     });
-
 	let host:string, port:string;
 	if (IS_DEV) {
 		host = app.commandLine.getSwitchValue("host");
@@ -133,7 +120,6 @@ const createWindow = () => {
     	mainWindow.show();
 	mainWindow.on("closed", () => process.exit(0));
 };
-
 async function openDiscord() {
 	await shell.openExternal("https://discord.gg/Kf7BzSw");
 }
@@ -141,12 +127,11 @@ async function openFaq() {
 	await shell.openExternal("https://github.com/wrapper-offline/wrapper-offline/wiki/FAQ");
 }
 async function openGitHub() {
-	await shell.openExternal("https://github.com/wrapper-offline/wrapper-offline");
+	await shell.openExternal("https://github.com/GTAManRCRX/wrapper-offline-fixed");
 }
 async function openDataFolder() {
 	await shell.openPath(Directories.userData);
 }
-
 app.whenReady().then(() => {
 	setTimeout(createWindow, 2000);
 
@@ -155,12 +140,10 @@ app.whenReady().then(() => {
 			createWindow();
 		}
 	});
-	
 });
 app.on("window-all-closed", () => {
 	if (process.platform !== "darwin") app.quit();
 });
-
 function setMenuBar(mainWindow:BrowserWindow) {
 	mainWindow.setAutoHideMenuBar(settings.hideNavbar);
 	Menu.setApplicationMenu(Menu.buildFromTemplate([

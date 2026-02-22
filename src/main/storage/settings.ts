@@ -13,10 +13,8 @@ class Settings {
 		DEFAULT_WATERMARK: "none",
 	};
 	private static _instance:Settings;
-
 	constructor() {
 		const defaultVals = this.json;
-		// create the file if it doesn't exist
 		if (!fs.existsSync(this.path)) {
 			console.error("Settings doesn't exist! Creating...");
 			this.save(defaultVals);
@@ -29,7 +27,6 @@ class Settings {
 		}
 		this.refresh();
 		if (Object.keys(this.json).length !== Object.keys(defaultVals).length) {
-			// replace all valid values
 			for (let key in this.json) {
 				if (defaultVals[key] != null) {
 					defaultVals[key] = this.json[key];
@@ -38,19 +35,16 @@ class Settings {
 			this.save(defaultVals);
 		}
 	}
-
 	static get instance() {
 		if (!Settings._instance) {
 			Settings._instance = new Settings();
 		}
 		return Settings._instance;
 	}
-
-	private refresh() { // refresh the database vars
+	private refresh() {
 		const data = fs.readFileSync(this.path);
 		this.json = JSON.parse(data.toString());
 	}
-
 	private save(newData:typeof Settings.prototype.json) {
 		try {
 			fs.writeFileSync(this.path, JSON.stringify(newData, null, "\t"));
@@ -58,7 +52,6 @@ class Settings {
 			console.error("Error saving DB:", err);
 		}
 	}
-
 	getAllSettings() {
 		return {
 			truncatedThemeList: this.truncatedThemeList,
@@ -69,7 +62,6 @@ class Settings {
 			defaultWatermark: this.defaultWatermark
 		};
 	}
-
 	get truncatedThemeList() {
 		return this.json["TRUNCATED_THEMELIST"];
 	}
@@ -77,7 +69,6 @@ class Settings {
 		this.json["TRUNCATED_THEMELIST"] = newValue;
 		this.save(this.json);
 	}
-
 	get showWaveforms() {
 		return this.json["SHOW_WAVEFORMS"];
 	}
@@ -85,7 +76,6 @@ class Settings {
 		this.json["SHOW_WAVEFORMS"] = newValue;
 		this.save(this.json);
 	}
-
 	get isWide() {
 		return this.json["IS_WIDE"] == "1";
 	}
@@ -94,7 +84,6 @@ class Settings {
 		this.json["IS_WIDE"] = whythefuckdididothis_sob;
 		this.save(this.json);
 	}
-
 	get saveLogFiles() {
 		return this.json["SAVE_LOG_FILES"];
 	}
@@ -102,7 +91,6 @@ class Settings {
 		this.json["SAVE_LOG_FILES"] = newValue;
 		this.save(this.json);
 	}
-
 	get hideNavbar() {
 		return this.json["HIDE_NAVBAR"];
 	}
@@ -110,7 +98,6 @@ class Settings {
 		this.json["HIDE_NAVBAR"] = newValue;
 		this.save(this.json);
 	}
-
 	get defaultWatermark() {
 		return this.json["DEFAULT_WATERMARK"];
 	}

@@ -3,19 +3,11 @@ import https from "https";
 import Settings from "../../storage/settings";
 
 const group = new httpz.Group();
-
-/*
-list
-*/
 group.route("GET", "/api/settings/list", (req, res) => {
 	res.log("Retrieving settings...");
 	res.json(Settings.getAllSettings());
 	res.log("Success!");
 });
-
-/*
-update
-*/
 group.route("POST", "/api/settings/update", (req, res) => {
 	const name:string = req.body.setting;
 	if (!name) {
@@ -24,12 +16,8 @@ group.route("POST", "/api/settings/update", (req, res) => {
 	if (!req.body.value) {
 		return res.status(400).json({msg:"Expected parameter 'value' on the request body."});
 	}
-	// convert true or false to a boolean, or use the original value if it's neither
 	const value:string|boolean = req.body.value == "true" ? true : 
 		req.body.value == "false" ? false : req.body.value;
-
-	// check if the setting exists
-	// this miight be a bad way to program it but i like how it looks
 	if (typeof Settings[name] == "undefined" || name == "getAllSettings") {
 		console.warn(`r.settings: Attempted #update on invalid setting '${name}'.`);
 		return res.status(400).json({msg:`Expected parameter 'value' for setting '${name}' to have type '${typeof Settings[name]}'.`});
@@ -42,12 +30,6 @@ group.route("POST", "/api/settings/update", (req, res) => {
 
 	res.end();
 });
-
-/*
-check for updates
-*/
-// TODO: move this to the client side
-// because wtf is this shit?? like what??? tf??
 group.route("GET", "/api/settings/get_updates", (req, res) => {
 	const handleError = (err:Error) => {
 		console.log("Error checking for updates:", err);
@@ -56,7 +38,7 @@ group.route("GET", "/api/settings/get_updates", (req, res) => {
 	https.get(
 		{
 			host: "api.github.com",
-			path: "/repos/Wrapper-Offline/Wrapper-Offline/tags",
+			path: "/repos/GTAManRCRX/wrapper-offline-fixed/releases",
 			headers: {
 				"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/109.0"
 			}
@@ -74,7 +56,6 @@ group.route("GET", "/api/settings/get_updates", (req, res) => {
 					console.log("Response:", buffer.toString());
 					return res.status(400).end();
 				}
-
 				const latest = json[0].name;
 				if (
 					+(latest.substring(1).replace(/\./, "")) >

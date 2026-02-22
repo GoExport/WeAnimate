@@ -7,13 +7,11 @@
 	flex-direction: column;
 	flex-shrink: 0;
 }
-
 .app_sidebar .link .link_text {
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
-
 .app_sidebar .link.create button {
 	display: flex;
 	justify-content: center;
@@ -21,7 +19,6 @@
 	width: 100%;
 	position: relative;
 }
-
 .app_sidebar #logo_container {
 	background: hsl(240deg 17% 13%);
 	border-bottom: 1px solid #3d3d57;
@@ -54,13 +51,11 @@
 	left: calc(50% - calc(175px / 2));
 	height: 41px;
 }
-
 .app_sidebar ul {
 	list-style: none;
 	margin: 0;
 	padding: 2px 8px;
 }
-
 .app_sidebar>ul:first-of-type {
 	border-bottom: 1px solid hsl(240 14% 32% / 1);
 }
@@ -69,12 +64,10 @@
 	margin-top: auto;
 	padding-bottom: 8px;
 }
-
 .app_sidebar i {
 	margin-top: 0;
 	margin-right: 7px;
 }
-
 .app_sidebar .link {
 	border-radius: 4px;
 	transition: 0.2s var(--button-anim);
@@ -153,7 +146,6 @@
 	text-transform: uppercase;
 	margin: 5px 0;
 }
-
 .app_sidebar .user_custom .link>button.unpin {
 	border-radius: 3px 0 0 3px;
 	font-size: 12px;
@@ -167,7 +159,6 @@
 .app_sidebar .user_custom .link>a {
 	padding: 5px 6px 5px 3px;
 }
-
 .app_sidebar .link[data-toggle]>button {
 	display: flex;
 	padding: 5px 12px;
@@ -182,18 +173,15 @@
 .app_sidebar .link[data-toggle]>button:hover {
 	background: #0000
 }
-
 .app_sidebar #wrapper_ver {
 	color: #909090;
 	display: block;
 	font-size: 13px;
 	text-align: center;
 }
-
 .app_sidebar input {
 	display: none;
 }
-
 html.dark .app_sidebar {
 	background: hsl(250 10% 13% / 1);
 }
@@ -204,20 +192,17 @@ html.dark .app_sidebar #logo_container {
 html.dark .app_sidebar #logo_container .logo_btn:hover {
 	background: #1b1924;
 }
-
 html.dark .app_sidebar>ul:first-of-type {
 	border-color: hsl(250deg 14% 23%);
 }
 html.dark .app_sidebar>ul:last-of-type {
 	border-color: hsl(250deg 14% 23%);
 }
-
 html.dark  .app_sidebar .group>ul>.divider {
 	background: hsl(250deg 14% 23%);
 	margin: 7px 0 5px;
 	width: 1px;
 }
-
 html.dark .app_sidebar .link>a {
 	color: #ccc;
 }
@@ -236,7 +221,6 @@ html.dark .app_sidebar .link:hover {
 html.dark .app_sidebar .link:hover::after {
 	background: linear-gradient(90deg, #0000 0, hsl(250 10% 18% / 1) 10px);
 }
-
 html.dark .app_sidebar .link.create {
 	background: hsl(342deg 55% 48%);
 	border-bottom-color: #732137;
@@ -254,7 +238,6 @@ html.dark .app_sidebar .user_custom .link>button:hover {
 html.dark .app_sidebar #wrapper_ver {
 	color: #bbb;
 }
-
 .app_sidebar.logo_collapsed #logo_container {
 	width: 62px;
 }
@@ -264,21 +247,18 @@ html.dark .app_sidebar #wrapper_ver {
 .app_sidebar.logo_collapsed #logo_container #logo_wordmark {
 	opacity: 0;
 }
-
 .app_sidebar.collapsed .group>ul {
 	display: block;	
 }
 .app_sidebar.collapsed .group>ul>.link {
 	width: 100%;
 }
-
 .app_sidebar.collapsed h3 {
 	opacity: 0;
 	pointer-events: none;
 	height: 0;
 	margin: 0;
 }
-
 .app_sidebar.collapsed .link>a {
 	padding: 5px 12.5px;
 }
@@ -288,7 +268,6 @@ html.dark .app_sidebar #wrapper_ver {
 .app_sidebar.collapsed .link::after {
 	content: none;
 }
-
 .app_sidebar.collapsed .link[data-toggle] i.ico::before {
 	transform: scale(1);
 }
@@ -296,7 +275,6 @@ html.dark .app_sidebar #wrapper_ver {
 	display: none;
 }
 </style>
-
 <script setup lang="ts">
 import { apiServer } from "../utils/AppInit";
 import AppInfoModal from "./AppInfoModal.vue";
@@ -312,14 +290,12 @@ import useListStore from "../composables/useListStore";
 import useLocalSettings from "../composables/useLocalSettings";
 import useTempStorage from "../composables/useTempStorage";
 import { wrapperVer } from "../utils/AppInit";
-
 const charInput = useTemplateRef("char-input");
 const movieInput = useTemplateRef("movie-input");
 const localSettings = useLocalSettings();
 const { pendingRefresh } = useListStore();
 const router = useRouter();
 const tempStorage = useTempStorage();
-
 const collapsed = ref(false);
 const displayAppInfo = ref(false);
 const displaySettings = ref(false);
@@ -331,9 +307,8 @@ const slideMode = ref({
 	enabled: false,
 });
 const width = ref(250);
-
 function setWidth(newWidth:number) {
-	if (newWidth <= 93) { // min
+	if (newWidth <= 93) {
 		if (newWidth <= 46) {
 			width.value = 56;
 		} else {
@@ -345,7 +320,6 @@ function setWidth(newWidth:number) {
 	collapsed.value = toValue(width) <= 56;
 	logoCollapsed.value = toValue(width) <= 200;
 }
-
 function watchWidth() {
 	slideMode.value.margin = Math.min(
 		0,
@@ -355,7 +329,6 @@ function watchWidth() {
 		)
 	);
 }
-
 async function charInput_input(e: Event) {
 	const target = e.currentTarget as HTMLInputElement;
 	if (!target.files || target.files.length === 0) return;
@@ -368,7 +341,6 @@ async function charInput_input(e: Event) {
 			method: "POST",
 			body: charData
 		});
-
 		if (response.ok) {
 			const data = await response.json();
 			pendingRefresh.value = true;
@@ -381,43 +353,34 @@ async function charInput_input(e: Event) {
 		console.error("Import error:", err);
 	}
 }
-
 async function movieInput_input(e: Event) {
 	const target = e.currentTarget as HTMLInputElement;
 	if (!target.files || target.files.length === 0) return;
-
 	const zipFile = target.files[0];
 	const isStarter = movieUploadType.value == "starter";
 	const body = new FormData();
 	body.append("import", zipFile);
-	
 	if (isStarter) {
 		body.append("is_starter", "1");
 	}
-
 	const res = await fetch(apiServer + "/api/movie/upload", {
 		method: "POST",
 		body
 	});
-
 	if (res.ok) {
 		const json = await res.json();
 		target.value = ""; 
-
 		pendingRefresh.value = true;
-
 		switch (localSettings.onMovieUpload) {
 		case "edit":
 			router.push("/movies/edit/" + json.id);
 			break;
-
 		case "play":
 			openPlayerWindow(json.id);
 			router.push("/temp").then(() => {
 				router.push(isStarter ? "/starters" : "/movies");
 			});
 			break;
-
 		case "none":
 		default:
 			router.push("/temp").then(() => {
@@ -426,31 +389,26 @@ async function movieInput_input(e: Event) {
 		}
 	}
 }
-
 function movieUpload_click() {
 	movieUploadType.value = "movie";
 	movieInput.value.click();
 }
-
 function starterUpload_click() {
 	movieUploadType.value = "starter";
 	movieInput.value.click();
 }
-
 function openAppInfo() {
 	displayAppInfo.value = true;
 }
 function closeAppInfo() {
 	displayAppInfo.value = false;
 }
-
 function openSettings() {
 	displaySettings.value = true;
 }
 function closeSettings() {
 	displaySettings.value = false;
 }
-
 function draggerDown(e:MouseEvent) {
 	inResize.value = true;
 	document.body.classList.add("col_resize");
@@ -467,7 +425,6 @@ function draggerDown(e:MouseEvent) {
 		document.body.classList.remove("col_resize");
 	});
 }
-
 onBeforeRouteLeave((to, from) => {
 	if (to.path.startsWith("/character") && !from.path.startsWith("/character")) {
 		window.addEventListener("resize", watchWidth);
@@ -479,10 +436,8 @@ onBeforeRouteLeave((to, from) => {
 		slideMode.value.enabled = false;
 	}
 });
-
 defineExpose({ slideMode, width });
 </script>
-
 <template>
 	<div class="app_sidebar" :class="{
 		collapsed,

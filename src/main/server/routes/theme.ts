@@ -11,10 +11,6 @@ const STATIC_SERVER_PORT = process.env.STATIC_SERVER_PORT;
 const STORE_URL = process.env.STORE_URL;
 const THEME_FOLDER = Directories.store;
 const group = new httpz.Group();
-
-/**
- * returns a json representation of the themelist
- */
 function parseThemeList() {
 	const { truncatedThemeList } = settings;
 	const xmlPath = join(
@@ -22,7 +18,6 @@ function parseThemeList() {
 		truncatedThemeList ? "themelist.xml" : "themelist-allthemes.xml"
 	);
 	const listXml = fs.readFileSync(xmlPath).toString();
-
 	const themeNodes = listXml.split("<theme").slice(1, -1);
 	let themes = [];
 	for (let node of themeNodes) {
@@ -35,10 +30,6 @@ function parseThemeList() {
 	}
 	return themes;
 }
-
-/*
-list
-*/
 group.route("GET", "/api/theme/list", (req, res) => {
 	const themeList = parseThemeList();
 	res.json(themeList);
@@ -53,10 +44,6 @@ group.route("POST", "/goapi/getThemeList/", async (req, res) => {
 	res.setHeader("Content-Type", "application/zip");
 	res.end(zip);
 });
-
-/*
-load
-*/
 group.route("POST", "/goapi/getTheme/", async (req, res) => {
 	const id = req.body.themeId;
 	if (!id) {

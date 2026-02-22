@@ -102,30 +102,40 @@ group.route("POST", "/goapi/saveCCThumbs/", (req, res) => {
 });
 group.route("*", "/api/char/upload", (req, res) => {
 	const charFile = req.files.import;
-	if (!charFile) return res.status(400).json({ msg: "No file uploaded" });
-
-	const charTitle = path.parse(charFile.originalFilename || "").name || "Untitled";
+	if (!charFile) {
+		console.error("No file imported");
+		return res.status(400).json({ status: "error" });
+	}
 	const charPath = charFile.filepath;
-	const buffer = fs.readFileSync(charPath);
-
-	const meta:Partial<Char> = {
-		type: "char",
-		subtype: "0",
-		title: charTitle,
-		themeId: CharModel.getThemeId(buffer)
-	};
 	try {
-		CharModel.save(buffer, meta); 
-		fs.unlinkSync(charPath);
+		const buffer = fs.readFileSync(charPath);
+		const content = buffer.toString().trim();
+		const isValidChar = content.includes("<cc_char") || content.includes("<character");
+		const isPolicyFile = content.includes("<cross-domain-policy");
+		if (!isValidChar || isPolicyFile) {
+			console.error(`Character upload blocked! Reason: ${isPolicyFile ? "Cross-domain policy file" : "Invalid XML structure"}`);
+			if (fs.existsSync(charPath)) fs.unlinkSync(charPath);
+			return res.status(400).json({ status: "error" });
+		}
+		const charTitle = path.parse(charFile.originalFilename || "").name || "Imported character";
+		const meta: Partial<Char> = {
+			type: "char",
+			subtype: "0",
+			title: charTitle,
+			themeId: CharModel.getThemeId(buffer)
+		};
+		const id = CharModel.save(buffer, meta);
+		console.log(`Character imported: ${charTitle} (ID: ${id})`);
 		res.json({ 
-			status: "Character uploaded successfully", 
-			id: meta.id, 
-			themeId: meta.themeId, 
-			title: charTitle 
+			status: "ok", 
+			id: id, 
+			themeId: meta.themeId
 		});
 	} catch (e) {
-		console.error("Error uploading character:", e);
+		console.error("[Critical] Character processing failed:", e);
 		res.status(500).json({ status: "error" });
+	} finally {
+		if (fs.existsSync(charPath)) fs.unlinkSync(charPath);
 	}
 });
 

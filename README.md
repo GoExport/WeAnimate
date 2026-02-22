@@ -71,4 +71,17 @@ npm run package
 Most of this project is free/libre software under the MIT license. You have the freedom to run, change, and share this as much as you want
 FFmpeg is under the GNU GPLv2 license, which grants similar rights, but has some differences from MIT. Flash player (`resources/extensions`) and GoAnimate's original assets (`resources/static`) are proprietary and do not grant you these rights, but if they did, this project wouldn't need to exist
 
-No members of the original GoAnimate Wrapper team are officially working on Wrapper offline, even if they have contributed. Some members of the original team have asked to not be given credit, and they have been removed
+### Credits
+| Contributor | Contribution |
+| --------- | ------- |
+| Benson | The original developer of Wrapper offline|
+| DanielBitten | Upgraded TTS endpoints and voices |
+| It'sJay | Saving every asset |
+| Octanuary | Rewriting the source code in Vue and TypeScript |
+| VisualPlugin | The developer of GoAnimate wrapper |
+| [Vyond](https://www.vyond.com) | The creators of GoAnimate |
+| [Whispery](https://www.youtube.com/channel/UCVgwK9guSmcb3GkYLBzAbgA) | Fixing issues with Windows 11 and macOS |
+
+[Whispery's Discord page](https://discord.com/users/1440498123997843607)
+
+No members of the original GoAnimate wrapper team are officially working on Wrapper offline, even if they have contributed. Some members of the original team have asked to not be given credit, and they have been removed

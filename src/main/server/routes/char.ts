@@ -70,21 +70,33 @@ group.route("GET", /\/go\/character_creator\/(\w+)(\/\w+)?(\/.+)?$/, (req, res) 
 	res.redirect(redirect);
 });
 group.route("POST", "/goapi/saveCCCharacter/", (req, res) => {
-	if (!req.body.body || !req.body.thumbdata || !req.body.themeId) {
-		return res.status(400).end("Missing one or more fields");
-	}
-	const body = Buffer.from(req.body.body);
-	const thumb = Buffer.from(req.body.thumbdata, "base64");
+    if (!req.body.body || !req.body.thumbdata || !req.body.themeId) {
+        return res.status(400).end("Missing one or more fields");
+    }
+    const body = Buffer.from(req.body.body);
+    const thumb = Buffer.from(req.body.thumbdata, "base64");
 
-	const meta:Partial<Char> = {
-		type: "char",
-		subtype: "0",
-		title: req.body.title,
-		themeId: req.body.themeId
-	};
-	const id = CharModel.save(body, meta);
-	CharModel.saveThumb(id, thumb);
-	res.end("0" + id);
+    const meta: Partial<Char> = {
+        type: "char",
+        subtype: "0",
+        title: req.body.title || "Untitled",
+        themeId: req.body.themeId
+    };
+    const id = CharModel.save(body, meta);
+    CharModel.saveThumb(id, thumb);
+    res.setHeader("Content-Type", "text/html");
+    res.end(`0${id}<script>
+    const studio = window.opener.document.getElementById('obj') || window.opener.document.getElementById('studio');
+    if (studio) {
+        const currentTheme = window.opener.currentThemeId || "family";
+        if (typeof studio.loadTheme === 'function') {
+            studio.loadTheme(currentTheme);
+        } else {
+            window.opener.location.reload();
+        }
+    }
+    window.close();
+</script>`);
 });
 group.route("POST", "/goapi/saveCCThumbs/", (req, res) => {
 	const id = req.body.assetId;
@@ -113,7 +125,7 @@ group.route("*", "/api/char/upload", (req, res) => {
 		const isValidChar = content.includes("<cc_char") || content.includes("<character");
 		const isPolicyFile = content.includes("<cross-domain-policy");
 		if (!isValidChar || isPolicyFile) {
-			console.error(`Character upload blocked! Reason: ${isPolicyFile ? "Cross-domain policy file" : "Invalid XML structure"}`);
+			console.error(`Character upload blocked! Reason: ${isPolicyFile ? "Cross-domain policy file" : "Not a GoAnimate character"}`);
 			if (fs.existsSync(charPath)) fs.unlinkSync(charPath);
 			return res.status(400).json({ status: "error" });
 		}
@@ -132,7 +144,7 @@ group.route("*", "/api/char/upload", (req, res) => {
 			themeId: meta.themeId
 		});
 	} catch (e) {
-		console.error("[Critical] Character processing failed:", e);
+		console.error("Character processing failed:", e);
 		res.status(500).json({ status: "error" });
 	} finally {
 		if (fs.existsSync(charPath)) fs.unlinkSync(charPath);

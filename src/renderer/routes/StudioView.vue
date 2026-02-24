@@ -87,11 +87,7 @@ function exitCCModal() {
 	showCCModal.value = false;
 }
 function charSaved(id:string) {
-    console.log("Character saved: " + id);
-    showObject.value = false;
-    setTimeout(() => {
-        showObject.value = true;
-    }, 100); 
+    studio.value.loadCharacterById(id);
 }
 function exitImporter() {
 	showImporter.value = false;

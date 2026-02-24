@@ -76,27 +76,15 @@ group.route("POST", "/goapi/saveCCCharacter/", (req, res) => {
     const body = Buffer.from(req.body.body);
     const thumb = Buffer.from(req.body.thumbdata, "base64");
 
-    const meta: Partial<Char> = {
-        type: "char",
-        subtype: "0",
-        title: req.body.title || "Untitled",
-        themeId: req.body.themeId
-    };
-    const id = CharModel.save(body, meta);
-    CharModel.saveThumb(id, thumb);
-    res.setHeader("Content-Type", "text/html");
-    res.end(`0${id}<script>
-    const studio = window.opener.document.getElementById('obj') || window.opener.document.getElementById('studio');
-    if (studio) {
-        const currentTheme = window.opener.currentThemeId || "family";
-        if (typeof studio.loadTheme === 'function') {
-            studio.loadTheme(currentTheme);
-        } else {
-            window.opener.location.reload();
-        }
-    }
-    window.close();
-</script>`);
+    const meta:Partial<Char> = {
+		type: "char",
+		subtype: "0",
+		title: req.body.title,
+		themeId: req.body.themeId
+	};
+	const id = CharModel.save(body, meta);
+	CharModel.saveThumb(id, thumb);
+	res.end("0" + id);
 });
 group.route("POST", "/goapi/saveCCThumbs/", (req, res) => {
 	const id = req.body.assetId;

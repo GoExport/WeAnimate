@@ -89,6 +89,7 @@ const createWindow = () => {
 		width: 1280,
 		height: 720,
 		title: "Wrapper offline",
+		autoHideMenuBar: true,
 		show: false,
 		icon: iconPath,
 		webPreferences: {
@@ -97,7 +98,6 @@ const createWindow = () => {
 			contextIsolation: true
 		}
 	});
-	setMenuBar(mainWindow);
 	ipcMain.on("exit", () => process.exit(0));
 	ipcMain.on("open-discord", openDiscord);
 	ipcMain.on("open-faq", openFaq);

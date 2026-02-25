@@ -8,7 +8,7 @@ export default function openPlayerWindow(movieId: string) {
         ? Math.floor(width / (16 / 9)) 
         : Math.floor(width / (14 / 9));
 
-    let height = videoHeight + 26;
+    let height = videoHeight + 1;
 
     const isWindows = (typeof process !== 'undefined' && process.platform === 'win32') || 
                       (navigator.platform.indexOf('Win') !== -1);

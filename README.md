@@ -74,13 +74,15 @@ FFmpeg is under the GNU GPLv2 license, which grants similar rights, but has some
 ### Credits
 | Contributor | Contribution |
 | --------- | ------- |
-| Benson | The original developer of Wrapper offline|
+| 2ka | Eradicating the timebomb issue |
+| Benson | The original developer of Wrapper offline |
 | DanielBitten | Upgraded TTS endpoints and voices |
 | It'sJay | Saving every asset |
 | Octanuary | The main developer. Rewriting the source code in Vue and TypeScript |
 | VisualPlugin | The developer of GoAnimate wrapper |
 | [Vyond](https://www.vyond.com) | The creators of GoAnimate |
 | [Whispery](https://www.youtube.com/channel/UCVgwK9guSmcb3GkYLBzAbgA) | Fixing issues with Windows 11 and macOS |
+
 
 [Whispery's Discord page](https://discord.com/users/1440498123997843607)
 

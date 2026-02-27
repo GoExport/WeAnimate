@@ -104,9 +104,9 @@ if (process.argv.includes("--dev")) {
 
 	if (existsSync(flashSource)) {
 		cpSync(flashSource, flashDest, { recursive: true });
-		console.log("✅ Flash Player version 34.0.0.118 has been successfully copied");
+		console.log("Flash Player version 34.0.0.118 has been successfully copied");
 	} else {
-		console.warn("⚠️ Flash Player is not found at " + flashSource);
+		console.warn("Flash Player is not found at " + flashSource);
 	}
 
 	console.log("Copying resources to the build folder");
@@ -115,9 +115,9 @@ if (process.argv.includes("--dev")) {
 
 	if (existsSync(staticSource)) {
 		cpSync(staticSource, staticDest, { recursive: true });
-		console.log("✅ Resources have been successfully copied");
+		console.log("Resources have been successfully copied");
 	} else {
-		console.warn("⚠️ Resources are not found at " + staticSource);
+		console.warn("Resources are not found at " + staticSource);
 	}
 
 	console.log("Copying favicons to the build folder");

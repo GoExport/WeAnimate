@@ -17,10 +17,10 @@ app.setPath("userData", customTempPath);
 
 		if (existsSync(defaultPath) && defaultPath !== customTempPath) {
 			rmdirSync(defaultPath, { recursive: true });
-			console.log(`\n✅ ${appName} default temp folder removed successfully`);
+			console.log(`\n${appName} default temp folder removed successfully`);
 		}
 	} catch (e: any) {
-		console.log(`\n⚠️ ${appName} default temp folder could not be removed`)
+		console.log(`\n${appName} default temp folder could not be removed`)
 	}
 })();
 const IS_DEV = app.commandLine.getSwitchValue("dev").length > 0;

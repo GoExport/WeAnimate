@@ -133,9 +133,9 @@ if (process.argv.includes("--dev")) {
 
 		if (existsSync(srcPath)) {
 			cpSync(srcPath, destPath); 
-			console.log(`✅ ${fav.name} has been successfully copied`);
+			console.log(`${fav.name} has been successfully copied`);
 		} else {
-			console.warn(`⚠️ ${fav.name} is not found at ${srcPath}`);
+			console.warn(`${fav.name} is not found at ${srcPath}`);
 		}
 	}
 

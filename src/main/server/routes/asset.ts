@@ -185,7 +185,6 @@ group.route("POST", "/api/asset/upload", async (req, res) => {
     const { filepath } = file;
     const filename = path.parse(file.originalFilename).name;
     const ext = (await fromFile(filepath))?.ext;
-
     if (typeof ext === "undefined") {
         return res.status(400).json({ msg: "File type could not be determined" });
     }
@@ -286,7 +285,6 @@ group.route("POST", "/api/asset/upload", async (req, res) => {
                     if (!stream) {
                         stream = fs.createReadStream(filepath);
                     }
-
                     if (stream instanceof fs.ReadStream) {
                         stream.pause();
                     }
@@ -294,7 +292,6 @@ group.route("POST", "/api/asset/upload", async (req, res) => {
                 }
                 break;
             }
-
             default: {
                 return res.status(400).json({ msg: "Invalid asset type" });
             }

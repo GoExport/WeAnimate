@@ -9,7 +9,6 @@
 	z-index: 1;
 	width: 320px;
 }
-
 #importer #import_head {
 	background: #1e1b2b;
 	/* border-bottom: 1px solid #000; */
@@ -18,7 +17,6 @@
 	padding: 8px 6px;
 	height: 50px;
 }
-
 #importer #import_head .btn {
 	text-align: center;
 	font-size: 16px;
@@ -35,13 +33,11 @@
 #importer #import_head .close_button:hover {
 	opacity: 0.8;
 }
-
 .file_type_help {
 	color: #7c889c;
 	font-size: 14px;
 	padding: 20px;
 }
-
 .file_type_help .instructions {
 	opacity: 0.7;
 	text-align: center;
@@ -55,7 +51,6 @@
 	margin-bottom: 18px;
 	padding-bottom: 22px;
 }
-
 .file_type_help h4 {
 	margin: 0;
 }
@@ -74,7 +69,6 @@
 .file_type_help ul summary:focus {
 	outline: none;
 }
-
 @keyframes importer-slide {
 	0% {
 		margin-left: -320px;
@@ -92,13 +86,11 @@
 	}
 }
 </style>
-
 <script setup lang="ts">
 import type { AssetStatus } from "./ImporterFile.vue";
 import Button from "../../controls/Button.vue";
 import ImporterFile from "./ImporterFile.vue";
 import { ref, toValue, useTemplateRef } from "vue";
-
 const supportedTypes = [
 	"flac",
 	"ogg",
@@ -106,7 +98,6 @@ const supportedTypes = [
 	"mp3",
 	"wav",
 	"wma",
-
 	"gif",
 	"jpeg",
 	"jpg",
@@ -115,7 +106,6 @@ const supportedTypes = [
 	"tiff",
 	"tif",
 	"webp",
-
 	"avi",
 	"mkv",
 	"mov",
@@ -123,7 +113,6 @@ const supportedTypes = [
 	"webm",
 	"wmv",
 ];
-
 function formatSize(bytes: number) {
     if (bytes === 0) return "0 B";
     const k = 1024;
@@ -131,14 +120,12 @@ function formatSize(bytes: number) {
     const i = Math.floor(Math.log(bytes) / Math.log(k));
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " " + sizes[i];
 }
-
 export type PendingFile = {
 	name: string,
 	ext: (typeof supportedTypes)[number],
 	file: File,
 	size: string,
 };
-
 const emit = defineEmits<{
 	addToScene: [string, string],
 	exitClicked: [],
@@ -146,10 +133,8 @@ const emit = defineEmits<{
 	uploadSuccess: [string, string, Record<string, string>],
 }>();
 const fileInput = useTemplateRef("importer-files");
-/** maximum file size in bytes */
 const maxsize = 0;
 const pendingFiles = ref<PendingFile[]>([]);
-
 function filesAdded(e:InputEvent) {
 	const fileUpload = e.currentTarget as HTMLInputElement;
 	for (let i = 0; i < fileUpload.files.length; i++) {
@@ -157,37 +142,31 @@ function filesAdded(e:InputEvent) {
 	}
 	fileUpload.value = "";
 }
-
 function fileDropped(e:DragEvent) {
 	const files = e.dataTransfer.files;
 	for (let i = 0; i < files.length; i++) {
 		addFile(files[i]);
 	}
 }
-
 function filePasted(e:ClipboardEvent) {
 	const files = e.clipboardData.files;
 	for (let i = 0; i < files.length; i++) {
 		addFile(files[i]);
 	}
 }
-
 function displayError(msg:string) {
 
 }
-
 function addFile(file:File) {
 	if (maxsize > 0 && file.size > maxsize) {
 		displayError("The file you selected is too large.");
 		return;
 	}
-
 	const ext = file.name.substring(file.name.lastIndexOf(".") + 1).toLowerCase();
 	if (!supportedTypes.includes(ext)) {
 		displayError("The file type you selected is not supported.");
 		return;
 	}
-
 	pendingFiles.value.unshift({
 		name: file.name,
 		ext,
@@ -195,12 +174,10 @@ function addFile(file:File) {
 		size: formatSize(file.size),
 	});
 }
-
 function cancelClicked(file:PendingFile) {
 	const index = toValue(pendingFiles).indexOf(file);
 	pendingFiles.value.splice(index, 1);
 }
-
 function onStatusUpdated(status:AssetStatus) {
 	emit("statusUpdated", status);
 }
@@ -215,7 +192,6 @@ function onUploadSuccess(
 	emit("uploadSuccess", assetType, assetId, lvmObject);
 }
 </script>
-
 <template>
 	<nav
 		id="importer"
@@ -252,7 +228,7 @@ function onUploadSuccess(
 				<img class="import_icon" src="/img/importer/import.svg"/>
 				<h3>Select or drop a file to upload</h3>
 			</div>
-			<h4>Supported file types:</h4>
+			<h4>Supported file types</h4>
 			<ul>
 				<li>
 					<details>

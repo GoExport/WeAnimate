@@ -214,7 +214,7 @@ group.route("POST", "/api/asset/upload", async (req, res) => {
             case "bg": {
 				if (finalExt != "swf") {
 					try {
-						const buffer = execSync(`"${ffmpegPath}" -hide_banner -loglevel error -i "${filepath}" -vf "scale=550:354" -f image2pipe -vcodec png -`);
+						const buffer = execSync(`"${ffmpegPath}" -hide_banner -loglevel error -i "${filepath}" -vf "scale=550:354:flags=bicubic,unsharp=3:3:0.5:3:3:0.0" -f image2pipe -vcodec png -`);
 						stream = Readable.from(buffer);
 						finalExt = "png";
 					} catch (err) {

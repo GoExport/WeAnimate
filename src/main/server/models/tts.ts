@@ -345,7 +345,7 @@ export default function processVoice(
 					}).toString();
 					const req = https.get(`https://api.textreader.pro/tts?${q}`, (res) => {
 						if (res.statusCode !== 200) {
-							console.error(`Polly+Wavenet error: ${res.statusCode}`);
+							console.error(`Pollypluswavenet error: ${res.statusCode}`);
 							return reject(new Error("Service unavailable"));
 						}
 						resolve(res);

@@ -2654,7 +2654,7 @@
 			"gender": "F",
 			"source": "pollypluswavenet",
 			"arg": "Joanna",
-			"desc": "Joanna (PW)"
+			"desc": "Joanna"
 		},
 		"joey_pw": {
 			"country": "US",
@@ -2702,7 +2702,7 @@
 			"gender": "M",
 			"source": "pollypluswavenet",
 			"arg": "Maxim",
-			"desc": "Maxim (PW)"
+			"desc": "Maxim"
 		},
 		"mizuki_pw": {
 			"country": "JP",
@@ -2710,7 +2710,7 @@
 			"gender": "F",
 			"source": "pollypluswavenet",
 			"arg": "Mizuki",
-			"desc": "Mizuki (PW)"
+			"desc": "Mizuki"
 		},
 		"nicole_pw": {
 			"country": "AU",
@@ -2726,7 +2726,15 @@
 			"gender": "F",
 			"source": "pollypluswavenet",
 			"arg": "Raveena",
-			"desc": "Raveena (PW)"
+			"desc": "Raveena"
+		},
+		"russell_pw": {
+			"country": "AU",
+			"language": "en",
+			"gender": "M",
+			"source": "pollypluswavenet",
+			"arg": "Russell",
+			"desc": "Russell (PW)"
 		},
 		"salli_pw": {
 			"country": "US",
@@ -5176,6 +5184,422 @@
 			"source": "vocalware",
 			"desc": "Phuong"
 		},
+ 		"google_amina": {
+			"country": "XA",
+			"language": "ar",
+			"gender": "F",
+			"source": "pollypluswavenet",
+			"arg": "ar-XA-Wavenet-A",
+			"desc": "Amina"
+		},
+		"google_jamal": {
+			"country": "XA",
+			"language": "ar",
+			"gender": "M",
+			"source": "pollypluswavenet",
+			"arg": "ar-XA-Wavenet-B",
+			"desc": "Jamal"
+		},	
+		"google_chai_ling": {
+			"country": "CN",
+			"language": "zh",
+			"gender": "F",
+			"source": "pollypluswavenet",
+			"arg": "cmn-TW-Wavenet-A",
+			"desc": "Chia-Ling (Taiwan)"
+		},
+		"google_chai_hao": {
+			"country": "CN",
+			"language": "zh",
+			"gender": "M",
+			"source": "pollypluswavenet",
+			"arg": "cmn-TW-Wavenet-B",
+			"desc": "Chia-Hao (Taiwan)"
+		},
+		"google_pavla": {
+			"country": "CZ",
+			"language": "cs",
+			"gender": "F",
+			"source": "pollypluswavenet",
+			"arg": "cs-CZ-Wavenet-B",
+			"desc": "Pavla"
+		},
+        "google_dagny": {
+			"country": "DK",
+			"language": "da",
+			"gender": "F",
+			"source": "pollypluswavenet",
+			"arg": "da-DK-Wavenet-F",
+			"desc": "Dagny"
+		},
+        "google_erik": {
+			"country": "DK",
+			"language": "da",
+			"gender": "M",
+			"source": "pollypluswavenet",
+			"arg": "da-DK-Wavenet-G",
+			"desc": "Erik"
+		},
+ 		"google_famke": {
+			"country": "NL",
+			"language": "nl",
+			"gender": "F",
+			"source": "pollypluswavenet",
+			"arg": "nl-NL-Wavenet-F",
+			"desc": "Famke"
+		},
+ 		"google_dirk": {
+			"country": "NL",
+			"language": "nl",
+			"gender": "M",
+			"source": "pollypluswavenet",
+			"arg": "nl-NL-Wavenet-G",
+			"desc": "Dirk"
+		},
+ 		"google_olivia": {
+			"country": "GB",
+			"language": "en",
+			"gender": "F",
+			"source": "pollypluswavenet",
+			"arg": "en-GB-Wavenet-F",
+			"desc": "Olivia (Google)"
+		},
+ 		"google_oliver": {
+			"country": "GB",
+			"language": "en",
+			"gender": "M",
+			"source": "pollypluswavenet",
+			"arg": "en-GB-Wavenet-B",
+			"desc": "Oliver (Google)"
+		},
+ 		"google_matilda": {
+			"country": "AU",
+			"language": "en",
+			"gender": "F",
+			"source": "pollypluswavenet",
+			"arg": "en-AU-Wavenet-A",
+			"desc": "Matilda"
+		},
+ 		"google_jackson": {
+			"country": "AU",
+			"language": "en",
+			"gender": "M",
+			"source": "pollypluswavenet",
+			"arg": "en-AU-Wavenet-B",
+			"desc": "Jackson (Google)"
+		},
+ 		"google_lakshmi": {
+			"country": "IN",
+			"language": "en",
+			"gender": "F",
+			"source": "pollypluswavenet",
+			"arg": "en-IN-Wavenet-A",
+			"desc": "Lakshmi"
+		},
+ 		"google_prashant": {
+			"country": "IN",
+			"language": "en",
+			"gender": "M",
+			"source": "pollypluswavenet",
+			"arg": "en-IN-Wavenet-C",
+			"desc": "Prashant"
+		},
+		"google_warren": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "pollypluswavenet",
+			"arg": "en-US-Wavenet-I",
+			"desc": "Warren"
+		},
+ 		"google_gilbert": {
+			"country": "GB",
+			"language": "en",
+			"gender": "M",
+			"source": "pollypluswavenet",
+			"arg": "en-GB-Wavenet-O",
+			"desc": "Gilbert"
+		},
+ 		"google_mayumi": {
+			"country": "PH",
+			"language": "fil",
+			"gender": "F",
+			"source": "pollypluswavenet",
+			"arg": "fil-PH-Wavenet-A",
+			"desc": "Mayumi"
+		},
+ 		"google_datu": {
+			"country": "PH",
+			"language": "fil",
+			"gender": "M",
+			"source": "pollypluswavenet",
+			"arg": "fil-PH-Wavenet-D",
+			"desc": "Datu"
+		},
+ 		"google_sanna": {
+			"country": "FI",
+			"language": "fi",
+			"gender": "F",
+			"source": "pollypluswavenet",
+			"arg": "fi-FI-Wavenet-B",
+			"desc": "Sanna (Google)"
+		},
+ 		"google_beatrice": {
+			"country": "FR",
+			"language": "fr",
+			"gender": "F",
+			"source": "pollypluswavenet",
+			"arg": "fr-FR-Wavenet-F",
+			"desc": "Beatrice"
+		},
+ 		"google_antoine": {
+			"country": "FR",
+			"language": "fr",
+			"gender": "M",
+			"source": "pollypluswavenet",
+			"arg": "fr-FR-Wavenet-G",
+			"desc": "Antoine (Google)"
+		},
+ 		"google_leonie": {
+			"country": "CA",
+			"language": "fr",
+			"gender": "F",
+			"source": "pollypluswavenet",
+			"arg": "fr-CA-Wavenet-A",
+			"desc": "Leonie"
+		},
+ 		"google_gaspard": {
+			"country": "CA",
+			"language": "fr",
+			"gender": "M",
+			"source": "pollypluswavenet",
+			"arg": "fr-CA-Wavenet-B",
+			"desc": "Gaspard"
+		},
+ 		"google_hilda": {
+			"country": "DE",
+			"language": "de",
+			"gender": "F",
+			"source": "pollypluswavenet",
+			"arg": "de-DE-Wavenet-G",
+			"desc": "Hilda"
+		},
+ 		"google_heinz": {
+			"country": "DE",
+			"language": "de",
+			"gender": "M",
+			"source": "pollypluswavenet",
+			"arg": "de-DE-Wavenet-H",
+			"desc": "Heinz"
+		},
+ 		"google_eleni": {
+			"country": "GR",
+			"language": "el",
+			"gender": "F",
+			"source": "pollypluswavenet",
+			"arg": "el-GR-Wavenet-B",
+			"desc": "Eleni"
+		},
+ 		"google_swathi": {
+			"country": "IN",
+			"language": "hi",
+			"gender": "F",
+			"source": "pollypluswavenet",
+			"arg": "hi-IN-Wavenet-A",
+			"desc": "Swathi"
+		},
+ 		"google_karan": {
+			"country": "IN",
+			"language": "hi",
+			"gender": "M",
+			"source": "pollypluswavenet",
+			"arg": "hi-IN-Wavenet-B",
+			"desc": "Karan"
+		},
+ 		"google_flora": {
+			"country": "HU",
+			"language": "hu",
+			"gender": "F",
+			"source": "pollypluswavenet",
+			"arg": "hu-HU-Wavenet-B",
+			"desc": "Flora"
+		},
+ 		"google_putri": {
+			"country": "ID",
+			"language": "id",
+			"gender": "F",
+			"source": "pollypluswavenet",
+			"arg": "id-ID-Wavenet-A",
+			"desc": "Putri"
+		},
+ 		"google_bintang": {
+			"country": "ID",
+			"language": "id",
+			"gender": "M",
+			"source": "pollypluswavenet",
+			"arg": "id-ID-Wavenet-C",
+			"desc": "Bintang"
+		},
+ 		"google_bianca": {
+			"country": "IT",
+			"language": "it",
+			"gender": "F",
+			"source": "pollypluswavenet",
+			"arg": "it-IT-Wavenet-E",
+			"desc": "Bianca (Google)"
+		},
+ 		"google_alessandro": {
+			"country": "IT",
+			"language": "it",
+			"gender": "M",
+			"source": "pollypluswavenet",
+			"arg": "it-IT-Wavenet-F",
+			"desc": "Alessandro"
+		},
+ 		"google_himari": {
+			"country": "JP",
+			"language": "ja",
+			"gender": "F",
+			"source": "pollypluswavenet",
+			"arg": "ja-JP-Wavenet-A",
+			"desc": "Himari"
+		},
+ 		"google_kaito": {
+			"country": "JP",
+			"language": "ja",
+			"gender": "M",
+			"source": "pollypluswavenet",
+			"arg": "ja-JP-Wavenet-C",
+			"desc": "Kaito"
+		},
+ 		"google_dagrun": {
+			"country": "no",
+			"language": "no",
+			"gender": "F",
+			"source": "pollypluswavenet",
+			"arg": "nb-NO-Wavenet-F",
+			"desc": "Dagrun"
+		},
+ 		"google_lars": {
+			"country": "no",
+			"language": "no",
+			"gender": "M",
+			"source": "pollypluswavenet",
+			"arg": "nb-NO-Wavenet-G",
+			"desc": "Lars"
+		},
+ 		"google_danota": {
+			"country": "PL",
+			"language": "pl",
+			"gender": "F",
+			"source": "pollypluswavenet",
+			"arg": "pl-PL-Wavenet-F",
+			"desc": "Danota"
+		},
+ 		"google_wojciech": {
+			"country": "PL",
+			"language": "pl",
+			"gender": "M",
+			"source": "pollypluswavenet",
+			"arg": "pl-PL-Wavenet-G",
+			"desc": "Wojciech"
+		},
+ 		"google_ana": {
+			"country": "BR",
+			"language": "pt",
+			"gender": "F",
+			"source": "pollypluswavenet",
+			"arg": "pt-BR-Wavenet-A",
+			"desc": "Ana"
+		},
+ 		"google_antonio": {
+			"country": "BR",
+			"language": "pt",
+			"gender": "M",
+			"source": "pollypluswavenet",
+			"arg": "pt-BR-Wavenet-B",
+			"desc": "Antonio"
+		},
+ 		"google_leonor": {
+			"country": "PT",
+			"language": "pt",
+			"gender": "F",
+			"source": "pollypluswavenet",
+			"arg": "pt-PT-Wavenet-F",
+			"desc": "Leonor"
+		},
+ 		"google_tiago": {
+			"country": "PT",
+			"language": "pt",
+			"gender": "M",
+			"source": "pollypluswavenet",
+			"arg": "pt-PT-Wavenet-G",
+			"desc": "Tiago"
+		},
+ 		"google_eliska": {
+			"country": "SK",
+			"language": "sk",
+			"gender": "F",
+			"source": "pollypluswavenet",
+			"arg": "sk-SK-Wavenet-B",
+			"desc": "Eliska"
+		},
+ 		"google_astrid": {
+			"country": "SE",
+			"language": "sv",
+			"gender": "F",
+			"source": "pollypluswavenet",
+			"arg": "sv-SE-Wavenet-A",
+			"desc": "Astrid (Google)"
+		},
+ 		"google_gustav": {
+			"country": "SE",
+			"language": "sv",
+			"gender": "M",
+			"source": "pollypluswavenet",
+			"arg": "sv-SE-Wavenet-G",
+			"desc": "Gustav"
+		},
+ 		"google_zehra": {
+			"country": "TR",
+			"language": "tr",
+			"gender": "F",
+			"source": "pollypluswavenet",
+			"arg": "tr-TR-Wavenet-A",
+			"desc": "Zehra"
+		},
+ 		"google_eymen": {
+			"country": "TR",
+			"language": "tr",
+			"gender": "M",
+			"source": "pollypluswavenet",
+			"arg": "tr-TR-Wavenet-B",
+			"desc": "Eymen"
+		},
+ 		"google_vira": {
+			"country": "UA",
+			"language": "uk",
+			"gender": "F",
+			"source": "pollypluswavenet",
+			"arg": "uk-UA-Wavenet-B",
+			"desc": "Vira"
+		},
+ 		"google_nguyet": {
+			"country": "VN",
+			"language": "vi",
+			"gender": "F",
+			"source": "pollypluswavenet",
+			"arg": "vi-VN-Wavenet-B",
+			"desc": "Nguyet"
+		},
+ 		"google_phuong": {
+			"country": "VN",
+			"language": "vi",
+			"gender": "M",
+			"source": "pollypluswavenet",
+			"arg": "vi-VN-Wavenet-C",
+			"desc": "Phuong"
+		},
  		"google_ernesto": {
 			"country": "ES",
 			"language": "es",
@@ -5233,7 +5657,7 @@
 			"desc": "Martin"
 		},		
  		"google_jolien": {
-			"country": "NL",
+			"country": "BE",
 			"language": "nl",
 			"gender": "F",
 			"source": "pollypluswavenet",
@@ -5241,7 +5665,7 @@
 			"desc": "Jolien"
 		},
  		"google_ward": {
-			"country": "NL",
+			"country": "BE",
 			"language": "nl",
 			"gender": "M",
 			"source": "pollypluswavenet",
@@ -5302,7 +5726,7 @@
 			"gender": "F",
 			"source": "pollypluswavenet",
 			"arg": "sv-SE-Wavenet-D",
-			"desc": "Hedvig (Google)"
+			"desc": "Hedvig"
 		},
  		"google_nils": {
 			"country": "SE",
@@ -5390,7 +5814,7 @@
 			"gender": "M",
 			"source": "pollypluswavenet",
 			"arg": "en-US-Wavenet-J",
-			"desc": "Mark"
+			"desc": "Mark (Google)"
 		},
  		"google_layla": {
 			"country": "GB",
@@ -5494,7 +5918,7 @@
 			"gender": "F",
 			"source": "pollypluswavenet",
 			"arg": "ru-RU-Wavenet-E",
-			"desc": "Katerina (Google)"
+			"desc": "Katerina"
 		},
  		"google_miray": {
 			"country": "TR",
@@ -5600,6 +6024,222 @@
 			"arg": "hi-IN-Wavenet-F",
 			"desc": "Ishaan"
 		},
+ 		"google_nandini": {
+			"country": "IN",
+			"language": "bn",
+			"gender": "F",
+			"source": "pollypluswavenet",
+			"arg": "bn-IN-Wavenet-A",
+			"desc": "Nandini"
+		},
+ 		"google_sabyasachi": {
+			"country": "IN",
+			"language": "bn",
+			"gender": "M",
+			"source": "pollypluswavenet",
+			"arg": "bn-IN-Wavenet-B",
+			"desc": "Sabyasachi"
+		},
+ 		"google_purnima": {
+			"country": "IN",
+			"language": "bn",
+			"gender": "F",
+			"source": "pollypluswavenet",
+			"arg": "bn-IN-Wavenet-C",
+			"desc": "Purnima"
+		},
+ 		"google_tanmay": {
+			"country": "IN",
+			"language": "bn",
+			"gender": "M",
+			"source": "pollypluswavenet",
+			"arg": "bn-IN-Wavenet-D",
+			"desc": "Tanmay"
+		},
+ 		"google_hiral": {
+			"country": "IN",
+			"language": "gu",
+			"gender": "F",
+			"source": "pollypluswavenet",
+			"arg": "gu-IN-Wavenet-A",
+			"desc": "Hiral"
+		},
+ 		"google_kiaan": {
+			"country": "IN",
+			"language": "gu",
+			"gender": "M",
+			"source": "pollypluswavenet",
+			"arg": "gu-IN-Wavenet-B",
+			"desc": "Kiaan"
+		},
+ 		"google_priyanshi": {
+			"country": "IN",
+			"language": "gu",
+			"gender": "F",
+			"source": "pollypluswavenet",
+			"arg": "gu-IN-Wavenet-C",
+			"desc": "Priyanshi"
+		},
+ 		"google_shaurya": {
+			"country": "IN",
+			"language": "gu",
+			"gender": "M",
+			"source": "pollypluswavenet",
+			"arg": "gu-IN-Wavenet-D",
+			"desc": "Shaurya"
+		},
+ 		"google_megha": {
+			"country": "IN",
+			"language": "kn",
+			"gender": "F",
+			"source": "pollypluswavenet",
+			"arg": "kn-IN-Wavenet-A",
+			"desc": "Megha"
+		},
+ 		"google_manan": {
+			"country": "IN",
+			"language": "kn",
+			"gender": "M",
+			"source": "pollypluswavenet",
+			"arg": "kn-IN-Wavenet-B",
+			"desc": "Manan"
+		},
+ 		"google_kavya": {
+			"country": "IN",
+			"language": "kn",
+			"gender": "F",
+			"source": "pollypluswavenet",
+			"arg": "kn-IN-Wavenet-C",
+			"desc": "Kavya"
+		},
+ 		"google_varun": {
+			"country": "IN",
+			"language": "kn",
+			"gender": "M",
+			"source": "pollypluswavenet",
+			"arg": "kn-IN-Wavenet-D",
+			"desc": "Varun"
+		},
+ 		"google_jini": {
+			"country": "IN",
+			"language": "ml",
+			"gender": "F",
+			"source": "pollypluswavenet",
+			"arg": "ml-IN-Wavenet-A",
+			"desc": "Jini"
+		},
+ 		"google_appu": {
+			"country": "IN",
+			"language": "ml",
+			"gender": "M",
+			"source": "pollypluswavenet",
+			"arg": "ml-IN-Wavenet-B",
+			"desc": "Appu"
+		},
+ 		"google_thulasi": {
+			"country": "IN",
+			"language": "ml",
+			"gender": "F",
+			"source": "pollypluswavenet",
+			"arg": "ml-IN-Wavenet-C",
+			"desc": "Thulasi"
+		},
+ 		"google_kuttappan": {
+			"country": "IN",
+			"language": "ml",
+			"gender": "M",
+			"source": "pollypluswavenet",
+			"arg": "ml-IN-Wavenet-D",
+			"desc": "Kuttappan"
+		},
+ 		"google_aishwarya": {
+			"country": "IN",
+			"language": "mr",
+			"gender": "F",
+			"source": "pollypluswavenet",
+			"arg": "mr-IN-Wavenet-A",
+			"desc": "Aishwarya"
+		},
+ 		"google_reyansh": {
+			"country": "IN",
+			"language": "mr",
+			"gender": "M",
+			"source": "pollypluswavenet",
+			"arg": "mr-IN-Wavenet-B",
+			"desc": "Reyansh"
+		},
+ 		"google_vaishnavi": {
+			"country": "IN",
+			"language": "mr",
+			"gender": "F",
+			"source": "pollypluswavenet",
+			"arg": "mr-IN-Wavenet-C",
+			"desc": "Vaishnavi"
+		},
+ 		"google_sehej": {
+			"country": "IN",
+			"language": "pa",
+			"gender": "F",
+			"source": "pollypluswavenet",
+			"arg": "pa-IN-Wavenet-A",
+			"desc": "Sehej"
+		},
+ 		"google_vikram": {
+			"country": "IN",
+			"language": "pa",
+			"gender": "M",
+			"source": "pollypluswavenet",
+			"arg": "pa-IN-Wavenet-B",
+			"desc": "Vikram"
+		},
+ 		"google_japnoor": {
+			"country": "IN",
+			"language": "pa",
+			"gender": "F",
+			"source": "pollypluswavenet",
+			"arg": "pa-IN-Wavenet-C",
+			"desc": "Japnoor"
+		},
+ 		"google_gurnoor": {
+			"country": "IN",
+			"language": "pa",
+			"gender": "M",
+			"source": "pollypluswavenet",
+			"arg": "pa-IN-Wavenet-D",
+			"desc": "Gurnoor"
+		},
+ 		"google_abirami": {
+			"country": "IN",
+			"language": "ta",
+			"gender": "F",
+			"source": "pollypluswavenet",
+			"arg": "ta-IN-Wavenet-A",
+			"desc": "Abirami"
+		},
+ 		"google_mithran": {
+			"country": "IN",
+			"language": "ta",
+			"gender": "M",
+			"source": "pollypluswavenet",
+			"arg": "ta-IN-Wavenet-B",
+			"desc": "Mithran"
+		},
+ 		"google_yazhini": {
+			"country": "IN",
+			"language": "ta",
+			"gender": "F",
+			"source": "pollypluswavenet",
+			"arg": "ta-IN-Wavenet-C",
+			"desc": "Yazhini"
+		},
+ 		"google_iniyan": {
+			"country": "IN",
+			"language": "ta",
+			"gender": "M",
+			"source": "pollypluswavenet",
+			"arg": "ta-IN-Wavenet-D",
+			"desc": "Iniyan"
+		},
  		"google_budi": {
 			"country": "ID",
 			"language": "id",
@@ -5615,6 +6255,70 @@
 			"source": "pollypluswavenet",
 			"arg": "id-ID-Wavenet-D",
 			"desc": "Anisa"
+		},
+ 		"google_fatimah": {
+			"country": "MY",
+			"language": "ms",
+			"gender": "F",
+			"source": "pollypluswavenet",
+			"arg": "ms-MY-Wavenet-A",
+			"desc": "Fatimah"
+		},
+ 		"google_zikri": {
+			"country": "MY",
+			"language": "ms",
+			"gender": "M",
+			"source": "pollypluswavenet",
+			"arg": "ms-MY-Wavenet-B",
+			"desc": "Zikri"
+		},
+ 		"google_khadijah": {
+			"country": "MY",
+			"language": "ms",
+			"gender": "F",
+			"source": "pollypluswavenet",
+			"arg": "ms-MY-Wavenet-C",
+			"desc": "Khadijah"
+		},
+ 		"google_farhan": {
+			"country": "MY",
+			"language": "ms",
+			"gender": "M",
+			"source": "pollypluswavenet",
+			"arg": "ms-MY-Wavenet-D",
+			"desc": "Farhan"
+		},
+ 		"google_shira": {
+			"country": "IL",
+			"language": "he",
+			"gender": "F",
+			"source": "pollypluswavenet",
+			"arg": "he-IL-Wavenet-A",
+			"desc": "Shira"
+		},
+ 		"google_binyamin": {
+			"country": "IL",
+			"language": "he",
+			"gender": "M",
+			"source": "pollypluswavenet",
+			"arg": "he-IL-Wavenet-B",
+			"desc": "Binyamin"
+		},
+ 		"google_avigail": {
+			"country": "IL",
+			"language": "he",
+			"gender": "F",
+			"source": "pollypluswavenet",
+			"arg": "he-IL-Wavenet-C",
+			"desc": "Avigail"
+		},
+ 		"google_elijah": {
+			"country": "IL",
+			"language": "he",
+			"gender": "M",
+			"source": "pollypluswavenet",
+			"arg": "he-IL-Wavenet-D",
+			"desc": "Elijah"
 		},
  		"google_eiko": {
 			"country": "JP",
@@ -5665,12 +6369,12 @@
 			"desc": "Mingli"
 		},
  		"google_xin-de": {
-			"country": "TW",
+			"country": "CN",
 			"language": "zh",
 			"gender": "M",
 			"source": "pollypluswavenet",
 			"arg": "cmn-TW-Wavenet-C",
-			"desc": "Xin-De"
+			"desc": "Xin-De (Taiwan)"
 		},
  		"google_linh": {
 			"country": "VN",

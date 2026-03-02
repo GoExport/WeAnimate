@@ -14258,7 +14258,7 @@
 		<rotation>0</rotation>
 	</prop>
 </compositebg>
-	<compositebg id="ncc_stp01" name="St. patrick's day" enable="Y" default="N" thumb="ncc_stp01.jpg" display_order="608" is_premium="Y" money="0" sharing="0" aid="12330">
+	<compositebg id="ncc_stp01" name="St. Patrick's day" enable="Y" default="N" thumb="ncc_stp01.jpg" display_order="608" is_premium="Y" money="0" sharing="0" aid="12330">
 	<bg id="ncc_stp01_BG426" index="0">
 		<file>common.ncc_hilltop_bg.swf</file>
 		<color r="ccColorA">16777215</color>
@@ -14430,7 +14430,7 @@
 		<rotation>0</rotation>
 	</prop>
 </compositebg>
-	<compositebg id="ncc_stp02" name="St. patrick's day" enable="Y" default="N" thumb="ncc_stp02.jpg" display_order="609" is_premium="Y" money="0" sharing="0" aid="12331">
+	<compositebg id="ncc_stp02" name="St. Patrick's day" enable="Y" default="N" thumb="ncc_stp02.jpg" display_order="609" is_premium="Y" money="0" sharing="0" aid="12331">
 	<bg id="ncc_stp02_cbg_beach01_BG1" index="0">
 		<file>common.ncc_low.swf</file>
 		<color r="colorA">6737151</color>
@@ -17491,7 +17491,7 @@
 		<state id="msp_ncc_02cup_ncc_02cup01.swf" name="Full" enable="Y" default="Y"/>
 		<state id="msp_ncc_02cup_ncc_02cup02.swf" name="Empty" enable="Y"/>
 	</prop>
-	<prop id="ncc_stp_banner01.swf" name="St. patrick day banner" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="Y" aid="12252" money="0" sharing="0"/>
+	<prop id="ncc_stp_banner01.swf" name="St. Patrick day banner" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="Y" aid="12252" money="0" sharing="0"/>
 	<prop id="ncc_stp_goldcoins.swf" name="Stack of coins" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="12253" money="0" sharing="0"/>
 	<prop id="msp_stp_pot" name="Cooking pot" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_stp_pot_ncc_stp_pot02.swf" enable="Y" is_premium="Y" aid="12254" money="0" sharing="0">
 		<state id="msp_stp_pot_ncc_stp_pot01.swf" name="Closed" enable="Y"/>
@@ -19305,8 +19305,8 @@
 	<sound id="playful_navigation_05.mp3" name="FX - Clicker down" downloadtype="progressive" subtype="soundeffect" duration="575" enable="Y" is_premium="N" aid="31427" money="0" sharing="0"/>
 	<sound id="playful_navigation_06.mp3" name="FX - Guiro" downloadtype="progressive" subtype="soundeffect" duration="731" enable="Y" is_premium="N" aid="31428" money="0" sharing="0"/>
 	<sound id="playful_navigation_09.mp3" name="FX - Ding" downloadtype="progressive" subtype="soundeffect" duration="731" enable="Y" is_premium="N" aid="31429" money="0" sharing="0"/>
-	<sound id="pop_01a.mp3" name="FX - Pop - short" downloadtype="progressive" subtype="soundeffect" duration="313" enable="Y" is_premium="N" aid="31430" money="0" sharing="0"/>
-	<sound id="pop_02a.mp3" name="FX - Pop - open" downloadtype="progressive" subtype="soundeffect" duration="313" enable="Y" is_premium="N" aid="31431" money="0" sharing="0"/>
+	<sound id="pop_01a.mp3" name="FX - Short pop" downloadtype="progressive" subtype="soundeffect" duration="313" enable="Y" is_premium="N" aid="31430" money="0" sharing="0"/>
+	<sound id="pop_02a.mp3" name="FX - Open pop" downloadtype="progressive" subtype="soundeffect" duration="313" enable="Y" is_premium="N" aid="31431" money="0" sharing="0"/>
 	<sound id="slot_machine_win_jackpot_03.mp3" name="FX - Jackpot" downloadtype="progressive" subtype="soundeffect" duration="30720" enable="Y" is_premium="N" aid="31432" money="0" sharing="0"/>
 	<sound id="subtle_tech_interface_17.mp3" name="FX - Select" downloadtype="progressive" subtype="soundeffect" duration="287" enable="Y" is_premium="N" aid="31433" money="0" sharing="0"/>
 	<sound id="talk_show_audience_laughter_08.mp3" name="FX - Audience laughter short" downloadtype="progressive" subtype="soundeffect" duration="3709" enable="Y" is_premium="N" aid="31434" money="0" sharing="0"/>
@@ -19699,17 +19699,17 @@
 	<effect id="snow01.swf" type="ANIME" resize="false" move="false" name="Snow" enable="Y" is_premium="N" aid="3442" money="0" sharing="0" display_order="34"/>
 	<effect id="hyper_snow.swf" type="ANIME" resize="false" move="false" name="Hyper snow" enable="Y" is_premium="N" aid="3441" money="0" sharing="0" display_order="35"/>
 	<effect id="lightening.swf" type="ANIME" resize="false" move="false" name="Lightning" enable="Y" is_premium="N" aid="3439" money="0" sharing="0" display_order="37"/>
-	<effect id="fire.swf" type="ANIME" resize="false" move="false" name="Bbq" enable="Y" is_premium="N" aid="3438" money="0" sharing="0" display_order="38"/>
+	<effect id="fire.swf" type="ANIME" resize="false" move="false" name="BBQ" enable="Y" is_premium="N" aid="3438" money="0" sharing="0" display_order="38"/>
 	<effect id="firespring" x="0" y="0" w="550" h="354" rotate="0" type="FIRESPRING" resize="false" move="false" name="Fire spring" enable="Y" is_premium="N" aid="3437" money="0" sharing="0" display_order="39"/>
 	<effect id="firework" x="0" y="0" w="550" h="354" rotate="0" type="FIREWORK" resize="false" move="false" name="Firework" enable="Y" is_premium="N" aid="3436" money="0" sharing="0" display_order="40"/>
 	<effect id="ncc_fx_06.swf" type="ANIME" resize="false" move="false" name="Spotlight" enable="Y" is_premium="N" aid="12364" money="0" sharing="0" display_order="41"/>
 	<effect id="ncc_fx_07.swf" type="ANIME" resize="false" move="false" name="Focus" enable="Y" is_premium="N" aid="12365" money="0" sharing="0" display_order="42"/>
 	<effect id="ncc_fx_camera.swf" type="ANIME" resize="false" move="false" name="Camera" enable="Y" is_premium="N" aid="12469" money="0" sharing="0" display_order="43"/>
-	<effect id="ncc_fx_camera_shoot2.swf" type="ANIME" resize="false" move="false" name="Camera - take picture" enable="Y" is_premium="N" aid="12470" money="0" sharing="0" display_order="44"/>
+	<effect id="ncc_fx_camera_shoot2.swf" type="ANIME" resize="false" move="false" name="Camera - Take picture" enable="Y" is_premium="N" aid="12470" money="0" sharing="0" display_order="44"/>
 	<effect id="ncc_fx_camera2.swf" type="ANIME" resize="false" move="false" name="Digital camera" enable="Y" is_premium="N" aid="12471" money="0" sharing="0" display_order="45"/>
 	<effect id="ncc_fx_nightvision.swf" type="ANIME" resize="false" move="false" name="Night vision goggles" enable="Y" is_premium="N" aid="12472" money="0" sharing="0" display_order="46"/>
 	<effect id="ncc_fx_sniper.swf" type="ANIME" resize="false" move="false" name="Target" enable="Y" is_premium="N" aid="12473" money="0" sharing="0" display_order="47"/>
-	<effect id="ncc_fx_sniper_fire.swf" type="ANIME" resize="false" move="false" name="Target - shoot" enable="Y" is_premium="N" aid="12474" money="0" sharing="0" display_order="48"/>
+	<effect id="ncc_fx_sniper_fire.swf" type="ANIME" resize="false" move="false" name="Target - Shoot" enable="Y" is_premium="N" aid="12474" money="0" sharing="0" display_order="48"/>
 	<effect id="ncc_fx_telescope.swf" type="ANIME" resize="false" move="false" name="Binoculars" enable="Y" is_premium="N" aid="12475" money="0" sharing="0" display_order="49"/>
 	<effect id="ncc_fight04.swf" type="ANIME" resize="false" move="false" name="You lose" enable="Y" is_premium="N" aid="12343" money="0" sharing="0" display_order="101"/>
 	<effect id="ncc_fight03.swf" type="ANIME" resize="false" move="false" name="You win" enable="Y" is_premium="N" aid="12342" money="0" sharing="0" display_order="102"/>
@@ -19719,14 +19719,14 @@
 	<effect id="ncc_transition02.swf" type="ANIME" resize="false" move="false" name="Black bars out" enable="Y" is_premium="N" aid="12226" money="0" sharing="0" display_order="202"/>
 	<effect id="ncc_opening01.swf" type="ANIME" resize="false" move="false" name="Opening" enable="Y" is_premium="N" aid="12332" money="0" sharing="0" display_order="203"/>
 	<effect id="ncc_opening01b.swf" type="ANIME" resize="false" move="false" name="Ending" enable="Y" is_premium="N" aid="12344" money="0" sharing="0" display_order="204"/>
-	<effect id="ncc_opening02.swf" type="ANIME" resize="false" move="false" name="Metal doors - opening" enable="Y" is_premium="N" aid="12333" money="0" sharing="0" display_order="205"/>
+	<effect id="ncc_opening02.swf" type="ANIME" resize="false" move="false" name="Metal doors - Opening" enable="Y" is_premium="N" aid="12333" money="0" sharing="0" display_order="205"/>
 	<effect id="ncc_ending02.swf" type="ANIME" resize="false" move="false" name="Metal doors - Game over" enable="Y" is_premium="N" aid="12334" money="0" sharing="0" display_order="206"/>
-	<effect id="ncc_ending02b.swf" type="ANIME" resize="false" move="false" name="Metal doors - closing" enable="Y" is_premium="N" aid="12335" money="0" sharing="0" display_order="207"/>
+	<effect id="ncc_ending02b.swf" type="ANIME" resize="false" move="false" name="Metal doors - Closing" enable="Y" is_premium="N" aid="12335" money="0" sharing="0" display_order="207"/>
 	<effect id="fadeInEx" x="0" y="0" w="550" h="354" rotate="0" type="FADING" resize="false" move="false" name="Fade in" enable="Y" isIn="true" is_premium="N" money="0" sharing="0" aid="9816" display_order="1001"/>
 	<effect id="fadeOutEx" x="0" y="0" w="550" h="354" rotate="0" type="FADING" resize="false" move="false" name="Fade out" enable="Y" isOut="true" is_premium="N" money="0" sharing="0" aid="9817" display_order="1002"/>
 	<effect id="circle_fade_out.swf" type="ANIME" resize="false" move="false" name="Circle fade out" enable="Y" is_premium="N" aid="3453" money="0" sharing="0" display_order="1002"/>
-	<effect id="ncc_transition03.swf" type="ANIME" resize="false" move="false" name="Transition in - vertical squares" enable="Y" is_premium="N" aid="12336" money="0" sharing="0" display_order="1010"/>
-	<effect id="ncc_transition03b.swf" type="ANIME" resize="false" move="false" name="Transition out - vertical squares" enable="Y" is_premium="N" aid="12337" money="0" sharing="0" display_order="1011"/>
-	<effect id="ncc_transition04.swf" type="ANIME" resize="false" move="false" name="Transition in - horizontal squares" enable="Y" is_premium="N" aid="12338" money="0" sharing="0" display_order="1012"/>
-	<effect id="ncc_transition04b.swf" type="ANIME" resize="false" move="false" name="Transition out - horizontal squares" enable="Y" is_premium="N" aid="12339" money="0" sharing="0" display_order="1013"/>
+	<effect id="ncc_transition03.swf" type="ANIME" resize="false" move="false" name="Transition in - Vertical squares" enable="Y" is_premium="N" aid="12336" money="0" sharing="0" display_order="1010"/>
+	<effect id="ncc_transition03b.swf" type="ANIME" resize="false" move="false" name="Transition out - Vertical squares" enable="Y" is_premium="N" aid="12337" money="0" sharing="0" display_order="1011"/>
+	<effect id="ncc_transition04.swf" type="ANIME" resize="false" move="false" name="Transition in - Horizontal squares" enable="Y" is_premium="N" aid="12338" money="0" sharing="0" display_order="1012"/>
+	<effect id="ncc_transition04b.swf" type="ANIME" resize="false" move="false" name="Transition out - Horizontal squares" enable="Y" is_premium="N" aid="12339" money="0" sharing="0" display_order="1013"/>
 </theme>

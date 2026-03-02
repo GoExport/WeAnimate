@@ -262,7 +262,7 @@
 			"gender": "F",
 			"source": "acapela",
 			"arg": "Victoria22k_HQ",
-			"desc": "Victoria"
+			"desc": "Victoria (Acapela)"
 		},
 		"deepa22k": {
 			"country": "IN",
@@ -318,7 +318,7 @@
 			"gender": "F",
 			"source": "acapela",
 			"arg": "Amelia22k_HQ",
-			"desc": "Amelia"
+			"desc": "Amelia (Acapela)"
 		},
 		"ameliateen22k": {
 			"country": "GB",
@@ -374,7 +374,7 @@
 			"gender": "F",
 			"source": "acapela",
 			"arg": "ChloeTeen22k_HQ",
-			"desc": "Chloe (Acapela, teen)"
+			"desc": "Chloe (Acapela teen)"
 		},
 		"graham22k": {
 			"country": "GB",
@@ -750,7 +750,7 @@
 			"gender": "M",
 			"source": "acapela",
 			"arg": "Will22k_HQ",
-			"desc": "Will"
+			"desc": "Will (Acapela)"
 		},
 		"willbadguy22k": {
 			"country": "US",
@@ -998,7 +998,7 @@
 			"gender": "F",
 			"source": "acapela",
 			"arg": "Claire22k_HQ",
-			"desc": "Claire"
+			"desc": "Claire (Acapela)"
 		},
 		"constance22k": {
 			"country": "FR",
@@ -1822,7 +1822,7 @@
 			"gender": "F",
 			"source": "cereproc",
 			"arg": "Claire",
-			"desc": "Claire"
+			"desc": "Claire (Cereproc)"
 		},
 		"daria1": {
 			"country": "ro",
@@ -1870,7 +1870,7 @@
 			"gender": "F",
 			"source": "cereproc",
 			"arg": "Eva",
-			"desc": "Eva"
+			"desc": "Eva (Cereproc)"
 		},
 		"ffion1": {
 			"country": "GB",
@@ -1998,7 +1998,7 @@
 			"gender": "M",
 			"source": "cereproc",
 			"arg": "Jack",
-			"desc": "Jack"
+			"desc": "Jack (Cereproc)"
 		},
 		"jeff1": {
 			"country": "US",
@@ -2174,7 +2174,7 @@
 			"gender": "F",
 			"source": "cereproc",
 			"arg": "Nicole",
-			"desc": "Nicole"
+			"desc": "Nicole (Cereproc)"
 		},
 		"nicoletta1": {
 			"country": "IT",
@@ -3294,7 +3294,7 @@
 			"gender": "F",
 			"arg": [2, 1, 10],
 			"source": "vocalware",
-			"desc": "Grace"
+			"desc": "Grace (Vocalware)"
 		},
 		"oc_veena": {
 			"country": "IN",
@@ -3726,7 +3726,7 @@
 			"gender": "M",
 			"arg": [3, 1, 7],
 			"source": "vocalware",
-			"desc": "James"
+			"desc": "James (Vocalware)"
 		},
 		"oc_julie": {
 			"country": "US",
@@ -6614,7 +6614,7 @@
 			"gender": "M",
 			"source": "svox",
 			"arg": "usenglishmale",
-			"desc": "Michael"
+			"desc": "Michael (SVOX)"
 		},
 		"grace2": {
 			"country": "US",
@@ -6622,7 +6622,7 @@
 			"gender": "F",
 			"source": "svox",
 			"arg": "usenglishfemale",
-			"desc": "Grace"
+			"desc": "Grace (SVOX)"
 		},
 		"obamasvox": {
 			"country": "US",
@@ -6646,7 +6646,7 @@
 			"gender": "F",
 			"source": "svox",
 			"arg": "ukenglishfemale",
-			"desc": "Victoria"
+			"desc": "Victoria (SVOX)"
 		},
 		"oliver2": {
 			"country": "GB",
@@ -6854,7 +6854,7 @@
 			"gender": "F",
 			"source": "svox",
 			"arg": "eurpolishfemale",
-			"desc": "Eva"
+			"desc": "Eva (SVOX)"
 		},
   		"bianca3": {
 			"country": "IT",
@@ -8046,7 +8046,7 @@
             "gender": "F",
             "arg": "BV027_streaming",
             "source": "tiktok",
-            "desc": "Amelia"
+            "desc": "Amelia (TikTok)"
         },
         "BV028_TOBI_streaming": {
             "country": "US",
@@ -9600,7 +9600,7 @@
             "source": "onecore",
 			"arg": "Microsoft Australian English (James)",
 			"lang": "en-AU",
-			"desc": "James"
+			"desc": "James (Onecore)"
 		},
 		"hayley": {
 			"country": "AU",
@@ -9627,7 +9627,7 @@
             "source": "onecore",
 			"arg": "Microsoft Austrian German (Michael)",
 			"lang": "de-AT",
-			"desc": "Michael"
+			"desc": "Michael (Onecore)"
 		},
 		"bart": {
 			"country": "BE",
@@ -10436,7 +10436,7 @@
             "source": "onecore",
 			"arg": "Microsoft US English (David)",
 			"lang": "en-US",
-			"desc": "David (Microsoft)"
+			"desc": "Microsoft David"
 		},
 		"mark": {
 			"country": "US",
@@ -10657,7 +10657,7 @@
 			"gender": "F",
 			"source": "watson",
 			"arg": "en-US_AllisonExpressive",
-			"desc": "Allison (Watson, expressive)"
+			"desc": "Allison (Watson expressive)"
 		},
 		"en-US_EllieNatural": {
 			"country": "US",
@@ -10705,7 +10705,7 @@
 			"gender": "M",
 			"source": "watson",
 			"arg": "en-US_HenryV3Voice",
-			"desc": "Henry"
+			"desc": "Henry (Watson)"
 		},
 		"en-US_JacksonNatural": {
 			"country": "US",
@@ -10753,7 +10753,7 @@
 			"gender": "M",
 			"source": "watson",
 			"arg": "en-US_MichaelExpressive",
-			"desc": "Michael"
+			"desc": "Michael (Watson expressive)"
 		},
 		"en-US_OliviaV3Voice": {
 			"country": "US",
@@ -10785,7 +10785,7 @@
 			"gender": "M",
 			"source": "watson",
 			"arg": "en-AU_JackExpressive",
-			"desc": "Jack (Watson)"
+			"desc": "Jack (Watson expressive)"
 		},	
 		"en-AU_JackNatural": {
 			"country": "AU",
@@ -10793,7 +10793,7 @@
 			"gender": "M",
 			"source": "watson",
 			"arg": "en-AU_JackNatural",
-			"desc": "Jack"
+			"desc": "Jack (Watson)"
 		},	
 		"en-AU_HeidiExpressive": {
 			"country": "AU",
@@ -10825,7 +10825,7 @@
 			"gender": "M",
 			"source": "watson",
 			"arg": "en-GB_GeorgeExpressive",
-			"desc": "George"
+			"desc": "George (Watson expressive)"
 		},			
 		"en-GB_GeorgeNatural": {
 			"country": "GB",

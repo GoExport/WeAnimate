@@ -7569,45 +7569,61 @@
 			"desc": "Alicigim"
 		},
         "tiktok_en_us_001": {
-            "country": "US",
-            "language": "en",
-            "gender": "F",
-            "arg": "en_us_001",
-            "source": "tiktok",
-            "desc": "Jessie"
-        },
-        "tiktok_en_us_006": {
-            "country": "US",
-            "language": "en",
-            "gender": "M",
-            "arg": "en_us_006",
-            "source": "tiktok",
-            "desc": "Joey (TikTok)"
-        },
-        "tiktok_en_us_007": {
-            "country": "US",
-            "language": "en",
-            "gender": "M",
-            "arg": "en_us_007",
-            "source": "tiktok",
-            "desc": "Professor"
-        },
-        "tiktok_en_us_009": {
-            "country": "US",
-            "language": "en",
-            "gender": "M",
-            "arg": "en_us_009",
-            "source": "tiktok",
-            "desc": "Scientist"
-        },
-        "tiktok_en_us_010": {
-            "country": "US",
-            "language": "en",
-            "gender": "M",
-            "arg": "en_us_010",
-            "source": "tiktok",
-            "desc": "Confidence"
-        },
+			"country": "US",
+			"language": "en",
+			"gender": "F",
+			"arg": "en_us_001",
+			"source": "tiktok",
+			"desc": "Jessie"
+		},
+		"tiktok_en_us_006": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"arg": "en_us_006",
+			"source": "tiktok",
+			"desc": "Joey (TikTok)"
+		},
+		"tiktok_en_us_007": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"arg": "en_us_007",
+			"source": "tiktok",
+			"desc": "Professor"
+		},
+		"tiktok_en_us_009": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"arg": "en_us_009",
+			"source": "tiktok",
+			"desc": "Scientist"
+		},
+		"tiktok_en_us_010": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"arg": "en_us_010",
+			"source": "tiktok",
+			"desc": "Confidence"
+		},
+		"tiktok_en_uk_001": {
+			"country": "GB",
+			"language": "en",
+			"gender": "M",
+			"arg": "en_uk_001",
+			"source": "tiktok",
+			"desc": "Narrator"
+		},
+		"tiktok_en_uk_003": {
+			"country": "GB",
+			"language": "en",
+			"gender": "M",
+			"arg": "en_uk_003",
+			"source": "tiktok",
+			"desc": "Reginald"
+		},
         "en_male_bob": {
             "country": "GB",
             "language": "en",
@@ -7616,13 +7632,45 @@
             "source": "tiktok",
             "desc": "Bob"
         },
-        "en_male_narration": {
-            "country": "GB",
+		"tiktok_en_au_001": {
+			"country": "AU",
+			"language": "en",
+			"gender": "F",
+			"arg": "en_au_001",
+			"source": "tiktok",
+			"desc": "Metro"
+		},
+		"tiktok_en_au_002": {
+			"country": "AU",
+			"language": "en",
+			"gender": "M",
+			"arg": "en_au_002",
+			"source": "tiktok",
+			"desc": "Smooth"
+		},
+        "en_male_adam": {
+            "country": "AU",
             "language": "en",
             "gender": "M",
-            "arg": "en_male_narration",
+            "arg": "en_male_adam",
             "source": "tiktok",
-            "desc": "Storyteller"
+            "desc": "Adam (TikTok)"
+        },
+        "en_female_sarah": {
+            "country": "AU",
+            "language": "en",
+            "gender": "F",
+            "arg": "en_female_sarah",
+            "source": "tiktok",
+            "desc": "Sarah (TikTok)"
+        },
+        "en_male_dryw": {
+            "country": "AU",
+            "language": "en",
+            "gender": "M",
+            "arg": "en_male_dryw",
+            "source": "tiktok",
+            "desc": "Dryw"
         },
         "en_male_funny": {
             "country": "GB",
@@ -7640,13 +7688,37 @@
             "source": "tiktok",
             "desc": "Peaceful"
         },
+        "en_male_mason": {
+            "country": "GB",
+            "language": "en",
+            "gender": "M",
+            "arg": "en_male_mason",
+            "source": "tiktok",
+            "desc": "Mason"
+        },		
+        "en_male_ryan": {
+            "country": "GB",
+            "language": "en",
+            "gender": "M",
+            "arg": "en_male_ryan",
+            "source": "tiktok",
+            "desc": "Ryan (TikTok)"
+        },		
+        "en_male_smith": {
+            "country": "GB",
+            "language": "en",
+            "gender": "M",
+            "arg": "en_male_smith",
+            "source": "tiktok",
+            "desc": "Smith"
+        },
         "en_male_cody": {
             "country": "US",
             "language": "en",
             "gender": "M",
             "arg": "en_male_cody",
             "source": "tiktok",
-            "desc": "Serious"
+            "desc": "Cody"
         },
         "en_female_samc": {
             "country": "US",
@@ -7654,7 +7726,7 @@
             "gender": "F",
             "arg": "en_female_samc",
             "source": "tiktok",
-            "desc": "Empathetic"
+            "desc": "Sam C"
         },
         "en_male_jarvis": {
             "country": "US",
@@ -7662,7 +7734,7 @@
             "gender": "M",
             "arg": "en_male_jarvis",
             "source": "tiktok",
-            "desc": "Alfred"
+            "desc": "Jarvis"
         },
         "en_male_santa_narration": {
             "country": "US",
@@ -7670,7 +7742,7 @@
             "gender": "M",
             "arg": "en_male_santa_narration",
             "source": "tiktok",
-            "desc": "Author"
+            "desc": "Santa (Narration)"
         },
         "en_female_betty": {
             "country": "US",
@@ -7678,7 +7750,7 @@
             "gender": "F",
             "arg": "en_female_betty",
             "source": "tiktok",
-            "desc": "Bae"
+            "desc": "Betty"
         },
         "en_female_makeup": {
             "country": "US",
@@ -7686,7 +7758,7 @@
             "gender": "F",
             "arg": "en_female_makeup",
             "source": "tiktok",
-            "desc": "Beauty guru"
+            "desc": "Make-up"
         },
         "en_female_richgirl": {
             "country": "US",
@@ -7694,7 +7766,7 @@
             "gender": "F",
             "arg": "en_female_richgirl",
             "source": "tiktok",
-            "desc": "Bestie"
+            "desc": "Rich girl"
         },
         "en_female_amie": {
             "country": "US",
@@ -7702,7 +7774,7 @@
             "gender": "F",
             "arg": "en_female_amie",
             "source": "tiktok",
-            "desc": "Billy"
+            "desc": "Amie"
         },
         "en_male_jason": {
             "country": "US",
@@ -7710,7 +7782,7 @@
             "gender": "M",
             "arg": "en_male_jason",
             "source": "tiktok",
-            "desc": "Captain"
+            "desc": "Jason"
         },
         "en_male_chris": {
             "country": "US",
@@ -7726,7 +7798,7 @@
             "gender": "M",
             "arg": "en_male_miki",
             "source": "tiktok",
-            "desc": "Comedian"
+            "desc": "Miki"
         },
         "en_male_cupid": {
             "country": "US",
@@ -7742,7 +7814,7 @@
             "gender": "F",
             "arg": "en_female_shenna",
             "source": "tiktok",
-            "desc": "Debutante"
+            "desc": "Shenna"
         },
         "en_male_whitney": {
             "country": "US",
@@ -7750,7 +7822,7 @@
             "gender": "M",
             "arg": "en_male_whitney",
             "source": "tiktok",
-            "desc": "Designer"
+            "desc": "Whitney"
         },
         "en_female_doll": {
             "country": "US",
@@ -7766,7 +7838,7 @@
             "gender": "M",
             "arg": "en_male_adam_elf",
             "source": "tiktok",
-            "desc": "Elf"
+            "desc": "Adam the elf"
         },
         "en_male_adrian": {
             "country": "GB",
@@ -7774,7 +7846,7 @@
             "gender": "M",
             "arg": "en_male_adrian",
             "source": "tiktok",
-            "desc": "Foodie"
+            "desc": "Adrian"
         },
         "en_male_jomboy": {
             "country": "US",
@@ -7782,7 +7854,7 @@
             "gender": "M",
             "arg": "en_male_jomboy",
             "source": "tiktok",
-            "desc": "Game on"
+            "desc": "Jomboy"
         },
         "en_female_ghost": {
             "country": "US",
@@ -7806,7 +7878,7 @@
             "gender": "M",
             "arg": "en_male_david_gingerman",
             "source": "tiktok",
-            "desc": "Gingerchime"
+            "desc": "David the gingerman"
         },
         "en_female_grandma": {
             "country": "US",
@@ -7814,7 +7886,7 @@
             "gender": "F",
             "arg": "en_female_grandma",
             "source": "tiktok",
-            "desc": "Granny"
+            "desc": "Grandma"
         },
         "en_male_ukneighbor": {
             "country": "GB",
@@ -7822,7 +7894,7 @@
             "gender": "M",
             "arg": "en_male_ukneighbor",
             "source": "tiktok",
-            "desc": "Lord Cringe"
+            "desc": "British neighbor"
         },
         "en_male_wizard": {
             "country": "US",
@@ -7830,7 +7902,7 @@
             "gender": "M",
             "arg": "en_male_wizard",
             "source": "tiktok",
-            "desc": "Magician"
+            "desc": "Wizard"
         },
         "en_male_trevor": {
             "country": "US",
@@ -7838,7 +7910,7 @@
             "gender": "M",
             "arg": "en_male_trevor",
             "source": "tiktok",
-            "desc": "Marty"
+            "desc": "Trevor"
         },
         "en_male_deadpool": {
             "country": "US",
@@ -7846,7 +7918,7 @@
             "gender": "M",
             "arg": "en_male_deadpool",
             "source": "tiktok",
-            "desc": "Mr. GoodGuy"
+            "desc": "Deadpool"
         },
         "en_male_ukbutler": {
             "country": "GB",
@@ -7854,7 +7926,7 @@
             "gender": "M",
             "arg": "en_male_ukbutler",
             "source": "tiktok",
-            "desc": "Mr. Meticulous"
+            "desc": "British butler"
         },
         "en_male_pirate": {
             "country": "US",
@@ -7878,7 +7950,7 @@
             "gender": "M",
             "arg": "en_male_santa_effect",
             "source": "tiktok",
-            "desc": "Santa (w/effect)"
+            "desc": "Santa (with effect)"
         },
         "en_male_corey_santa": {
             "country": "US",
@@ -7894,7 +7966,7 @@
             "gender": "M",
             "arg": "en_male_maxwell",
             "source": "tiktok",
-            "desc": "Stylist"
+            "desc": "Maxwell"
         },
         "en_female_pansino": {
             "country": "US",
@@ -7902,7 +7974,7 @@
             "gender": "F",
             "arg": "en_female_pansino",
             "source": "tiktok",
-            "desc": "Varsity"
+            "desc": "Pansino"
         },
         "en_female_erika": {
             "country": "US",
@@ -7910,7 +7982,7 @@
             "gender": "F",
             "arg": "en_female_erika",
             "source": "tiktok",
-            "desc": "Victory"
+            "desc": "Erika"
         },
         "en_female_werewolf": {
             "country": "US",
@@ -7942,7 +8014,7 @@
             "gender": "M",
             "arg": "en_male_grinch",
             "source": "tiktok",
-            "desc": "Trickster"
+            "desc": "Grinch"
         },
         "en_female_madam_leota": {
             "country": "US",
@@ -7950,7 +8022,7 @@
             "gender": "F",
             "arg": "en_female_madam_leota",
             "source": "tiktok",
-            "desc": "Madame Leota"
+            "desc": "Madam Leota"
         },
         "en_male_ashmagic": {
             "country": "AU",
@@ -7968,69 +8040,181 @@
             "source": "tiktok",
             "desc": "Olantekkers"
         },
-        "tiktok_en_uk_001": {
-            "country": "GB",
-            "language": "en",
-            "gender": "M",
-            "arg": "en_uk_001",
-            "source": "tiktok",
-            "desc": "Narrator"
-        },
-        "tiktok_en_uk_003": {
-            "country": "GB",
-            "language": "en",
-            "gender": "M",
-            "arg": "en_uk_003",
-            "source": "tiktok",
-            "desc": "UK male"
-        },
-        "tiktok_en_au_001": {
-            "country": "AU",
+        "BV027_streaming": {
+            "country": "US",
             "language": "en",
             "gender": "F",
-            "arg": "en_au_001",
+            "arg": "BV027_streaming",
             "source": "tiktok",
-            "desc": "Metro"
+            "desc": "Amelia"
         },
-        "tiktok_en_au_002": {
+        "BV028_TOBI_streaming": {
+            "country": "US",
+            "language": "en",
+            "gender": "M",
+            "arg": "BV028_TOBI_streaming",
+            "source": "tiktok",
+            "desc": "Tobi"
+        },
+        "BV029_streaming": {
+            "country": "US",
+            "language": "en",
+            "gender": "F",
+            "arg": "BV029_streaming",
+            "source": "tiktok",
+            "desc": "Candace"
+        },
+        "BV031_streaming": {
+            "country": "GB",
+            "language": "en",
+            "gender": "F",
+            "arg": "BV031_streaming",
+            "source": "tiktok",
+            "desc": "Kimmi"
+        },
+        "BV127_streaming": {
+            "country": "US",
+            "language": "en",
+            "gender": "M",
+            "arg": "BV127_streaming",
+            "source": "tiktok",
+            "desc": "Story teller"
+        },		
+        "BV502_streaming": {
+            "country": "US",
+            "language": "en",
+            "gender": "F",
+            "arg": "BV502_streaming",
+            "source": "tiktok",
+            "desc": "Aggie"
+        },
+        "BV503_streaming": {
+            "country": "US",
+            "language": "en",
+            "gender": "F",
+            "arg": "BV503_streaming",
+            "source": "tiktok",
+            "desc": "Ariana"
+        },
+        "BV504_streaming": {
+            "country": "US",
+            "language": "en",
+            "gender": "M",
+            "arg": "BV504_streaming",
+            "source": "tiktok",
+            "desc": "Jackson"
+        },	
+        "BV510_streaming": {
+            "country": "US",
+            "language": "en",
+            "gender": "M",
+            "arg": "BV510_streaming",
+            "source": "tiktok",
+            "desc": "Ted"
+        },			
+        "BV138_streaming": {
+            "country": "US",
+            "language": "en",
+            "gender": "F",
+            "arg": "BV138_streaming",
+            "source": "tiktok",
+            "desc": "Lorraine"
+        },
+        "BV511_streaming": {
+            "country": "US",
+            "language": "en",
+            "gender": "F",
+            "arg": "BV511_streaming",
+            "source": "tiktok",
+            "desc": "Ava (TikTok)"
+        },
+        "BV505_streaming": {
+            "country": "US",
+            "language": "en",
+            "gender": "F",
+            "arg": "BV505_streaming",
+            "source": "tiktok",
+            "desc": "Alicia"
+        },
+        "BV421_streaming": {
+            "country": "US",
+            "language": "en",
+            "gender": "F",
+            "arg": "BV421_streaming",
+            "source": "tiktok",
+            "desc": "Genius girl"
+        },
+        "BV506_streaming": {
+            "country": "US",
+            "language": "en",
+            "gender": "F",
+            "arg": "BV506_streaming",
+            "source": "tiktok",
+            "desc": "Lily (TikTok)"
+        },
+        "BV516_streaming": {
             "country": "AU",
             "language": "en",
             "gender": "M",
-            "arg": "en_au_002",
+            "arg": "BV516_streaming",
             "source": "tiktok",
-            "desc": "Smooth"
+            "desc": "Henry"
         },
-        "tiktok_fr_001": {
+		"tiktok_fr_001": {
+			"country": "FR",
+			"language": "fr",
+			"gender": "M",
+			"arg": "fr_001",
+			"source": "tiktok",
+			"desc": "Jean-Claude"
+		},
+		"tiktok_fr_002": {
+			"country": "FR",
+			"language": "fr",
+			"gender": "M",
+			"arg": "fr_002",
+			"source": "tiktok",
+			"desc": "Bastien"
+		},
+        "fr_male_enzo": {
             "country": "FR",
             "language": "fr",
-            "gender": "M",
-            "arg": "fr_001",
+            "gender": "F",
+            "arg": "fr_male_enzo",
             "source": "tiktok",
-            "desc": "French male 1 (TikTok)"
+            "desc": "Capucine"
         },
-        "tiktok_fr_002": {
+        "BV078_streaming": {
             "country": "FR",
             "language": "fr",
-            "gender": "M",
-            "arg": "fr_002",
+            "gender": "F",
+            "arg": "BV078_streaming",
             "source": "tiktok",
-            "desc": "French male 2 (TikTok)"
+            "desc": "Enzo"
         },
-        "tiktok_de_001": {
+		"tiktok_de_001": {
+			"country": "DE",
+			"language": "de",
+			"gender": "F",
+			"arg": "de_001",
+			"source": "tiktok",
+			"desc": "Katharina"
+		},
+		"tiktok_de_002": {
+			"country": "DE",
+			"language": "de",
+			"gender": "M",
+			"arg": "de_002",
+			"source": "tiktok",
+			"desc": "Ludwig"
+		},
+        "de_female_sophie": {
             "country": "DE",
             "language": "de",
             "gender": "F",
-            "arg": "de_001",
+            "arg": "de_female_sophie",
             "source": "tiktok",
-            "desc": "German female (TikTok)"
-        },
-        "tiktok_de_002": {
-            "country": "DE",
-            "language": "de",
-            "gender": "M",
-            "arg": "de_002",
-            "source": "tiktok",
-            "desc": "German male (TikTok)"
+            "desc": "Sophie"
         },
         "it_male_m18": {
             "country": "IT",
@@ -8038,24 +8222,32 @@
             "gender": "M",
             "arg": "it_male_m18",
             "source": "tiktok",
-            "desc": "Italian male (TikTok)"
+            "desc": "Luigi"
         },
-        "tiktok_es_002": {
-            "country": "ES",
-            "language": "es",
-            "gender": "M",
-            "arg": "es_002",
+        "BV087_streaming": {
+            "country": "RU",
+            "language": "ru",
+            "gender": "F",
+            "arg": "BV087_streaming",
             "source": "tiktok",
-            "desc": "Spanish male (TikTok)"
+            "desc": "Emiliano"
         },
-        "tiktok_es_mx_002": {
-            "country": "MX",
-            "language": "es",
-            "gender": "M",
-            "arg": "es_mx_002",
-            "source": "tiktok",
-            "desc": "Álex"
-        },
+		"tiktok_es_002": {
+			"country": "ES",
+			"language": "es",
+			"gender": "M",
+			"arg": "es_002",
+			"source": "tiktok",
+			"desc": "Homero"
+		},
+		"tiktok_es_mx_002": {
+			"country": "MX",
+			"language": "es",
+			"gender": "M",
+			"arg": "es_mx_002",
+			"source": "tiktok",
+			"desc": "Jandro"
+		},
         "es_male_m3": {
             "country": "ES",
             "language": "es",
@@ -8080,6 +8272,14 @@
             "source": "tiktok",
             "desc": "Mariana"
         },
+        "es_male_george": {
+            "country": "ES",
+            "language": "es",
+            "gender": "M",
+            "arg": "es_male_george",
+            "source": "tiktok",
+            "desc": "Jorge (TikTok)"
+        },
         "es_mx_female_supermom": {
             "country": "MX",
             "language": "es",
@@ -8088,29 +8288,53 @@
             "source": "tiktok",
             "desc": "Super mamá"
         },
-        "tiktok_br_003": {
-            "country": "BR",
-            "language": "pt",
+        "BV065_streaming": {
+            "country": "MX",
+            "language": "es",
             "gender": "F",
-            "arg": "br_003",
+            "arg": "BV065_streaming",
             "source": "tiktok",
-            "desc": "Júlia"
+            "desc": "Claudia"
         },
-        "tiktok_br_004": {
-            "country": "BR",
-            "language": "pt",
-            "gender": "F",
-            "arg": "br_004",
-            "source": "tiktok",
-            "desc": "Ana (TikTok)"
-        },
-        "tiktok_br_005": {
+		"tiktok_br_003": {
+			"country": "BR",
+			"language": "pt",
+			"gender": "F",
+			"arg": "br_003",
+			"source": "tiktok",
+			"desc": "Júlia"
+		},
+		"tiktok_br_004": {
+			"country": "BR",
+			"language": "pt",
+			"gender": "F",
+			"arg": "br_004",
+			"source": "tiktok",
+			"desc": "Ana (TikTok)"
+		},
+		"tiktok_br_005": {
+			"country": "BR",
+			"language": "pt",
+			"gender": "M",
+			"arg": "br_005",
+			"source": "tiktok",
+			"desc": "Lucas (TikTok)"
+		},
+        "BV531_streaming": {
             "country": "BR",
             "language": "pt",
             "gender": "M",
-            "arg": "br_005",
+            "arg": "BV531_streaming",
             "source": "tiktok",
-            "desc": "Lucas"
+            "desc": "Carlos"
+        },
+        "BV530_streaming": {
+            "country": "BR",
+            "language": "pt",
+            "gender": "F",
+            "arg": "BV530_streaming",
+            "source": "tiktok",
+            "desc": "Regiane"
         },
         "bp_female_ludmilla": {
             "country": "BR",
@@ -8144,6 +8368,14 @@
             "source": "tiktok",
             "desc": "Laizza"
         },
+        "pt_female_alice": {
+            "country": "PT",
+            "language": "pt",
+            "gender": "F",
+            "arg": "pt_female_alice",
+            "source": "tiktok",
+            "desc": "Carolina"
+        },
         "pt_male_bueno": {
             "country": "PT",
             "language": "pt",
@@ -8152,14 +8384,14 @@
             "source": "tiktok",
             "desc": "Galvão Bueno"
         },
-        "tiktok_id_001": {
-            "country": "ID",
-            "language": "id",
-            "gender": "F",
-            "arg": "id_001",
-            "source": "tiktok",
-            "desc": "Noor"
-        },
+		"tiktok_id_001": {
+			"country": "ID",
+			"language": "id",
+			"gender": "F",
+			"arg": "id_001",
+			"source": "tiktok",
+			"desc": "Noor"
+		},
         "id_female_icha": {
             "country": "ID",
             "language": "id",
@@ -8183,6 +8415,62 @@
             "arg": "id_male_putra",
             "source": "tiktok",
             "desc": "Putra"
+        },
+        "BV083_streaming": {
+			"country": "TR",
+			"language": "tr",
+            "gender": "M",
+            "arg": "BV083_streaming",
+            "source": "tiktok",
+            "desc": "Adahan"
+        },
+        "BV068_streaming": {
+            "country": "RU",
+            "language": "ru",
+            "gender": "F",
+            "arg": "BV068_streaming",
+            "source": "tiktok",
+            "desc": "Elizaveta"
+        },
+        "BV075_streaming": {
+			"country": "VI",
+			"language": "vi",
+            "gender": "M",
+            "arg": "BV075_streaming",
+            "source": "tiktok",
+            "desc": "Truong"
+        },
+        "BV074_streaming": {
+			"country": "VI",
+			"language": "vi",
+            "gender": "F",
+            "arg": "BV074_streaming",
+            "source": "tiktok",
+            "desc": "Huyen"
+        },
+        "BV092_streaming": {
+			"country": "MY",
+			"language": "ms",
+            "gender": "F",
+            "arg": "BV092_streaming",
+            "source": "tiktok",
+            "desc": "Siti"
+        },
+        "BV570_streaming": {
+			"country": "SA",
+			"language": "ar",
+            "gender": "M",
+            "arg": "BV570_streaming",
+            "source": "tiktok",
+            "desc": "Ismael"
+        },
+        "BV160_streaming": {
+			"country": "ID",
+			"language": "id",
+            "gender": "M",
+            "arg": "BV160_streaming",
+            "source": "tiktok",
+            "desc": "Bambang"
         },
         "zh_female_qingxin": {
             "country": "CN",
@@ -8222,7 +8510,7 @@
             "gender": "M",
             "arg": "zh_male_sunwukong_clone2",
             "source": "tiktok",
-            "desc": "Sunwukong"
+            "desc": "Sun Wukong"
         },
         "zh_male_rap": {
             "country": "CN",
@@ -8230,7 +8518,7 @@
             "gender": "M",
             "arg": "zh_male_rap",
             "source": "tiktok",
-            "desc": "Male rapper"
+            "desc": "Male rapper 1"
         },
         "zh_male_rap_bgm_00": {
             "country": "CN",
@@ -8254,7 +8542,15 @@
             "gender": "F",
             "arg": "zh_female_sichuan",
             "source": "tiktok",
-            "desc": "Sichuan"
+            "desc": "Xingxing (Sichuan)"
+        },
+        "zh_male_yuanqizhengtai": {
+            "country": "CN",
+            "language": "zh",
+            "gender": "M",
+            "arg": "zh_male_yuanqizhengtai",
+            "source": "tiktok",
+            "desc": "Yuanqizhengtai"
         },
         "zh_female_zhubo": {
             "country": "CN",
@@ -8262,7 +8558,7 @@
             "gender": "F",
             "arg": "zh_female_zhubo",
             "source": "tiktok",
-            "desc": "Zhubo (female)"
+            "desc": "Zhubo female"
         },
         "zh_male_zhubo": {
             "country": "CN",
@@ -8270,7 +8566,7 @@
             "gender": "M",
             "arg": "zh_male_zhubo",
             "source": "tiktok",
-            "desc": "Zhubo (male)"
+            "desc": "Zhubo male"
         },
         "zh_male_xiaoming": {
             "country": "CN",
@@ -8280,39 +8576,398 @@
             "source": "tiktok",
             "desc": "Xiaoming"
         },
-        
-        "tiktok_jp_001": {
-            "country": "JP",
-            "language": "ja",
+        "BV001_streaming": {
+            "country": "CN",
+            "language": "zh",
             "gender": "F",
-            "arg": "jp_001",
+            "arg": "BV001_streaming",
             "source": "tiktok",
-            "desc": "Miho"
+            "desc": "Xiao-Na"
         },
-        "tiktok_jp_003": {
-            "country": "JP",
-            "language": "ja",
-            "gender": "F",
-            "arg": "jp_003",
-            "source": "tiktok",
-            "desc": "Keiko"
-        },
-        "tiktok_jp_005": {
-            "country": "JP",
-            "language": "ja",
-            "gender": "F",
-            "arg": "jp_005",
-            "source": "tiktok",
-            "desc": "Sakura"
-        },
-        "tiktok_jp_006": {
-            "country": "JP",
-            "language": "ja",
+        "BV002_streaming": {
+            "country": "CN",
+            "language": "zh",
             "gender": "M",
-            "arg": "jp_006",
+            "arg": "BV002_streaming",
             "source": "tiktok",
-            "desc": "Naoki"
+            "desc": "Xiao-Ming"
         },
+        "BV051_streaming": {
+            "country": "CN",
+            "language": "zh",
+            "gender": "M",
+            "arg": "BV051_streaming",
+            "source": "tiktok",
+            "desc": "Xiao-Ding"
+        },
+        "BV700_streaming": {
+            "country": "CN",
+            "language": "zh",
+            "gender": "F",
+            "arg": "BV700_streaming",
+            "source": "tiktok",
+            "desc": "Cancan"
+        },
+        "BV701_streaming": {
+            "country": "CN",
+            "language": "zh",
+            "gender": "M",
+            "arg": "BV701_streaming",
+            "source": "tiktok",
+            "desc": "Qingcang"
+        },
+        "BV021_streaming": {
+            "country": "CN",
+            "language": "zh",
+            "gender": "M",
+            "arg": "BV021_streaming",
+            "source": "tiktok",
+            "desc": "Xiao-Peng"
+        },
+        "BV406_streaming": {
+            "country": "CN",
+            "language": "zh",
+            "gender": "F",
+            "arg": "BV406_streaming",
+            "source": "tiktok",
+            "desc": "Zizi"
+        },
+        "BV407_streaming": {
+            "country": "CN",
+            "language": "zh",
+            "gender": "F",
+            "arg": "BV407_streaming",
+            "source": "tiktok",
+            "desc": "Ranran"
+        },
+        "BV123_streaming": {
+            "country": "CN",
+            "language": "zh",
+            "gender": "M",
+            "arg": "BV123_streaming",
+            "source": "tiktok",
+            "desc": "Sunshine male 1"
+        },
+        "BV119_streaming": {
+            "country": "CN",
+            "language": "zh",
+            "gender": "M",
+            "arg": "BV119_streaming",
+            "source": "tiktok",
+            "desc": "Enwei"
+        },
+        "BV115_streaming": {
+            "country": "CN",
+            "language": "zh",
+            "gender": "F",
+            "arg": "BV115_streaming",
+            "source": "tiktok",
+            "desc": "Zhen-Yi"
+        },
+        "BV107_streaming": {
+            "country": "CN",
+            "language": "zh",
+            "gender": "M",
+            "arg": "BV107_streaming",
+            "source": "tiktok",
+            "desc": "Uncle Qing"
+        },
+        "BV104_streaming": {
+            "country": "CN",
+            "language": "zh",
+            "gender": "F",
+            "arg": "BV104_streaming",
+            "source": "tiktok",
+            "desc": "Tian-Qi"
+        },
+        "BV004_streaming": {
+            "country": "CN",
+            "language": "zh",
+            "gender": "M",
+            "arg": "BV004_streaming",
+            "source": "tiktok",
+            "desc": "Ming-Hao"
+        },
+        "BV102_streaming": {
+            "country": "CN",
+            "language": "zh",
+            "gender": "M",
+            "arg": "BV102_streaming",
+            "source": "tiktok",
+            "desc": "Hong-Hui"
+        },
+        "BV405_streaming": {
+            "country": "CN",
+            "language": "zh",
+            "gender": "F",
+            "arg": "BV405_streaming",
+            "source": "tiktok",
+            "desc": "Jing-Yi"
+        },
+        "BV007_streaming": {
+            "country": "CN",
+            "language": "zh",
+            "gender": "F",
+            "arg": "BV007_streaming",
+            "source": "tiktok",
+            "desc": "Shu-Ying"
+        },
+        "BV419_streaming": {
+            "country": "CN",
+            "language": "zh",
+            "gender": "M",
+            "arg": "BV419_streaming",
+            "source": "tiktok",
+            "desc": "Run-Quan"
+        },
+        "BV415_streaming": {
+            "country": "CN",
+            "language": "zh",
+            "gender": "M",
+            "arg": "BV415_streaming",
+            "source": "tiktok",
+            "desc": "Tongtong"
+        },
+        "BV008_streaming": {
+            "country": "CN",
+            "language": "zh",
+            "gender": "M",
+            "arg": "BV008_streaming",
+            "source": "tiktok",
+            "desc": "Qi-Xian"
+        },
+        "BV408_streaming": {
+            "country": "CN",
+            "language": "zh",
+            "gender": "M",
+            "arg": "BV408_streaming",
+            "source": "tiktok",
+            "desc": "Guo-Yong"
+        },
+        "BV426_streaming": {
+            "country": "CN",
+            "language": "zh",
+            "gender": "F",
+            "arg": "BV426_streaming",
+            "source": "tiktok",
+            "desc": "Ke-Xin"
+        },
+        "BV428_streaming": {
+            "country": "CN",
+            "language": "zh",
+            "gender": "F",
+            "arg": "BV428_streaming",
+            "source": "tiktok",
+            "desc": "Zi-Xuan"
+        },
+        "BV403_streaming": {
+            "country": "CN",
+            "language": "zh",
+            "gender": "F",
+            "arg": "BV403_streaming",
+            "source": "tiktok",
+            "desc": "Zi-Han"
+        },
+        "BV158_streaming": {
+            "country": "CN",
+            "language": "zh",
+            "gender": "M",
+            "arg": "BV158_streaming",
+            "source": "tiktok",
+            "desc": "Long-Fei"
+        },
+        "BR001_streaming": {
+            "country": "CN",
+            "language": "zh",
+            "gender": "F",
+            "arg": "BR001_streaming",
+            "source": "tiktok",
+            "desc": "Male rapper 4"
+        },
+        "BV411_streaming": {
+            "country": "CN",
+            "language": "zh",
+            "gender": "F",
+            "arg": "BV411_streaming",
+            "source": "tiktok",
+            "desc": "Xiaoshuai"
+        },
+        "BV418_streaming": {
+            "country": "CN",
+            "language": "zh",
+            "gender": "F",
+            "arg": "BV418_streaming",
+            "source": "tiktok",
+            "desc": "Hai-Tao"
+        },
+        "BV120_streaming": {
+            "country": "CN",
+            "language": "zh",
+            "gender": "M",
+            "arg": "BV120_streaming",
+            "source": "tiktok",
+            "desc": "Huai-Hai"
+        },
+        "BV056_streaming": {
+            "country": "CN",
+            "language": "zh",
+            "gender": "M",
+            "arg": "BV056_streaming",
+            "source": "tiktok",
+            "desc": "Sunshine male 2"
+        },
+        "BV005_streaming": {
+            "country": "CN",
+            "language": "zh",
+            "gender": "F",
+            "arg": "BV005_streaming",
+            "source": "tiktok",
+            "desc": "Ru-Xuan"
+        },
+        "BV064_streaming": {
+            "country": "CN",
+            "language": "zh",
+            "gender": "F",
+            "arg": "BV064_streaming",
+            "source": "tiktok",
+            "desc": "Meng-Yao"
+        },
+        "BV063_streaming": {
+            "country": "CN",
+            "language": "zh",
+            "gender": "M",
+            "arg": "BV063_streaming",
+            "source": "tiktok",
+            "desc": "Cartoon sponge"
+        },
+        "BV417_streaming": {
+            "country": "CN",
+            "language": "zh",
+            "gender": "M",
+            "arg": "BV417_streaming",
+            "source": "tiktok",
+            "desc": "Cartoon starfish"
+        },
+        "BV050_streaming": {
+            "country": "CN",
+            "language": "zh",
+            "gender": "M",
+            "arg": "BV050_streaming",
+            "source": "tiktok",
+            "desc": "Shin Chan"
+        },
+        "BV061_streaming": {
+            "country": "CN",
+            "language": "zh",
+            "gender": "M",
+            "arg": "BV061_streaming",
+            "source": "tiktok",
+            "desc": "Hao-Ran"
+        },
+        "BV401_streaming": {
+            "country": "CN",
+            "language": "zh",
+            "gender": "F",
+            "arg": "BV401_streaming",
+            "source": "tiktok",
+            "desc": "Mu-Chen"
+        },
+        "BV011_streaming": {
+            "country": "CN",
+            "language": "zh",
+            "gender": "F",
+            "arg": "BV011_streaming",
+            "source": "tiktok",
+            "desc": "Xin-Yi"
+        },
+        "BV217_streaming": {
+            "country": "CN",
+            "language": "zh",
+            "gender": "F",
+            "arg": "BV217_streaming",
+            "source": "tiktok",
+            "desc": "Shu-Lan (Shanghai)"
+        },
+        "BV213_streaming": {
+            "country": "CN",
+            "language": "zh",
+            "gender": "M",
+            "arg": "BV213_streaming",
+            "source": "tiktok",
+            "desc": "Hao-Yu (Guangxi)"
+        },
+        "BV025_streaming": {
+            "country": "CN",
+            "language": "zh",
+            "gender": "F",
+            "arg": "BV025_streaming",
+            "source": "tiktok",
+            "desc": "Xiao-Yan"
+        },
+        "BV424_streaming": {
+            "country": "CN",
+            "language": "zh",
+            "gender": "F",
+            "arg": "BV424_streaming",
+            "source": "tiktok",
+            "desc": "Ping-An (Guangdong)"
+        },
+        "BV221_streaming": {
+            "country": "CN",
+            "language": "zh",
+            "gender": "F",
+            "arg": "BV221_streaming",
+            "source": "tiktok",
+            "desc": "Lianhua (Sichuan)"
+        },
+        "BV214_streaming": {
+            "country": "CN",
+            "language": "zh",
+            "gender": "M",
+            "arg": "BV214_streaming",
+            "source": "tiktok",
+            "desc": "Jun-Jie"
+        },
+        "BV100_streaming": {
+            "country": "CN",
+            "language": "zh",
+            "gender": "M",
+            "arg": "BV100_streaming",
+            "source": "tiktok",
+            "desc": "Yi-Chen"
+        },
+		"tiktok_jp_001": {
+			"country": "JP",
+			"language": "ja",
+			"gender": "F",
+			"arg": "jp_001",
+			"source": "tiktok",
+			"desc": "Miho"
+		},
+		"tiktok_jp_003": {
+			"country": "JP",
+			"language": "ja",
+			"gender": "F",
+			"arg": "jp_003",
+			"source": "tiktok",
+			"desc": "Koharu"
+		},
+		"tiktok_jp_005": {
+			"country": "JP",
+			"language": "ja",
+			"gender": "F",
+			"arg": "jp_005",
+			"source": "tiktok",
+			"desc": "Hanako"
+		},
+		"tiktok_jp_006": {
+			"country": "JP",
+			"language": "ja",
+			"gender": "M",
+			"arg": "jp_006",
+			"source": "tiktok",
+			"desc": "Naoki"
+		},
         "jp_male_osada": {
             "country": "JP",
             "language": "ja",
@@ -8377,6 +9032,54 @@
             "source": "tiktok",
             "desc": "Yagi Saki"
         },
+        "jp_female_hana": {
+            "country": "JP",
+            "language": "ja",
+            "gender": "F",
+            "arg": "jp_female_hana",
+            "source": "tiktok",
+            "desc": "Hana"
+        },
+        "jp_female_mai": {
+            "country": "JP",
+            "language": "ja",
+            "gender": "F",
+            "arg": "jp_female_mai",
+            "source": "tiktok",
+            "desc": "Mai"
+        },
+        "jp_male_satoshi": {
+            "country": "JP",
+            "language": "ja",
+            "gender": "M",
+            "arg": "jp_male_satoshi",
+            "source": "tiktok",
+            "desc": "Satoshi"
+        },
+        "jp_female_kaorishoji": {
+            "country": "JP",
+            "language": "ja",
+            "gender": "F",
+            "arg": "jp_female_kaorishoji",
+            "source": "tiktok",
+            "desc": "Kaori Shoji"
+        },
+        "jp_male_tamawakazuki": {
+            "country": "JP",
+            "language": "ja",
+            "gender": "M",
+            "arg": "jp_male_tamawakazuki",
+            "source": "tiktok",
+            "desc": "Toshiki Tamagawa"
+        },
+        "jp_male_yujinchigusa": {
+            "country": "JP",
+            "language": "ja",
+            "gender": "M",
+            "arg": "jp_male_yujinchigusa",
+            "source": "tiktok",
+            "desc": "Yujinchigusa"
+        },
         "jp_female_oomaeaika": {
             "country": "JP",
             "language": "ja",
@@ -8409,37 +9112,85 @@
             "source": "tiktok",
             "desc": "Risa"
         },
-        "tiktok_kr_002": {
+        "BV520_streaming": {
+            "country": "JP",
+            "language": "ja",
+            "gender": "F",
+            "arg": "BV520_streaming",
+            "source": "tiktok",
+            "desc": "Himari (TikTok)"
+        },
+        "BV521_streaming": {
+            "country": "JP",
+            "language": "ja",
+            "gender": "F",
+            "arg": "BV521_streaming",
+            "source": "tiktok",
+            "desc": "Misaki (TikTok)"
+        },
+        "BV522_streaming": {
+            "country": "JP",
+            "language": "ja",
+            "gender": "F",
+            "arg": "BV522_streaming",
+            "source": "tiktok",
+            "desc": "Mayumi"
+        },
+        "BV523_streaming": {
+            "country": "JP",
+            "language": "ja",
+            "gender": "F",
+            "arg": "BV523_streaming",
+            "source": "tiktok",
+            "desc": "Hikari (TikTok)"
+        },
+        "BV524_streaming": {
+            "country": "JP",
+            "language": "ja",
+            "gender": "M",
+            "arg": "BV524_streaming",
+            "source": "tiktok",
+            "desc": "Kenta"
+        },
+		"tiktok_kr_002": {
+			"country": "KR",
+			"language": "ko",
+			"gender": "M",
+			"arg": "kr_002",
+			"source": "tiktok",
+			"desc": "Hajun"
+		},
+		"tiktok_kr_004": {
+			"country": "KR",
+			"language": "ko",
+			"gender": "M",
+			"arg": "kr_004",
+			"source": "tiktok",
+			"desc": "Eunwoo"
+		},
+		"tiktok_kr_003": {
+			"country": "KR",
+			"language": "ko",
+			"gender": "F",
+			"arg": "kr_003",
+			"source": "tiktok",
+			"desc": "Jiwoo"
+		},
+        "kr_male_gye": {
             "country": "KR",
             "language": "ko",
             "gender": "M",
-            "arg": "kr_002",
+            "arg": "kr_male_gye",
             "source": "tiktok",
-            "desc": "Korean male 1 (TikTok)"
+            "desc": "Gye"
         },
-        "tiktok_kr_004": {
-            "country": "KR",
-            "language": "ko",
-            "gender": "M",
-            "arg": "kr_004",
-            "source": "tiktok",
-            "desc": "Korean male 2 (TikTok)"
-        },
-        "tiktok_kr_003": {
+        "BV059_streaming": {
             "country": "KR",
             "language": "ko",
             "gender": "F",
-            "arg": "kr_003",
+            "arg": "BV059_streaming",
             "source": "tiktok",
-            "desc": "Korean female (TikTok)"
-        },
-        "ghostface": {
-            "country": "US",
-            "language": "en",
-            "gender": "M",
-            "arg": "en_us_ghostface",
-            "source": "tiktok",
-            "desc": "Ghostface"
+            "desc": "Minseo"
         },
         "chewbacca": {
             "country": "US",
@@ -8511,7 +9262,7 @@
             "gender": "M",
             "arg": "en_male_m03_lobby",
             "source": "tiktok",
-            "desc": "Jingle"
+            "desc": "Lobby"
         },
         "tiktok_en_male_m03_sunshine_soon": {
             "country": "US",
@@ -8519,7 +9270,7 @@
             "gender": "M",
             "arg": "en_male_m03_sunshine_soon",
             "source": "tiktok",
-            "desc": "Toon beat"
+            "desc": "Sunshine soon"
         },
         "en_female_f08_twinkle": {
             "country": "US",
@@ -8569,7 +9320,7 @@
             "source": "tiktok",
             "desc": "Quirky time"
         },
-        "tiktok_en_male_m2_xhxs_m03_christmas": {
+        "en_male_m2_xhxs_m03_christmas": {
             "country": "US",
             "language": "en",
             "gender": "M",
@@ -8585,7 +9336,7 @@
             "source": "tiktok",
             "desc": "Wonderful world"
         },
-        "tiktok_en_female_ht_f08_newyear": {
+        "en_female_ht_f08_newyear": {
             "country": "US",
             "language": "en",
             "gender": "F",
@@ -8593,7 +9344,7 @@
             "source": "tiktok",
             "desc": "NYE 2023"
         },
-        "tiktok_en_male_sing_funny_thanksgiving": {
+        "en_male_sing_funny_thanksgiving": {
             "country": "US",
             "language": "en",
             "gender": "M",

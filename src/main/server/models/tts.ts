@@ -441,45 +441,57 @@ export default function processVoice(
 					break;
 				}
 				case "tiktok": {
-					const body = new URLSearchParams({
-						text: text,
-						voice: voice.arg,
-						service: "TikTok",
+					text = text.slice(0, 199).trim();
+					const params = new URLSearchParams({
+						aid: "1233",
+						req_text: text,
+						region: voice.country,
+						text_speaker: voice.arg,
 					}).toString();
-
-					const req = https.request({
-						hostname: "lazypy.ro",
-						path: "/tts/request_tts.php",
-						method: "POST",
-						headers: {
-							"Content-Type": "application/x-www-form-urlencoded",
-							"Content-Length": Buffer.byteLength(body)
-						}
-					}, (res) => {
-						let chunks = [];
-						res.on("data", (chunk) => chunks.push(chunk));
-						res.on("end", () => {
-							try {
-								const json = JSON.parse(Buffer.concat(chunks).toString());
-								
-								if (json.success !== true) {
-									return reject(`TikTok proxy error: ${json.error_msg || "Unknown error"}`);
-								}
-
-								https.get(json.audio_url, (audioRes) => {
-									if (audioRes.statusCode !== 200) {
-										return reject(`TikTok audio download error: ${audioRes.statusCode}`);
-									}
-									resolve(audioRes);
-								}).on("error", reject);
-								
-							} catch (e) {
-								reject("TikTok proxy error: Invalid JSON response from lazypy");
+					const req = https.request(
+						{
+							hostname: "api16-normal-useast5.us.tiktokv.com",
+							path: `/media/api/text/speech/invoke/?${params}`,
+							method: "POST",
+							headers: {
+								"cache-control": "no-cache",
+								"content-type": "application/json",
+								"cookie": "sessionid=cc11cb1a8f38fd855aad30660349dd8a",
+								"responsetype": "ResponseType.json",
+								"sdk-version": "2",
+								"user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:98.0) Gecko/20100101 Firefox/98.0"
+							},
+							timeout: 10000
+						},
+						(r) => {
+							if (r.statusCode < 200 || r.statusCode >= 300) {
+								return rej(new Error(`TikTok server returned HTTP ${r.statusCode}`));
 							}
-						});
+							let body = "";
+							r.on("error", (e) => rej(e));
+							r.on("data", (c) => body += c);
+							r.on("end", () => {
+								try {
+									const json = JSON.parse(body);
+									if (json.status_code !== 0) {
+										return rej(new Error(`TikTok API error: ${json.status_code} - ${json.message || "Unknown error"}`));
+									}
+									if (!json.data || !json.data.v_str) {
+										return rej(new Error("TikTok API response is missing voice data (v_str)"));
+									}
+									resolve(Buffer.from(json.data.v_str, "base64"));
+								} catch (e) {
+									rej(new Error(`Failed to parse TikTok response: ${e.message}`));
+								}
+							});
+						}
+					);
+					req.on("error", (e) => rej(new Error(`Network error: ${e.message}`)));
+					req.on("timeout", () => {
+						req.destroy();
+						rej(new Error("TikTok request timed out"));
 					});
-					req.on("error", (e) => reject(`Network error: ${e.message}`));
-					req.end(body);
+					req.end();
 					break;
 				}
 				case "vocalware": {

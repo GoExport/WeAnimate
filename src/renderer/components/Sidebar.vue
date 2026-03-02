@@ -496,9 +496,7 @@ defineExpose({ slideMode, width });
 				</RouterLink>
 			</li>
 		</ul>
-		<ul class="user_custom">
-			<h3>Recent</h3>
-		</ul>
+		<ul class="user_custom"></ul>
 		<ul>
 			<li class="link" title="Get answers to various questions you may have">
         <a href="javascript:window.appWindow.openFAQ();">

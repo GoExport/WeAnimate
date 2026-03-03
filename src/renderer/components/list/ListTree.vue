@@ -270,8 +270,6 @@ table.list_tree tbody tr.checked td.hidden {
 .list_tree_container.grid.select_mode table.list_tree {
     margin-top: 34px;
 }
-
-/* Grid módban csak a szükséges cellák látszódjanak */
 .list_tree_container.grid table.list_tree tbody tr td {
     display: none;
 }
@@ -282,7 +280,6 @@ table.list_tree tbody tr.checked td.hidden {
 .list_tree_container.grid table.list_tree tbody tr td.actions {
     display: block;
 }
-
 html.dark .list_tree_container:not(.grid) {
     background: repeating-linear-gradient(
         #0000 0,
@@ -337,7 +334,6 @@ html.dark .list_tree_container.grid table.list_tree tbody tr.checked {
     border-color: hsl(342deg 55% 48%);
 }
 </style>
-
 <script setup lang="ts" generic="ListEntry extends GenericListEntry,
 	ListRow extends (typeof GenericListRow<ListEntry>),
 	RowOptions extends (typeof GenericRowOptions<ListEntry>)">
@@ -366,7 +362,6 @@ interface ListData {
 	folders: Folder[],
 	entries: ListEntry[],
 };
-
 const emit = defineEmits<{
 	columnResize: [string, number],
 	sortChange: [string],
@@ -385,7 +380,6 @@ const modeRestriction = props?.restrictions?.mode ?? false;
 const route = useRoute();
 const router = useRouter();
 const { search, viewMode, zoomLevel } = useListStore();
-
 const columnIds = props.columns.map((v) => v.id);
 const selectAllBox = useTemplateRef("select-all-box")
 const selection = ref<{
@@ -395,7 +389,6 @@ const selection = ref<{
 	anchor: 0,
 	entries: []
 });
-
 const filteredEntryIds:{
 	folders: string[],
 	entries: string[],
@@ -405,29 +398,24 @@ const filteredEntryIds:{
 };
 const listRows = useTemplateRef("list-row");
 const mode = () => modeRestriction ? modeRestriction : viewMode.value;
-
 function dataFilterFunc(v:Folder|ListEntry, shouldContain:string, resultArray:string[]) {
 	if (v.title.toLowerCase().includes(shouldContain)) {
 		resultArray.push(v.id);
 	}
 }
-
 function syncSelectAllBox() {
 	const allSelected = selection.value.entries.length ==
 		props.data.entries.length;
 	selectAllBox.value.checked = allSelected;
 }
-
 function resetSelection() {
 	selection.value.anchor = 0;
 	selection.value.entries = [];
 	syncSelectAllBox();
 }
-
 function sortOption_click(fieldId:string) {
 	emit("sortChange", fieldId);
 }
-
 function dragger_down(id:FieldIdOf<ListEntry>, e:MouseEvent) {
 	document.body.classList.add("col_resize");
 	const option = props.columns.find(v => v.id == id);
@@ -445,7 +433,6 @@ function dragger_down(id:FieldIdOf<ListEntry>, e:MouseEvent) {
 		emit("columnResize", id.toString(), option.width.value);
 	});
 }
-
 function selectAll_click() {
 	const equal = props.data.entries.length == selection.value.entries.length;
 	const allSelected = equal && props.data.entries.length > 0;
@@ -455,7 +442,6 @@ function selectAll_click() {
 		selection.value.entries = props.data.entries.map(v => v.id);
 	}
 }
-
 function folder_click(folderId:string) {
 	router.push({
 		name: route.name,
@@ -464,20 +450,18 @@ function folder_click(folderId:string) {
 		}
 	});
 }
-
-function entry_delete(ids:string[]) {
-	for (const id of ids) {
-		const index = props.data.entries.findIndex((v) => v.id == id);
-		props.data.entries.splice(index, 1);
-	}
+function entry_delete(ids: string[]) {
+    for (const id of ids) {
+        const index = props.data.entries.findIndex((v) => v.id == id);
+        if (index !== -1) {
+            props.data.entries.splice(index, 1);
+        }
+    }
+    filteredEntryIds.entries = filteredEntryIds.entries.filter(id => !ids.includes(id));
+    selection.value.entries = selection.value.entries.filter(id => !ids.includes(id));
+    selection.value.anchor = 0;
+    syncSelectAllBox();
 }
-
-function entry_click(id:string) {
-	selection.value.entries = [id];
-	selection.value.anchor = 0;
-	syncSelectAllBox();
-}
-
 function entry_ctrlClick(id: string) {
     const index = selection.value.entries.indexOf(id);
     if (index !== -1) {
@@ -495,11 +479,9 @@ function entry_ctrlClick(id: string) {
     }
     syncSelectAllBox();
 }
-
 function entry_dblClick() {
 	resetSelection();
 }
-
 function entry_shiftClick(id:string) {
 	const anchoredId = selection.value.entries[selection.value.anchor];
 	if (typeof anchoredId == "undefined") {
@@ -521,7 +503,6 @@ function entry_shiftClick(id:string) {
 	}
 	syncSelectAllBox();
 }
-
 function ctrlADown(e:KeyboardEvent) {
 	if (!e.ctrlKey || e.key != "a") {
 		return;
@@ -532,9 +513,7 @@ function ctrlADown(e:KeyboardEvent) {
 	selection.value.anchor = 0;
 	syncSelectAllBox();
 }
-
 provide(genericColumnIdKey<ListEntry>(), columnIds);
-
 watch(() => search.value, (newSearch:string) => {
 	resetSelection();
 	filteredEntryIds.entries = [];
@@ -548,11 +527,8 @@ onMounted(() => {
 onUnmounted(() => {
 	document.removeEventListener("keydown", ctrlADown);
 });
-
 defineExpose({ resetSelection });
-
 </script>
-
 <template>
 	<div :class="{
 		list_tree_container: true,

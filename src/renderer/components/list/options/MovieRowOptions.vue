@@ -1,24 +1,20 @@
 <style src="./list_row_options.css"></style>
-
 <script setup lang="ts" generic="T extends Movie">
 import { apiServer } from "../../../utils/AppInit";
 import type { Movie } from "../../../interfaces/Movie";
 import openPlayerWindow from "../../../utils/openPlayerWindow";
 import en_US from "../../../locale/en_US";
-
 const emit = defineEmits<{
 	entryDelete: [string[]]
 }>();
 const props = defineProps<{
 	entry: T | string[]
 }>();
-
 const isSingular = !Array.isArray(props.entry);
 
 function playBtn_click() {
 	openPlayerWindow((props.entry as Movie).id);
 }
-
 async function deleteBtn_click() {
 	const msg = isSingular ?
 		en_US.list.actions.movie_delete_confirm.sing :
@@ -26,7 +22,6 @@ async function deleteBtn_click() {
 	if (!confirm(msg)) {
 		return;	
 	}
-
 	const idField = Array.isArray(props.entry) ?
 		props.entry.join(",") :
 		props.entry.id;
@@ -37,19 +32,17 @@ async function deleteBtn_click() {
 		body
 	});
 	if (!res.ok) {
-		alert("Failed to delete movie");
+		alert("Failed to delete movies");
 		return;
 	}
 	emit("entryDelete", idField.split(","));
 }
-
 function idsAsArray() {
 	return Array.isArray(props.entry) ?
 		props.entry :
 		[ props.entry.id ];
 }
 </script>
-
 <template>
 	<div class="list_row_options">
 		<a
@@ -71,8 +64,8 @@ function idsAsArray() {
 		<a
 			class="option"
 			:href="`${apiServer}/file/movie/file/${idsAsArray().join(',')}`"
-			download="download.zip"
-			title="Download project files"
+			download="export.zip"
+			title="Export project files"
 			@click.stop>
 			<i class="ico download"></i>
 		</a>

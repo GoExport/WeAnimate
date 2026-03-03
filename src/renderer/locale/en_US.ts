@@ -26,6 +26,10 @@ export default {
 			"movie_delete_confirm": {
 				"sing": "Are you sure you want to delete this movie? It cannot be recovered",
 				"plr": "Are you sure you want to delete these movies? They cannot be recovered",
+			},
+			"asset_delete_confirm": {
+				"sing": "Are you sure you want to delete this asset? It cannot be recovered",
+				"plr": "Are you sure you want to delete these assets? They cannot be recovered",
 			}
 		}
 	}

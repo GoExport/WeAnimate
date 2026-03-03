@@ -22,26 +22,32 @@ Ffmpeg.setFfmpegPath(ffmpegPath);
 Ffmpeg.setFfprobePath(ffprobePath);
 const group = new httpz.Group();
 
-group.route("POST", "/api_v2/asset/delete/", (req, res) => {
-	const id = req.body.data.id || req.body.data.starter_id;
-	if (typeof id == "undefined") {
-		return res.status(400).json({ status:"error" });
+group.route("POST", "/api_v2/asset/delete/", async (req, res) => {
+	const idField = req.body.data?.id || req.body.data?.starter_id;
+	if (typeof idField == "undefined") {
+		return res.status(400).json({ status: "error", msg: "Missing required parameters" });
 	}
-	try {
-		const asset = AssetModel.getInfo(id) as Asset | Starter;
-		if (asset.type == "movie") {
-			MovieModel.delete(id);
-		} else {
-			AssetModel.delete(id);
+	const ids = idField.split(",");
+	for (const id of ids) {
+		try {
+			const asset = AssetModel.getInfo(id);
+			if (!asset) throw "404";
+			if (asset.type == "movie") {
+				await MovieModel.delete(id);
+			} else {
+				await AssetModel.delete(id);
+			}
+			console.log("Deleted asset " + id); 
+		} catch (err) {
+			if (err == "404") {
+				console.log(`Failed to delete asset ${id}`);
+			} else {
+				console.error(`Failed to delete asset ${id} ${err}`);
+				return res.status(500).json({ status: "error", msg: "Internal server error" });
+			}
 		}
-		res.json({ status:"ok" });
-	} catch (e) {
-		if (e == "404") {
-			return res.status(404).json({ status:"error" });
-		}
-		console.error(req.parsedUrl.pathname, "failed. Error:", e);
-		res.status(500).json({ status:"error" });
 	}
+	res.json({ status: "ok" });
 });
 group.route("GET", "/api/asset/list", (req, res) => {
 	const filter = {
@@ -176,7 +182,6 @@ const { execSync } = require("child_process");
 const { Readable } = require("stream");
 const fs = require("fs");
 const path = require("path");
-
 group.route("POST", "/api/asset/upload", async (req, res) => {
     const file = req.files.import;
     if (typeof file === "undefined" || !req.body.type || !req.body.subtype) {

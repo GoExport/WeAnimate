@@ -433,6 +433,11 @@ function dragger_down(id:FieldIdOf<ListEntry>, e:MouseEvent) {
 		emit("columnResize", id.toString(), option.width.value);
 	});
 }
+function entry_click(id: string) {
+    selection.value.entries = [id];
+    selection.value.anchor = 0;
+    syncSelectAllBox();
+}
 function selectAll_click() {
 	const equal = props.data.entries.length == selection.value.entries.length;
 	const allSelected = equal && props.data.entries.length > 0;

@@ -100,9 +100,6 @@ return `${day}${ordinal} of ${months[d.getMonth()]} ${d.getFullYear()} - ${hours
 		@click.ctrl.exact="entryElem_ctrlClick"
 		@click.shift.exact="entryElem_shiftClick"
 		@click.exact="entryElem_click">
-		<!-- 
-		draggable="true"
-		@dragstart="onMovieDrag($event, movie.id)"> -->
 		<td class="hidden">
 			<input ref="select-box" type="checkbox" @input="entryElem_ctrlClick" @click.stop :checked="checked"/>
 		</td>

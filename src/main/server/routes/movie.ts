@@ -187,7 +187,7 @@ group.route("POST", "/api/movie/upload", async (req, res) => {
 	const isZip = buffer.subarray(0, 4).equals(Buffer.from([0x50, 0x4b, 0x03, 0x04]));
 	if (!isZip) {
 		if (fs.existsSync(charPath)) fs.unlinkSync(charPath);
-		console.error("Movie upload blocked: Not a GoAnimate ZIP video");
+		console.error("Movie upload blocked: Not a Wrapper offline video");
 		return res.status(400).json({ msg: "The file is invalid" });
 	}
 	try {

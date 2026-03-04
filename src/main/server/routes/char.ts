@@ -113,7 +113,7 @@ group.route("*", "/api/char/upload", (req, res) => {
 		const isValidChar = content.includes("<cc_char") || content.includes("<character");
 		const isPolicyFile = content.includes("<cross-domain-policy");
 		if (!isValidChar || isPolicyFile) {
-			console.error(`Character upload blocked! Reason: ${isPolicyFile ? "Cross-domain policy file" : "Not a GoAnimate character"}`);
+			console.error(`Character upload blocked! Reason: ${isPolicyFile ? "Crossdomain file" : "Not a Wrapper offline character"}`);
 			if (fs.existsSync(charPath)) fs.unlinkSync(charPath);
 			return res.status(400).json({ status: "error" });
 		}

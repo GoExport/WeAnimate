@@ -205,7 +205,7 @@ function onUploadSuccess(
 				<input
 					type="file"
 					name="file"
-					title="Upload Files"
+					title="Import files"
 					:accept="supportedTypes.map(v => '.' + v).join(',')"
 					multiple
 					@input="filesAdded"

@@ -2,11 +2,9 @@
 .wm_manager input {
 	display: none;
 }
-
 .wm_manager .watermark_container {
 	width: calc(100% + 20px);
 }
-
 .wm_manager .upload_button,
 .wm_manager .watermark {
 	background-color: hsl(252deg 16% 97%);
@@ -19,7 +17,6 @@
 	width: 124px;
 	height: 66px;
 }
-
 .wm_manager .upload_button {
 	display: inline-flex;
 	justify-content: center;
@@ -30,7 +27,6 @@
 	margin: 0;
 	padding: 20px 0 0 5px;
 }
-
 .wm_manager .watermark .thumbnail  {
 	object-fit: contain;
 	width: 100%;
@@ -45,7 +41,6 @@
 .wm_manager .watermark .actions .ico.btn {
 	margin: 0 2px 0 4px;
 }
-
 .wm_manager .upload_button:hover,
 .wm_manager .watermark:hover {
 	background-color: hsl(338deg 55% 85%);
@@ -55,7 +50,6 @@
 .wm_manager .watermark:hover .actions {
 	display: block;
 }
-
 .wm_manager .upload_button.checked,
 .wm_manager .watermark.checked {
 	background-color: hsl(338deg 55% 85%);
@@ -74,19 +68,16 @@
     right: -10px;
     padding: 0 5px 1px 6px;
 }
-
 html.dark .wm_manager .upload_button,
 html.dark .wm_manager .watermark {
 	background-color: hsl(250deg 10% 19%);
 	border-color: hsl(250deg 11% 26%);
 }
-
 html.dark .wm_manager .upload_button:hover,
 html.dark .wm_manager .watermark:hover {
 	background-color: hsl(330 26% 26% / 1);
 	border-color: hsl(330 26% 41% / 1);
 }
-
 html.dark .wm_manager .watermark.checked {
 	background: hsl(342 47% 40% / 0.45);
 	border-color: hsl(342deg 55% 48%);
@@ -102,12 +93,10 @@ import { apiServer } from "../../utils/AppInit";
 import Button from "../controls/Button.vue";
 import { onMounted, ref, useTemplateRef } from "vue";
 import useAppSettings from "../../composables/useAppSettings";
-
 type Watermark = {
 	id: string,
 	thumbnail: string
 };
-
 const appSettings = useAppSettings();
 const container = useTemplateRef("wm-container");
 const defaultWm = ref<string>(appSettings.get("defaultWatermark") as string);
@@ -129,7 +118,6 @@ async function loadWatermarks() {
 	xhttp.open("GET", url, true);
 	xhttp.send();
 }
-
 async function wmInput_input(replaceMode?:boolean) {
 	const image = replaceMode ?
 		wmReplaceInput.value.files[0] :
@@ -145,7 +133,6 @@ async function wmInput_input(replaceMode?:boolean) {
 		method: "POST",
 		body
 	});
-
 	wmInput.value.value = "";
 	wmReplaceInput.value.value = "";
 	pendingReplaceId.value = null;
@@ -161,7 +148,6 @@ async function wmInput_input(replaceMode?:boolean) {
 	}
 	watermarks.value.unshift(json);
 }
-
 async function wm_click(id:string) {
 	const body = new FormData();
 	if (id == defaultWm.value) {
@@ -169,7 +155,6 @@ async function wm_click(id:string) {
 	} else {
 		body.append("id", id);
 	}
-
 	const res = await fetch(apiServer + "/api/watermark/set_default", {
 		method: "POST",
 		body
@@ -178,12 +163,10 @@ async function wm_click(id:string) {
 		defaultWm.value = id;
 	}
 }
-
 async function wmReplace_click(id:string) {
 	pendingReplaceId.value = id;
 	wmReplaceInput.value.click();
 }
-
 async function wmDelete_click(id:string) {
 	if (!confirm("Are you sure that you want to remove the watermark?")) {
 		return;
@@ -200,7 +183,6 @@ async function wmDelete_click(id:string) {
 		watermarks.value.splice(index, 1);
 	}
 }
-
 onMounted(loadWatermarks);
 </script>
 
@@ -209,13 +191,13 @@ onMounted(loadWatermarks);
 		<div class="app_setting">
 			<div>
 				<h3>Manage watermarks</h3>
-				<p>Upload, delete or set a default watermark</p>
+				<p>Import, delete or set a default watermark</p>
 			</div>
 		</div>
 		<div class="watermark_container" ref="wm-container">
 			<div class="upload_button" @click="wmInput.click">
-				<img src="/img/importer/import.svg" alt="Upload"/>
-				<small>Upload</small>
+				<img src="/img/importer/import.svg" alt="Import"/>
+				<small>Import</small>
 			</div>
 			<div :class="{
 				watermark: true,

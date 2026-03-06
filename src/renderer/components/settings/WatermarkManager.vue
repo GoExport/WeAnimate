@@ -191,7 +191,7 @@ onMounted(loadWatermarks);
 		<div class="app_setting">
 			<div>
 				<h3>Manage watermarks</h3>
-				<p>Import, delete or set a default watermark</p>
+				<p>Import, remove or set a default watermark</p>
 			</div>
 		</div>
 		<div class="watermark_container" ref="wm-container">
@@ -213,7 +213,7 @@ onMounted(loadWatermarks);
 					<Button icon primary @click.stop="wmReplace_click(wm.id)" title="Replace">
 						<i class="ico arr_swap"></i>
 					</Button>
-					<Button icon @click.stop="wmDelete_click(wm.id)" title="Delete">
+					<Button icon @click.stop="wmDelete_click(wm.id)" title="Remove">
 						<i class="ico trash"></i>
 					</Button>
 				</div>

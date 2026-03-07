@@ -290,45 +290,6 @@ export default function processVoice(
 					req.end(body);
 					break;
 				}
-				case "polly": {
-					const body = new URLSearchParams({
-						text: text,
-						voice: voice.arg,
-						service: "Streamlabs",
-					}).toString();
-					const req = https.request({
-						hostname: "lazypy.ro",
-						path: "/tts/request_tts.php",
-						method: "POST",
-						headers: {
-							"Content-Type": "application/x-www-form-urlencoded",
-							"Content-Length": Buffer.byteLength(body)
-						}
-					}, (res) => {
-						let chunks = [];
-						res.on("data", (chunk) => chunks.push(chunk));
-						res.on("end", () => {
-							try {
-								const json = JSON.parse(Buffer.concat(chunks).toString());
-								
-								if (json.success !== true) {
-									return reject(`Polly proxy error: ${json.error_msg || "Unknown error"}`);
-								}
-								https.get(json.audio_url, (audioRes) => {
-									if (audioRes.statusCode !== 200) {
-										return reject(`Polly audio download error: ${audioRes.statusCode}`);
-									}
-									resolve(audioRes);
-								}).on("error", reject);
-							} catch (e) {
-								reject("Polly proxy error: Invalid JSON response from lazypy");
-							}
-						});
-					});
-					req.on("error", (e) => reject(`Network error: ${e.message}`));
-					req.end(body);
-					break;
-				}
 				case "onecoretwo": {
 					const q = new URLSearchParams({
 						hl: voice.lang,
@@ -343,6 +304,39 @@ export default function processVoice(
 						}
 						resolve(audioRes);
 					}).on("error", (e) => reject(`Network error: ${e.message}`));
+					break;
+				}
+				case "polly": {
+					const query = new URLSearchParams({
+						voice: voice.arg,
+						text: text,
+					}).toString();
+					const req = https.get(
+						{
+							hostname: "streamlabs.com",
+							path: `/polly/speak?${query}`,
+							method: "POST",
+							headers: {
+								"referer": "https://streamlabs.com"
+							}
+						}, (r) => {
+							let body = "";
+							r.on("data", (d) => body += d);
+							r.on("end", () => {
+								try {
+									const json = JSON.parse(body);
+									if (!json.success) {
+										return reject("Polly error: " + json.message);
+									}
+									const url = json.speak_url;
+									https.get(url, resolve);
+								} catch (e) {
+									return reject(e);
+								}
+							});
+						}
+					);
+					req.on("error", (err) => reject(`Polly network request failed: ${err.message}`));
 					break;
 				}
 				case "pollytwo": {

@@ -838,7 +838,7 @@
 			"gender": "F",
 			"source": "acapela",
 			"arg": "Eva22k_HQ",
-			"desc": "Eva"
+			"desc": "Eva (Acapela)"
 		},
 		"geir22k": {
 			"country": "FO",
@@ -2230,7 +2230,7 @@
 			"gender": "F",
             "source": "bing",
 			"arg": "en-SG-LunaNeural",
-			"desc": "Luna"
+			"desc": "Luna (Azure)"
 		},
 		"en-SG-WayneNeural": {
 			"country": "SG",
@@ -5967,7 +5967,7 @@
             "source": "onecoretwo",
 			"arg": "Clara",
 			"lang": "en-ca",
-			"desc": "Eva"
+			"desc": "Eva (Onecore)"
 		},
 		"harmonie": {
 			"country": "CA",

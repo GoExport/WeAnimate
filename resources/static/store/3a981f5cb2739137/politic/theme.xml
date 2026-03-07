@@ -1385,15 +1385,15 @@
 	<background id="school_classroom_bg.swf" name="Classroom" enable="N" is_premium="N" aid="2683" money="0" sharing="0"/>
 	<background id="school_locker_bg.swf" name="Locker" enable="N" is_premium="N" aid="2684" money="0" sharing="0"/>
 	<background id="toilet_dirty.swf" name="Dirty toilet" enable="N" is_premium="N" aid="2685" money="0" sharing="0"/>
-	<background id="TV_interview_bg.swf" name="Tv interview" enable="N" is_premium="N" aid="2686" money="0" sharing="0"/>
+	<background id="TV_interview_bg.swf" name="TV interview" enable="N" is_premium="N" aid="2686" money="0" sharing="0"/>
 	<background id="WH_office_bg.swf" name="White house office" enable="N" is_premium="N" aid="2687" money="0" sharing="0"/>
 	<background id="WH_stage_bg.swf" name="White house stage" enable="N" is_premium="N" aid="2688" money="0" sharing="0"/>
 	<background id="WH_stage_bg_v1.swf" name="Wh stage" enable="N" is_premium="N" aid="2689" money="0" sharing="0"/>
 	<background id="bar.swf" name="Bar" enable="N" is_premium="N" aid="2690" money="0" sharing="0"/>
 	<background id="color_bar.swf" name="Color bar" enable="N" is_premium="N" aid="2691" money="0" sharing="0"/>
-	<background id="tvsnowflask.swf" name="Tv noise" enable="N" is_premium="N" aid="2692" money="0" sharing="0"/>
+	<background id="tvsnowflask.swf" name="TV noise" enable="N" is_premium="N" aid="2692" money="0" sharing="0"/>
 	<background id="credit.swf" name="Credit" enable="N" is_premium="N" aid="2693" money="0" sharing="0"/>
-	<background id="countdown.swf" name="Count down" enable="N" is_premium="N" aid="2694" money="0" sharing="0"/>
+	<background id="countdown.swf" name="Countdown" enable="N" is_premium="N" aid="2694" money="0" sharing="0"/>
 	<background id="white_house_bg.swf" name="White house" enable="N" is_premium="N" aid="2710" money="0" sharing="0"/>
 	<compositebg id="adirtytoilet" name="Dirty toilet" enable="N" default="N" thumb="toilet_dirty.jpg" display_order="0" is_premium="N" money="0" sharing="0" aid="2711">
 	<bg id="TOILETDIRTYBG0" index="0">
@@ -1900,7 +1900,7 @@
 	<prop id="space_man2.swf" name="Space man 2" holdable="0" placeable="1" wearable="1" facing="left" thumb="" enable="N" is_premium="N" aid="2794" money="0" sharing="0"/>
 	<prop id="space_man3.swf" name="Space man 3" holdable="0" placeable="1" wearable="1" facing="left" thumb="" enable="N" is_premium="N" aid="2795" money="0" sharing="0"/>
 	<prop id="space_man4.swf" name="Space man 4" holdable="0" placeable="1" wearable="1" facing="left" thumb="" enable="N" is_premium="N" aid="2796" money="0" sharing="0"/>
-	<prop id="tvhead.swf" name="Tv head" holdable="0" placeable="1" wearable="1" facing="left" thumb="" enable="N" is_premium="N" aid="2797" money="0" sharing="0"/>
+	<prop id="tvhead.swf" name="TV head" holdable="0" placeable="1" wearable="1" facing="left" thumb="" enable="N" is_premium="N" aid="2797" money="0" sharing="0"/>
 	<prop id="white_motor.swf" name="White motor" holdable="0" placeable="1" wearable="1" facing="left" thumb="" enable="N" is_premium="N" aid="2798" money="0" sharing="0"/>
 	<prop id="camera.swf" name="Camera" holdable="1" placeable="1" facing="left" thumb="" enable="N" is_premium="N" aid="2799" money="0" sharing="0"/>
 	<prop id="camera_with_flash.swf" name="Camera with flash" holdable="1" placeable="1" facing="left" thumb="" enable="N" is_premium="N" aid="2800" money="0" sharing="0"/>
@@ -1984,7 +1984,7 @@
 	<effect id="upsideDown" x="0" y="0" w="550" h="354" rotate="0" type="UPSIDEDOWN" resize="false" move="false" name="Upside down" enable="N" is_premium="N" aid="2876" money="0" sharing="0" display_order="0"/>
 	<effect id="firework" x="0" y="0" w="550" h="354" rotate="0" type="FIREWORK" resize="false" move="false" name="Firework" enable="N" is_premium="N" aid="2877" money="0" sharing="0" display_order="0"/>
 	<effect id="firespring" x="0" y="0" w="550" h="354" rotate="0" type="FIRESPRING" resize="false" move="false" name="Fire spring" enable="N" is_premium="N" aid="2878" money="0" sharing="0" display_order="0"/>
-	<effect id="fire.swf" type="ANIME" resize="false" move="false" name="Bbq" enable="N" is_premium="N" aid="2879" money="0" sharing="0" display_order="0"/>
+	<effect id="fire.swf" type="ANIME" resize="false" move="false" name="BBQ" enable="N" is_premium="N" aid="2879" money="0" sharing="0" display_order="0"/>
 	<effect id="lightening.swf" type="ANIME" resize="false" move="false" name="Lightning" enable="N" is_premium="N" aid="2880" money="0" sharing="0" display_order="0"/>
 	<effect id="snow.swf" type="ANIME" resize="false" move="false" name="Snow" enable="N" is_premium="N" aid="2881" money="0" sharing="0" display_order="0"/>
 	<effect id="hyper_snow.swf" type="ANIME" resize="false" move="false" name="Hyper snow" enable="N" is_premium="N" aid="2882" money="0" sharing="0" display_order="0"/>

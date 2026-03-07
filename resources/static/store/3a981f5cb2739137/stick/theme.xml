@@ -1564,7 +1564,7 @@
 	<c_area>sfOtherProp</c_area>
 </c_parts>
 	</prop>
-	<prop id="tv.swf" name="Tv" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="7686" money="0" sharing="0">
+	<prop id="tv.swf" name="TV" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="7686" money="0" sharing="0">
 		<colorset enable="Y" aid="7687">
 	<color r="sfOtherProp">0x000000</color>
 </colorset>

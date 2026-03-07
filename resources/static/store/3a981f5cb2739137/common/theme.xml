@@ -64,7 +64,7 @@
 	<background id="street.swf" name="Street" enable="Y" is_premium="N" aid="3111" money="0" sharing="0"/>
 	<background id="toilet_clean.swf" name="Toilet" enable="Y" is_premium="N" aid="3112" money="0" sharing="0"/>
 	<background id="color_bar.swf" name="Color bar" enable="Y" is_premium="N" aid="3113" money="0" sharing="0"/>
-	<background id="tvsnowflask.swf" name="Tv noise" enable="Y" is_premium="N" aid="3114" money="0" sharing="0"/>
+	<background id="tvsnowflask.swf" name="TV noise" enable="Y" is_premium="N" aid="3114" money="0" sharing="0"/>
 	<background id="countdown.swf" name="Countdown" enable="Y" is_premium="N" aid="3115" money="0" sharing="0"/>
 	<background id="credit.swf" name="Credit" enable="Y" is_premium="N" aid="3116" money="0" sharing="0"/>
 	<background id="backStage.swf" name="Backstage" enable="Y" default="N" is_premium="N" aid="3117" money="0" sharing="0"/>
@@ -14166,7 +14166,7 @@
 		<rotation>0</rotation>
 	</prop>
 </compositebg>
-	<compositebg id="cbg_nccxmas_manger" name="Baby jesus" enable="Y" default="N" thumb="ncc_xmasmanger.jpg" display_order="606" is_premium="Y" money="0" sharing="0" aid="11574">
+	<compositebg id="cbg_nccxmas_manger" name="Baby Jesus" enable="Y" default="N" thumb="ncc_xmasmanger.jpg" display_order="606" is_premium="Y" money="0" sharing="0" aid="11574">
 	<bg id="cbg_nccxmas_manger_BG54" index="0">
 		<file>common.wall_grass.swf</file>
 	</bg>
@@ -14216,7 +14216,7 @@
 		<rotation>0</rotation>
 	</prop>
 </compositebg>
-	<compositebg id="cbg_nccxmas_mangeroutdoor" name="Baby jesus stable" enable="Y" default="N" thumb="ncc_xmasmanger_outdoor.jpg" display_order="607" is_premium="Y" money="0" sharing="0" aid="11578">
+	<compositebg id="cbg_nccxmas_mangeroutdoor" name="Baby Jesus stable" enable="Y" default="N" thumb="ncc_xmasmanger_outdoor.jpg" display_order="607" is_premium="Y" money="0" sharing="0" aid="11578">
 	<bg id="cbg_nccxmas_mangeroutdoor_BG7" index="0">
 		<file>common.star_night.swf</file>
 	</bg>
@@ -15536,7 +15536,7 @@
 	<prop id="space_man2.swf" name="Space man 2" holdable="0" placeable="1" wearable="1" facing="left" thumb="" enable="Y" is_premium="N" aid="3263" money="0" sharing="0"/>
 	<prop id="space_man3.swf" name="Space man 3" holdable="0" placeable="1" wearable="1" facing="left" thumb="" enable="Y" is_premium="N" aid="3264" money="0" sharing="0"/>
 	<prop id="space_man4.swf" name="Space man 4" holdable="0" placeable="1" wearable="1" facing="left" thumb="" enable="Y" is_premium="N" aid="3265" money="0" sharing="0"/>
-	<prop id="tvhead.swf" name="Tv head" holdable="0" placeable="1" wearable="1" facing="left" thumb="" enable="Y" is_premium="N" aid="3266" money="0" sharing="0"/>
+	<prop id="tvhead.swf" name="TV head" holdable="0" placeable="1" wearable="1" facing="left" thumb="" enable="Y" is_premium="N" aid="3266" money="0" sharing="0"/>
 	<prop id="white_motor.swf" name="White motor" holdable="0" placeable="1" wearable="1" facing="left" thumb="" enable="Y" is_premium="N" aid="3267" money="0" sharing="0"/>
 	<prop id="fly.swf" name="Fly" holdable="0" placeable="1" wearable="1" facing="left" thumb="" enable="Y" is_premium="N" aid="3268" money="0" sharing="0"/>
 	<prop id="speaker_red.swf" name="Red speaker" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="3269" money="0" sharing="0"/>
@@ -15647,7 +15647,7 @@
 	<prop id="chapel_altar.swf" name="Altar" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="3375" money="0" sharing="0"/>
 	<prop id="chemistry_lab_table.swf" name="Lab workspace" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="3376" money="0" sharing="0"/>
 	<prop id="donut_shop_counter.swf" name="Donut shop counter" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="3377" money="0" sharing="0"/>
-	<prop id="living_room_tv.swf" name="Tv back" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="3378" money="0" sharing="0"/>
+	<prop id="living_room_tv.swf" name="TV back" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="3378" money="0" sharing="0"/>
 	<prop id="boy_bedroom_chair.swf" name="Green chair" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="3379" money="0" sharing="0"/>
 	<prop id="hopsital_ward_chair.swf" name="Hospital bench" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="3380" money="0" sharing="0"/>
 	<prop id="hopsital_ward_counter.swf" name="Hospital counter" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="3381" money="0" sharing="0"/>
@@ -16179,7 +16179,7 @@
 	</prop>
 	<prop id="ncc_mountain_backdrop01.swf" name="Mountains" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="10936" money="0" sharing="0"/>
 	<prop id="ncc_mountain_backdrop02.swf" name="Hills" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="10937" money="0" sharing="0"/>
-	<prop id="msp_bbq_grill" name="Bbq" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_bbq_grill_ncc_bbq_grill_empty.swf" enable="Y" is_premium="Y" aid="10938" money="0" sharing="0">
+	<prop id="msp_bbq_grill" name="BBQ" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_bbq_grill_ncc_bbq_grill_empty.swf" enable="Y" is_premium="Y" aid="10938" money="0" sharing="0">
 		<state id="msp_bbq_grill_ncc_bbq_grill_empty.swf" name="No food" enable="Y" default="Y"/>
 		<state id="msp_bbq_grill_ncc_bbq_grill_full.swf" name="Food" enable="Y"/>
 	</prop>
@@ -16636,7 +16636,7 @@
 	<prop id="nccxmas_grass01.swf" name="Soil backdrop" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="11562" money="0" sharing="0"/>
 	<prop id="nccxmas_manger_backdrop.swf" name="Orient backdrop" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="Y" aid="11563" money="0" sharing="0"/>
 	<prop id="nccxmas_manger_outdoor.swf" name="Barn" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="Y" aid="11564" money="0" sharing="0"/>
-	<prop id="msp_manger1" name="Baby jesus" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_manger1_nccxmas_manger01.swf" enable="Y" is_premium="N" aid="11565" money="0" sharing="0">
+	<prop id="msp_manger1" name="Baby Jesus" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_manger1_nccxmas_manger01.swf" enable="Y" is_premium="N" aid="11565" money="0" sharing="0">
 		<state id="msp_manger1_nccxmas_manger01.swf" name="Default" enable="Y" default="Y"/>
 		<state id="msp_manger1_nccxmas_manger02.swf" name="Empty" enable="Y"/>
 	</prop>
@@ -17129,7 +17129,7 @@
 		<state id="msp_lift04_ncc_lift04_opening.swf" name="Opening" enable="Y"/>
 		<state id="msp_lift04_ncc_lift04_up02.swf" name="Going up" enable="Y"/>
 	</prop>
-	<prop id="msp_bbgbar" name="Bbq" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_bbgbar_ncc_bbgbar_empty.swf" enable="Y" is_premium="N" aid="12071" money="0" sharing="0">
+	<prop id="msp_bbgbar" name="BBQ" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_bbgbar_ncc_bbgbar_empty.swf" enable="Y" is_premium="N" aid="12071" money="0" sharing="0">
 		<state id="msp_bbgbar_ncc_bbgbar_empty.swf" name="Empty" enable="Y" default="Y"/>
 		<state id="msp_bbgbar_ncc_bbgbar_full.swf" name="Full" enable="Y"/>
 	</prop>

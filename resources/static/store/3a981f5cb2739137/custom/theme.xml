@@ -3265,7 +3265,7 @@
 		<state id="msp_dish_msp_computer_cc_dish_01.swf" name="Empty" enable="Y"/>
 		<state id="msp_dish_msp_computer_cc_dish_02.swf" name="Food" enable="Y" default="Y"/>
 	</prop>
-	<prop id="cc_tv_back.swf" name="Tv back view" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="9192" money="0" sharing="0">
+	<prop id="cc_tv_back.swf" name="TV back view" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="9192" money="0" sharing="0">
 		<colorset enable="Y" aid="9193">
 			<color r="ccColorA">0x946538</color>
 		</colorset>
@@ -3273,7 +3273,7 @@
 			<c_area oc="">ccColorA</c_area>
 		</c_parts>
 	</prop>
-	<prop id="cc_tv_front.swf" name="Tv front view" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="9194" money="0" sharing="0">
+	<prop id="cc_tv_front.swf" name="TV front view" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="9194" money="0" sharing="0">
 		<colorset enable="Y" aid="9195">
 			<color r="ccColorA">0x946538</color>
 		</colorset>
@@ -3885,7 +3885,7 @@
 	<prop id="oscar_sit_chair02.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="9767" money="0" sharing="0"/>
 	<prop id="oscar_sit_chair03.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="9768" money="0" sharing="0"/>
 	<prop id="oscar_sit_chair04.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="9769" money="0" sharing="0"/>
-	<prop id="oscar_stage_stand.swf" name="Mic" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="9770" money="0" sharing="0"/>
+	<prop id="oscar_stage_stand.swf" name="Microphone" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="9770" money="0" sharing="0"/>
 	<prop id="oscar_stage_light.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="9771" money="0" sharing="0"/>
 	<prop id="oscar_stage_screen.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="9772" money="0" sharing="0"/>
 	<prop id="airport_security_cover.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="9773" money="0" sharing="0"/>
@@ -3905,7 +3905,7 @@
 		<state id="msp_living_rm_door_living_room_door_close.swf" name="Closed" enable="Y" default="Y"/>
 		<state id="msp_living_rm_door_living_room_door_open.swf" name="Open" enable="Y"/>
 	</prop>
-	<prop id="msp_TV_version" name="Tv" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_TV_version_living_room_tv01.swf" enable="Y" is_premium="N" aid="9798" money="0" sharing="0">
+	<prop id="msp_TV_version" name="TV" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_TV_version_living_room_tv01.swf" enable="Y" is_premium="N" aid="9798" money="0" sharing="0">
 		<state id="msp_TV_version_living_room_tv01.swf" name="Flat screen" enable="Y" default="Y"/>
 		<state id="msp_TV_version_living_room_tv02.swf" name="Old television" enable="Y"/>
 	</prop>
@@ -3919,5 +3919,3 @@
 	<prop id="bar_stool.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="9807" money="0" sharing="0"/>
 	<prop id="living_room_sofa.swf" name="Sofa" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="9797" money="0" sharing="0"/>
 </theme>
-<!--If you see this, Blukas/GoTube says hi and you should give him credit if you modify this ;)-->
-<!--Hi-->

@@ -1399,8 +1399,8 @@
 	<background id="school_entrance_bg.swf" name="School entrance" enable="Y" is_premium="N" aid="4869" money="0" sharing="0"/>
 	<background id="toilet_clean.swf" name="Toilet" enable="Y" is_premium="N" aid="4861" money="0" sharing="0"/>
 	<background id="color_bar.swf" name="Color bar" enable="Y" is_premium="N" aid="4862" money="0" sharing="0"/>
-	<background id="tvsnowflask.swf" name="Tv noise" enable="Y" is_premium="N" aid="4863" money="0" sharing="0"/>
-	<background id="countdown.swf" name="Count down" enable="Y" is_premium="N" aid="4864" money="0" sharing="0"/>
+	<background id="tvsnowflask.swf" name="TV noise" enable="Y" is_premium="N" aid="4863" money="0" sharing="0"/>
+	<background id="countdown.swf" name="Countdown" enable="Y" is_premium="N" aid="4864" money="0" sharing="0"/>
 	<background id="credit.swf" name="Credit" enable="Y" is_premium="N" aid="4865" money="0" sharing="0"/>
 	<background id="moon.swf" name="Moon" enable="Y" is_premium="N" aid="4866" money="0" sharing="0"/>
 	<background id="girl_bedroom_bg.swf" name="Girl bedroom" enable="Y" is_premium="N" aid="4867" money="0" sharing="0"/>
@@ -2525,14 +2525,14 @@
 	<prop id="chapel_chair_l.swf" name="Chapel benches left" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="4974" money="0" sharing="0"/>
 	<prop id="space_man4.swf" name="Space man 4" holdable="0" placeable="1" wearable="1" facing="left" thumb="" enable="N" is_premium="N" aid="1135" money="0" sharing="0"/>
 	<prop id="chapel_chair_r.swf" name="Chapel benches right" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="4975" money="0" sharing="0"/>
-	<prop id="tvhead.swf" name="Tv head" holdable="0" placeable="1" wearable="1" facing="left" thumb="" enable="N" is_premium="N" aid="1136" money="0" sharing="0"/>
+	<prop id="tvhead.swf" name="TV head" holdable="0" placeable="1" wearable="1" facing="left" thumb="" enable="N" is_premium="N" aid="1136" money="0" sharing="0"/>
 	<prop id="chapel_altar.swf" name="Altar" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="4976" money="0" sharing="0"/>
 	<prop id="white_motor.swf" name="White motor" holdable="0" placeable="1" wearable="1" facing="left" thumb="" enable="N" is_premium="N" aid="1137" money="0" sharing="0"/>
 	<prop id="chemistry_lab_table.swf" name="Lab workspace" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="4977" money="0" sharing="0"/>
 	<prop id="camera.swf" name="Camera" holdable="1" placeable="1" facing="left" thumb="" enable="N" is_premium="N" aid="1138" money="0" sharing="0"/>
 	<prop id="donut_shop_counter.swf" name="Donut shop counter" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="4978" money="0" sharing="0"/>
 	<prop id="camera_with_flash.swf" name="Camera with flash" holdable="1" placeable="1" facing="left" thumb="" enable="N" is_premium="N" aid="1139" money="0" sharing="0"/>
-	<prop id="living_room_tv.swf" name="Tv back" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="4979" money="0" sharing="0"/>
+	<prop id="living_room_tv.swf" name="TV back" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="4979" money="0" sharing="0"/>
 	<prop id="flag.swf" name="Flag" holdable="1" placeable="1" facing="left" thumb="" enable="N" is_premium="N" aid="1140" money="0" sharing="0"/>
 	<prop id="boy_bedroom_chair.swf" name="Green chair" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="4980" money="0" sharing="0"/>
 	<prop id="interview_cup.swf" name="Interview cup" holdable="1" placeable="1" facing="left" thumb="" enable="N" is_premium="N" aid="1141" money="0" sharing="0"/>
@@ -2668,7 +2668,7 @@
 	<effect id="upsideDown" x="0" y="0" w="550" h="354" rotate="0" type="UPSIDEDOWN" resize="false" move="false" name="Upside down" enable="N" is_premium="N" aid="1202" money="0" sharing="0" display_order="0"/>
 	<effect id="firework" x="0" y="0" w="550" h="354" rotate="0" type="FIREWORK" resize="false" move="false" name="Firework" enable="N" is_premium="N" aid="1203" money="0" sharing="0" display_order="0"/>
 	<effect id="firespring" x="0" y="0" w="550" h="354" rotate="0" type="FIRESPRING" resize="false" move="false" name="Fire spring" enable="N" is_premium="N" aid="1204" money="0" sharing="0" display_order="0"/>
-	<effect id="fire.swf" type="ANIME" resize="false" move="false" name="Bbq" enable="N" is_premium="N" aid="1205" money="0" sharing="0" display_order="0"/>
+	<effect id="fire.swf" type="ANIME" resize="false" move="false" name="BBQ" enable="N" is_premium="N" aid="1205" money="0" sharing="0" display_order="0"/>
 	<effect id="lightening.swf" type="ANIME" resize="false" move="false" name="Lightning" enable="N" is_premium="N" aid="1206" money="0" sharing="0" display_order="0"/>
 	<effect id="snow.swf" type="ANIME" resize="false" move="false" name="Snow" enable="N" is_premium="N" aid="1207" money="0" sharing="0" display_order="0"/>
 	<effect id="hyper_snow.swf" type="ANIME" resize="false" move="false" name="Hyper snow" enable="N" is_premium="N" aid="1208" money="0" sharing="0" display_order="0"/>

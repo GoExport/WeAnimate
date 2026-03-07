@@ -5,7 +5,7 @@
 </div>
 
 Wrapper offline is a software designed to provide readily obtainable, irrevocable access to GoAnimate's retired assets in the modern era    
-It achieves this by replicating the original API and asset servers entirely on the user's computer while providing a simplistic frontend to interact with them    
+It achieves this by replicating the original API and asset servers entirely on the computers of the users while providing a simplistic frontend to interact with them
 This project is important for archival purposes, as the ability to use the legacy GoAnimate editor and themes would be far trickier without it
 
 ### 🚀 Wrapper offline 2.1.4 (The ultimate bugfix)  
@@ -74,10 +74,10 @@ FFmpeg is under the GNU GPLv2 license, which grants similar rights, but has some
 ### Credits
 | Contributor | Contribution |
 | --------- | ------- |
-| 2ka | Eradicating the timebomb issue |
 | Benson | The original developer of Wrapper offline |
 | DanielBitten | Upgraded TTS endpoints and voices |
 | It'sJay | Saving every asset |
+| MegaT | Eradicating the timebomb issue |
 | Octanuary | The main developer. Rewriting the source code in Vue and TypeScript |
 | VisualPlugin | The developer of GoAnimate wrapper |
 | [Vyond](https://www.vyond.com) | The creators of GoAnimate |

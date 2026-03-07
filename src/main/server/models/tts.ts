@@ -414,7 +414,7 @@ export default function processVoice(
 					  (r) => {
 						if (r.statusCode !== 200) return reject(`Readloud error: HTTP ${r.statusCode}`);
 						let buffers = [];
-						r.on("error", (e) => rej(e));
+						r.on("error", (e) => reject(e));
 						r.on("data", (b) => buffers.push(b));
 						r.on("end", () => {
 						  const html = Buffer.concat(buffers);
@@ -501,7 +501,7 @@ export default function processVoice(
 								return reject(new Error(`TikTok server returned HTTP ${r.statusCode}`));
 							}
 							let body = "";
-							r.on("error", (e) => rej(e));
+							r.on("error", (e) => reject(e));
 							r.on("data", (c) => body += c);
 							r.on("end", () => {
 								try {

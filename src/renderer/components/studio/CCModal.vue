@@ -17,7 +17,6 @@ import Popup from "../Popup.vue";
 import { onMounted, onUnmounted, useTemplateRef } from "vue";
 
 type CCObjectType = InstanceType<typeof CCObject>;
-
 const emit = defineEmits<{
 	charSaved: [string],
 	userClose: [],
@@ -25,51 +24,40 @@ const emit = defineEmits<{
 const { show = true } = defineProps<{
 	show?: boolean
 }>();
-
 const ccObject = useTemplateRef<CCObjectType>("cc-object");
-
-/**
- * resets the cc object and emits the `exit` event
- */
 function exit() {
 	ccObject.value.reset();
 	emit("userClose");
 }
-
 function charSaved(id:string) {
 	emit("charSaved", id);
 	exit();
 }
-
 function displayBrowser(themeId:string) {
 	ccObject.value.displayBrowser(themeId);
 }
-
 function copyCharacter(themeId:string, assetId:string) {
 	ccObject.value.copyCharacter(themeId, assetId);
 }
-
 function escPress(e:KeyboardEvent) {
 	if (e.key != "Escape") {
 		return;
 	}
 	exit();
 }
-
 onMounted(() => {
 	document.addEventListener("keydown", escPress);
 });
 onUnmounted(() => {
 	document.removeEventListener("keydown", escPress);
 });
-
 defineExpose({ displayBrowser, copyCharacter });
 </script>
 
 <template>
 	<div class="cc_modal">
 		<Popup class="cc_popup_container" :show="show">
-			<template #small-heading>Edit a video</template>
+			<template #small-heading>Character creator</template>
 			<template #large-heading>Create a character</template>
 			<template #head-right>
 				<Button primary @click="exit">Exit</Button>

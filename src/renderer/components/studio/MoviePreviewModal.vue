@@ -83,7 +83,7 @@ defineExpose({ displayPlayer });
 <template>
 	<div class="preview_modal">
 		<Popup class="preview_popup_container" :show="show">
-			<template #small-heading>Edit a video</template>
+			<template #small-heading>Preview</template>
 			<template #large-heading>Video preview</template>
 			<object v-if="showObject" id="player_object" :src="swfUrl" type="application/x-shockwave-flash" width="640" height="360">
 				<param v-for="[name, param] of Object.entries(params)" :name="name" :value="toAttrString(param)"/>

@@ -498,7 +498,7 @@ export default function processVoice(
 						},
 						(r) => {
 							if (r.statusCode < 200 || r.statusCode >= 300) {
-								return rej(new Error(`TikTok server returned HTTP ${r.statusCode}`));
+								return reject(new Error(`TikTok server returned HTTP ${r.statusCode}`));
 							}
 							let body = "";
 							r.on("error", (e) => rej(e));
@@ -507,22 +507,22 @@ export default function processVoice(
 								try {
 									const json = JSON.parse(body);
 									if (json.status_code !== 0) {
-										return rej(new Error(`TikTok API error: ${json.status_code} - ${json.message || "Unknown error"}`));
+										return reject(new Error(`TikTok API error: ${json.status_code} - ${json.message || "Unknown error"}`));
 									}
 									if (!json.data || !json.data.v_str) {
-										return rej(new Error("TikTok API response is missing voice data (v_str)"));
+										return reject(new Error("TikTok API response is missing voice data (v_str)"));
 									}
 									resolve(Buffer.from(json.data.v_str, "base64"));
 								} catch (e) {
-									rej(new Error(`Failed to parse TikTok response: ${e.message}`));
+									reject(new Error(`Failed to parse TikTok response: ${e.message}`));
 								}
 							});
 						}
 					);
-					req.on("error", (e) => rej(new Error(`Network error: ${e.message}`)));
+					req.on("error", (e) => reject(new Error(`Network error: ${e.message}`)));
 					req.on("timeout", () => {
 						req.destroy();
-						rej(new Error("TikTok request timed out"));
+						reject(new Error("TikTok request timed out"));
 					});
 					req.end();
 					break;

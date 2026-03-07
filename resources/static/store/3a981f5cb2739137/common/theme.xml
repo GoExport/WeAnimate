@@ -16186,7 +16186,7 @@
 	<prop id="ncc_pool.swf" name="Swimming pool" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="10941" money="0" sharing="0"/>
 	<prop id="ncc_wood_fence.swf" name="Wooden fence" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="10942" money="0" sharing="0"/>
 	<prop id="ncc_wire_fence.swf" name="Wired fence" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="10943" money="0" sharing="0"/>
-	<prop id="msp_ncc_foodset" name="Makeshift bbq" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_ncc_foodset_ncc_foodset_boil.swf" enable="Y" is_premium="N" aid="10944" money="0" sharing="0">
+	<prop id="msp_ncc_foodset" name="Makeshift BBQ" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_ncc_foodset_ncc_foodset_boil.swf" enable="Y" is_premium="N" aid="10944" money="0" sharing="0">
 		<state id="msp_ncc_foodset_ncc_foodset_boil.swf" name="Boiling pot" enable="Y" default="Y"/>
 		<state id="msp_ncc_foodset_ncc_foodset_stop.swf" name="Pot" enable="Y"/>
 		<state id="msp_ncc_foodset_ncc_foodset_without.swf" name="Without pot" enable="Y"/>

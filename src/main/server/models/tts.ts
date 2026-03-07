@@ -62,7 +62,7 @@ export default function processVoice(
 						}
 					}, (audioRes) => {
 						if (audioRes.statusCode !== 200) {
-							return reject(`Baidu Error: ${audioRes.statusCode}`);
+							return reject(`Baidu error: ${audioRes.statusCode}`);
 						}
 						resolve(audioRes);
 					}).on("error", (e) => reject(`Network error: ${e.message}`));
@@ -357,16 +357,16 @@ export default function processVoice(
 						let chunks = [];
 						res.on("data", (chunk) => chunks.push(chunk));
 						res.on("end", () => {
-							try {
-								const json = JSON.parse(Buffer.concat(chunks).toString());
-								if (json.Error === 1) return reject(json.Text);
-								const audioUrl = json.URL.startsWith("https") ? json.URL : json.URL.replace("http", "https");
-								https.get(audioUrl, resolve).on("error", reject);
-							} catch (e) {
-								reject("Invalid JSON from ttsmp3.com");
-							}
-						});
+						try {
+							const json = JSON.parse(Buffer.concat(chunks).toString());
+							if (json.Error === 1) return reject(json.Text);
+							const audioUrl = json.URL.startsWith("https") ? json.URL : json.URL.replace("http", "https");
+							https.get(audioUrl, resolve).on("error", (e) => reject(`Audio download error: ${e.message}`));
+						} catch (e) {
+							reject("Invalid JSON from ttsmp3.com");
+						}
 					});
+				});
 					req.on("error", (e) => reject(`Network error: ${e.message}`));
 					req.end(body);
 					break;
@@ -379,7 +379,7 @@ export default function processVoice(
 					const req = https.get(`https://api.textreader.pro/tts?${q}`, (res) => {
 						if (res.statusCode !== 200) {
 							console.error(`Pollypluswavenet error: ${res.statusCode}`);
-							return reject(new Error("Service unavailable"));
+							return reject("Service unavailable");
 						}
 						resolve(res);
 					});
@@ -387,9 +387,8 @@ export default function processVoice(
 						console.error("Network error:", err.message);
 						reject(err);
 					});
-					req.setTimeout(10000, () => {
-						req.destroy();
-						reject(new Error("Request timed out"));
+					req.setTimeout(10000, () => {req.destroy();
+						reject("Request timed out");
 					});
 					break;
 				}
@@ -498,7 +497,7 @@ export default function processVoice(
 						},
 						(r) => {
 							if (r.statusCode < 200 || r.statusCode >= 300) {
-								return reject(new Error(`TikTok server returned HTTP ${r.statusCode}`));
+								return reject(`TikTok server returned HTTP ${r.statusCode}`);
 							}
 							let body = "";
 							r.on("error", (e) => reject(e));
@@ -507,22 +506,21 @@ export default function processVoice(
 								try {
 									const json = JSON.parse(body);
 									if (json.status_code !== 0) {
-										return reject(new Error(`TikTok API error: ${json.status_code} - ${json.message || "Unknown error"}`));
+										return reject(`TikTok API error: ${json.status_code} - ${json.message || "Unknown error"}`);
 									}
 									if (!json.data || !json.data.v_str) {
-										return reject(new Error("TikTok API response is missing voice data (v_str)"));
+										return reject("TikTok API response is missing voice data");
 									}
 									resolve(Buffer.from(json.data.v_str, "base64"));
 								} catch (e) {
-									reject(new Error(`Failed to parse TikTok response: ${e.message}`));
+									reject(`Failed to parse TikTok response: ${e.message}`);
 								}
 							});
 						}
 					);
-					req.on("error", (e) => reject(new Error(`Network error: ${e.message}`)));
-					req.on("timeout", () => {
-						req.destroy();
-						reject(new Error("TikTok request timed out"));
+					req.on("error", (e) => reject(`Network error: ${e.message}`));
+					req.on("timeout", () => {req.destroy();
+						reject("TikTok request timed out");
 					});
 					req.end();
 					break;
@@ -551,7 +549,7 @@ export default function processVoice(
 						}
 					}, (audioRes) => {
 						if (audioRes.statusCode !== 200) {
-							return reject(`Vocalware Error: ${audioRes.statusCode}`);
+							return reject(`Vocalware error: ${audioRes.statusCode}`);
 						}
 						resolve(audioRes);
 					});

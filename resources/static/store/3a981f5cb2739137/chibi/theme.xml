@@ -2454,7 +2454,7 @@
 		<state id="msp_ninja_tatami_ncc_ninja_tatami.swf" name="Front" enable="Y" default="Y"/>
 		<state id="msp_ninja_tatami_ncc_ninja_tatami2.swf" name="Side" enable="Y"/>
 	</prop>
-	<prop id="msp_ninja_tv" name="Old tv set" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_ninja_tv_ncc_ninja_tv01_front.swf" enable="Y" is_premium="N" aid="15027" money="0" sharing="0">
+	<prop id="msp_ninja_tv" name="Old TV set" holdable="0" placeable="1" wearable="0" facing="left" thumb="msp_ninja_tv_ncc_ninja_tv01_front.swf" enable="Y" is_premium="N" aid="15027" money="0" sharing="0">
 		<state id="msp_ninja_tv_ncc_ninja_tv01_front.swf" name="Front - off" enable="Y" default="Y"/>
 		<state id="msp_ninja_tv_ncc_ninja_tv01_side.swf" name="Side - off" enable="Y"/>
 		<state id="msp_ninja_tv_ncc_ninja_tv02_front.swf" name="Front - on" enable="Y"/>

@@ -1661,7 +1661,7 @@
 	<effect id="firework" x="0"  y="0" w="550" h="354" rotate="0" type="FIREWORK" resize="false" move="false" name="Firework" enable="Y"/>
 	<effect id="firespring" x="0"  y="0" w="550" h="354" rotate="0" type="FIRESPRING" resize="false" move="false" name="Fire spring" enable="Y"/>	
 
-	<effect id="fire.swf" type="ANIME" resize="false" move="false" name="Bbq" enable="Y"/>
+	<effect id="fire.swf" type="ANIME" resize="false" move="false" name="BBQ" enable="Y"/>
 	<effect id="lightening.swf" type="ANIME" resize="false" move="false" name="Lightning" enable="Y"/>
 	<effect id="snow.swf" type="ANIME" resize="false" move="false" name="Snow" enable="Y"/>
 	<effect id="hyper_snow.swf" type="ANIME" resize="false" move="false" name="Hyper snow" enable="Y"/>

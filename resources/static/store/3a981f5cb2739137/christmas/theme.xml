@@ -275,7 +275,7 @@
 	<effect id="upsideDown" x="0" y="0" w="550" h="354" rotate="0" type="UPSIDEDOWN" resize="false" move="false" name="Upside down" enable="N" is_premium="N" aid="1369" money="0" sharing="0" display_order="1369"/>
 	<effect id="firework" x="0" y="0" w="550" h="354" rotate="0" type="FIREWORK" resize="false" move="false" name="Firework" enable="N" is_premium="N" aid="1370" money="0" sharing="0" display_order="1370"/>
 	<effect id="firespring" x="0" y="0" w="550" h="354" rotate="0" type="FIRESPRING" resize="false" move="false" name="Fire spring" enable="N" is_premium="N" aid="1371" money="0" sharing="0" display_order="1371"/>
-	<effect id="fire.swf" type="ANIME" resize="false" move="false" name="Bbq" enable="N" is_premium="N" aid="1372" money="0" sharing="0" display_order="1372"/>
+	<effect id="fire.swf" type="ANIME" resize="false" move="false" name="BBQ" enable="N" is_premium="N" aid="1372" money="0" sharing="0" display_order="1372"/>
 	<effect id="lightening.swf" type="ANIME" resize="false" move="false" name="Lightning" enable="N" is_premium="N" aid="1373" money="0" sharing="0" display_order="1373"/>
 	<effect id="snow.swf" type="ANIME" resize="false" move="false" name="Snow" enable="N" is_premium="N" aid="1374" money="0" sharing="0" display_order="1374"/>
 	<effect id="hyper_snow.swf" type="ANIME" resize="false" move="false" name="Hyper snow" enable="N" is_premium="N" aid="1375" money="0" sharing="0" display_order="1375"/>

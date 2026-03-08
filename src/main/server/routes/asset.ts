@@ -350,8 +350,8 @@ group.route("POST", "/goapi/saveSound/", async (req, res) => {
 		const meta = {
 			duration: duration,
 			type: "sound",
-			subtype: info.subtype || "voiceover",
-			title: info.title || "Mic recording"
+			subtype: info.subtype || "Voiceover",
+			title: info.title || "Microphone recording"
 		};
 		const id = await AssetModel.save(filepath, "mp3", meta);
 		if (tempToUnlink && fs.existsSync(tempToUnlink)) {

@@ -10,11 +10,16 @@ class Settings {
 		IS_WIDE: "1",
 		SAVE_LOG_FILES: false,
 		HIDE_NAVBAR: true,
+		GE_ASPECT: "16:9",
+		GE_RESOLUTION: "720p",
+		GE_OPEN_FOLDER: false,
+		GE_OUTRO: true,
+		GE_REQUIRE_OBS: false,
 		DEFAULT_WATERMARK: "none",
 	};
 	private static _instance:Settings;
 	constructor() {
-		const defaultVals = this.json;
+		const defaultVals = { ...this.json };
 		if (!fs.existsSync(this.path)) {
 			console.error("Settings doesn't exist! Creating...");
 			this.save(defaultVals);
@@ -26,13 +31,20 @@ class Settings {
 			}
 		}
 		this.refresh();
-		if (Object.keys(this.json).length !== Object.keys(defaultVals).length) {
-			for (let key in this.json) {
-				if (defaultVals[key] != null) {
-					defaultVals[key] = this.json[key];
-				}
+
+		let shouldSave = false;
+		const merged = { ...defaultVals };
+		for (const key in defaultVals) {
+			if (typeof this.json[key] !== "undefined") {
+				merged[key] = this.json[key];
+			} else {
+				shouldSave = true;
 			}
-			this.save(defaultVals);
+		}
+
+		if (shouldSave) {
+			this.save(merged);
+			this.refresh();
 		}
 	}
 	static get instance() {
@@ -59,6 +71,11 @@ class Settings {
 			isWide: this.isWide,
 			saveLogFiles: this.saveLogFiles,
 			hideNavbar: this.hideNavbar,
+			geAspect: this.geAspect,
+			geResolution: this.geResolution,
+			geOpenFolder: this.geOpenFolder,
+			geOutro: this.geOutro,
+			geRequireObs: this.geRequireObs,
 			defaultWatermark: this.defaultWatermark
 		};
 	}
@@ -96,6 +113,41 @@ class Settings {
 	}
 	set hideNavbar(newValue:boolean) {
 		this.json["HIDE_NAVBAR"] = newValue;
+		this.save(this.json);
+	}
+	get geAspect() {
+		return this.json["GE_ASPECT"];
+	}
+	set geAspect(newValue:string) {
+		this.json["GE_ASPECT"] = newValue;
+		this.save(this.json);
+	}
+	get geResolution() {
+		return this.json["GE_RESOLUTION"];
+	}
+	set geResolution(newValue:string) {
+		this.json["GE_RESOLUTION"] = newValue;
+		this.save(this.json);
+	}
+	get geOpenFolder() {
+		return this.json["GE_OPEN_FOLDER"];
+	}
+	set geOpenFolder(newValue:boolean) {
+		this.json["GE_OPEN_FOLDER"] = newValue;
+		this.save(this.json);
+	}
+	get geOutro() {
+		return this.json["GE_OUTRO"];
+	}
+	set geOutro(newValue:boolean) {
+		this.json["GE_OUTRO"] = newValue;
+		this.save(this.json);
+	}
+	get geRequireObs() {
+		return this.json["GE_REQUIRE_OBS"];
+	}
+	set geRequireObs(newValue:boolean) {
+		this.json["GE_REQUIRE_OBS"] = newValue;
 		this.save(this.json);
 	}
 	get defaultWatermark() {

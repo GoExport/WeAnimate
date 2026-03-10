@@ -78,6 +78,10 @@ const tabs = [
 		name: "Appearance"
 	},
 	{
+		id: "goexport",
+		name: "GoExport"
+	},
+	{
 		id: "watermarks",
 		name: "Watermarks"
 	}
@@ -167,6 +171,42 @@ onUnmounted(() => {
 					<SettingToggle id="truncatedThemeList" binary>
 						<template #title>Truncated themelist</template>
 						<template #description>Shows a limited selection of themes</template>
+					</SettingToggle>
+				</div>
+				<div v-if="selectedTab == 'goexport'" class="tab">
+					<SettingToggle id="geAspect" :options="{
+						'4:3': 'Standard (4:3)',
+						'14:9': 'Classic (14:9)',
+						'16:9': 'Widescreen (16:9)',
+						'9:16': 'Vertical (9:16)'
+					}">
+						<template #title>Aspect ratio</template>
+						<template #description>The aspect ratio determines how wide your video should be in GoExport</template>
+					</SettingToggle>
+
+					<SettingToggle id="geResolution" :options="{
+						'360p': '360p',
+						'480p': '480p',
+						'720p': '720p',
+						'1080p': '1080p'
+					}">
+						<template #title>Resolution</template>
+						<template #description>The output frame size for GoExport videos. Default is 720p</template>
+					</SettingToggle>
+
+					<SettingToggle id="geOpenFolder" binary>
+						<template #title>Open folder after export</template>
+						<template #description>When enabled, GoExport opens the output folder when export finishes</template>
+					</SettingToggle>
+
+					<SettingToggle id="geOutro" binary>
+						<template #title>Add outro to exported videos</template>
+						<template #description>When enabled, GoExport appends an outro to exported videos</template>
+					</SettingToggle>
+
+					<SettingToggle id="geRequireObs" binary>
+						<template #title>Require OBS for export</template>
+						<template #description>Only allow exporting when OBS is running</template>
 					</SettingToggle>
 				</div>
 				<div v-if="selectedTab == 'watermarks'" class="tab">

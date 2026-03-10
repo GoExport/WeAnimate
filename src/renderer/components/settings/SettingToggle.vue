@@ -108,7 +108,7 @@ function set(strValue:string) {
 		</div>
 		<input v-if="props.binary" class="setting" type="checkbox" :checked="Boolean(value) == true"></input>
 		<select v-if="!props.binary" class="setting" @change="optionSelected">
-			<option v-for="(option, id) in props.options" :value="id" :selected="value.toString() == id">
+			<option v-for="(option, id) in props.options" :value="id" :selected="(value ?? '').toString() == id">
 				{{ option }}
 			</option>`
 		</select>

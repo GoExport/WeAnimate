@@ -28,7 +28,7 @@ export default function openPlayerWindow(movieId: string) {
 
     window.open(
         `?redirect=/movies/play/${movieId}`,
-        "Video player - Wrapper offline",
+        "Video player - WeAnimate",
         `width=${width},height=${height},left=${left},top=${top},menubar=no,status=no,resizable=no`
     );
 }

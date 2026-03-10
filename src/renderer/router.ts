@@ -106,7 +106,7 @@ const router = createRouter({
 });
 router.beforeEach((to) => {
 	const title = to.meta.title as string;
-	const titleBase = "Wrapper offline";
+	const titleBase = "WeAnimate";
 	if (title) {
 		document.title = `${title} - ${titleBase}`;
 	} else {

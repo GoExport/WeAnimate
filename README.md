@@ -1,17 +1,17 @@
 <div class="head" align="center">
-  <h1>Wrapper offline</h1>
-  <p><b>This project is not affiliated with or endorsed by GoAnimate Inc. or their product Vyond. Wrapper offline is a decentralized open source initiative developed exclusively for archival purposes. It operates on a non-profit basis and does not accept any form of donations</b></p>
+  <h1>WeAnimate</h1>
+  <p><b>This project is not affiliated with or endorsed by GoAnimate Inc. or their product Vyond. WeAnimate is a decentralized open source initiative developed exclusively for archival purposes. It operates on a non-profit basis and does not accept any form of donations</b></p>
   <br/>
 </div>
 
-Wrapper offline is a software designed to provide readily obtainable, irrevocable access to GoAnimate's retired assets in the modern era    
+WeAnimate is a software designed to provide readily obtainable, irrevocable access to GoAnimate's retired assets in the modern era    
 It achieves this by replicating the original API and asset servers entirely on the computers of the users while providing a simplistic frontend to interact with them
 This project is important for archival purposes, as the ability to use the legacy GoAnimate editor and themes would be far trickier without it
 
-### 🚀 Wrapper offline 2.1.4 (The ultimate bugfix)  
+### 🚀 WeAnimate 1.0.0 (The ultimate bugfix)  
 This version is a complete overhaul of the original 2.1.0 source code. Over 40+ critical bugs have been fixed, unnecessary dependencies removed, and the core packages swapped for maximum compatibility and portability
 ### 🛠️ Major architectural changes
-- Sharp → FFmpeg migration: Replaced the binary-heavy Sharp with FFmpeg as that is a Wrapper offline dependency anyways. This enables 100% native Windows 7 support without needing VxKex or any kernel extensions
+- Sharp → FFmpeg migration: Replaced the binary-heavy Sharp with FFmpeg as that is a WeAnimate dependency anyways. This enables 100% native Windows 7 support without needing VxKex or any kernel extensions
 - Pure portability: Separated temp and userdata from %APPDATA%. All data now stays within the program’s resources folder, leaving ZERO footprint in your appdata folder
 - Nodezip → AdmZip: Swapped the unreliable nodezip for AdmZip for stable ZIP compression and metadata handling
 - Automated build process: Fully automated the build script that handles asset relocation, icon selection (ICO/PNG/ICNS) and multi-arch packaging in a single go
@@ -38,18 +38,18 @@ This version is a complete overhaul of the original 2.1.0 source code. Over 40+ 
 - Readable dates: New format: Day [st/nd/rd/th] of Month YYYY - HH:MM:SS
 - Locked video player aspect ratio: Disabled window resizing for the player to prevent Flash distortion and maintain pixel-perfect rendering, as Flash is not a responsive technology
 ### 💡 Why choose the THIS version?
-This version is built for longevity and stability. It runs on Windows 7 natively, consumes fewer resources, and fixes the most annoying bugs that occured in the previous Wrapper offline versions
+This version is built for longevity and stability. It runs on Windows 7 natively, consumes fewer resources, and fixes the most annoying bugs that occured in the previous WeAnimate versions
 
 ### Downloads / Installation
-To install Wrapper offline, you need to download it through the [releases page](https://github.com/GTAManRCRX/wrapper-offline-fixed/releases/)
+To install WeAnimate, you need to download it through the [releases page](https://github.com/GoExport/WeAnimate/releases/)
 
 ### Updates and support
-For support, the first thing you should do is to [read through the Wrapper offline wiki](https://github.com/wrapper-offline/wrapper-offline/wiki) as it most likely has what you want to know    
+For support, the first thing you should do is to [read through the WeAnimate wiki](https://github.com/weanimate/weanimate/wiki) as it most likely has what you want to know    
 Alternatively if you can't find what you need, you can join the [Discord server](https://discord.gg/Kf7BzSw)
 Joining the server is recommended, as there is a whole community that can help you out
 
 ### Building and testing
-To run Wrapper offline with a development server, first run this command
+To run WeAnimate with a development server, first run this command
 ```
 npm install
 ```
@@ -62,7 +62,7 @@ And now you can run the development server with
 npm run dev
 ```
 ### Packaging
-To build a full copy of Wrapper offline
+To build a full copy of WeAnimate
 ```
 npm run package
 ```
@@ -74,7 +74,7 @@ FFmpeg is under the GNU GPLv2 license, which grants similar rights, but has some
 ### Credits
 | Contributor | Contribution |
 | --------- | ------- |
-| Benson | The original developer of Wrapper offline |
+| Benson | The original developer of WeAnimate |
 | DanielBitten | Upgraded TTS endpoints and voices |
 | It'sJay | Saving every asset |
 | MegaT | Eradicating the timebomb issue |
@@ -86,4 +86,4 @@ FFmpeg is under the GNU GPLv2 license, which grants similar rights, but has some
 
 [Whispery's Discord page](https://discord.com/users/1440498123997843607)
 
-No members of the original GoAnimate wrapper team are officially working on Wrapper offline, even if they have contributed. Some members of the original team have asked to not be given credit, and they have been removed
+No members of the original GoAnimate wrapper team are officially working on WeAnimate, even if they have contributed. Some members of the original team have asked to not be given credit, and they have been removed

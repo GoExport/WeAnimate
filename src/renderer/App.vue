@@ -85,7 +85,7 @@ onMounted(() => {
 <template>
 	<RouterView/>
 	<noscript id="noscript">
-		<h1>Wrapper offline</h1>
+		<h1>WeAnimate</h1>
 		<h2>JavaScript required</h2>
 		<p>This page requires JavaScript to function.</p>
 	</noscript>

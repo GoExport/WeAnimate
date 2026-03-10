@@ -13,5 +13,5 @@
 	"CACHE_FOLDER": "./CACHE",
 	"LOG_FOLDER": "./LOGS",
 	"SAVED_FOLDER": "./SAVED",
-	"WRAPPER_VER": "2.1.4"
+	"WRAPPER_VER": "1.0.0"
 }

@@ -1,7 +1,7 @@
 {
-	"name": "wrapper-offline",
+	"name": "weanimate",
 	"description": "GoAnimate server emulator",
-	"version": "2.1.4",
+	"version": "1.0.0",
 	"homepage": "https://discord.gg/Kf7BzSw",
 	"license": "MIT",
 	"private": true,
@@ -9,7 +9,7 @@
 		"postinstall": "node scripts/fixModules.js",
 		"dev": "concurrently \"NODE_OPTIONS='--no-deprecation' node scripts/build.mjs --dev\" \"vite dev\"",
 		"build": "vite build && node scripts/build.mjs",
-		"package": "npx electron-packager dist 'Wrapper offline' --icon=dist/favicon.ico --overwrite"
+		"package": "npx electron-packager dist 'WeAnimate' --icon=dist/favicon.ico --overwrite"
 	},
 	"engines": {
 		"node": ">=16"
@@ -41,10 +41,10 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/GTAManRCRX/wrapper-offline-fixed.git"
+		"url": "git+https://github.com/GoExport/WeAnimate.git"
 	},
 	"author": "GTAManRCR",
 	"bugs": {
-		"url": "https://github.com/GTAManRCRX/wrapper-offline-fixed/issues"
+		"url": "https://github.com/GoExport/WeAnimate/issues"
 	}
 }

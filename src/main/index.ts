@@ -68,7 +68,7 @@ switch (process.platform) {
 		break;
 	}
 	default: {
-		throw new Error("You are running Wrapper offline on an unsupported platform");
+		throw new Error("You are running WeAnimate on an unsupported platform");
 	}
 }
 app.commandLine.appendSwitch("ppapi-flash-path", join(__dirname, pluginName));
@@ -88,7 +88,7 @@ const createWindow = () => {
 	mainWindow = new BrowserWindow({
 		width: 1280,
 		height: 720,
-		title: "Wrapper offline",
+		title: "WeAnimate",
 		autoHideMenuBar: true,
 		show: false,
 		icon: iconPath,
@@ -124,10 +124,10 @@ async function openDiscord() {
 	await shell.openExternal("https://discord.gg/Kf7BzSw");
 }
 async function openFaq() {
-	await shell.openExternal("https://github.com/wrapper-offline/wrapper-offline/wiki/FAQ");
+	await shell.openExternal("https://github.com/weanimate/weanimate/wiki/FAQ");
 }
 async function openGitHub() {
-	await shell.openExternal("https://github.com/GTAManRCRX/wrapper-offline-fixed");
+	await shell.openExternal("https://github.com/GoExport/WeAnimate");
 }
 async function openDataFolder() {
 	await shell.openPath(Directories.userData);

@@ -1,278 +1,278 @@
 <style lang="css" scoped>
 .app_sidebar {
-	background: hsl(240deg 17% 23%);
-	z-index: 8;
-	user-select: none;
-	display: flex;
-	flex-direction: column;
-	flex-shrink: 0;
+  background: hsl(240deg 17% 23%);
+  z-index: 8;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
 }
 .app_sidebar .link .link_text {
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .app_sidebar .link.create button {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
 }
 .app_sidebar #logo_container {
-	background: hsl(240deg 17% 13%);
-	border-bottom: 1px solid #3d3d57;
-	padding: 4px 8px;
-	transform: translateX(0);
-	height: 50px;
+  background: hsl(240deg 17% 13%);
+  border-bottom: 1px solid #3d3d57;
+  padding: 4px 8px;
+  transform: translateX(0);
+  height: 50px;
 }
 .app_sidebar #logo_container .logo_btn {
-	border-radius: 3px;
-	transition: 0.2s var(--button-anim);
-	cursor: pointer;
-	width: 100%;
-	height: 100%;
+  border-radius: 3px;
+  transition: 0.2s var(--button-anim);
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
 }
 .app_sidebar #logo_container .logo_btn:hover {
-	transition: none;
-	background: hsl(240deg 16% 18%);
+  transition: none;
+  background: hsl(240deg 16% 18%);
 }
 .app_sidebar #logo_container #logo_icon {
-	transition: 0.205s var(--slide-anim);
-	pointer-events: none;
-	position: absolute;
-	left: calc(50% - calc(175px / 2));
-	height: 41px;
+  transition: 0.205s var(--slide-anim);
+  pointer-events: none;
+  position: absolute;
+  left: calc(50% - calc(175px / 2));
+  height: 41px;
 }
 .app_sidebar #logo_container #logo_wordmark {
-	transition: 0.205s var(--slide-anim);
-	pointer-events: none;
-	position: absolute;
-	left: calc(50% - calc(175px / 2));
-	height: 41px;
+  transition: 0.205s var(--slide-anim);
+  pointer-events: none;
+  position: absolute;
+  left: calc(50% - calc(175px / 2));
+  height: 41px;
 }
 .app_sidebar ul {
-	list-style: none;
-	margin: 0;
-	padding: 2px 8px;
+  list-style: none;
+  margin: 0;
+  padding: 2px 8px;
 }
-.app_sidebar>ul:first-of-type {
-	border-bottom: 1px solid hsl(240 14% 32% / 1);
+.app_sidebar > ul:first-of-type {
+  border-bottom: 1px solid hsl(240 14% 32% / 1);
 }
-.app_sidebar>ul:last-of-type {
-	border-top: 1px solid hsl(240 14% 32% / 1);
-	margin-top: auto;
-	padding-bottom: 8px;
+.app_sidebar > ul:last-of-type {
+  border-top: 1px solid hsl(240 14% 32% / 1);
+  margin-top: auto;
+  padding-bottom: 8px;
 }
 .app_sidebar i {
-	margin-top: 0;
-	margin-right: 7px;
+  margin-top: 0;
+  margin-right: 7px;
 }
 .app_sidebar .link {
-	border-radius: 4px;
-	transition: 0.2s var(--button-anim);
-	overflow: hidden;
-	display: flex;
-	margin: 3px 0;
-	height: 35px;
+  border-radius: 4px;
+  transition: 0.2s var(--button-anim);
+  overflow: hidden;
+  display: flex;
+  margin: 3px 0;
+  height: 35px;
 }
-.app_sidebar .link>a {
-	color: #fff;
-	text-decoration: none;
-	display: flex;
-	padding: 5px 12.5px;
-	height: 100%;
-	width: calc(100% - 14px);
+.app_sidebar .link > a {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  padding: 5px 12.5px;
+  height: 100%;
+  width: calc(100% - 14px);
 }
-.app_sidebar .link>button {
-	background: #0000;
-	border: none;
-	color: #fff;
-	cursor: pointer;
-	display: flex;
-	padding: 8px 12.5px;
-	width: calc(100% - 14px);
+.app_sidebar .link > button {
+  background: #0000;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  padding: 8px 12.5px;
+  width: calc(100% - 14px);
 }
-.app_sidebar .link>button:focus {
-	outline: none;
+.app_sidebar .link > button:focus {
+  outline: none;
 }
 .app_sidebar .link::after {
-	content: "";
-	background: linear-gradient(90deg, #0000 0, #313145 10px);
-	width: 14px;
-	height: 100%;
+  content: "";
+  background: linear-gradient(90deg, #0000 0, #313145 10px);
+  width: 14px;
+  height: 100%;
 }
 .app_sidebar .link:hover {
-	background: hsl(240 17% 29% / 1);
-	transition: none;
+  background: hsl(240 17% 29% / 1);
+  transition: none;
 }
 .app_sidebar .link:hover::after {
-	background: linear-gradient(90deg, #0000 0, hsl(240 17% 29% / 1) 10px);
+  background: linear-gradient(90deg, #0000 0, hsl(240 17% 29% / 1) 10px);
 }
 .app_sidebar .link.create {
-	background: hsl(344deg 97% 65%);
-	border-bottom-color: #ac0633;
+  background: hsl(344deg 97% 65%);
+  border-bottom-color: #ac0633;
 }
-.app_sidebar .link.create>button {
-	color: #fff;
+.app_sidebar .link.create > button {
+  color: #fff;
 }
 .app_sidebar .link.create::after {
-	content: "";
-	background: linear-gradient(90deg, #0000 0, hsl(344deg 97% 65%) 10px);
-	width: 14px;
-	height: 100%;
+  content: "";
+  background: linear-gradient(90deg, #0000 0, hsl(344deg 97% 65%) 10px);
+  width: 14px;
+  height: 100%;
 }
 .app_sidebar .spacer {
-	margin-bottom: 7px;
+  margin-bottom: 7px;
 }
 .app_sidebar .dragger {
-	cursor: col-resize;
-	position: absolute;
-	top: 50px;
-	float: right;
-	width: 6px;
-	height: calc(100% - 50px);
+  cursor: col-resize;
+  position: absolute;
+  top: 50px;
+  float: right;
+  width: 6px;
+  height: calc(100% - 50px);
 }
 .app_sidebar .dragger:hover {
-	background: #489cf7a3;
-	transition: 0.08s ease-in;
-	transition-delay: 0.18s;
+  background: #489cf7a3;
+  transition: 0.08s ease-in;
+  transition-delay: 0.18s;
 }
 .app_sidebar h3 {
-	text-align: center;
-	color: #918fa0;
-	font-size: 13px;
-	font-weight: bold;
-	text-transform: uppercase;
-	margin: 5px 0;
+  text-align: center;
+  color: #918fa0;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 5px 0;
 }
-.app_sidebar .user_custom .link>button.unpin {
-	border-radius: 3px 0 0 3px;
-	font-size: 12px;
-	text-align: left;
-	padding: 5px 5px 5px 8px;
-	height: 100%;
+.app_sidebar .user_custom .link > button.unpin {
+  border-radius: 3px 0 0 3px;
+  font-size: 12px;
+  text-align: left;
+  padding: 5px 5px 5px 8px;
+  height: 100%;
 }
-.app_sidebar .user_custom .link>button.unpin:hover {
-	background: #ffd3e8;
+.app_sidebar .user_custom .link > button.unpin:hover {
+  background: #ffd3e8;
 }
-.app_sidebar .user_custom .link>a {
-	padding: 5px 6px 5px 3px;
+.app_sidebar .user_custom .link > a {
+  padding: 5px 6px 5px 3px;
 }
-.app_sidebar .link[data-toggle]>button {
-	display: flex;
-	padding: 5px 12px;
-	flex-grow: 1;
-	line-height: 24px;
+.app_sidebar .link[data-toggle] > button {
+  display: flex;
+  padding: 5px 12px;
+  flex-grow: 1;
+  line-height: 24px;
 }
-.app_sidebar .link[data-toggle]>button i.ico::before {
-	transition: transform 0.2s cubic-bezier(0, 0.8, 0.45, 1.35);
-	transform: scale(-1) translate(0.5px, 0);
-	display: block;
+.app_sidebar .link[data-toggle] > button i.ico::before {
+  transition: transform 0.2s cubic-bezier(0, 0.8, 0.45, 1.35);
+  transform: scale(-1) translate(0.5px, 0);
+  display: block;
 }
-.app_sidebar .link[data-toggle]>button:hover {
-	background: #0000
+.app_sidebar .link[data-toggle] > button:hover {
+  background: #0000;
 }
 .app_sidebar #wrapper_ver {
-	color: #909090;
-	display: block;
-	font-size: 13px;
-	text-align: center;
+  color: #909090;
+  display: block;
+  font-size: 13px;
+  text-align: center;
 }
 .app_sidebar input {
-	display: none;
+  display: none;
 }
 html.dark .app_sidebar {
-	background: hsl(250 10% 13% / 1);
+  background: hsl(250 10% 13% / 1);
 }
 html.dark .app_sidebar #logo_container {
-	background: hsl(250 10% 9% / 1);
-	border-color: hsl(250 10% 22% / 1);
+  background: hsl(250 10% 9% / 1);
+  border-color: hsl(250 10% 22% / 1);
 }
 html.dark .app_sidebar #logo_container .logo_btn:hover {
-	background: #1b1924;
+  background: #1b1924;
 }
-html.dark .app_sidebar>ul:first-of-type {
-	border-color: hsl(250deg 14% 23%);
+html.dark .app_sidebar > ul:first-of-type {
+  border-color: hsl(250deg 14% 23%);
 }
-html.dark .app_sidebar>ul:last-of-type {
-	border-color: hsl(250deg 14% 23%);
+html.dark .app_sidebar > ul:last-of-type {
+  border-color: hsl(250deg 14% 23%);
 }
-html.dark  .app_sidebar .group>ul>.divider {
-	background: hsl(250deg 14% 23%);
-	margin: 7px 0 5px;
-	width: 1px;
+html.dark .app_sidebar .group > ul > .divider {
+  background: hsl(250deg 14% 23%);
+  margin: 7px 0 5px;
+  width: 1px;
 }
-html.dark .app_sidebar .link>a {
-	color: #ccc;
+html.dark .app_sidebar .link > a {
+  color: #ccc;
 }
-html.dark .app_sidebar .link>button {
-	color: #ccc;
+html.dark .app_sidebar .link > button {
+  color: #ccc;
 }
 html.dark .app_sidebar .link i {
-	color: #9f9eab;
+  color: #9f9eab;
 }
 html.dark .app_sidebar .link::after {
-	background: linear-gradient(90deg, #0000 0, hsl(250 11% 13% / 1) 10px);
+  background: linear-gradient(90deg, #0000 0, hsl(250 11% 13% / 1) 10px);
 }
 html.dark .app_sidebar .link:hover {
-	background: hsl(250 10% 18% / 1);
+  background: hsl(250 10% 18% / 1);
 }
 html.dark .app_sidebar .link:hover::after {
-	background: linear-gradient(90deg, #0000 0, hsl(250 10% 18% / 1) 10px);
+  background: linear-gradient(90deg, #0000 0, hsl(250 10% 18% / 1) 10px);
 }
 html.dark .app_sidebar .link.create {
-	background: hsl(342deg 55% 48%);
-	border-bottom-color: #732137;
+  background: #daa5de;
+  border-bottom-color: #250d59;
 }
 html.dark .app_sidebar .link.create button,
 html.dark .app_sidebar .link.create i {
-	color: #eee;
+  color: #eee;
 }
 html.dark .app_sidebar .link.create::after {
-	background: linear-gradient(90deg, #0000 0, hsl(342deg 55% 48%) 10px);
+  background: linear-gradient(90deg, #0000 0, #daa5de 10px);
 }
-html.dark .app_sidebar .user_custom .link>button:hover {
-	background: #573344;
+html.dark .app_sidebar .user_custom .link > button:hover {
+  background: #573344;
 }
 html.dark .app_sidebar #wrapper_ver {
-	color: #bbb;
+  color: #bbb;
 }
 .app_sidebar.logo_collapsed #logo_container {
-	width: 62px;
+  width: 62px;
 }
 .app_sidebar.logo_collapsed #logo_container #logo_icon {
-	left: calc(50% - calc(41px / 2));
+  left: calc(50% - calc(41px / 2));
 }
 .app_sidebar.logo_collapsed #logo_container #logo_wordmark {
-	opacity: 0;
+  opacity: 0;
 }
-.app_sidebar.collapsed .group>ul {
-	display: block;	
+.app_sidebar.collapsed .group > ul {
+  display: block;
 }
-.app_sidebar.collapsed .group>ul>.link {
-	width: 100%;
+.app_sidebar.collapsed .group > ul > .link {
+  width: 100%;
 }
 .app_sidebar.collapsed h3 {
-	opacity: 0;
-	pointer-events: none;
-	height: 0;
-	margin: 0;
+  opacity: 0;
+  pointer-events: none;
+  height: 0;
+  margin: 0;
 }
-.app_sidebar.collapsed .link>a {
-	padding: 5px 12.5px;
+.app_sidebar.collapsed .link > a {
+  padding: 5px 12.5px;
 }
-.app_sidebar.collapsed .link>button {
-	padding: 8px 12.5px;
+.app_sidebar.collapsed .link > button {
+  padding: 8px 12.5px;
 }
 .app_sidebar.collapsed .link::after {
-	content: none;
+  content: none;
 }
 .app_sidebar.collapsed .link[data-toggle] i.ico::before {
-	transform: scale(1);
+  transform: scale(1);
 }
 .app_sidebar.collapsed .link_text {
-	display: none;
+  display: none;
 }
 </style>
 <script setup lang="ts">
@@ -301,233 +301,254 @@ const displayAppInfo = ref(false);
 const displaySettings = ref(false);
 const inResize = ref(false);
 const logoCollapsed = ref(false);
-const movieUploadType = ref("starter")
+const movieUploadType = ref("starter");
 const slideMode = ref({
-	margin: 0,
-	enabled: false,
+  margin: 0,
+  enabled: false,
 });
 const width = ref(250);
-function setWidth(newWidth:number) {
-	if (newWidth <= 93) {
-		if (newWidth <= 46) {
-			width.value = 56;
-		} else {
-			width.value = 93;
-		}
-	} else {
-		width.value = Math.min(newWidth, 590);
-	}
-	collapsed.value = toValue(width) <= 56;
-	logoCollapsed.value = toValue(width) <= 200;
+function setWidth(newWidth: number) {
+  if (newWidth <= 93) {
+    if (newWidth <= 46) {
+      width.value = 56;
+    } else {
+      width.value = 93;
+    }
+  } else {
+    width.value = Math.min(newWidth, 590);
+  }
+  collapsed.value = toValue(width) <= 56;
+  logoCollapsed.value = toValue(width) <= 200;
 }
 function watchWidth() {
-	slideMode.value.margin = Math.min(
-		0,
-		-toValue(width) + Math.max(
-			56,
-			document.body.clientWidth - 1000
-		)
-	);
+  slideMode.value.margin = Math.min(
+    0,
+    -toValue(width) + Math.max(56, document.body.clientWidth - 1000),
+  );
 }
 async function charInput_input(e: Event) {
-	const target = e.currentTarget as HTMLInputElement;
-	if (!target.files || target.files.length === 0) return;
+  const target = e.currentTarget as HTMLInputElement;
+  if (!target.files || target.files.length === 0) return;
 
-	const charData = new FormData();
-	charData.append("import", target.files[0]);
+  const charData = new FormData();
+  charData.append("import", target.files[0]);
 
-	try {
-		const response = await fetch(`${apiServer}/api/char/upload`, {
-			method: "POST",
-			body: charData
-		});
-		if (response.ok) {
-			const data = await response.json();
-			pendingRefresh.value = true;
-			router.push("/").then(() => {
-				router.push("/characters/" + data.themeId);
-				if (target) target.value = "";
-			});
-		}
-	} catch (err) {
-		console.error("Import error:", err);
-	}
+  try {
+    const response = await fetch(`${apiServer}/api/char/upload`, {
+      method: "POST",
+      body: charData,
+    });
+    if (response.ok) {
+      const data = await response.json();
+      pendingRefresh.value = true;
+      router.push("/").then(() => {
+        router.push("/characters/" + data.themeId);
+        if (target) target.value = "";
+      });
+    }
+  } catch (err) {
+    console.error("Import error:", err);
+  }
 }
 async function movieInput_input(e: Event) {
-	const target = e.currentTarget as HTMLInputElement;
-	if (!target.files || target.files.length === 0) return;
-	const zipFile = target.files[0];
-	const isStarter = movieUploadType.value == "starter";
-	const body = new FormData();
-	body.append("import", zipFile);
-	if (isStarter) {
-		body.append("is_starter", "1");
-	}
-	const res = await fetch(apiServer + "/api/movie/upload", {
-		method: "POST",
-		body
-	});
-	if (res.ok) {
-		const json = await res.json();
-		target.value = ""; 
-		pendingRefresh.value = true;
-		switch (localSettings.onMovieUpload) {
-		case "edit":
-			router.push("/movies/edit/" + json.id);
-			break;
-		case "play":
-			openPlayerWindow(json.id);
-			router.push("/temp").then(() => {
-				router.push(isStarter ? "/starters" : "/movies");
-			});
-			break;
-		case "none":
-		default:
-			router.push("/temp").then(() => {
-				router.push(isStarter ? "/starters" : "/movies");
-			});
-		}
-	}
+  const target = e.currentTarget as HTMLInputElement;
+  if (!target.files || target.files.length === 0) return;
+  const zipFile = target.files[0];
+  const isStarter = movieUploadType.value == "starter";
+  const body = new FormData();
+  body.append("import", zipFile);
+  if (isStarter) {
+    body.append("is_starter", "1");
+  }
+  const res = await fetch(apiServer + "/api/movie/upload", {
+    method: "POST",
+    body,
+  });
+  if (res.ok) {
+    const json = await res.json();
+    target.value = "";
+    pendingRefresh.value = true;
+    switch (localSettings.onMovieUpload) {
+      case "edit":
+        router.push("/movies/edit/" + json.id);
+        break;
+      case "play":
+        openPlayerWindow(json.id);
+        router.push("/temp").then(() => {
+          router.push(isStarter ? "/starters" : "/movies");
+        });
+        break;
+      case "none":
+      default:
+        router.push("/temp").then(() => {
+          router.push(isStarter ? "/starters" : "/movies");
+        });
+    }
+  }
 }
 function movieUpload_click() {
-	movieUploadType.value = "movie";
-	movieInput.value.click();
+  movieUploadType.value = "movie";
+  movieInput.value.click();
 }
 function starterUpload_click() {
-	movieUploadType.value = "starter";
-	movieInput.value.click();
+  movieUploadType.value = "starter";
+  movieInput.value.click();
 }
 function openAppInfo() {
-	displayAppInfo.value = true;
+  displayAppInfo.value = true;
 }
 function closeAppInfo() {
-	displayAppInfo.value = false;
+  displayAppInfo.value = false;
 }
 function openSettings() {
-	displaySettings.value = true;
+  displaySettings.value = true;
 }
 function closeSettings() {
-	displaySettings.value = false;
+  displaySettings.value = false;
 }
-function draggerDown(e:MouseEvent) {
-	inResize.value = true;
-	document.body.classList.add("col_resize");
-	const startX = e.clientX;
-	const startWidth = width.value;
-	const moveCb = (moveE2:MouseEvent) => {
-		const newWidth = startWidth - startX + moveE2.clientX;
-		setWidth(newWidth);
-	};
-	window.addEventListener("mousemove", moveCb);
-	window.addEventListener("mouseup", () => {
-		window.removeEventListener("mousemove", moveCb);
-		inResize.value = false;
-		document.body.classList.remove("col_resize");
-	});
+function draggerDown(e: MouseEvent) {
+  inResize.value = true;
+  document.body.classList.add("col_resize");
+  const startX = e.clientX;
+  const startWidth = width.value;
+  const moveCb = (moveE2: MouseEvent) => {
+    const newWidth = startWidth - startX + moveE2.clientX;
+    setWidth(newWidth);
+  };
+  window.addEventListener("mousemove", moveCb);
+  window.addEventListener("mouseup", () => {
+    window.removeEventListener("mousemove", moveCb);
+    inResize.value = false;
+    document.body.classList.remove("col_resize");
+  });
 }
 onBeforeRouteLeave((to, from) => {
-	if (to.path.startsWith("/character") && !from.path.startsWith("/character")) {
-		window.addEventListener("resize", watchWidth);
-		watchWidth();
-		slideMode.value.enabled = true;
-	} else if (from.path.startsWith("/character") && !to.path.startsWith("/character")) {
-		window.removeEventListener("resize", watchWidth);
-		slideMode.value.margin = 0;
-		slideMode.value.enabled = false;
-	}
+  if (to.path.startsWith("/character") && !from.path.startsWith("/character")) {
+    window.addEventListener("resize", watchWidth);
+    watchWidth();
+    slideMode.value.enabled = true;
+  } else if (
+    from.path.startsWith("/character") &&
+    !to.path.startsWith("/character")
+  ) {
+    window.removeEventListener("resize", watchWidth);
+    slideMode.value.margin = 0;
+    slideMode.value.enabled = false;
+  }
 });
 defineExpose({ slideMode, width });
 </script>
 <template>
-	<div class="app_sidebar" :class="{
-		collapsed,
-		logo_collapsed: logoCollapsed,
-		slide_mode: slideMode.enabled,
-		resize: inResize
-	}" :style="{
-		marginLeft: slideMode.margin + 'px',
-		width: width + 'px'
-	}">
-		<div id="logo_container" :style="{width:width + 'px'}">
-			<div class="logo_btn" @click="openAppInfo" title="About WeAnimate">
-				<img id="logo_icon" src="/img/logo_icon.svg" alt="Candy"/>
-				<img id="logo_wordmark" src="/img/logo_wordmark.svg" alt="WeAnimate"/>
-			</div>
-		</div>
-		<ul>
-			<Dropdown>
-				<template #toggle>
-					<li class="link create">
-						<button>
-							<i class="ico arr_r"></i>
-							<div class="link_text">New</div>
-						</button>
-					</li>
-				</template>
-				<RouterLink to="/movies/create" class="dropdown_item">Make a video</RouterLink>
-				<DropdownSeparator/>
-				<DropdownItem @click="charInput.click()">Import a character</DropdownItem>
-				<DropdownItem @click="movieUpload_click()">Import a video</DropdownItem>
-				<DropdownItem @click="starterUpload_click()">Import a starter</DropdownItem>
-			</Dropdown>
-			<div class="spacer"></div>
-			<li class="link">
-				<RouterLink to="/characters">
-					<i class="ico person"></i>
-					<div class="link_text">Characters</div>
-				</RouterLink>
-			</li>
-			<li class="link">
-				<RouterLink to="/movies">
-					<i class="ico film"></i>
-					<div class="link_text">Videos</div>
-				</RouterLink>
-			</li>
-			<li class="link">
-				<RouterLink to="/starters">
-					<i class="ico briefcase"></i>
-					<div class="link_text">Starters</div>
-				</RouterLink>
-			</li>
-			<li class="link">
-				<RouterLink to="/assets">
-					<i class="ico cloud"></i>
-					<div class="link_text">Your library</div>
-				</RouterLink>
-			</li>
-		</ul>
-		<ul class="user_custom"></ul>
-		<ul>
-			<li class="link" title="Get answers to various questions you may have">
+  <div
+    class="app_sidebar"
+    :class="{
+      collapsed,
+      logo_collapsed: logoCollapsed,
+      slide_mode: slideMode.enabled,
+      resize: inResize,
+    }"
+    :style="{
+      marginLeft: slideMode.margin + 'px',
+      width: width + 'px',
+    }"
+  >
+    <div id="logo_container" :style="{ width: width + 'px' }">
+      <div class="logo_btn" @click="openAppInfo" title="About WeAnimate">
+        <img id="logo_icon" src="/img/logo_icon.svg" alt="Candy" />
+        <img id="logo_wordmark" src="/img/logo_wordmark.svg" alt="WeAnimate" />
+      </div>
+    </div>
+    <ul>
+      <Dropdown>
+        <template #toggle>
+          <li class="link create">
+            <button>
+              <i class="ico arr_r"></i>
+              <div class="link_text">New</div>
+            </button>
+          </li>
+        </template>
+        <RouterLink to="/movies/create" class="dropdown_item"
+          >Make a video</RouterLink
+        >
+        <DropdownSeparator />
+        <DropdownItem @click="charInput.click()"
+          >Import a character</DropdownItem
+        >
+        <DropdownItem @click="movieUpload_click()">Import a video</DropdownItem>
+        <DropdownItem @click="starterUpload_click()"
+          >Import a starter</DropdownItem
+        >
+      </Dropdown>
+      <div class="spacer"></div>
+      <li class="link">
+        <RouterLink to="/characters">
+          <i class="ico person"></i>
+          <div class="link_text">Characters</div>
+        </RouterLink>
+      </li>
+      <li class="link">
+        <RouterLink to="/movies">
+          <i class="ico film"></i>
+          <div class="link_text">Videos</div>
+        </RouterLink>
+      </li>
+      <li class="link">
+        <RouterLink to="/starters">
+          <i class="ico briefcase"></i>
+          <div class="link_text">Starters</div>
+        </RouterLink>
+      </li>
+      <li class="link">
+        <RouterLink to="/assets">
+          <i class="ico cloud"></i>
+          <div class="link_text">Your library</div>
+        </RouterLink>
+      </li>
+    </ul>
+    <ul class="user_custom"></ul>
+    <ul>
+      <li class="link" title="Get answers to various questions you may have">
         <a href="javascript:window.appWindow.openFAQ();">
-            <i class="ico interr"></i>
-            <div class="link_text">FAQ</div>
+          <i class="ico interr"></i>
+          <div class="link_text">FAQ</div>
         </a>
-    </li>
-    <li class="link" title="Need help?">
+      </li>
+      <li class="link" title="Need help?">
         <a href="javascript:window.appWindow.openDiscord();">
-            <i class="ico speech"></i>
-            <div class="link_text">Discord</div>
+          <i class="ico speech"></i>
+          <div class="link_text">Discord</div>
         </a>
-    </li>
-    <li class="link" title="Configure">
+      </li>
+      <li class="link" title="Configure">
         <button @click="openSettings">
-            <i class="ico cog"></i>
-            <div class="link_text">Settings</div>
+          <i class="ico cog"></i>
+          <div class="link_text">Settings</div>
         </button>
-    </li>
+      </li>
 
-    <div class="spacer"></div>
-    <span id="wrapper_ver">{{ wrapperVer }}</span>
-</ul>
-		<div
-			v-if="!slideMode.enabled"
-			class="dragger"
-			:style="{left: width - 3 + 'px'}"
-			@mousedown="draggerDown"></div>
-		<SettingsModal v-if="displaySettings" @user-close="closeSettings"/>
-		<AppInfoModal v-if="displayAppInfo" @user-close="closeAppInfo"/>
-		<input type="file" ref="char-input" accept=".xml" @input="charInput_input"/>
-		<input type="file" ref="movie-input" accept=".zip" @input="movieInput_input"/>
-	</div>
+      <div class="spacer"></div>
+      <span id="wrapper_ver">{{ wrapperVer }}</span>
+    </ul>
+    <div
+      v-if="!slideMode.enabled"
+      class="dragger"
+      :style="{ left: width - 3 + 'px' }"
+      @mousedown="draggerDown"
+    ></div>
+    <SettingsModal v-if="displaySettings" @user-close="closeSettings" />
+    <AppInfoModal v-if="displayAppInfo" @user-close="closeAppInfo" />
+    <input
+      type="file"
+      ref="char-input"
+      accept=".xml"
+      @input="charInput_input"
+    />
+    <input
+      type="file"
+      ref="movie-input"
+      accept=".zip"
+      @input="movieInput_input"
+    />
+  </div>
 </template>

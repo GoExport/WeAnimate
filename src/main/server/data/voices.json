@@ -1150,7 +1150,7 @@
 			"gender": "F",
 			"source": "acapela",
 			"arg": "Lea22k_HQ",
-			"desc": "Lea"
+			"desc": "Lea (Acapela)"
 		},
 		"leonie22k": {
 			"country": "DE",
@@ -1510,7 +1510,7 @@
 			"gender": "F",
 			"source": "acapela",
 			"arg": "Ines22k_HQ",
-			"desc": "Ines"
+			"desc": "Ines (Acapela)"
 		},
 		"maria22k": {
 			"country": "ES",
@@ -1534,7 +1534,7 @@
 			"gender": "F",
 			"source": "acapela",
 			"arg": "Carmen22k_HQ",
-			"desc": "Carmen"
+			"desc": "Carmen (Acapela)"
 		},
 		"daniela22k": {
 			"country": "US",
@@ -1662,7 +1662,7 @@
 			"gender": "F",
 			"source": "acapela",
 			"arg": "Mia22k_HQ",
-			"desc": "Mia"
+			"desc": "Mia (Acapela)"
 		},
 		"samuel22k": {
 			"country": "FI",
@@ -1966,7 +1966,7 @@
 			"gender": "F",
             "source": "bing",
 			"arg": "de-AT-IngridNeural",
-			"desc": "Ingrid (Bing)"
+			"desc": "Ingrid"
 		},
 		"de-AT-JonasNeural": {
 			"country": "AT",
@@ -2072,6 +2072,102 @@
 			"arg": "en-AU-WilliamNeural",
 			"desc": "William (Azure)"
 		},
+		"en-AU-AnnetteNeural": {
+			"country": "AU",
+			"language": "en",
+			"gender": "F",
+            "source": "bing",
+			"arg": "en-AU-AnnetteNeural",
+			"desc": "Annette"
+		},
+		"en-AU-CarlyNeural": {
+			"country": "AU",
+			"language": "en",
+			"gender": "F",
+            "source": "bing",
+			"arg": "en-AU-CarlyNeural",
+			"desc": "Carly"
+		},
+		"en-AU-DarrenNeural": {
+			"country": "AU",
+			"language": "en",
+			"gender": "M",
+            "source": "bing",
+			"arg": "en-AU-DarrenNeural",
+			"desc": "Darren"
+		},
+		"en-AU-DuncanNeural": {
+			"country": "AU",
+			"language": "en",
+			"gender": "M",
+            "source": "bing",
+			"arg": "en-AU-DuncanNeural",
+			"desc": "Duncan (Azure)"
+		},
+		"en-AU-ElsieNeural": {
+			"country": "AU",
+			"language": "en",
+			"gender": "F",
+            "source": "bing",
+			"arg": "en-AU-ElsieNeural",
+			"desc": "Elsie"
+		},
+		"en-AU-FreyaNeural": {
+			"country": "AU",
+			"language": "en",
+			"gender": "F",
+            "source": "bing",
+			"arg": "en-AU-FreyaNeural",
+			"desc": "Freya"
+		},
+		"en-AU-JoanneNeural": {
+			"country": "AU",
+			"language": "en",
+			"gender": "F",
+            "source": "bing",
+			"arg": "en-AU-JoanneNeural",
+			"desc": "Joanne"
+		},
+		"en-AU-KenNeural": {
+			"country": "AU",
+			"language": "en",
+			"gender": "M",
+            "source": "bing",
+			"arg": "en-AU-KenNeural",
+			"desc": "Ken"
+		},
+		"en-AU-KimNeural": {
+			"country": "AU",
+			"language": "en",
+			"gender": "F",
+            "source": "bing",
+			"arg": "en-AU-KimNeural",
+			"desc": "Kim"
+		},
+		"en-AU-NeilNeural": {
+			"country": "AU",
+			"language": "en",
+			"gender": "M",
+            "source": "bing",
+			"arg": "en-AU-NeilNeural",
+			"desc": "Neil"
+		},
+		"en-AU-TimNeural": {
+			"country": "AU",
+			"language": "en",
+			"gender": "M",
+            "source": "bing",
+			"arg": "en-AU-TimNeural",
+			"desc": "Tim"
+		},
+		"en-AU-TinaNeural": {
+			"country": "AU",
+			"language": "en",
+			"gender": "F",
+            "source": "bing",
+			"arg": "en-AU-TinaNeural",
+			"desc": "Tina"
+		},
 		"en-CA-ClaraNeural": {
 			"country": "CA",
 			"language": "en",
@@ -2095,6 +2191,14 @@
             "source": "bing",
 			"arg": "en-GB-SoniaNeural",
 			"desc": "Sonia"
+		},
+		"en-GB-MiaNeural": {
+			"country": "GB",
+			"language": "en",
+			"gender": "F",
+            "source": "bing",
+			"arg": "en-GB-SoniaNeural",
+			"desc": "Mia"
 		},
 		"en-GB-RyanNeural": {
 			"country": "GB",
@@ -2127,6 +2231,70 @@
             "source": "bing",
 			"arg": "en-GB-ThomasNeural",
 			"desc": "Thomas"
+		},
+		"en-GB-AbbiNeural": {
+			"country": "GB",
+			"language": "en",
+			"gender": "F",
+            "source": "bing",
+			"arg": "en-GB-AbbiNeural",
+			"desc": "Abbi"
+		},
+		"en-GB-BellaNeural": {
+			"country": "GB",
+			"language": "en",
+			"gender": "F",
+            "source": "bing",
+			"arg": "en-GB-BellaNeural",
+			"desc": "Bella (Azure)"
+		},
+		"en-GB-HollieNeural": {
+			"country": "GB",
+			"language": "en",
+			"gender": "F",
+            "source": "bing",
+			"arg": "en-GB-HollieNeural",
+			"desc": "Hollie"
+		},
+		"en-GB-AlfieNeural": {
+			"country": "GB",
+			"language": "en",
+			"gender": "M",
+            "source": "bing",
+			"arg": "en-GB-AlfieNeural",
+			"desc": "Alfie"
+		},
+		"en-GB-ElliotNeural": {
+			"country": "GB",
+			"language": "en",
+			"gender": "M",
+            "source": "bing",
+			"arg": "en-GB-ElliotNeural",
+			"desc": "Elliot"
+		},
+		"en-GB-EthanNeural": {
+			"country": "GB",
+			"language": "en",
+			"gender": "M",
+            "source": "bing",
+			"arg": "en-GB-EthanNeural",
+			"desc": "Ethan"
+		},
+		"en-GB-NoahNeural": {
+			"country": "GB",
+			"language": "en",
+			"gender": "M",
+            "source": "bing",
+			"arg": "en-GB-NoahNeural",
+			"desc": "Noah"
+		},
+		"en-GB-OliverNeural": {
+			"country": "GB",
+			"language": "en",
+			"gender": "M",
+            "source": "bing",
+			"arg": "en-GB-OliverNeural",
+			"desc": "Oliver (Azure)"
 		},
 		"en-GB-AdaNeural": {
 			"country": "GB",
@@ -2192,6 +2360,70 @@
 			"arg": "en-IN-PrabhatNeural",
 			"desc": "Prabhat"
 		},
+		"en-IN-AaravNeural": {
+			"country": "IN",
+			"language": "en",
+			"gender": "M",
+            "source": "bing",
+			"arg": "en-IN-AaravNeural",
+			"desc": "Aarav"
+		},
+		"en-IN-AashiNeural": {
+			"country": "IN",
+			"language": "en",
+			"gender": "F",
+            "source": "bing",
+			"arg": "en-IN-AashiNeural",
+			"desc": "Aashi"
+		},
+		"en-IN-AartiNeural": {
+			"country": "IN",
+			"language": "en",
+			"gender": "F",
+            "source": "bing",
+			"arg": "en-IN-AartiNeural",
+			"desc": "Aarti"
+		},
+		"en-IN-ArjunNeural": {
+			"country": "IN",
+			"language": "en",
+			"gender": "M",
+            "source": "bing",
+			"arg": "en-IN-ArjunNeural",
+			"desc": "Arjun"
+		},
+		"en-IN-AnanyaNeural": {
+			"country": "IN",
+			"language": "en",
+			"gender": "F",
+            "source": "bing",
+			"arg": "en-IN-AnanyaNeural",
+			"desc": "Ananya"
+		},
+		"en-IN-KavyaNeural": {
+			"country": "IN",
+			"language": "en",
+			"gender": "F",
+            "source": "bing",
+			"arg": "en-IN-KavyaNeural",
+			"desc": "Kavya"
+		},
+		"en-IN-KunalNeural": {
+			"country": "IN",
+			"language": "en",
+			"gender": "M",
+            "source": "bing",
+			"arg": "en-IN-KunalNeural",
+			"desc": "Kunal"
+		},
+		"en-IN-RehaanNeural": {
+			"country": "IN",
+			"language": "en",
+			"gender": "M",
+            "source": "bing",
+			"arg": "en-IN-RehaanNeural",
+			"desc": "Rehaan"
+		},
 		"en-NZ-MollyNeural": {
 			"country": "NZ",
 			"language": "en",
@@ -2230,7 +2462,7 @@
 			"gender": "F",
             "source": "bing",
 			"arg": "en-SG-LunaNeural",
-			"desc": "Luna (Azure)"
+			"desc": "Luna"
 		},
 		"en-SG-WayneNeural": {
 			"country": "SG",
@@ -2263,6 +2495,54 @@
             "source": "bing",
 			"arg": "en-US-AriaNeural",
 			"desc": "Aria (Azure)"
+		},
+		"en-US-DavisNeural": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+            "source": "bing",
+			"arg": "en-US-DavisNeural",
+			"desc": "Davis"
+		},
+		"en-US-JaneNeural": {
+			"country": "US",
+			"language": "en",
+			"gender": "F",
+            "source": "bing",
+			"arg": "en-US-JaneNeural",
+			"desc": "Jane"
+		},
+		"en-US-JasonNeural": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+            "source": "bing",
+			"arg": "en-US-JasonNeural",
+			"desc": "Jason"
+		},
+		"en-US-SaraNeural": {
+			"country": "US",
+			"language": "en",
+			"gender": "F",
+            "source": "bing",
+			"arg": "en-US-SaraNeural",
+			"desc": "Sara"
+		},
+		"en-US-TonyNeural": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+            "source": "bing",
+			"arg": "en-US-TonyNeural",
+			"desc": "Tony"
+		},
+		"en-US-NancyNeural": {
+			"country": "US",
+			"language": "en",
+			"gender": "F",
+            "source": "bing",
+			"arg": "en-US-NancyNeural",
+			"desc": "Nancy"
 		},
 		"en-US-AmberNeural": {
 			"country": "US",
@@ -2415,6 +2695,38 @@
             "source": "bing",
 			"arg": "en-US-BrianMultilingualNeural",
 			"desc": "Brian (Azure)"
+		},
+		"en-US-DanaNeural": {
+			"country": "US",
+			"language": "en",
+			"gender": "F",
+            "source": "bing",
+			"arg": "en-US-Dana:DragonHDOmniLatestNeural",
+			"desc": "Dana"
+		},
+		"en-US-CalebNeural": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+            "source": "bing",
+			"arg": "en-US-Caleb:DragonHDOmniLatestNeural",
+			"desc": "Caleb (Azure)"
+		},
+		"en-US-PhoebeNeural": {
+			"country": "US",
+			"language": "en",
+			"gender": "F",
+            "source": "bing",
+			"arg": "en-US-Phoebe:DragonHDOmniLatestNeural",
+			"desc": "Phoebe"
+		},
+		"en-US-LewisNeural": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+            "source": "bing",
+			"arg": "en-US-Lewis:DragonHDOmniLatestNeural",
+			"desc": "Lewis"
 		},
 		"en-ZA-LeahNeural": {
 			"country": "ZA",
@@ -3560,6 +3872,38 @@
 			"arg": "zh-CN-XiaoxuanNeural",
 			"desc": "Xiaoxuan"
 		},
+		"zh-CN-XiaoshuangNeural": {
+			"country": "CN",
+			"language": "zh",
+			"gender": "F",
+            "source": "bing",
+			"arg": "zh-CN-Xiaoshuang:DragonHDFlashLatestNeural",
+			"desc": "Xiaoshuang"
+		},
+		"zh-CN-YunyeNeural": {
+			"country": "CN",
+			"language": "zh",
+			"gender": "M",
+            "source": "bing",
+			"arg": "zh-CN-Yunye:DragonHDFlashLatestNeural",
+			"desc": "Yunye"
+		},
+		"zh-CN-XiaoyouNeural": {
+			"country": "CN",
+			"language": "zh",
+			"gender": "F",
+            "source": "bing",
+			"arg": "zh-CN-Xiaoyou:DragonHDFlashLatestNeural",
+			"desc": "Xiaoyou"
+		},
+		"zh-CN-XiaoyuNeural": {
+			"country": "CN",
+			"language": "zh",
+			"gender": "F",
+            "source": "bing",
+			"arg": "zh-CN-Xiaoyu:DragonHDFlashLatestNeural",
+			"desc": "Xiaoyu"
+		},
 		"zh-CN-liaoning-XiaobeiNeural": {
 			"country": "CN",
 			"language": "zh",
@@ -3577,52 +3921,52 @@
 			"desc": "Xiaoni (Shaanxi)"
 		},
 		"zh-HK-HiuMaanNeural": {
-			"country": "HK",
+			"country": "CN",
 			"language": "zh",
 			"gender": "F",
             "source": "bing",
 			"arg": "zh-HK-HiuMaanNeural",
-			"desc": "HiuMaan"
+			"desc": "HiuMaan (Cantonese)"
 		},
 		"zh-HK-WanLungNeural": {
-			"country": "HK",
+			"country": "CN",
 			"language": "zh",
 			"gender": "M",
             "source": "bing",
 			"arg": "zh-HK-WanLungNeural",
-			"desc": "WanLung"
+			"desc": "WanLung (Cantonese)"
 		},
 		"zh-HK-HiuGaaiNeural": {
-			"country": "HK",
+			"country": "CN",
 			"language": "zh",
 			"gender": "F",
             "source": "bing",
 			"arg": "zh-HK-HiuGaaiNeural",
-			"desc": "HiuGaai"
+			"desc": "HiuGaai (Cantonese)"
 		},
 		"zh-TW-HsiaoChenNeural": {
-			"country": "TW",
+			"country": "CN",
 			"language": "zh",
 			"gender": "F",
             "source": "bing",
 			"arg": "zh-TW-HsiaoChenNeural",
-			"desc": "HsiaoChen"
+			"desc": "HsiaoChen (Taiwan)"
 		},
 		"zh-TW-YunJheNeural": {
-			"country": "TW",
+			"country": "CN",
 			"language": "zh",
 			"gender": "M",
             "source": "bing",
 			"arg": "zh-TW-YunJheNeural",
-			"desc": "YunJhe"
+			"desc": "YunJhe (Taiwan)"
 		},
 		"zh-TW-HsiaoYuNeural": {
-			"country": "TW",
+			"country": "CN",
 			"language": "zh",
 			"gender": "F",
             "source": "bing",
 			"arg": "zh-TW-HsiaoYuNeural",
-			"desc": "HsiaoYu"
+			"desc": "HsiaoYu (Taiwan)"
 		},
 		"Allison": {
 			"country": "US",
@@ -3798,7 +4142,7 @@
 			"gender": "M",
 			"source": "cepstral",
 			"arg": "Miguel",
-			"desc": "Miguel"
+			"desc": "Miguel (Cepstral)"
 		},
 		"Jean-Pierre": {
 			"country": "CA",
@@ -6131,6 +6475,310 @@
 			"lang": "en-us",
 			"desc": "Eva"
 		},
+		"celine": {
+			"country": "FR",
+			"language": "fr",
+			"gender": "F",
+			"source": "polly",
+			"arg": "Celine",
+			"desc": "Céline"
+		},
+		"vicki": {
+			"country": "DE",
+			"language": "de",
+			"gender": "F",
+			"source": "polly",
+			"arg": "Vicki",
+			"desc": "Vicki"
+		},
+		"marlene_po": {
+			"country": "DE",
+			"language": "de",
+			"gender": "F",
+			"source": "polly",
+			"arg": "Marlene",
+			"desc": "Marlene (PO)"
+		},
+		"karl_po": {
+			"country": "IS",
+			"language": "is",
+			"gender": "M",
+			"source": "polly",
+			"arg": "Karl",
+			"desc": "Karl (PO)"
+		},
+		"dora": {
+			"country": "IS",
+			"language": "is",
+			"gender": "F",
+			"source": "polly",
+			"arg": "Dora",
+			"desc": "Dóra"
+		},
+		"aditi": {
+			"country": "IN",
+			"language": "en",
+			"gender": "F",
+			"source": "polly",
+			"arg": "Aditi",
+			"desc": "Aditi"
+		},
+		"aditi_two": {
+			"country": "IN",
+			"language": "hi",
+			"gender": "F",
+			"source": "polly",
+			"arg": "Aditi",
+			"desc": "Aditi (Hindi)"
+		},
+		"giorgio_po": {
+			"country": "IT",
+			"language": "it",
+			"gender": "M",
+			"source": "polly",
+			"arg": "Giorgio",
+			"desc": "Giorgio (PO)"
+		},
+		"carla_po": {
+			"country": "IT",
+			"language": "it",
+			"gender": "F",
+			"source": "polly",
+			"arg": "Carla",
+			"desc": "Carla (PO)"
+		},
+		"bianca": {
+			"country": "IT",
+			"language": "it",
+			"gender": "F",
+			"source": "polly",
+			"arg": "Bianca",
+			"desc": "Bianca (PO)"
+		},
+		"takumi": {
+			"country": "JP",
+			"language": "ja",
+			"gender": "M",
+			"source": "polly",
+			"arg": "Takumi",
+			"desc": "Takumi"
+		},
+		"seoyeon": {
+			"country": "KR",
+			"language": "ko",
+			"gender": "F",
+			"source": "polly",
+			"arg": "Seoyeon",
+			"desc": "Seoyeon"
+		},
+		"mia": {
+			"country": "MX",
+			"language": "es",
+			"gender": "F",
+			"source": "polly",
+			"arg": "Mia",
+			"desc": "Mia"
+		},
+		"liv_po": {
+			"country": "no",
+			"language": "no",
+			"gender": "F",
+			"source": "polly",
+			"arg": "Liv",
+			"desc": "Liv (PO)"
+		},
+		"jacek_po": {
+			"country": "PL",
+			"language": "pl",
+			"gender": "M",
+			"source": "polly",
+			"arg": "Jacek",
+			"desc": "Jacek (PO)"
+		},
+		"jan_po": {
+			"country": "PL",
+			"language": "pl",
+			"gender": "M",
+			"source": "polly",
+			"arg": "Jan",
+			"desc": "Jan (PO)"
+		},
+		"maja_po": {
+			"country": "PL",
+			"language": "pl",
+			"gender": "F",
+			"source": "polly",
+			"arg": "Maja",
+			"desc": "Maja (PO)"
+		},
+		"ewa_po": {
+			"country": "PL",
+			"language": "pl",
+			"gender": "F",
+			"source": "polly",
+			"arg": "Ewa",
+			"desc": "Ewa (PO)"
+		},
+		"cristiano_po": {
+			"country": "PT",
+			"language": "pt",
+			"gender": "M",
+			"source": "polly",
+			"arg": "Cristiano",
+			"desc": "Cristiano (PO)"
+		},
+		"ines": {
+			"country": "PT",
+			"language": "pt",
+			"gender": "F",
+			"source": "polly",
+			"arg": "Ines",
+			"desc": "Inês"
+		},
+		"carmen": {
+			"country": "RO",
+			"language": "ro",
+			"gender": "F",
+			"source": "polly",
+			"arg": "Carmen",
+			"desc": "Carmen (PO)"
+		},
+		"tatyana_po": {
+			"country": "RU",
+			"language": "ru",
+			"gender": "F",
+			"source": "polly",
+			"arg": "Tatyana",
+			"desc": "Tatyana (PO)"
+		},
+		"astrid_po": {
+			"country": "SE",
+			"language": "sv",
+			"gender": "F",
+			"source": "polly",
+			"arg": "Astrid",
+			"desc": "Astrid (PO)"
+		},
+		"filiz_po": {
+			"country": "TR",
+			"language": "tr",
+			"gender": "F",
+			"source": "polly",
+			"arg": "Filiz",
+			"desc": "Filiz (PO)"
+		},
+		"matthew": {
+			"country": "US",
+			"language": "en",
+			"gender": "M",
+			"source": "polly",
+			"arg": "Matthew",
+			"desc": "Matthew"
+		},
+		"miguel_po": {
+			"country": "US",
+			"language": "es",
+			"gender": "M",
+			"source": "polly",
+			"arg": "Miguel",
+			"desc": "Miguel (PO)"
+		},
+		"penelope": {
+			"country": "US",
+			"language": "es",
+			"gender": "F",
+			"source": "polly",
+			"arg": "Penelope",
+			"desc": "Penélope"
+		},
+		"gwyneth_po": {
+			"country": "GB",
+			"language": "en",
+			"gender": "F",
+			"source": "polly",
+			"arg": "Gwyneth",
+			"desc": "Gwyneth (PO)"
+		},
+		"geraint_po": {
+			"country": "GB",
+			"language": "en",
+			"gender": "M",
+			"source": "polly",
+			"arg": "Geraint",
+			"desc": "Geraint (PO)"
+		},
+		"conchita_po": {
+			"country": "ES",
+			"language": "es",
+			"gender": "F",
+			"source": "polly",
+			"arg": "Conchita",
+			"desc": "Conchita (PO)"
+		},
+		"enrique_po": {
+			"country": "ES",
+			"language": "es",
+			"gender": "M",
+			"source": "polly",
+			"arg": "Enrique",
+			"desc": "Enrique (PO)"
+		},
+		"vitoria": {
+			"country": "BR",
+			"language": "pt",
+			"gender": "F",
+			"source": "polly",
+			"arg": "Vitoria",
+			"desc": "Vitória"
+		},
+		"ricardo_po": {
+			"country": "BR",
+			"language": "pt",
+			"gender": "M",
+			"source": "polly",
+			"arg": "Ricardo",
+			"desc": "Ricardo (PO)"
+		},
+		"zhiyu": {
+			"country": "CN",
+			"language": "zh",
+			"gender": "F",
+			"source": "polly",
+			"arg": "Zhiyu",
+			"desc": "Zhiyu"
+		},
+		"mads_po": {
+			"country": "DK",
+			"language": "da",
+			"gender": "M",
+			"source": "polly",
+			"arg": "Mads",
+			"desc": "Mads (PO)"
+		},
+		"naja_po": {
+			"country": "DK",
+			"language": "da",
+			"gender": "F",
+			"source": "polly",
+			"arg": "Naja",
+			"desc": "Naja (PO)"
+		},
+		"lotte_po": {
+			"country": "NL",
+			"language": "nl",
+			"gender": "F",
+			"source": "polly",
+			"arg": "Lotte",
+			"desc": "Lotte (PO)"
+		},
+		"ruben_po": {
+			"country": "NL",
+			"language": "nl",
+			"gender": "M",
+			"source": "polly",
+			"arg": "Ruben",
+			"desc": "Ruben (PO)"
+		},
 		"hala": {
 			"country": "AE",
 			"language": "ar",
@@ -7025,7 +7673,7 @@
 			"gender": "F",
 			"source": "pollypluswavenet",
 			"arg": "es-ES-Wavenet-F",
-			"desc": "Camila"
+			"desc": "Camila (Google)"
 		},
  		"google_jose": {
 			"country": "ES",
@@ -7897,7 +8545,7 @@
 			"gender": "F",
 			"source": "pollytwo",
 			"arg": "Camila",
-			"desc": "Camila"
+			"desc": "Camila (PT)"
 		},
 		"lupe": {
 			"country": "US",
@@ -8681,7 +9329,7 @@
 			"gender": "M",
 			"source": "svox",
 			"arg": "eurdutchmale",
-			"desc": "Jan"
+			"desc": "Jan (SVOX)"
 		},
   		"eva2": {
 			"country": "PL",
@@ -8697,7 +9345,7 @@
 			"gender": "F",
 			"source": "svox",
 			"arg": "euritalianfemale",
-			"desc": "Bianca"
+			"desc": "Bianca (SVOX)"
 		},
   		"marco2": {
 			"country": "IT",
@@ -10793,7 +11441,7 @@
 			"gender": "F",
 			"arg": [2, 2, 1],
 			"source": "vocalware",
-			"desc": "Carmen"
+			"desc": "Carmen (Vocalware)"
 		},
 		"oc_esperanza": {
 			"country": "MX",
@@ -13206,6 +13854,7 @@
 			"fr": "French",
 			"ga": "Irish",
 			"gd": "Gaelic",
+			"gl": "Galician",
 			"gu": "Gujarati",
 			"ha": "Hausa",
 			"he": "Hebrew",
@@ -13237,11 +13886,13 @@
 	    	"ne": "Nepali",
 	    	"nl": "Dutch",
 	    	"no": "Norwegian",
+	    	"pa": "Punjabi",
 	    	"pl": "Polish",
 	    	"ps": "Pashto",
 	    	"pt": "Portuguese",
 	    	"ro": "Romanian",
 	    	"ru": "Russian",
+	    	"se": "Swedish",
 	    	"si": "Sinhala",
 	    	"sk": "Slovak",
 	    	"sl": "Slovenian",

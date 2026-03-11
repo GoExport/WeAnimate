@@ -43,8 +43,8 @@
 }
 .wm_manager .upload_button:hover,
 .wm_manager .watermark:hover {
-  background-color: hsl(338deg 55% 85%);
-  border-color: hsl(338deg 55% 77%);
+  background-color: hsl(290 40% 85%);
+  border-color: hsl(290 40% 77%);
   cursor: pointer;
 }
 .wm_manager .watermark:hover .actions {
@@ -52,14 +52,14 @@
 }
 .wm_manager .upload_button.checked,
 .wm_manager .watermark.checked {
-  background-color: hsl(338deg 55% 85%);
-  border-color: hsl(344deg 97% 65%);
-  box-shadow: inset 0 0 0 1px hsl(344deg 97% 65%);
+  background-color: hsl(290 40% 85%);
+  border-color: #daa5de;
+  box-shadow: inset 0 0 0 1px #daa5de;
 }
 .wm_manager .watermark.checked::after {
   content: "\E207";
   font-family: "GlyphiconsRegular";
-  background: hsl(344deg 97% 65%);
+  background: #daa5de;
   color: #fff;
   border-radius: 100%;
   float: right;
@@ -75,8 +75,8 @@ html.dark .wm_manager .watermark {
 }
 html.dark .wm_manager .upload_button:hover,
 html.dark .wm_manager .watermark:hover {
-  background-color: hsl(330 26% 26% / 1);
-  border-color: hsl(330 26% 41% / 1);
+  background-color: hsl(270 26% 26% / 1);
+  border-color: hsl(270 26% 41% / 1);
 }
 html.dark .wm_manager .watermark.checked {
   background: #250d59;

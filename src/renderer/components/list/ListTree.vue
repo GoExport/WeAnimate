@@ -93,7 +93,7 @@ thead.list_head .sort_option.active.desc::after {
   transform: translate(-2px, 0) rotate(180deg);
 }
 thead.list_head .sort_option:hover {
-  background: hsl(338deg 55% 91%);
+  background: hsl(290 40% 91%);
   transition: none;
 }
 thead.list_head th .dragger {
@@ -146,10 +146,10 @@ table.list_tree tbody tr:first-of-type td:first-of-type {
   overflow: hidden;
 }
 table.list_tree tbody tr:hover {
-  background: hsl(338deg 55% 91%);
+  background: hsl(290 40% 91%);
 }
 table.list_tree tbody tr.checked {
-  background: hsl(344 80% 50% / 0.55);
+  background: rgba(37, 13, 89, 0.55);
   color: #fff;
 }
 table.list_tree tbody tr:hover td.hidden,
@@ -249,8 +249,8 @@ table.list_tree tbody tr.checked td.hidden {
   top: calc(-37px - (((9 / 16) * ((4 * v-bind("zoomLevel.css()")) - 8px)) / 2));
 }
 .list_tree_container.grid table.list_tree tbody tr:hover {
-  background-color: hsl(338deg 55% 85%);
-  border-color: hsl(338deg 55% 77%);
+  background-color: hsl(290 40% 85%);
+  border-color: hsl(290 40% 77%);
 }
 .list_tree_container.grid table.list_tree tbody tr:hover td.title img {
   filter: brightness(0.5);
@@ -259,7 +259,7 @@ table.list_tree tbody tr.checked td.hidden {
   display: block;
 }
 .list_tree_container.grid table.list_tree tbody tr.checked {
-  background-color: hsl(344 80% 50% / 0.55);
+  background-color: rgba(37, 13, 89, 0.55);
 }
 .list_tree_container.grid.select_mode table.list_tree {
   margin-top: 34px;
@@ -301,7 +301,7 @@ html.dark thead.list_head .sort_option {
 }
 html.dark thead.list_head .sort_option:hover,
 html.dark table.list_tree tbody tr:hover {
-  background: hsl(330 26% 21% / 1);
+  background: hsl(270 26% 21% / 1);
 }
 html.dark table.list_tree tbody tr.checked {
   background: #250d59;

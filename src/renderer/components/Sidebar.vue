@@ -110,15 +110,15 @@
   background: linear-gradient(90deg, #0000 0, hsl(240 17% 29% / 1) 10px);
 }
 .app_sidebar .link.create {
-  background: hsl(344deg 97% 65%);
-  border-bottom-color: #ac0633;
+  background: #daa5de;
+  border-bottom-color: #250d59;
 }
 .app_sidebar .link.create > button {
   color: #fff;
 }
 .app_sidebar .link.create::after {
   content: "";
-  background: linear-gradient(90deg, #0000 0, hsl(344deg 97% 65%) 10px);
+  background: linear-gradient(90deg, #0000 0, #daa5de 10px);
   width: 14px;
   height: 100%;
 }
@@ -154,7 +154,7 @@
   height: 100%;
 }
 .app_sidebar .user_custom .link > button.unpin:hover {
-  background: #ffd3e8;
+  background: #eeb9f2;
 }
 .app_sidebar .user_custom .link > a {
   padding: 5px 6px 5px 3px;
@@ -233,7 +233,7 @@ html.dark .app_sidebar .link.create::after {
   background: linear-gradient(90deg, #0000 0, #daa5de 10px);
 }
 html.dark .app_sidebar .user_custom .link > button:hover {
-  background: #573344;
+  background: #3d2154;
 }
 html.dark .app_sidebar #wrapper_ver {
   color: #bbb;

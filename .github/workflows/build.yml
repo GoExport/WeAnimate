@@ -1,0 +1,54 @@
+name: Build and Package
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    name: Build (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    permissions:
+      contents: read
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+
+      - name: Install dependencies
+        # No package-lock.json in this repo, so use npm install
+        run: npm install --no-audit --no-fund
+
+      - name: Build
+        run: npm run build
+
+      - name: Package (Windows)
+        if: runner.os == 'Windows'
+        run: npm run package:win
+
+      - name: Package (macOS)
+        if: runner.os == 'macOS'
+        run: npm run package:mac
+
+      - name: Package (Linux)
+        if: runner.os == 'Linux'
+        run: npm run package:linux
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          # Name includes the OS for easy identification
+          name: WeAnimate-${{ matrix.os }}
+          # electron-packager outputs a folder named WeAnimate-<platform>-<arch>
+          # (e.g. WeAnimate-win32-x64, WeAnimate-darwin-x64, WeAnimate-linux-x64)
+          path: WeAnimate-*/
+          if-no-files-found: error

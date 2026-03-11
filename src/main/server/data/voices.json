@@ -9531,37 +9531,13 @@
 			"source": "tiktok",
 			"desc": "Smooth"
 		},
-        "en_male_adam": {
-            "country": "AU",
-            "language": "en",
-            "gender": "M",
-            "arg": "en_male_adam",
-            "source": "tiktok",
-            "desc": "Adam (TikTok)"
-        },
-        "en_female_sarah": {
-            "country": "AU",
-            "language": "en",
-            "gender": "F",
-            "arg": "en_female_sarah",
-            "source": "tiktok",
-            "desc": "Sarah (TikTok)"
-        },
-        "en_male_dryw": {
-            "country": "AU",
-            "language": "en",
-            "gender": "M",
-            "arg": "en_male_dryw",
-            "source": "tiktok",
-            "desc": "Dryw"
-        },
         "en_male_funny": {
             "country": "GB",
             "language": "en",
             "gender": "M",
             "arg": "en_male_funny",
             "source": "tiktok",
-            "desc": "Wacky"
+            "desc": "Funny"
         },
         "en_female_emotional": {
             "country": "GB",
@@ -9569,24 +9545,8 @@
             "gender": "F",
             "arg": "en_female_emotional",
             "source": "tiktok",
-            "desc": "Peaceful"
-        },
-        "en_male_mason": {
-            "country": "GB",
-            "language": "en",
-            "gender": "M",
-            "arg": "en_male_mason",
-            "source": "tiktok",
-            "desc": "Mason"
-        },		
-        "en_male_ryan": {
-            "country": "GB",
-            "language": "en",
-            "gender": "M",
-            "arg": "en_male_ryan",
-            "source": "tiktok",
-            "desc": "Ryan (TikTok)"
-        },		
+            "desc": "Emotional"
+        },	
         "en_male_smith": {
             "country": "GB",
             "language": "en",
@@ -9721,7 +9681,7 @@
             "gender": "M",
             "arg": "en_male_adam_elf",
             "source": "tiktok",
-            "desc": "Adam the elf"
+            "desc": "Adam (TikTok, Elf)"
         },
         "en_male_adrian": {
             "country": "GB",
@@ -9929,7 +9889,7 @@
             "gender": "F",
             "arg": "BV027_streaming",
             "source": "tiktok",
-            "desc": "Amelia (TikTok)"
+            "desc": "Amelia"
         },
         "BV028_TOBI_streaming": {
             "country": "US",
@@ -9985,7 +9945,7 @@
             "gender": "M",
             "arg": "BV504_streaming",
             "source": "tiktok",
-            "desc": "Jackson"
+            "desc": "Jackson (TikTok)"
         },	
         "BV510_streaming": {
             "country": "US",
@@ -10041,7 +10001,7 @@
             "gender": "M",
             "arg": "BV516_streaming",
             "source": "tiktok",
-            "desc": "Henry"
+            "desc": "Henry (TikTok)"
         },
 		"tiktok_fr_001": {
 			"country": "FR",
@@ -10833,7 +10793,7 @@
 			"gender": "F",
 			"arg": "jp_003",
 			"source": "tiktok",
-			"desc": "Koharu"
+			"desc": "Keiko"
 		},
 		"tiktok_jp_005": {
 			"country": "JP",
@@ -10841,7 +10801,7 @@
 			"gender": "F",
 			"arg": "jp_005",
 			"source": "tiktok",
-			"desc": "Hanako"
+			"desc": "Sakura (TikTok)"
 		},
 		"tiktok_jp_006": {
 			"country": "JP",
@@ -10849,7 +10809,7 @@
 			"gender": "M",
 			"arg": "jp_006",
 			"source": "tiktok",
-			"desc": "Naoki"
+			"desc": "Naoki (TikTok)"
 		},
         "jp_male_osada": {
             "country": "JP",
@@ -10913,7 +10873,7 @@
             "gender": "F",
             "arg": "jp_female_yagishaki",
             "source": "tiktok",
-            "desc": "Yagi Saki"
+            "desc": "Yagi Shaki"
         },
         "jp_female_hana": {
             "country": "JP",

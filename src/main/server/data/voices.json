@@ -5485,7 +5485,7 @@
 			"language": "hu",
 			"gender": "F",
 			"source": "googletranslate",
-			"arg": "hu-hu",
+			"arg": "hu-HU",
 			"desc": "Ishtevan"
 		},    
  		"google_helga": {
@@ -6195,7 +6195,7 @@
 			"gender": "M",
             "source": "onecore",
 			"arg": "Microsoft Hungarian (Szabolcs)",
-			"lang": "hu-hu",
+			"lang": "hu-HU",
 			"desc": "Microsoft Szabolcs"
 		},
 		"heera": {

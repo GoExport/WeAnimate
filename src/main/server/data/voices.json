@@ -2889,7 +2889,7 @@
 			"desc": "Alonso"
 		},
 		"et-EE-AnuNeural": {
-			"country": "EE",
+			"country": "et",
 			"language": "et",
 			"gender": "F",
             "source": "bing",
@@ -2897,7 +2897,7 @@
 			"desc": "Anu"
 		},
 		"et-EE-KertNeural": {
-			"country": "EE",
+			"country": "et",
 			"language": "et",
 			"gender": "M",
             "source": "bing",
@@ -3169,7 +3169,7 @@
 			"desc": "Roi"
 		},
 		"gu-IN-DhwaniNeural": {
-			"country": "IN",
+			"country": "gu",
 			"language": "gu",
 			"gender": "F",
             "source": "bing",
@@ -3177,7 +3177,7 @@
 			"desc": "Dhwani"
 		},
 		"gu-IN-NiranjanNeural": {
-			"country": "IN",
+			"country": "gu",
 			"language": "gu",
 			"gender": "M",
             "source": "bing",
@@ -3489,7 +3489,7 @@
 			"desc": "Masaru"
 		},
 		"kn-IN-SapnaNeural": {
-			"country": "IN",
+			"country": "kn",
 			"language": "kn",
 			"gender": "F",
             "source": "bing",
@@ -3497,7 +3497,7 @@
 			"desc": "Sapna"
 		},
 		"kn-IN-GaganNeural": {
-			"country": "IN",
+			"country": "kn",
 			"language": "kn",
 			"gender": "M",
             "source": "bing",
@@ -3609,7 +3609,7 @@
 			"desc": "Nils"
 		},
 		"ml-IN-SobhanaNeural": {
-			"country": "IN",
+			"country": "ml",
 			"language": "ml",
 			"gender": "F",
             "source": "bing",
@@ -3617,7 +3617,7 @@
 			"desc": "Sobhana"
 		},
 		"ml-IN-MidhunNeural": {
-			"country": "IN",
+			"country": "ml",
 			"language": "ml",
 			"gender": "M",
             "source": "bing",
@@ -3625,7 +3625,7 @@
 			"desc": "Midhun"
 		},
 		"mr-IN-AarohiNeural": {
-			"country": "IN",
+			"country": "mr",
 			"language": "mr",
 			"gender": "F",
             "source": "bing",
@@ -3633,7 +3633,7 @@
 			"desc": "Aarohi"
 		},
 		"mr-IN-ManoharNeural": {
-			"country": "IN",
+			"country": "mr",
 			"language": "mr",
 			"gender": "M",
             "source": "bing",
@@ -5233,7 +5233,7 @@
 			"desc": "Sonya"
 		},
 		"sq": {
-			"country": "AL",
+			"country": "sq",
 			"language": "sq",
 			"gender": "M",
 			"source": "googletranslate",
@@ -5241,7 +5241,7 @@
 			"desc": "Albanian male"
 		},
    		"am": {
-			"country": "ET",
+			"country": "am",
 			"language": "am",
 			"gender": "F",
 			"source": "googletranslate",
@@ -5273,7 +5273,7 @@
 			"desc": "Bengali female"
 		},
 		"bs": {
-			"country": "BA",
+			"country": "bs",
 			"language": "bs",
 			"gender": "M",
 			"source": "googletranslate",
@@ -5385,7 +5385,7 @@
 			"desc": "US female"
 		},
 		"et": {
-			"country": "ET",
+			"country": "et",
 			"language": "et",
 			"gender": "M",
 			"source": "googletranslate",
@@ -5449,7 +5449,7 @@
 			"desc": "Thalia"
 		},
 		"gu-IN": {
-			"country": "IN",
+			"country": "gu",
 			"language": "gu",
 			"gender": "F",
 			"source": "googletranslate",
@@ -5457,7 +5457,7 @@
 			"desc": "Gujarati female"
 		},
    		"ha-NG": {
-			"country": "NG",
+			"country": "ha",
 			"language": "ha",
 			"gender": "F",
 			"source": "googletranslate",
@@ -5521,7 +5521,7 @@
 			"desc": "Koharu"
 		},     
  		"jv": {
-			"country": "JV",
+			"country": "jv",
 			"language": "jv",
 			"gender": "F",
 			"source": "googletranslate",
@@ -5529,7 +5529,7 @@
 			"desc": "Javanese female"
 		},    
  		"kn-IN": {
-			"country": "IN",
+			"country": "kn",
 			"language": "kn",
 			"gender": "F",
 			"source": "googletranslate",
@@ -5537,7 +5537,7 @@
 			"desc": "Kannada female"
 		},   
  		"km": {
-			"country": "KM",
+			"country": "km",
 			"language": "km",
 			"gender": "F",
 			"source": "googletranslate",
@@ -5553,7 +5553,7 @@
 			"desc": "Dohyun"
 		},       
  		"la": {
-			"country": "LA",
+			"country": "la",
 			"language": "la",
 			"gender": "M",
 			"source": "googletranslate",
@@ -5585,7 +5585,7 @@
 			"desc": "Malay female"
 		},    
  		"ml": {
-			"country": "ML",
+			"country": "ml",
 			"language": "ml",
 			"gender": "F",
 			"source": "googletranslate",
@@ -5593,7 +5593,7 @@
 			"desc": "Malayalam female"
 		},    
  		"mr-IN": {
-			"country": "IN",
+			"country": "mr",
 			"language": "mr",
 			"gender": "F",
 			"source": "googletranslate",
@@ -5601,7 +5601,7 @@
 			"desc": "Marathi female"
 		},
  		"my-mm": {
-			"country": "MM",
+			"country": "my",
 			"language": "my",
 			"gender": "F",
 			"source": "googletranslate",
@@ -5609,7 +5609,7 @@
 			"desc": "Myanmar female"
 		},
  		"ne-NE": {
-			"country": "NE",
+			"country": "ne",
 			"language": "ne",
 			"gender": "F",
 			"source": "googletranslate",
@@ -5705,7 +5705,7 @@
 			"desc": "Paloma"
 		},
  		"su": {
-			"country": "SU",
+			"country": "su",
 			"language": "su",
 			"gender": "F",
 			"source": "googletranslate",
@@ -5713,7 +5713,7 @@
 			"desc": "Sundanese female"
 		},
  		"sw": {
-			"country": "SW",
+			"country": "sw",
 			"language": "sw",
 			"gender": "F",
 			"source": "googletranslate",
@@ -8388,7 +8388,7 @@
 			"desc": "Tanmay"
 		},
  		"google_hiral": {
-			"country": "IN",
+			"country": "gu",
 			"language": "gu",
 			"gender": "F",
 			"source": "pollypluswavenet",
@@ -8396,7 +8396,7 @@
 			"desc": "Hiral"
 		},
  		"google_kiaan": {
-			"country": "IN",
+			"country": "gu",
 			"language": "gu",
 			"gender": "M",
 			"source": "pollypluswavenet",
@@ -8404,7 +8404,7 @@
 			"desc": "Kiaan"
 		},
  		"google_priyanshi": {
-			"country": "IN",
+			"country": "gu",
 			"language": "gu",
 			"gender": "F",
 			"source": "pollypluswavenet",
@@ -8412,7 +8412,7 @@
 			"desc": "Priyanshi"
 		},
  		"google_shaurya": {
-			"country": "IN",
+			"country": "gu",
 			"language": "gu",
 			"gender": "M",
 			"source": "pollypluswavenet",
@@ -8420,7 +8420,7 @@
 			"desc": "Shaurya"
 		},
  		"google_megha": {
-			"country": "IN",
+			"country": "kn",
 			"language": "kn",
 			"gender": "F",
 			"source": "pollypluswavenet",
@@ -8428,7 +8428,7 @@
 			"desc": "Megha"
 		},
  		"google_manan": {
-			"country": "IN",
+			"country": "kn",
 			"language": "kn",
 			"gender": "M",
 			"source": "pollypluswavenet",
@@ -8436,7 +8436,7 @@
 			"desc": "Manan"
 		},
  		"google_kavya": {
-			"country": "IN",
+			"country": "kn",
 			"language": "kn",
 			"gender": "F",
 			"source": "pollypluswavenet",
@@ -8444,7 +8444,7 @@
 			"desc": "Kavya"
 		},
  		"google_varun": {
-			"country": "IN",
+			"country": "kn",
 			"language": "kn",
 			"gender": "M",
 			"source": "pollypluswavenet",
@@ -8452,7 +8452,7 @@
 			"desc": "Varun"
 		},
  		"google_jini": {
-			"country": "IN",
+			"country": "ml",
 			"language": "ml",
 			"gender": "F",
 			"source": "pollypluswavenet",
@@ -8460,7 +8460,7 @@
 			"desc": "Jini"
 		},
  		"google_appu": {
-			"country": "IN",
+			"country": "ml",
 			"language": "ml",
 			"gender": "M",
 			"source": "pollypluswavenet",
@@ -8468,7 +8468,7 @@
 			"desc": "Appu"
 		},
  		"google_thulasi": {
-			"country": "IN",
+			"country": "ml",
 			"language": "ml",
 			"gender": "F",
 			"source": "pollypluswavenet",
@@ -8476,7 +8476,7 @@
 			"desc": "Thulasi"
 		},
  		"google_kuttappan": {
-			"country": "IN",
+			"country": "ml",
 			"language": "ml",
 			"gender": "M",
 			"source": "pollypluswavenet",
@@ -8484,7 +8484,7 @@
 			"desc": "Kuttappan"
 		},
  		"google_aishwarya": {
-			"country": "IN",
+			"country": "mr",
 			"language": "mr",
 			"gender": "F",
 			"source": "pollypluswavenet",
@@ -8492,7 +8492,7 @@
 			"desc": "Aishwarya"
 		},
  		"google_reyansh": {
-			"country": "IN",
+			"country": "mr",
 			"language": "mr",
 			"gender": "M",
 			"source": "pollypluswavenet",
@@ -8500,7 +8500,7 @@
 			"desc": "Reyansh"
 		},
  		"google_vaishnavi": {
-			"country": "IN",
+			"country": "mr",
 			"language": "mr",
 			"gender": "F",
 			"source": "pollypluswavenet",
@@ -8508,7 +8508,7 @@
 			"desc": "Vaishnavi"
 		},
  		"google_sehej": {
-			"country": "IN",
+			"country": "pa",
 			"language": "pa",
 			"gender": "F",
 			"source": "pollypluswavenet",
@@ -8516,7 +8516,7 @@
 			"desc": "Sehej"
 		},
  		"google_vikram": {
-			"country": "IN",
+			"country": "pa",
 			"language": "pa",
 			"gender": "M",
 			"source": "pollypluswavenet",
@@ -8524,7 +8524,7 @@
 			"desc": "Vikram"
 		},
  		"google_japnoor": {
-			"country": "IN",
+			"country": "pa",
 			"language": "pa",
 			"gender": "F",
 			"source": "pollypluswavenet",
@@ -8532,7 +8532,7 @@
 			"desc": "Japnoor"
 		},
  		"google_gurnoor": {
-			"country": "IN",
+			"country": "pa",
 			"language": "pa",
 			"gender": "M",
 			"source": "pollypluswavenet",

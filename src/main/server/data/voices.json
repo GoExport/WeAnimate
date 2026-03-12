@@ -1458,7 +1458,7 @@
 		},
 		"elle_nt22k": {
 			"country": "no",
-			"language": "se",
+			"language": "sv",
 			"gender": "F",
 			"source": "acapela",
 			"arg": "Elle22k_NT",
@@ -1466,7 +1466,7 @@
 		},
 		"biera22k": {
 			"country": "no",
-			"language": "se",
+			"language": "sv",
 			"gender": "M",
 			"source": "acapela",
 			"arg": "Biera22k_NT",
@@ -14124,7 +14124,6 @@
 	    	"pt": "Portuguese",
 	    	"ro": "Romanian",
 	    	"ru": "Russian",
-	    	"se": "Swedish",
 	    	"si": "Sinhala",
 	    	"sk": "Slovak",
 	    	"sl": "Slovenian",

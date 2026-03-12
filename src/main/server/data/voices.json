@@ -3237,16 +3237,16 @@
 			"language": "hu",
 			"gender": "F",
             "source": "bing",
-			"arg": "hu-hu-NoemiNeural",
-			"desc": "Noemi"
+			"arg": "hu-HU-NoemiNeural",
+			"desc": "Noémi"
 		},
 		"hu-hu-TamasNeural": {
 			"country": "hu",
 			"language": "hu",
 			"gender": "M",
             "source": "bing",
-			"arg": "hu-hu-TamasNeural",
-			"desc": "Tamas"
+			"arg": "hu-HU-TamasNeural",
+			"desc": "Tamás"
 		},
 		"id-ID-GadisNeural": {
 			"country": "ID",

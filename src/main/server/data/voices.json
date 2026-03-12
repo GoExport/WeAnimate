@@ -3232,7 +3232,7 @@
 			"arg": "hr-HR-SreckoNeural",
 			"desc": "Srecko"
 		},
-		"hu-hu-NoemiNeural": {
+		"hu-HU-NoemiNeural": {
 			"country": "hu",
 			"language": "hu",
 			"gender": "F",
@@ -3240,7 +3240,7 @@
 			"arg": "hu-HU-NoemiNeural",
 			"desc": "Noémi"
 		},
-		"hu-hu-TamasNeural": {
+		"hu-HU-TamasNeural": {
 			"country": "hu",
 			"language": "hu",
 			"gender": "M",
@@ -7752,7 +7752,7 @@
 			"language": "hu",
 			"gender": "F",
 			"source": "pollypluswavenet",
-			"arg": "hu-hu-Wavenet-B",
+			"arg": "hu-HU-Wavenet-B",
 			"desc": "Flora"
 		},
  		"google_putri": {

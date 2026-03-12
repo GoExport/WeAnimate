@@ -1865,7 +1865,7 @@
 			"desc": "Borislav"
 		},
 		"bn-BD-NabanitaNeural": {
-			"country": "IN",
+			"country": "bn",
 			"language": "bn",
 			"gender": "F",
             "source": "bing",
@@ -1873,7 +1873,7 @@
 			"desc": "Nabanita"
 		},
 		"bn-BD-PradeepNeural": {
-			"country": "IN",
+			"country": "bn",
 			"language": "bn",
 			"gender": "M",
             "source": "bing",
@@ -1881,7 +1881,7 @@
 			"desc": "Pradeep"
 		},
 		"bn-IN-TanishaaNeural": {
-			"country": "IN",
+			"country": "bn",
 			"language": "bn",
 			"gender": "F",
             "source": "bing",
@@ -1889,7 +1889,7 @@
 			"desc": "Tanishaa"
 		},
 		"bn-IN-BashkarNeural": {
-			"country": "IN",
+			"country": "bn",
 			"language": "bn",
 			"gender": "M",
             "source": "bing",
@@ -3249,7 +3249,7 @@
 			"desc": "Tamás"
 		},
 		"id-ID-GadisNeural": {
-			"country": "ID",
+			"country": "id",
 			"language": "id",
 			"gender": "F",
             "source": "bing",
@@ -3257,7 +3257,7 @@
 			"desc": "Gadis"
 		},
 		"id-ID-ArdiNeural": {
-			"country": "ID",
+			"country": "id",
 			"language": "id",
 			"gender": "M",
             "source": "bing",
@@ -5265,7 +5265,7 @@
 			"desc": "Irati"
 		},
 		"bn-bd": {
-			"country": "IN",
+			"country": "bn",
 			"language": "bn",
 			"gender": "F",
 			"source": "googletranslate",
@@ -5497,7 +5497,7 @@
 			"desc": "Helga"
 		},  
  		"google_indah": {
-			"country": "ID",
+			"country": "id",
 			"language": "id",
 			"gender": "F",
 			"source": "googletranslate",
@@ -6217,7 +6217,7 @@
 			"desc": "Ravi"
 		},
 		"andika": {
-			"country": "ID",
+			"country": "id",
 			"language": "id",
 			"gender": "M",
             "source": "onecore",
@@ -7756,7 +7756,7 @@
 			"desc": "Flora"
 		},
  		"google_putri": {
-			"country": "ID",
+			"country": "id",
 			"language": "id",
 			"gender": "F",
 			"source": "pollypluswavenet",
@@ -7764,7 +7764,7 @@
 			"desc": "Putri"
 		},
  		"google_bintang": {
-			"country": "ID",
+			"country": "id",
 			"language": "id",
 			"gender": "M",
 			"source": "pollypluswavenet",
@@ -8356,7 +8356,7 @@
 			"desc": "Ishaan"
 		},
  		"google_nandini": {
-			"country": "IN",
+			"country": "bn",
 			"language": "bn",
 			"gender": "F",
 			"source": "pollypluswavenet",
@@ -8364,7 +8364,7 @@
 			"desc": "Nandini"
 		},
  		"google_sabyasachi": {
-			"country": "IN",
+			"country": "bn",
 			"language": "bn",
 			"gender": "M",
 			"source": "pollypluswavenet",
@@ -8372,7 +8372,7 @@
 			"desc": "Sabyasachi"
 		},
  		"google_purnima": {
-			"country": "IN",
+			"country": "bn",
 			"language": "bn",
 			"gender": "F",
 			"source": "pollypluswavenet",
@@ -8380,7 +8380,7 @@
 			"desc": "Purnima"
 		},
  		"google_tanmay": {
-			"country": "IN",
+			"country": "bn",
 			"language": "bn",
 			"gender": "M",
 			"source": "pollypluswavenet",
@@ -8572,7 +8572,7 @@
 			"desc": "Iniyan"
 		},
  		"google_budi": {
-			"country": "ID",
+			"country": "id",
 			"language": "id",
 			"gender": "M",
 			"source": "pollypluswavenet",
@@ -8580,7 +8580,7 @@
 			"desc": "Budi"
 		},
  		"google_anisa": {
-			"country": "ID",
+			"country": "id",
 			"language": "id",
 			"gender": "F",
 			"source": "pollypluswavenet",
@@ -10500,7 +10500,7 @@
             "desc": "Galvão Bueno"
         },
 		"tiktok_id_001": {
-			"country": "ID",
+			"country": "id",
 			"language": "id",
 			"gender": "F",
 			"arg": "id_001",
@@ -10508,7 +10508,7 @@
 			"desc": "Noor"
 		},
         "id_female_icha": {
-            "country": "ID",
+            "country": "id",
             "language": "id",
             "gender": "F",
             "arg": "id_female_icha",
@@ -10516,7 +10516,7 @@
             "desc": "Icha"
         },
         "id_male_darma": {
-            "country": "ID",
+            "country": "id",
             "language": "id",
             "gender": "M",
             "arg": "id_male_darma",
@@ -10524,7 +10524,7 @@
             "desc": "Darma"
         },
         "id_male_putra": {
-            "country": "ID",
+            "country": "id",
             "language": "id",
             "gender": "M",
             "arg": "id_male_putra",
@@ -10580,7 +10580,7 @@
             "desc": "Ismael"
         },
         "BV160_streaming": {
-			"country": "ID",
+			"country": "id",
 			"language": "id",
             "gender": "M",
             "arg": "BV160_streaming",
@@ -12892,7 +12892,7 @@
 			"desc": "Eszter"
 		},
         	"oc_damayanti": {
-			"country": "ID",
+			"country": "id",
 			"language": "id",
 			"gender": "F",
 			"arg": [4, 28, 1],
@@ -13484,7 +13484,7 @@
 			"desc": "Erzsi"
 		},
  		"ica": {
-			"country": "ID",
+			"country": "id",
 			"language": "id",
 			"gender": "F",
 			"arg": [8, 28, 1],

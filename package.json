@@ -2,7 +2,7 @@
   "name": "weanimate",
   "description": "GoAnimate server emulator",
   "version": "1.0.0",
-  "homepage": "https://discord.gg/Kf7BzSw",
+  "homepage": "https://discord.gg/ejwJYtQDrS",
   "license": "MIT",
   "private": true,
   "scripts": {
@@ -50,7 +50,7 @@
     "type": "git",
     "url": "git+https://github.com/GoExport/WeAnimate.git"
   },
-  "author": "GTAManRCR",
+  "author": "LexianDEV",
   "bugs": {
     "url": "https://github.com/GoExport/WeAnimate/issues"
   }

@@ -13802,6 +13802,54 @@
       "source": "sapi5",
       "arg": "Cepstral Dog",
       "desc": "Dog (SAPI5)"
+    },
+    "t2s_female_us": {
+      "country": "US",
+      "language": "en",
+      "gender": "F",
+      "source": "text2speech",
+      "arg": "slt",
+      "desc": "Female US (Text2Speech)"
+    },
+    "t2s_male_us": {
+      "country": "US",
+      "language": "en",
+      "gender": "M",
+      "source": "text2speech",
+      "arg": "rms",
+      "desc": "Male US (Text2Speech)"
+    },
+    "t2s_male_us_scottish": {
+      "country": "US",
+      "language": "en",
+      "gender": "M",
+      "source": "text2speech",
+      "arg": "awb",
+      "desc": "Male US Scottish Accent (Text2Speech)"
+    },
+    "t2s_male_us_low": {
+      "country": "US",
+      "language": "en",
+      "gender": "M",
+      "source": "text2speech",
+      "arg": "kal",
+      "desc": "Male US Low Quality (Text2Speech)"
+    },
+    "t2s_female_hindi": {
+      "country": "IN",
+      "language": "hi",
+      "gender": "F",
+      "source": "text2speech",
+      "arg": "file-cmu_indic_axb.flitevox",
+      "desc": "Female Hindi (Text2Speech)"
+    },
+    "t2s_male_marathi": {
+      "country": "IN",
+      "language": "mr",
+      "gender": "M",
+      "source": "text2speech",
+      "arg": "file-cmu_indic_aup_mr.flitevox",
+      "desc": "Male Marathi (Text2Speech)"
     }
   },
   "languages": {

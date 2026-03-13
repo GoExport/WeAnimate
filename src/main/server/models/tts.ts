@@ -818,6 +818,137 @@ export default function processVoice(
           req1.end();
           break;
         }
+        case "text2speech": {
+          const t2sBoundary = "----WebKitFormBoundary7MA4YWxkTrZu0gW";
+          const t2sBody = [
+            "--" + t2sBoundary,
+            'Content-Disposition: form-data; name="text"',
+            "",
+            text,
+            "--" + t2sBoundary,
+            'Content-Disposition: form-data; name="voice"',
+            "",
+            voice.arg,
+            "--" + t2sBoundary,
+            'Content-Disposition: form-data; name="speed"',
+            "",
+            "1",
+            "--" + t2sBoundary,
+            'Content-Disposition: form-data; name="outname"',
+            "",
+            "speech",
+            "--" + t2sBoundary,
+            'Content-Disposition: form-data; name="submit"',
+            "",
+            "Start",
+            "--" + t2sBoundary,
+            'Content-Disposition: form-data; name="user_screen_width"',
+            "",
+            "980",
+            "--" + t2sBoundary + "--",
+            "",
+          ].join("\r\n");
+          const t2sReq = https.request(
+            {
+              hostname: "www.text2speech.org",
+              path: "/",
+              method: "POST",
+              headers: {
+                "Content-Type": "multipart/form-data; boundary=" + t2sBoundary,
+                "Content-Length": Buffer.byteLength(t2sBody),
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+                Origin: "https://www.text2speech.org",
+                Referer: "https://www.text2speech.org/",
+              },
+            },
+            (t2sRes) => {
+              let html = "";
+              t2sRes.on("data", (chunk: Buffer) => (html += chunk));
+              t2sRes.on("end", () => {
+                const urlMatch = html.match(/var url = '([^']+)'/);
+                if (!urlMatch) {
+                  return reject("text2speech.org: failed to get poll URL");
+                }
+                const pollPath = urlMatch[1];
+                let attempts = 0;
+                const maxAttempts = 40;
+                function pollResult() {
+                  if (++attempts > maxAttempts) {
+                    return reject("text2speech.org: polling timed out");
+                  }
+                  https
+                    .get(
+                      {
+                        hostname: "www.text2speech.org",
+                        path: pollPath + "&tscachebusttamp=" + Date.now(),
+                        headers: {
+                          "User-Agent":
+                            "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+                          Referer: "https://www.text2speech.org/",
+                        },
+                      },
+                      (pollRes) => {
+                        let pollData = "";
+                        pollRes.on(
+                          "data",
+                          (chunk: Buffer) => (pollData += chunk),
+                        );
+                        pollRes.on("end", () => {
+                          if (pollData.indexOf("__wait__123") > -1) {
+                            setTimeout(pollResult, 3000);
+                            return;
+                          }
+                          const fileMatch = pollData.match(
+                            /href="(\/FW\/getfile\.php\?file=[^"]+\.mp3)"/,
+                          );
+                          if (!fileMatch) {
+                            return reject(
+                              "text2speech.org: no download link found",
+                            );
+                          }
+                          const filePath = fileMatch[1].replace(/&amp;/g, "&");
+                          https
+                            .get(
+                              {
+                                hostname: "www.text2speech.org",
+                                path: filePath,
+                                headers: {
+                                  "User-Agent":
+                                    "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+                                },
+                              },
+                              (audioRes) => {
+                                const chunks: Buffer[] = [];
+                                audioRes.on("data", (c: Buffer) =>
+                                  chunks.push(c),
+                                );
+                                audioRes.on("end", () =>
+                                  resolve(Buffer.concat(chunks)),
+                                );
+                              },
+                            )
+                            .on("error", (e) =>
+                              reject(
+                                `text2speech.org download error: ${e.message}`,
+                              ),
+                            );
+                        });
+                      },
+                    )
+                    .on("error", (e) =>
+                      reject(`text2speech.org poll error: ${e.message}`),
+                    );
+                }
+                pollResult();
+              });
+            },
+          );
+          t2sReq.on("error", (e) =>
+            reject(`text2speech.org error: ${e.message}`),
+          );
+          t2sReq.end(t2sBody);
+          break;
+        }
         default: {
           return reject("Not implemented");
         }

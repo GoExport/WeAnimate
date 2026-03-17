@@ -14075,13 +14075,21 @@
       "arg": "Cepstral Dog",
       "desc": "Dog (SAPI5)"
     },
+    "sapi5eric": {
+      "country": "US",
+      "language": "en",
+      "gender": "M",
+      "source": "sapi5",
+      "arg": "IVONA 2 Eric OEM",
+      "desc": "Eric (SAPI5)"
+    },
     "t2s_female_us": {
       "country": "US",
       "language": "en",
       "gender": "F",
       "source": "text2speech",
       "arg": "slt",
-      "desc": "Female US (Text2Speech)"
+      "desc": "Female US (T2S)"
     },
     "t2s_male_us": {
       "country": "US",
@@ -14089,7 +14097,7 @@
       "gender": "M",
       "source": "text2speech",
       "arg": "rms",
-      "desc": "Male US (Text2Speech)"
+      "desc": "Male US (T2S)"
     },
     "t2s_male_us_scottish": {
       "country": "US",
@@ -14097,7 +14105,7 @@
       "gender": "M",
       "source": "text2speech",
       "arg": "awb",
-      "desc": "Male US Scottish Accent (Text2Speech)"
+      "desc": "Male US Scottish Accent (T2S)"
     },
     "t2s_male_us_low": {
       "country": "US",
@@ -14105,7 +14113,7 @@
       "gender": "M",
       "source": "text2speech",
       "arg": "kal",
-      "desc": "Male US Low Quality (Text2Speech)"
+      "desc": "Male US Low Quality (T2S)"
     },
     "t2s_female_hindi": {
       "country": "IN",
@@ -14113,7 +14121,7 @@
       "gender": "F",
       "source": "text2speech",
       "arg": "file-cmu_indic_axb.flitevox",
-      "desc": "Female Hindi (Text2Speech)"
+      "desc": "Female Hindi (T2S)"
     },
     "t2s_male_marathi": {
       "country": "IN",
@@ -14121,7 +14129,7 @@
       "gender": "M",
       "source": "text2speech",
       "arg": "file-cmu_indic_aup_mr.flitevox",
-      "desc": "Male Marathi (Text2Speech)"
+      "desc": "Male Marathi (T2S)"
     }
   },
   "languages": {

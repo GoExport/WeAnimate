@@ -57,8 +57,8 @@ defineExpose({ displayBrowser, copyCharacter });
 <template>
 	<div class="cc_modal">
 		<Popup class="cc_popup_container" :show="show">
-			<template #small-heading>Character creator</template>
-			<template #large-heading>Create a character</template>
+			<template #small-heading>Character maker</template>
+			<template #large-heading>Make a character</template>
 			<template #head-right>
 				<Button primary @click="exit">Exit</Button>
 			</template>

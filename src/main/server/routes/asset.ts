@@ -152,8 +152,8 @@ group.route("POST", "/api_v2/asset/get", (req, res) => {
 		res.status(500).json({status:"error"});
 	}
 });
-group.route("POST", "/goapi/getAssetTags", (_, r) => r.json([]));
-group.route("POST", "/goapi/getLatestAssetId", (_, r) => r.end(0));
+group.route("POST", "/goapi/getAssetTags/", (_, r) => r.json([]));
+group.route("POST", "/goapi/getLatestAssetId/", (_, r) => {r.setHeader("Content-Type", "text/html"); r.end("0");});
 group.route("POST", "/api_v2/asset/update/", (req, res) => {
 	const id = req.body.data?.id ?? req.body.data?.starter_id ?? null;
 	const title = req.body.data?.title ?? null;

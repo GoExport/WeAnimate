@@ -164,8 +164,12 @@ group.route("POST", "/api_v2/asset/update/", (req, res) => {
 	const update:Partial<Asset> = {
 		title: title
 	};
-	if (tags) {
-		update.tags = tags;
+	if (req.body.data?.hasOwnProperty("tags")) {
+		if (tags && String(tags).trim() !== "") {
+			update.tags = tags;
+		} else {
+			update.tags = undefined; 
+		}
 	}
 	try {
 		AssetModel.updateInfo(id, update);

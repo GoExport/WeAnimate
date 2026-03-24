@@ -2971,10 +2971,10 @@
 			<rotation>0</rotation>
 		</prop>
 	</compositebg>
-	<prop id="cc_ak47.swf" name="Ak47" holdable="1" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="9004" money="0" sharing="0"/>
+	<prop id="cc_ak47.swf" name="AK-47" holdable="1" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="9004" money="0" sharing="0"/>
 	<prop id="cc_arrow.swf" name="Arrow" holdable="1" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="9005" money="0" sharing="0"/>
 	<prop id="cc_book.swf" name="Book" holdable="1" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="9006" money="0" sharing="0"/>
-	<prop id="cc_briefcase.swf" name="Brief case" holdable="1" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="9007" money="0" sharing="0"/>
+	<prop id="cc_briefcase.swf" name="Briefcase" holdable="1" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="9007" money="0" sharing="0"/>
 	<prop id="cc_cake.swf" name="Cake" holdable="1" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="9008" money="0" sharing="0"/>
 	<prop id="cc_camera.swf" name="Camera" holdable="1" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="9009" money="0" sharing="0"/>
 	<prop id="cc_camera_with_flash.swf" name="Camera with flash" holdable="1" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="9010" money="0" sharing="0"/>
@@ -3007,7 +3007,7 @@
 	<prop id="cc_devilcorn.swf" name="Devil horn" holdable="0" placeable="1" wearable="1" facing="left" thumb="" enable="Y" is_premium="N" aid="9037" money="0" sharing="0"/>
 	<prop id="cc_rabitear.swf" name="Rabbit ear" holdable="0" placeable="1" wearable="1" facing="left" thumb="" enable="Y" is_premium="N" aid="9038" money="0" sharing="0"/>
 	<prop id="cc_coffin.swf" name="Coffin" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="9039" money="0" sharing="0"/>
-	<prop id="cc_flying_ufo.swf" name="Flying ufo" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="9040" money="0" sharing="0"/>
+	<prop id="cc_flying_ufo.swf" name="Flying UFO" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="9040" money="0" sharing="0"/>
 	<prop id="cc_foldedchair.swf" name="Folding chair" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="9041" money="0" sharing="0"/>
 	<prop id="cc_lightray.swf" name="Light ray" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="9042" money="0" sharing="0"/>
 	<prop id="cc_mosaic.swf" name="Mosaic" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="9043" money="0" sharing="0"/>

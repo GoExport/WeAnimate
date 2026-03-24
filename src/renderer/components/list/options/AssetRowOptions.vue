@@ -14,10 +14,17 @@ function idsAsArray(): string[] {
 	return Array.isArray(props.entry) ? props.entry : [props.entry.id];
 }
 async function deleteBtn_click() {
-	const msg = isSingular ?
+	const actualIsSingular = Array.isArray(props.entry) 
+		? props.entry.length === 1 
+		: true;
+	const msg = actualIsSingular ?
 		en_US.list.actions.asset_delete_confirm.sing :
 		en_US.list.actions.asset_delete_confirm.plr;
-	if (!confirm(msg)) return;
+	const subtext = actualIsSingular ? 
+		"It cannot be recovered" : 
+		"They cannot be recovered";
+	const confirmed = await window.appWindow.confirmQuit(msg, subtext);
+	if (!confirmed) return;
 	const ids = Array.isArray(props.entry) 
 		? props.entry 
 		: [(props.entry as T).id];

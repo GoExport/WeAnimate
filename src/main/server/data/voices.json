@@ -350,7 +350,7 @@
 			"gender": "M",
 			"source": "acapela",
 			"arg": "Caleb22k_HQ",
-			"desc": "Caleb"
+			"desc": "Caleb (Acapela)"
 		},
 		"calebteen22k": {
 			"country": "GB",
@@ -358,7 +358,7 @@
 			"gender": "M",
 			"source": "acapela",
 			"arg": "CalebTeen22k_HQ",
-			"desc": "Caleb (Teen)"
+			"desc": "Caleb (Acapela teen)"
 		},
 		"chloe22k": {
 			"country": "GB",
@@ -958,7 +958,7 @@
 			"gender": "M",
 			"source": "acapela",
 			"arg": "AntoineFromAfar22k_HQ",
-			"desc": "Antoine (Acapela, From Afar)"
+			"desc": "Antoine (Acapela from afar)"
 		},
 		"antoinehappy22k": {
 			"country": "FR",
@@ -966,7 +966,7 @@
 			"gender": "M",
 			"source": "acapela",
 			"arg": "AntoineHappy22k_HQ",
-			"desc": "Antoine"
+			"desc": "Antoine (Acapela happy)"
 		},
 		"antoinesad22k": {
 			"country": "FR",
@@ -974,7 +974,7 @@
 			"gender": "M",
 			"source": "acapela",
 			"arg": "AntoineSad22k_HQ",
-			"desc": "Antoine"
+			"desc": "Antoine (Acapela sad)"
 		},
 		"antoineupclose22k": {
 			"country": "FR",
@@ -982,7 +982,7 @@
 			"gender": "M",
 			"source": "acapela",
 			"arg": "AntoineUpClose22k_HQ",
-			"desc": "Antoine"
+			"desc": "Antoine (Acapela up close)"
 		},
 		"bruno22k": {
 			"country": "FR",
@@ -1785,7 +1785,7 @@
 			"desc": "Willem"
 		},
 		"ar-AE-FatimaNeural": {
-			"country": "AE",
+			"country": "ae",
 			"language": "ar",
 			"gender": "F",
             "source": "bing",
@@ -1793,7 +1793,7 @@
 			"desc": "Fatima"
 		},
 		"ar-AE-HamdanNeural": {
-			"country": "AE",
+			"country": "ae",
 			"language": "ar",
 			"gender": "M",
             "source": "bing",
@@ -2558,7 +2558,7 @@
 			"gender": "F",
             "source": "bing",
 			"arg": "en-SG-LunaNeural",
-			"desc": "Luna (Azure)"
+			"desc": "Luna (Singapore)"
 		},
 		"en-SG-WayneNeural": {
 			"country": "SG",
@@ -2726,7 +2726,7 @@
 			"gender": "F",
             "source": "bing",
 			"arg": "en-US-LunaNeural",
-			"desc": "Luna"
+			"desc": "Luna (American)"
 		},
 		"en-US-MichelleNeural": {
 			"country": "US",
@@ -7668,7 +7668,7 @@
 			"desc": "Ruben (PO)"
 		},
 		"hala": {
-			"country": "AE",
+			"country": "ae",
 			"language": "ar",
 			"gender": "F",
 			"source": "polly",
@@ -7676,7 +7676,7 @@
 			"desc": "Hala"
 		},
 		"zayd": {
-			"country": "AE",
+			"country": "ae",
 			"language": "ar",
 			"gender": "M",
 			"source": "polly",

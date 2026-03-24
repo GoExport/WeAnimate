@@ -23,7 +23,7 @@
 .theme_sel_popup .theme {
   background-color: hsl(252deg 16% 97%);
   border: 1px solid hsl(252deg 16% 82%);
-  border-radius: 3px;
+  border-radius: 20px;
   transition: 0.12s cubic-bezier(0.7, 0.5, 0.3, 1);
   display: inline-flex;
   align-items: center;
@@ -41,7 +41,7 @@
   height: 70px;
 }
 .theme_sel_popup .theme .banner {
-  border-radius: 3px;
+  border-radius: 20px;
   transition: 0.12s cubic-bezier(0, 0.7, 0.1, 0.75);
   object-position: center -30px;
   object-fit: cover;

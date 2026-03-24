@@ -1,7 +1,7 @@
 const fs = require("fs");
 const { join } = require("path");
 
-const searchDirs = ["@ffprobe-installer", "@img/colour"];
+const searchDirs = ["@ffprobe-installer"];
 
 searchDirs.forEach((dir) => {
 	const path = join(__dirname, "../node_modules", dir);

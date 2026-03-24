@@ -1,9 +1,9 @@
 const env = Object.assign(process.env, require("../../env.json"), require("../../config.json"));
-import { app, BrowserWindow, Menu, shell, ipcMain } from "electron";
+import { app, BrowserWindow, Menu, shell, ipcMain, dialog } from "electron";
 import { createWriteStream } from "fs";
 import Directories from "./storage/directories";
 import { join } from "path";
-import { rmdirSync, existsSync } from "fs";
+import { rmdirSync, existsSync, readFileSync } from "fs";
 import settings from "./storage/settings";
 import { startAll } from "./server/index";
 import { writeFileSync, existsSync } from "fs";
@@ -32,6 +32,7 @@ contextBridge.exposeInMainWorld("appWindow", {
 	openFAQ: () => ipcRenderer.send("open-faq"),
 	openGitHub: () => ipcRenderer.send("open-github"),
 	openDataFolder: () => ipcRenderer.send("open-data-folder"),
+	confirmQuit: (message, subtext) => ipcRenderer.invoke("show-quit-dialog", message, subtext),
 });`;
 const getPreloadPath = () => {
     const localPath = join(__dirname, "preload.js");
@@ -48,7 +49,7 @@ if (settings.saveLogFiles) {
 		process.stdout.write(c + "\n");
 	};
 	process.on("exit", () => {
-		console.log("Exiting...");
+		console.log("Exiting");
 		writeStream.close();
 	});
 }
@@ -78,13 +79,7 @@ let mainWindow:BrowserWindow;
 let root:string;
 const createWindow = () => {
 	let iconPath: string;
-		if (process.platform === 'win32') {
-    			iconPath = join(__dirname, 'favicon.ico');
-		} else if (process.platform === 'darwin') {
-    			iconPath = join(__dirname, 'favicon.icns');
-		} else {
-    			iconPath = join(__dirname, 'favicon.png');
-		}
+	if (process.platform === 'win32') {iconPath = join(__dirname, 'favicon.ico');} else if (process.platform === 'darwin') {iconPath = join(__dirname, 'favicon.icns');} else {iconPath = join(__dirname, 'favicon.png');}
 	mainWindow = new BrowserWindow({
 		width: 1280,
 		height: 720,
@@ -98,6 +93,140 @@ const createWindow = () => {
 			contextIsolation: true
 		}
 	});
+    ipcMain.handle("show-quit-dialog", async (event, message, subtext) => {
+    const displayMsg = message || "Are you sure you want to exit the LVM?";
+    const displaySub = subtext || "Unsaved changes will be lost";
+    let iconPath: string;
+	if (process.platform === 'win32') {iconPath = join(__dirname, 'favicon.ico');} else if (process.platform === 'darwin') {iconPath = join(__dirname, 'favicon.icns');} else {iconPath = join(__dirname, 'favicon.png');}
+    const innerIconPath = (process.platform === 'darwin' || process.platform === 'linux') ? join(__dirname, 'favicon.png') : join(__dirname, 'favicon.ico');
+    let iconDataUrl = "";
+    try {
+        const iconBase64 = readFileSync(innerIconPath).toString('base64');
+        const mimeType = innerIconPath.endsWith('.ico') ? 'image/x-icon' : 'image/png';
+        iconDataUrl = `data:${mimeType};base64,${iconBase64}`;
+    } catch (e) {
+        console.log("Could not load icon, using fallback");
+    }
+    let confirmWin = new BrowserWindow({
+        width: 500,
+        height: 150,
+        parent: mainWindow,
+        modal: true,
+        icon: iconPath,
+        title: "Wrapper offline",
+        resizable: false,
+        autoHideMenuBar: true,
+        show: false,
+        webPreferences: {
+            nodeIntegration: true,
+            contextIsolation: false
+        }
+    });
+    let result = false;
+    const handleResponse = (event, response) => {
+        result = response;
+        confirmWin.close();
+    };
+    ipcMain.once("confirm-response", handleResponse);
+    setTimeout(() => {
+        if (!confirmWin.isDestroyed()) {
+            confirmWin.loadURL(`data:text/html;charset=utf-8,${encodeURIComponent(htmlContent)}`);
+            confirmWin.show();
+        }
+    }, 150);
+        const htmlContent = `
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <style>
+                body { 
+                    background: #222222; 
+                    color: #e0e0e0; 
+                    font-family: system-ui, sans-serif; 
+                    margin: 0; 
+                    padding: 25px; 
+                    user-select: none; 
+                    overflow: hidden; 
+                }
+                .top-section { 
+                    display: flex; 
+                    align-items: flex-start; 
+                    margin-bottom: 25px; 
+                }
+                .logo { 
+                    width: 50px; 
+                    height: 50px; 
+                    margin-right: 20px; 
+                    flex-shrink: 0; 
+                }
+                .text-container {
+					flex-grow: 1; 
+					text-align: center;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+				}
+                p { 
+                    margin: 0; 
+                    font-size: 13.5px; 
+                    line-height: 1.5; 
+                }
+                .button-group { 
+                    display: flex; 
+                    width: 100%; 
+                    align-items: center; 
+                }
+                .spacer { 
+                    flex-grow: 1; 
+                }
+                button { 
+                    background: #222222; 
+                    color: #ffffff; 
+                    border: 1px solid #444444; 
+                    padding: 7px 30px; 
+                    cursor: pointer; 
+                    border-radius: 10px; 
+                    font-size: 12px; 
+                    font-weight: bold; 
+                    outline: none; 
+                    transition: background 0.2s;
+                }
+                button:hover { 
+                    background: #444; 
+                }
+            </style>
+        </head>
+        <body>
+            <div class="top-section">
+                <img src="${iconDataUrl}" class="logo">
+                <div class="text-container">
+					<p><b>${displayMsg}</b></p>
+					<p style="opacity:0.6; font-size:12px;">${displaySub}</p>
+				</div>
+            </div>
+            <div class="button-group">
+                <button id="yes">Yes</button>
+                <div class="spacer"></div> 
+                <button id="no">No</button>
+            </div>
+            <script>
+                const { ipcRenderer } = require('electron');
+                const y = document.getElementById('yes');
+                const n = document.getElementById('no');
+                y.onclick = () => ipcRenderer.send('confirm-response', true);
+                n.onclick = () => ipcRenderer.send('confirm-response', false);
+            </script>
+        </body>
+        </html>
+    `;
+    confirmWin.loadURL(`data:text/html;charset=utf-8,${encodeURIComponent(htmlContent)}`);
+    return new Promise((resolve) => {
+        confirmWin.on('closed', () => {
+            ipcMain.removeListener("confirm-response", handleResponse);
+            resolve(result);
+        });
+    });
+});
 	ipcMain.on("exit", () => process.exit(0));
 	ipcMain.on("open-discord", openDiscord);
 	ipcMain.on("open-faq", openFaq);

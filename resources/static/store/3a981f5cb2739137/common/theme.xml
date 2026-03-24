@@ -15605,7 +15605,7 @@
 	<prop id="electric_drill.swf" name="Electric drill" holdable="1" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="3333" money="0" sharing="0" handstyle="stick"/>
 	<prop id="febex_envelope.swf" name="Febex envelope" holdable="1" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="3334" money="0" sharing="0" handstyle="flat"/>
 	<prop id="febex_cap.swf" name="Febex cap" holdable="0" placeable="1" wearable="1" facing="left" thumb="" enable="Y" is_premium="N" aid="3335" money="0" sharing="0"/>
-	<prop id="flying_ufo.swf" name="Flying ufo" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="3336" money="0" sharing="0"/>
+	<prop id="flying_ufo.swf" name="Flying UFO" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="3336" money="0" sharing="0"/>
 	<prop id="golf_stick.swf" name="Golf stick" holdable="1" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="3337" money="0" sharing="0" handstyle="stick"/>
 	<prop id="hammer.swf" name="Hammer" holdable="1" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="3338" money="0" sharing="0" handstyle="stick"/>
 	<prop id="handcuff.swf" name="Handcuff" holdable="1" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="3339" money="0" sharing="0"/>
@@ -15628,7 +15628,7 @@
 	<prop id="stethoscope.swf" name="Stethoscope" holdable="0" placeable="1" wearable="1" facing="left" thumb="" enable="Y" is_premium="N" aid="3356" money="0" sharing="0"/>
 	<prop id="timothy.swf" name="Timothy" holdable="1" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="3357" money="0" sharing="0" handstyle="stick"/>
 	<prop id="tool_box.swf" name="Tool box" holdable="1" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="3358" money="0" sharing="0"/>
-	<prop id="ufo.swf" name="Ufo" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="3359" money="0" sharing="0"/>
+	<prop id="ufo.swf" name="UFO" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="3359" money="0" sharing="0"/>
 	<prop id="walking_stick.swf" name="Walking stick" holdable="1" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="3360" money="0" sharing="0" handstyle="stick"/>
 	<prop id="water_dispenser.swf" name="Water dispenser" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="3361" money="0" sharing="0"/>
 	<prop id="wool_ball.swf" name="Wool ball" holdable="1" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="3362" money="0" sharing="0" handstyle="flat"/>
@@ -16473,7 +16473,7 @@
 		<state id="msp_handshape_ncc_hand05.swf" name="Fist" enable="Y"/>
 	</prop>
 	<prop id="ncc_pie02_full.swf" name="Pie" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="11377" money="0" sharing="0"/>
-	<prop id="msp_ncc_gun_ak47" name="Ak47" holdable="1" placeable="1" wearable="0" facing="left" thumb="msp_ncc_gun_ak47_ncc_05ak47_still.swf" enable="Y" is_premium="N" aid="11409" money="0" sharing="0" handstyle="gun">
+	<prop id="msp_ncc_gun_ak47" name="AK-47" holdable="1" placeable="1" wearable="0" facing="left" thumb="msp_ncc_gun_ak47_ncc_05ak47_still.swf" enable="Y" is_premium="N" aid="11409" money="0" sharing="0" handstyle="gun">
 		<state id="msp_ncc_gun_ak47_ncc_05ak47_fire.swf" name="Automatic mode" enable="Y"/>
 		<state id="msp_ncc_gun_ak47_ncc_05ak47_loop.swf" name="Burst mode" enable="Y"/>
 		<state id="msp_ncc_gun_ak47_ncc_05ak47_once.swf" name="Shoot once" enable="Y"/>
@@ -16704,7 +16704,7 @@
 	</prop>
 	<prop id="ncc_tree05.swf" name="Tree" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="Y" aid="11623" money="0" sharing="0"/>
 	<prop id="ncc_03camp_bottle.swf" name="Army bottle" holdable="1" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="Y" aid="11624" money="0" sharing="0" handstyle="flat"/>
-	<prop id="msp_ncc_gun_ak47b" name="Ak47" holdable="1" placeable="1" wearable="0" facing="left" thumb="msp_ncc_gun_ak47b_ncc_gun_still.swf" enable="Y" is_premium="N" aid="11625" money="0" sharing="0" handstyle="gun">
+	<prop id="msp_ncc_gun_ak47b" name="AK-47" holdable="1" placeable="1" wearable="0" facing="left" thumb="msp_ncc_gun_ak47b_ncc_gun_still.swf" enable="Y" is_premium="N" aid="11625" money="0" sharing="0" handstyle="gun">
 		<tag>Gun</tag>
 		<state id="msp_ncc_gun_ak47b_ncc_gun_fire.swf" name="Automatic mode" enable="Y"/>
 		<state id="msp_ncc_gun_ak47b_ncc_gun_loop.swf" name="Burst mode" enable="Y"/>

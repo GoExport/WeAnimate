@@ -170,12 +170,15 @@ async function wmReplace_click(id: string) {
   wmReplaceInput.value.click();
 }
 async function wmDelete_click(id: string) {
-  if (!confirm("Are you sure that you want to remove the watermark?")) {
+  const confirmed = await window.appWindow.confirmQuit(
+    "Are you sure you want to remove the watermark?",
+    "This action cannot be undone",
+  );
+  if (!confirmed) {
     return;
   }
   const body = new FormData();
   body.append("id", id);
-
   const res = await fetch(apiServer + "/api/watermark/delete", {
     method: "POST",
     body,

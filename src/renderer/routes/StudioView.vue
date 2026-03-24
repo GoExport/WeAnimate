@@ -146,12 +146,16 @@ onMounted(() => {
 			return !showTutorial;
 		}
 	};
-	window.quitStudio = function (skipAsk:boolean) {
-		const shouldQuit = skipAsk || confirm("Are you sure you want to exit the studio? You may have unsaved changes");
-		if (shouldQuit) {
-			router.push("/");
-		}
-	};
+	window.quitStudio = async function (skipAsk) {
+    if (skipAsk) {
+        router.push("/");
+    } else {
+        const shouldQuit = await window.appWindow.confirmQuit();
+        if (shouldQuit) {
+            router.push("/");
+        }
+    }
+};
 	window.restartTutorial = function () {
 		showTutorial = true;
 		showObject.value = false;

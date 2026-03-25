@@ -32,7 +32,6 @@ let globalXml = "";
 let params:Params = {
 	flashvars: {
 		isEmbed: "1",
-		tlang: "en_US",
 		isInitFromExternal: "1",
 		startFrame: "0",
 		autostart: "1",

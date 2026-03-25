@@ -28,7 +28,6 @@ let params:Params = {
 		m_mode: "school",
 		page: "",
 		siteId: "go",
-		tlang: "en_US",
 		ut: "60",
 		apiserver: apiServer + "/",
 		storePath: staticServer + staticPaths.storeUrl + "/<store>",

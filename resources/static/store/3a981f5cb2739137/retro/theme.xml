@@ -2577,7 +2577,7 @@
 	<prop id="diner_sitting_area_table.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="5000" money="0" sharing="0"/>
 	<prop id="mosaic.swf" name="Mosaic" holdable="0" placeable="1" facing="left" thumb="" enable="N" is_premium="N" aid="1161" money="0" sharing="0"/>
 	<prop id="diner_sitting_area_seat.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="5001" money="0" sharing="0"/>
-	<prop id="mosaic_02.swf" name="Mosaic02" holdable="0" placeable="1" facing="left" thumb="" enable="N" is_premium="N" aid="1162" money="0" sharing="0"/>
+	<prop id="mosaic_02.swf" name="Mosaic 2" holdable="0" placeable="1" facing="left" thumb="" enable="N" is_premium="N" aid="1162" money="0" sharing="0"/>
 	<prop id="rooftop_building2.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="5002" money="0" sharing="0"/>
 	<prop id="mouse.swf" name="Boxing glove" holdable="0" placeable="1" facing="left" thumb="" enable="Y" is_premium="N" aid="1163" money="0" sharing="0"/>
 	<prop id="rooftop_building1.swf" name="" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="N" is_premium="N" aid="5003" money="0" sharing="0"/>

@@ -15,7 +15,6 @@ main {
 	width: 100%;
 	height: 100%;
 }
-
 #full_page_container.popup_mode {
 	background: var(--popup-gradient-bg);
 }
@@ -24,16 +23,8 @@ main {
 	height: 1px;
 }
 </style>
-
 <script setup lang="ts">
-import {
-	apiServer,
-	Params,
-	staticPaths,
-	staticServer,
-	swfUrlBase,
-	toAttrString
-} from "../utils/AppInit";
+import { apiServer, Params, staticPaths, staticServer, swfUrlBase, toAttrString } from "../utils/AppInit";
 import AssetImporter from "../components/studio/importer/AssetImporter.vue";
 import type { AssetStatus } from "../components/studio/importer/ImporterFile.vue";
 import CCModal from "../components/studio/CCModal.vue";
@@ -43,25 +34,19 @@ import StudioObject from "../interfaces/StudioObject";
 import ThemeSelector from "../components/ThemeSelector.vue";
 import useAppSettings from "../composables/useAppSettings";
 import { useRoute, useRouter } from "vue-router";
-
 type CCModalType = InstanceType<typeof CCModal>;
 type MoviePreviewModalType = InstanceType<typeof MoviePreviewModal>;
-
 const appSettings = useAppSettings();
 const ccModal = useTemplateRef<CCModalType>("ccModal");
 const previewModal = useTemplateRef<MoviePreviewModalType>("previewModal");
 const router = useRouter();
 const studio = useTemplateRef<StudioObject>("studio-object");
-
 const showCCModal = ref(false);
 const showImporter = ref(false);
 const showPreviewer = ref(false);
-
 const showObject = ref(false);
-
 const showSelector = ref(false);
 let swfUrl:string;
-
 let params:Params = {
 	flashvars: {
 		appCode: "go",
@@ -69,7 +54,7 @@ let params:Params = {
 		ctc: "go",
 		goteam_draft_only: "1",
 		isLogin: "Y",
-		isWide: appSettings.get("isWide") ? "1" : "0",
+		isWide: "0",
 		lid: "0",
 		page: "",
 		retut: "1",
@@ -81,7 +66,6 @@ let params:Params = {
 	},
 	allowScriptAccess: "always"
 };
-
 function exitCCModal() {
 	showCCModal.value = false;
 }
@@ -92,7 +76,6 @@ function exitImporter() {
 	showImporter.value = false;
 	studio.value.importerStatus("clear");
 }
-
 function onImportStatusUpdate(status:AssetStatus) {
 	switch (status) {
 		case "uploading": {
@@ -108,7 +91,6 @@ function onImportStatusUpdate(status:AssetStatus) {
 		}
 	}
 }
-
 function onImporterUploadSuccess(
 	assetType: string,
 	assetId: string,
@@ -116,7 +98,6 @@ function onImporterUploadSuccess(
 ) {
 	studio.value.importerUploadComplete(assetType, assetId, lvmObject);
 }
-
 function onImportAddToScene(assetType:string, assetId:string) {
 	studio.value.importerAddAsset(assetType, assetId);
 }
@@ -126,15 +107,16 @@ function exitPreviewer() {
 function showSavePopup() {
 	studio.value.onExternalPreviewPlayerPublish();
 }
-
-function themeSelected(themeId:string) {
-	swfUrl = swfUrlBase + "/go_full.swf";
+async function themeSelected(themeId:string) {
+    await appSettings.loadSettings();
+    const wideSetting = appSettings.get("isWide");
+    params.flashvars.isWide = wideSetting === "1" || wideSetting === true ? "1" : "0";
+    swfUrl = swfUrlBase + "/go_full.swf";
 	params.flashvars.tray = themeId;
 	params.movie = swfUrl;
 	showSelector.value = false;
 	showObject.value = true;
 }
-
 onMounted(() => {
 	let showTutorial = false;
 	window.studioLoaded = function (arg) {
@@ -197,7 +179,6 @@ onUnmounted(() => {
 	delete window.copyCharacter;
 	delete window.showImporter;
 });
-
 const route = useRoute();
 let movieId = route.params.movieId as string | void;
 if (movieId) {

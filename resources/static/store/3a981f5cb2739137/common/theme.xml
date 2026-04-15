@@ -25,10 +25,10 @@
 		<action id="laugh.swf" name="Laugh" loop="Y" totalframe="3" enable="Y" aid="3076"/>
 		<action id="talk.swf" name="Talk" loop="Y" totalframe="48" enable="Y" aid="3077"/>
 		<action id="threaten.swf" name="Become threatened" loop="Y" totalframe="2" enable="Y" aid="3078"/>
-		<action id="propose.swf" name="Propose (a)" loop="Y" totalframe="40" enable="Y" aid="3079"/>
-		<action id="propose02.swf" name="Propose (b)" loop="Y" totalframe="45" enable="Y" aid="3080"/>
-		<action id="murder01.swf" name="Murdered (a)" loop="Y" totalframe="42" enable="Y" aid="3081"/>
-		<action id="murder02.swf" name="Murdered (b)" loop="Y" totalframe="50" enable="Y" aid="3082"/>
+		<action id="propose.swf" name="Propose (A)" loop="Y" totalframe="40" enable="Y" aid="3079"/>
+		<action id="propose02.swf" name="Propose (B)" loop="Y" totalframe="45" enable="Y" aid="3080"/>
+		<action id="murder01.swf" name="Murdered (A)" loop="Y" totalframe="42" enable="Y" aid="3081"/>
+		<action id="murder02.swf" name="Murdered (B)" loop="Y" totalframe="50" enable="Y" aid="3082"/>
 		<action id="kill06.swf" name="Kill" loop="Y" totalframe="20" enable="Y" aid="3083"/>
 	</char>
 	<char id="matchGirl" name="Match girl" thumb="stand.swf" facing="left" default="stand.swf" motion="walk.swf" enable="Y" is_premium="N" aid="3084" money="0" sharing="0">
@@ -50,13 +50,13 @@
 		<motion id="walk.swf" name="Walk" loop="Y" totalframe="58" enable="Y" aid="3086"/>
 		<action id="kiss.swf" name="Kiss" loop="Y" totalframe="35" enable="Y" aid="3099"/>
 		<action id="talk.swf" name="Talk" loop="Y" totalframe="50" enable="Y" aid="3100"/>
-		<action id="murder01.swf" name="Murdered (a)" loop="Y" totalframe="35" enable="Y" aid="3101"/>
-		<action id="murder02.swf" name="Murdered (b)" loop="Y" totalframe="70" enable="Y" aid="3102"/>
+		<action id="murder01.swf" name="Murdered (A)" loop="Y" totalframe="35" enable="Y" aid="3101"/>
+		<action id="murder02.swf" name="Murdered (B)" loop="Y" totalframe="70" enable="Y" aid="3102"/>
 		<action id="shy.swf" name="Shy" loop="Y" totalframe="16" enable="Y" aid="3103"/>
-		<action id="dance01.swf" name="Dance (a)" loop="Y" totalframe="25" enable="Y" aid="3104"/>
-		<action id="dance02.swf" name="Dance (b)" loop="Y" totalframe="13" enable="Y" aid="3105"/>
-		<action id="greeting.swf" name="Greeting (a)" loop="Y" totalframe="65" enable="Y" aid="3106"/>
-		<action id="greeting02.swf" name="Greeting (b)" loop="Y" totalframe="75" enable="Y" aid="3107"/>
+		<action id="dance01.swf" name="Dance (A)" loop="Y" totalframe="25" enable="Y" aid="3104"/>
+		<action id="dance02.swf" name="Dance (B)" loop="Y" totalframe="13" enable="Y" aid="3105"/>
+		<action id="greeting.swf" name="Greeting (A)" loop="Y" totalframe="65" enable="Y" aid="3106"/>
+		<action id="greeting02.swf" name="Greeting (B)" loop="Y" totalframe="75" enable="Y" aid="3107"/>
 		<action id="sing.swf" name="Sing" loop="Y" totalframe="24" enable="Y" aid="3108"/>
 		<action id="think.swf" name="Think" loop="Y" totalframe="75" enable="Y" aid="3109"/>
 		<action id="cry.swf" name="Cry" loop="Y" totalframe="24" enable="Y" aid="3110"/>
@@ -7346,7 +7346,7 @@
 		<color r="ccColorA">3355443</color>
 	</prop>
 </compositebg>
-	<compositebg id="cbg_vkrm" name="Vip karaoke room" enable="Y" default="N" thumb="vip_karaoke_room.jpg" display_order="409" is_premium="N" money="0" sharing="0" aid="10787">
+	<compositebg id="cbg_vkrm" name="VIP karaoke room" enable="Y" default="N" thumb="vip_karaoke_room.jpg" display_order="409" is_premium="N" money="0" sharing="0" aid="10787">
 	<bg id="cbg_vkrm_cbg_bar01_BG25" index="0">
 		<file>common.ncc_floor.swf</file>
 		<color r="colorA">3342387</color>
@@ -15566,8 +15566,6 @@
 	<prop id="locker_locker.swf" name="Locker" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="3294" money="0" sharing="0"/>
 	<prop id="locker_win.swf" name="Locker win" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="3295" money="0" sharing="0"/>
 	<prop id="locker_woodChair.swf" name="Locker wooden chair" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="3296" money="0" sharing="0"/>
-	<prop id="mosaic.swf" name="Mosaic" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="3297" money="0" sharing="0"/>
-	<prop id="mosaic_02.swf" name="Mosaic" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="3298" money="0" sharing="0"/>
 	<prop id="mouse.swf" name="Mouse" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="3299" money="0" sharing="0"/>
 	<prop id="office_carpet.swf" name="Office carpet" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="3300" money="0" sharing="0"/>
 	<prop id="office_desk.swf" name="Office desk" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="3301" money="0" sharing="0"/>
@@ -17698,29 +17696,29 @@
 		<state id="msp_ncc_05musket_ncc_05musket_loop.swf" name="Keep shooting" enable="Y"/>
 		<state id="msp_ncc_05musket_ncc_05musket_once.swf" name="Shoot once" enable="Y"/>
 	</prop>
-	<sound id="roadSide.swf" name="Rock at the road side" downloadtype="progressive" subtype="bgmusic" duration="39800" enable="Y" is_premium="N" aid="3407" money="0" sharing="0"/>
-	<sound id="rockMain.swf" name="Rock and roll" downloadtype="progressive" subtype="bgmusic" duration="185000" enable="Y" is_premium="N" aid="3408" money="0" sharing="0"/>
-	<sound id="soft.swf" name="Soft" downloadtype="progressive" subtype="bgmusic" duration="34000" enable="Y" is_premium="N" aid="3409" money="0" sharing="0"/>
-	<sound id="tension builds up.swf" name="Build up tension" downloadtype="progressive" subtype="bgmusic" duration="59000" enable="Y" is_premium="N" aid="3410" money="0" sharing="0"/>
-	<sound id="laugh_4.swf" name="Laugh" downloadtype="embed" subtype="soundeffect" duration="4700" enable="Y" is_premium="N" aid="3411" money="0" sharing="0">
+	<sound id="roadSide.mp3" name="Rock at the road side" downloadtype="progressive" subtype="bgmusic" duration="39800" enable="Y" is_premium="N" aid="3407" money="0" sharing="0"/>
+	<sound id="rockMain.mp3" name="Rock and roll" downloadtype="progressive" subtype="bgmusic" duration="185000" enable="Y" is_premium="N" aid="3408" money="0" sharing="0"/>
+	<sound id="soft.mp3" name="Soft" downloadtype="progressive" subtype="bgmusic" duration="34000" enable="Y" is_premium="N" aid="3409" money="0" sharing="0"/>
+	<sound id="tension builds up.mp3" name="Build up tension" downloadtype="progressive" subtype="bgmusic" duration="59000" enable="Y" is_premium="N" aid="3410" money="0" sharing="0"/>
+	<sound id="laugh_4.mp3" name="Laugh" downloadtype="progressive" subtype="soundeffect" duration="4700" enable="Y" is_premium="N" aid="3411" money="0" sharing="0">
 		<tag>Happy</tag>
 		<tag>Human sounds</tag>
 		<tag>Laugh</tag>
 		<tag>People</tag>
 	</sound>
-	<sound id="The_First_Noel.swf" name="The first Noel" downloadtype="progressive" subtype="bgmusic" duration="59400" enable="Y" is_premium="N" aid="3412" money="0" sharing="0"/>
-	<sound id="Action.swf" name="Cinematic" downloadtype="progressive" subtype="bgmusic" duration="14500" enable="Y" is_premium="N" aid="3413" money="0" sharing="0"/>
-	<sound id="Suspense.swf" name="Suspense" downloadtype="progressive" subtype="bgmusic" duration="128500" enable="Y" is_premium="N" aid="3414" money="0" sharing="0"/>
-	<sound id="Romance.swf" name="Romance" downloadtype="progressive" subtype="bgmusic" duration="60000" enable="Y" is_premium="N" aid="3415" money="0" sharing="0"/>
-	<sound id="BroadcastNews.swf" name="Broadcast news" downloadtype="progressive" subtype="bgmusic" duration="37600" enable="Y" is_premium="N" aid="3416" money="0" sharing="0"/>
-	<sound id="FunkyBeat.swf" name="Funky beat" downloadtype="progressive" subtype="bgmusic" duration="35600" enable="Y" is_premium="N" aid="3417" money="0" sharing="0"/>
-	<sound id="recipe_for_riches.swf" name="Recipe for riches" downloadtype="progressive" subtype="bgmusic" duration="227500" enable="Y" is_premium="N" aid="3418" money="0" sharing="0"/>
-	<sound id="tibetan_monks.swf" name="Tibetan monks" downloadtype="progressive" subtype="bgmusic" duration="217400" enable="Y" is_premium="N" aid="3419" money="0" sharing="0"/>
-	<sound id="swimming.swf" name="Swimming" downloadtype="progressive" subtype="bgmusic" duration="301400" enable="Y" is_premium="N" aid="3420" money="0" sharing="0"/>
-	<sound id="salient.swf" name="Salient" downloadtype="progressive" subtype="bgmusic" duration="297000" enable="Y" is_premium="N" aid="3421" money="0" sharing="0"/>
-	<sound id="smell_isnt_everything.swf" name="Smell isn't everything" downloadtype="progressive" subtype="bgmusic" duration="134300" enable="Y" is_premium="N" aid="3422" money="0" sharing="0"/>
-	<sound id="peace_on_earth.swf" name="Peace on Earth" downloadtype="progressive" subtype="bgmusic" duration="229600" enable="Y" is_premium="N" aid="3423" money="0" sharing="0"/>
-	<sound id="buzzin.swf" name="Buzzin'" downloadtype="progressive" subtype="bgmusic" duration="70600" enable="Y" is_premium="N" aid="3424" money="0" sharing="0"/>
+	<sound id="The_First_Noel.mp3" name="The first Noel" downloadtype="progressive" subtype="bgmusic" duration="59400" enable="Y" is_premium="N" aid="3412" money="0" sharing="0"/>
+	<sound id="Action.mp3" name="Cinematic" downloadtype="progressive" subtype="bgmusic" duration="14500" enable="Y" is_premium="N" aid="3413" money="0" sharing="0"/>
+	<sound id="Suspense.mp3" name="Suspense" downloadtype="progressive" subtype="bgmusic" duration="128500" enable="Y" is_premium="N" aid="3414" money="0" sharing="0"/>
+	<sound id="Romance.mp3" name="Romance" downloadtype="progressive" subtype="bgmusic" duration="60000" enable="Y" is_premium="N" aid="3415" money="0" sharing="0"/>
+	<sound id="BroadcastNews.mp3" name="Broadcast news" downloadtype="progressive" subtype="bgmusic" duration="37600" enable="Y" is_premium="N" aid="3416" money="0" sharing="0"/>
+	<sound id="FunkyBeat.mp3" name="Funky beat" downloadtype="progressive" subtype="bgmusic" duration="35600" enable="Y" is_premium="N" aid="3417" money="0" sharing="0"/>
+	<sound id="recipe_for_riches.mp3" name="Recipe for riches" downloadtype="progressive" subtype="bgmusic" duration="227500" enable="Y" is_premium="N" aid="3418" money="0" sharing="0"/>
+	<sound id="tibetan_monks.mp3" name="Tibetan monks" downloadtype="progressive" subtype="bgmusic" duration="217400" enable="Y" is_premium="N" aid="3419" money="0" sharing="0"/>
+	<sound id="swimming.mp3" name="Swimming" downloadtype="progressive" subtype="bgmusic" duration="301400" enable="Y" is_premium="N" aid="3420" money="0" sharing="0"/>
+	<sound id="salient.mp3" name="Salient" downloadtype="progressive" subtype="bgmusic" duration="297000" enable="Y" is_premium="N" aid="3421" money="0" sharing="0"/>
+	<sound id="smell_isnt_everything.mp3" name="Smell isn't everything" downloadtype="progressive" subtype="bgmusic" duration="134300" enable="Y" is_premium="N" aid="3422" money="0" sharing="0"/>
+	<sound id="peace_on_earth.mp3" name="Peace on Earth" downloadtype="progressive" subtype="bgmusic" duration="229600" enable="Y" is_premium="N" aid="3423" money="0" sharing="0"/>
+	<sound id="buzzin.mp3" name="Buzzin'" downloadtype="progressive" subtype="bgmusic" duration="70600" enable="Y" is_premium="N" aid="3424" money="0" sharing="0"/>
 	<sound id="acid_jazz.mp3" name="Club jazz" downloadtype="progressive" subtype="bgmusic" duration="33311" enable="Y" is_premium="N" aid="4776" money="0" sharing="0">
 		<tag>Acoustic</tag>
 		<tag>Cartoons</tag>
@@ -17920,29 +17918,29 @@
 	<sound id="salient.mp3" name="Salient" downloadtype="progressive" subtype="tribeofnoise" duration="297000" enable="Y" is_premium="N" aid="6050" money="0" sharing="0"/>
 	<sound id="smell_isnt_everything.mp3" name="Smell isn't everything" downloadtype="progressive" subtype="tribeofnoise" duration="134300" enable="Y" is_premium="N" aid="6051" money="0" sharing="0"/>
 	<sound id="peace_on_earth.mp3" name="Peace on earth" downloadtype="progressive" subtype="tribeofnoise" duration="229600" enable="Y" is_premium="N" aid="6052" money="0" sharing="0"/>
-	<sound id="buzzin.mp3" name="Buzzin'" downloadtype="progressive" subtype="tribeofnoise" duration="70600" enable="Y" is_premium="N" aid="6053" money="0" sharing="0"/>
-	<sound id="approved_weird_buzzer.swf" name="Buzzer" downloadtype="embed" subtype="soundeffect" duration="838" enable="Y" is_premium="N" aid="6685" money="0" sharing="0">
+	<sound id="buzzin.mp3" name="Buzzing" downloadtype="progressive" subtype="tribeofnoise" duration="70600" enable="Y" is_premium="N" aid="6053" money="0" sharing="0"/>
+	<sound id="approved_weird_buzzer.mp3" name="Buzzer" downloadtype="progressive" subtype="soundeffect" duration="838" enable="Y" is_premium="N" aid="6685" money="0" sharing="0">
 		<tag>Various foley</tag>
 	</sound>
-	<sound id="approved_weird_car_rev.swf" name="Car rev" downloadtype="embed" subtype="soundeffect" duration="2431" enable="Y" is_premium="N" aid="6686" money="0" sharing="0">
+	<sound id="approved_weird_car_rev.mp3" name="Car rev" downloadtype="progressive" subtype="soundeffect" duration="2431" enable="Y" is_premium="N" aid="6686" money="0" sharing="0">
 		<tag>Cars and motorcycles</tag>
 		<tag>Motors and engines</tag>
 	</sound>
-	<sound id="approved_weird_crackleg.swf" name="Crack leg" downloadtype="embed" subtype="soundeffect" duration="916" enable="Y" is_premium="N" aid="6687" money="0" sharing="0">
+	<sound id="approved_weird_crackleg.mp3" name="Crack leg" downloadtype="progressive" subtype="soundeffect" duration="916" enable="Y" is_premium="N" aid="6687" money="0" sharing="0">
 		<tag>Crashes and impacts</tag>
 	</sound>
-	<sound id="approved_weird_crowdlau.swf" name="Crowd laugh" downloadtype="embed" subtype="soundeffect" duration="1595" enable="Y" is_premium="N" aid="6688" money="0" sharing="0">
+	<sound id="approved_weird_crowdlau.mp3" name="Crowd laugh" downloadtype="progressive" subtype="soundeffect" duration="1595" enable="Y" is_premium="N" aid="6688" money="0" sharing="0">
 		<tag>Audience</tag>
 		<tag>Happy</tag>
 		<tag>Human sounds</tag>
 		<tag>laugh</tag>
 		<tag>People</tag>
 	</sound>
-	<sound id="approved_weird_drainage.swf" name="Drainage" downloadtype="embed" subtype="soundeffect" duration="1230" enable="Y" is_premium="N" aid="6689" money="0" sharing="0">
+	<sound id="approved_weird_drainage.mp3" name="Drainage" downloadtype="progressive" subtype="soundeffect" duration="1230" enable="Y" is_premium="N" aid="6689" money="0" sharing="0">
 		<tag>Lasers, weapons</tag>
 		<tag>Space, sci-fi</tag>
 	</sound>
-	<sound id="approved_weird_fire.swf" name="Fire" downloadtype="embed" subtype="soundeffect" duration="420" enable="Y" is_premium="N" aid="6690" money="0" sharing="0">
+	<sound id="approved_weird_fire.mp3" name="Fire" downloadtype="progressive" subtype="soundeffect" duration="420" enable="Y" is_premium="N" aid="6690" money="0" sharing="0">
 		<tag>Human sounds</tag>
 		<tag>People</tag>
 		<tag>War</tag>
@@ -17955,22 +17953,22 @@
 		<tag>Danger</tag>
 		<tag>Emergency</tag>
 	</sound>
-	<sound id="approved_weird_siren2.swf" name="Siren 2" downloadtype="embed" subtype="soundeffect" duration="0" enable="Y" is_premium="N" aid="6693" money="0" sharing="0">
+	<sound id="approved_weird_siren2.mp3" name="Siren 2" downloadtype="progressive" subtype="soundeffect" duration="0" enable="Y" is_premium="N" aid="6693" money="0" sharing="0">
 		<tag>Danger</tag>
 		<tag>Emergency</tag>
 	</sound>
-	<sound id="approved_weird_siren3.swf" name="Siren 3" downloadtype="embed" subtype="soundeffect" duration="1961" enable="Y" is_premium="N" aid="6694" money="0" sharing="0">
+	<sound id="approved_weird_siren3.mp3" name="Siren 3" downloadtype="progressive" subtype="soundeffect" duration="1961" enable="Y" is_premium="N" aid="6694" money="0" sharing="0">
 		<tag>Danger</tag>
 		<tag>Emergency</tag>
 	</sound>
-	<sound id="approved_weird_siren4.swf" name="Siren 4" downloadtype="embed" subtype="soundeffect" duration="2588" enable="Y" is_premium="N" aid="6695" money="0" sharing="0">
+	<sound id="approved_weird_siren4.mp3" name="Siren 4" downloadtype="progressive" subtype="soundeffect" duration="2588" enable="Y" is_premium="N" aid="6695" money="0" sharing="0">
 		<tag>Danger</tag>
 		<tag>Emergency</tag>
 	</sound>
-	<sound id="approved_weird_tic_toc.swf" name="Tic toc" downloadtype="embed" subtype="soundeffect" duration="1726" enable="Y" is_premium="N" aid="6696" money="0" sharing="0">
+	<sound id="approved_weird_tic_toc.mp3" name="Tic toc" downloadtype="progressive" subtype="soundeffect" duration="1726" enable="Y" is_premium="N" aid="6696" money="0" sharing="0">
 		<tag>Clock</tag>
 	</sound>
-	<sound id="approved_weird_zap.swf" name="Zap" downloadtype="embed" subtype="soundeffect" duration="289" enable="Y" is_premium="N" aid="6697" money="0" sharing="0">
+	<sound id="approved_weird_zap.mp3" name="Zap" downloadtype="progressive" subtype="soundeffect" duration="289" enable="Y" is_premium="N" aid="6697" money="0" sharing="0">
 		<tag>Lasers, weapons</tag>
 		<tag>Space, sci-fi</tag>
 	</sound>
@@ -18126,72 +18124,72 @@
 		<tag>Soothing</tag>
 		<tag>Wedding</tag>
 	</sound>
-	<sound id="musical_instru_flute1.swf" name="Flute 1" downloadtype="embed" subtype="soundeffect" duration="1099" enable="Y" is_premium="N" aid="6717" money="0" sharing="0">
+	<sound id="musical_instru_flute1.mp3" name="Flute 1" downloadtype="progressive" subtype="soundeffect" duration="1099" enable="Y" is_premium="N" aid="6717" money="0" sharing="0">
 		<tag>Flute</tag>
 		<tag>Instruments</tag>
 		<tag>Musical</tag>
 	</sound>
-	<sound id="musical_instru_flute2.swf" name="Flute 2" downloadtype="embed" subtype="soundeffect" duration="446" enable="Y" is_premium="N" aid="6718" money="0" sharing="0">
+	<sound id="musical_instru_flute2.mp3" name="Flute 2" downloadtype="progressive" subtype="soundeffect" duration="446" enable="Y" is_premium="N" aid="6718" money="0" sharing="0">
 		<tag>Flute</tag>
 		<tag>Instruments</tag>
 		<tag>Musical</tag>
 	</sound>
-	<sound id="musical_instru_flute3.swf" name="Flute 3" downloadtype="embed" subtype="soundeffect" duration="1151" enable="Y" is_premium="N" aid="6719" money="0" sharing="0">
+	<sound id="musical_instru_flute3.mp3" name="Flute 3" downloadtype="progressive" subtype="soundeffect" duration="1151" enable="Y" is_premium="N" aid="6719" money="0" sharing="0">
 		<tag>Flute</tag>
 		<tag>Instruments</tag>
 		<tag>Musical</tag>
 	</sound>
-	<sound id="musical_instru_flute4.swf" name="Flute 4" downloadtype="embed" subtype="soundeffect" duration="1230" enable="Y" is_premium="N" aid="6720" money="0" sharing="0">
+	<sound id="musical_instru_flute4.mp3" name="Flute 4" downloadtype="progressive" subtype="soundeffect" duration="1230" enable="Y" is_premium="N" aid="6720" money="0" sharing="0">
 		<tag>Flute</tag>
 		<tag>Instruments</tag>
 		<tag>Musical</tag>
 	</sound>
-	<sound id="musical_instru_flute5.swf" name="Flute 5" downloadtype="embed" subtype="soundeffect" duration="0" enable="Y" is_premium="N" aid="6721" money="0" sharing="0">
+	<sound id="musical_instru_flute5.mp3" name="Flute 5" downloadtype="progressive" subtype="soundeffect" duration="0" enable="Y" is_premium="N" aid="6721" money="0" sharing="0">
 		<tag>Flute</tag>
 		<tag>Instruments</tag>
 		<tag>Musical</tag>
 	</sound>
-	<sound id="musical_instru_logostin.swf" name="Logo sting" downloadtype="embed" subtype="soundeffect" duration="5488" enable="Y" is_premium="N" aid="6722" money="0" sharing="0">
+	<sound id="musical_instru_logostin.mp3" name="Logo sting" downloadtype="progressive" subtype="soundeffect" duration="5488" enable="Y" is_premium="N" aid="6722" money="0" sharing="0">
 		<tag>Instruments</tag>
 		<tag>Logo sting</tag>
 		<tag>Musical</tag>
 	</sound>
-	<sound id="musical_instru_saxy1.swf" name="Saxy 1" downloadtype="embed" subtype="soundeffect" duration="498" enable="Y" is_premium="N" aid="6723" money="0" sharing="0">
+	<sound id="musical_instru_saxy1.mp3" name="Saxy 1" downloadtype="progressive" subtype="soundeffect" duration="498" enable="Y" is_premium="N" aid="6723" money="0" sharing="0">
 		<tag>Instruments</tag>
 		<tag>Musical</tag>
 		<tag>Saxy</tag>
 	</sound>
-	<sound id="musical_instru_saxy2.swf" name="Saxy 2" downloadtype="embed" subtype="soundeffect" duration="1700" enable="Y" is_premium="N" aid="6724" money="0" sharing="0">
+	<sound id="musical_instru_saxy2.mp3" name="Saxy 2" downloadtype="progressive" subtype="soundeffect" duration="1700" enable="Y" is_premium="N" aid="6724" money="0" sharing="0">
 		<tag>Instruments</tag>
 		<tag>Musical</tag>
 		<tag>Saxy</tag>
 	</sound>
-	<sound id="musical_instru_saxy3.swf" name="Saxy 3" downloadtype="embed" subtype="soundeffect" duration="446" enable="Y" is_premium="N" aid="6725" money="0" sharing="0">
+	<sound id="musical_instru_saxy3.mp3" name="Saxy 3" downloadtype="progressive" subtype="soundeffect" duration="446" enable="Y" is_premium="N" aid="6725" money="0" sharing="0">
 		<tag>Instruments</tag>
 		<tag>Musical</tag>
 		<tag>Saxy</tag>
 	</sound>
-	<sound id="musical_instru_saxy4.swf" name="Saxy 4" downloadtype="embed" subtype="soundeffect" duration="420" enable="Y" is_premium="N" aid="6726" money="0" sharing="0">
+	<sound id="musical_instru_saxy4.mp3" name="Saxy 4" downloadtype="progressive" subtype="soundeffect" duration="420" enable="Y" is_premium="N" aid="6726" money="0" sharing="0">
 		<tag>Instruments</tag>
 		<tag>Musical</tag>
 		<tag>Saxy</tag>
 	</sound>
-	<sound id="musical_instru_saxy5.swf" name="Saxy 5" downloadtype="embed" subtype="soundeffect" duration="289" enable="Y" is_premium="N" aid="6727" money="0" sharing="0">
+	<sound id="musical_instru_saxy5.mp3" name="Saxy 5" downloadtype="progressive" subtype="soundeffect" duration="289" enable="Y" is_premium="N" aid="6727" money="0" sharing="0">
 		<tag>Instruments</tag>
 		<tag>Musical</tag>
 		<tag>Saxy</tag>
 	</sound>
-	<sound id="musical_instru_saxy6.swf" name="Saxy 6" downloadtype="embed" subtype="soundeffect" duration="629" enable="Y" is_premium="N" aid="6728" money="0" sharing="0">
+	<sound id="musical_instru_saxy6.mp3" name="Saxy 6" downloadtype="progressive" subtype="soundeffect" duration="629" enable="Y" is_premium="N" aid="6728" money="0" sharing="0">
 		<tag>Instruments</tag>
 		<tag>Musical</tag>
 		<tag>Saxy</tag>
 	</sound>
-	<sound id="musical_instru_saxy7.swf" name="Saxy 7" downloadtype="embed" subtype="soundeffect" duration="446" enable="Y" is_premium="N" aid="6729" money="0" sharing="0">
+	<sound id="musical_instru_saxy7.mp3" name="Saxy 7" downloadtype="progressive" subtype="soundeffect" duration="446" enable="Y" is_premium="N" aid="6729" money="0" sharing="0">
 		<tag>Instruments</tag>
 		<tag>Musical</tag>
 		<tag>Saxy</tag>
 	</sound>
-	<sound id="musical_instru_scary.swf" name="Scary" downloadtype="embed" subtype="soundeffect" duration="3555" enable="Y" is_premium="N" aid="6730" money="0" sharing="0">
+	<sound id="musical_instru_scary.mp3" name="Scary" downloadtype="progressive" subtype="soundeffect" duration="3555" enable="Y" is_premium="N" aid="6730" money="0" sharing="0">
 		<tag>Instruments</tag>
 		<tag>Musical</tag>
 		<tag>Scary</tag>
@@ -18201,267 +18199,267 @@
 		<tag>Instruments</tag>
 		<tag>Musical</tag>
 	</sound>
-	<sound id="odd_animal_s_bird1.swf" name="Bird 1" downloadtype="embed" subtype="soundeffect" duration="629" enable="Y" is_premium="N" aid="6732" money="0" sharing="0">
+	<sound id="odd_animal_s_bird1.mp3" name="Bird 1" downloadtype="progressive" subtype="soundeffect" duration="629" enable="Y" is_premium="N" aid="6732" money="0" sharing="0">
 		<tag>Animal</tag>
 	</sound>
-	<sound id="odd_animal_s_bird2.swf" name="Bird 2" downloadtype="embed" subtype="soundeffect" duration="263" enable="Y" is_premium="N" aid="6733" money="0" sharing="0">
+	<sound id="odd_animal_s_bird2.mp3" name="Bird 2" downloadtype="progressive" subtype="soundeffect" duration="263" enable="Y" is_premium="N" aid="6733" money="0" sharing="0">
 		<tag>Animal</tag>
 	</sound>
-	<sound id="odd_animal_s_bird3.swf" name="Bird 3" downloadtype="embed" subtype="soundeffect" duration="733" enable="Y" is_premium="N" aid="6734" money="0" sharing="0">
+	<sound id="odd_animal_s_bird3.mp3" name="Bird 3" downloadtype="progressive" subtype="soundeffect" duration="733" enable="Y" is_premium="N" aid="6734" money="0" sharing="0">
 		<tag>Animal</tag>
 	</sound>
-	<sound id="odd_animal_s_cat.swf" name="Cat" downloadtype="embed" subtype="soundeffect" duration="681" enable="Y" is_premium="N" aid="6735" money="0" sharing="0">
+	<sound id="odd_animal_s_cat.mp3" name="Cat" downloadtype="progressive" subtype="soundeffect" duration="681" enable="Y" is_premium="N" aid="6735" money="0" sharing="0">
 		<tag>Animal</tag>
 	</sound>
-	<sound id="odd_animal_s_chicken.swf" name="Chicken" downloadtype="embed" subtype="soundeffect" duration="394" enable="Y" is_premium="N" aid="6736" money="0" sharing="0">
+	<sound id="odd_animal_s_chicken.mp3" name="Chicken" downloadtype="progressive" subtype="soundeffect" duration="394" enable="Y" is_premium="N" aid="6736" money="0" sharing="0">
 		<tag>Animal</tag>
 	</sound>
-	<sound id="odd_animal_s_chicken1.swf" name="Chicken 1" downloadtype="embed" subtype="soundeffect" duration="498" enable="Y" is_premium="N" aid="6737" money="0" sharing="0">
+	<sound id="odd_animal_s_chicken1.mp3" name="Chicken 1" downloadtype="progressive" subtype="soundeffect" duration="498" enable="Y" is_premium="N" aid="6737" money="0" sharing="0">
 		<tag>Animal</tag>
 	</sound>
-	<sound id="odd_animal_s_chicken2.swf" name="Chicken 2" downloadtype="embed" subtype="soundeffect" duration="1204" enable="Y" is_premium="N" aid="6738" money="0" sharing="0">
+	<sound id="odd_animal_s_chicken2.mp3" name="Chicken 2" downloadtype="progressive" subtype="soundeffect" duration="1204" enable="Y" is_premium="N" aid="6738" money="0" sharing="0">
 		<tag>Animal</tag>
 	</sound>
-	<sound id="odd_animal_s_chimp1.swf" name="Chimp 1" downloadtype="embed" subtype="soundeffect" duration="446" enable="Y" is_premium="N" aid="6739" money="0" sharing="0">
+	<sound id="odd_animal_s_chimp1.mp3" name="Chimp 1" downloadtype="progressive" subtype="soundeffect" duration="446" enable="Y" is_premium="N" aid="6739" money="0" sharing="0">
 		<tag>Animal</tag>
 	</sound>
-	<sound id="odd_animal_s_chinp2.swf" name="Chimp 2" downloadtype="embed" subtype="soundeffect" duration="498" enable="Y" is_premium="N" aid="6740" money="0" sharing="0">
+	<sound id="odd_animal_s_chimp2.mp3" name="Chimp 2" downloadtype="progressive" subtype="soundeffect" duration="498" enable="Y" is_premium="N" aid="6740" money="0" sharing="0">
 		<tag>Animal</tag>
 	</sound>
-	<sound id="odd_animal_s_cow.swf" name="Cow" downloadtype="embed" subtype="soundeffect" duration="1622" enable="Y" is_premium="N" aid="6741" money="0" sharing="0">
+	<sound id="odd_animal_s_cow.mp3" name="Cow" downloadtype="progressive" subtype="soundeffect" duration="1622" enable="Y" is_premium="N" aid="6741" money="0" sharing="0">
 		<tag>Animal</tag>
 	</sound>
-	<sound id="odd_animal_s_dog1.swf" name="Dog 1" downloadtype="embed" subtype="soundeffect" duration="681" enable="Y" is_premium="N" aid="6742" money="0" sharing="0">
+	<sound id="odd_animal_s_dog.mp3" name="Dog" downloadtype="progressive" subtype="soundeffect" duration="681" enable="Y" is_premium="N" aid="6742" money="0" sharing="0">
 		<tag>Animal</tag>
 	</sound>
-	<sound id="odd_animal_s_frog.swf" name="Frog" downloadtype="embed" subtype="soundeffect" duration="263" enable="Y" is_premium="N" aid="6743" money="0" sharing="0">
+	<sound id="odd_animal_s_frog.mp3" name="Frog" downloadtype="progressive" subtype="soundeffect" duration="263" enable="Y" is_premium="N" aid="6743" money="0" sharing="0">
 		<tag>Animal</tag>
 	</sound>
-	<sound id="odd_animal_s_goat.swf" name="Goat" downloadtype="embed" subtype="soundeffect" duration="864" enable="Y" is_premium="N" aid="6744" money="0" sharing="0">
+	<sound id="odd_animal_s_goat.mp3" name="Goat" downloadtype="progressive" subtype="soundeffect" duration="864" enable="Y" is_premium="N" aid="6744" money="0" sharing="0">
 		<tag>Animal</tag>
 	</sound>
-	<sound id="odd_animal_s_growlbar.swf" name="Growl bear" downloadtype="embed" subtype="soundeffect" duration="472" enable="Y" is_premium="N" aid="6745" money="0" sharing="0">
+	<sound id="odd_animal_s_growlbear.mp3" name="Growl bear" downloadtype="progressive" subtype="soundeffect" duration="472" enable="Y" is_premium="N" aid="6745" money="0" sharing="0">
 		<tag>Animal</tag>
 	</sound>
-	<sound id="odd_animal_s_horse.swf" name="Horse" downloadtype="embed" subtype="soundeffect" duration="1047" enable="Y" is_premium="N" aid="6746" money="0" sharing="0">
+	<sound id="odd_animal_s_horse.mp3" name="Horse" downloadtype="progressive" subtype="soundeffect" duration="1047" enable="Y" is_premium="N" aid="6746" money="0" sharing="0">
 		<tag>Animal</tag>
 	</sound>
-	<sound id="odd_animal_s_horsegal.swf" name="Horse gallop" downloadtype="embed" subtype="soundeffect" duration="1439" enable="Y" is_premium="N" aid="6747" money="0" sharing="0">
+	<sound id="odd_animal_s_horsegal.mp3" name="Horse gallop" downloadtype="progressive" subtype="soundeffect" duration="1439" enable="Y" is_premium="N" aid="6747" money="0" sharing="0">
 		<tag>Animal</tag>
 	</sound>
-	<sound id="odd_animal_s_horseslo.swf" name="Horses" downloadtype="embed" subtype="soundeffect" duration="394" enable="Y" is_premium="N" aid="6748" money="0" sharing="0">
+	<sound id="odd_animal_s_horseslo.mp3" name="Horses" downloadtype="progressive" subtype="soundeffect" duration="394" enable="Y" is_premium="N" aid="6748" money="0" sharing="0">
 		<tag>Animal</tag>
 	</sound>
-	<sound id="odd_animal_s_howl.swf" name="Howl" downloadtype="embed" subtype="soundeffect" duration="3633" enable="Y" is_premium="N" aid="6749" money="0" sharing="0">
+	<sound id="odd_animal_s_howl.mp3" name="Howl" downloadtype="progressive" subtype="soundeffect" duration="3633" enable="Y" is_premium="N" aid="6749" money="0" sharing="0">
 		<tag>Animal</tag>
 	</sound>
-	<sound id="odd_animal_s_howl2.swf" name="Howl 2" downloadtype="embed" subtype="soundeffect" duration="1465" enable="Y" is_premium="N" aid="6750" money="0" sharing="0">
+	<sound id="odd_animal_s_howl2.mp3" name="Howl 2" downloadtype="progressive" subtype="soundeffect" duration="1465" enable="Y" is_premium="N" aid="6750" money="0" sharing="0">
 		<tag>Animal</tag>
 	</sound>
-	<sound id="odd_animal_s_hyenas.swf" name="Hyenas" downloadtype="embed" subtype="soundeffect" duration="2588" enable="Y" is_premium="N" aid="6751" money="0" sharing="0">
+	<sound id="odd_animal_s_hyenas.mp3" name="Hyenas" downloadtype="progressive" subtype="soundeffect" duration="2588" enable="Y" is_premium="N" aid="6751" money="0" sharing="0">
 		<tag>Animal</tag>
 	</sound>
-	<sound id="odd_animal_s_lion1.swf" name="Lion 1" downloadtype="embed" subtype="soundeffect" duration="1987" enable="Y" is_premium="N" aid="6752" money="0" sharing="0">
+	<sound id="odd_animal_s_lion.mp3" name="Lion" downloadtype="progressive" subtype="soundeffect" duration="1987" enable="Y" is_premium="N" aid="6752" money="0" sharing="0">
 		<tag>Animal</tag>
 	</sound>
-	<sound id="odd_animal_s_madbark.swf" name="Mad bark" downloadtype="embed" subtype="soundeffect" duration="368" enable="Y" is_premium="N" aid="6753" money="0" sharing="0">
+	<sound id="odd_animal_s_madbark.mp3" name="Mad bark" downloadtype="progressive" subtype="soundeffect" duration="368" enable="Y" is_premium="N" aid="6753" money="0" sharing="0">
 		<tag>Animal</tag>
 	</sound>
-	<sound id="odd_animal_s_meeow.swf" name="Meeow" downloadtype="embed" subtype="soundeffect" duration="368" enable="Y" is_premium="N" aid="6754" money="0" sharing="0">
+	<sound id="odd_animal_s_meow.mp3" name="Meow" downloadtype="progressive" subtype="soundeffect" duration="368" enable="Y" is_premium="N" aid="6754" money="0" sharing="0">
 		<tag>Animal</tag>
 	</sound>
-	<sound id="odd_animal_s_monster.swf" name="Monster" downloadtype="embed" subtype="soundeffect" duration="707" enable="Y" is_premium="N" aid="6755" money="0" sharing="0">
+	<sound id="odd_animal_s_monster.mp3" name="Monster" downloadtype="progressive" subtype="soundeffect" duration="707" enable="Y" is_premium="N" aid="6755" money="0" sharing="0">
 		<tag>Animal</tag>
 	</sound>
-	<sound id="odd_animal_s_mooo.swf" name="Mooo" downloadtype="embed" subtype="soundeffect" duration="1125" enable="Y" is_premium="N" aid="6756" money="0" sharing="0">
+	<sound id="odd_animal_s_mooo.mp3" name="Mooo" downloadtype="progressive" subtype="soundeffect" duration="1125" enable="Y" is_premium="N" aid="6756" money="0" sharing="0">
 		<tag>Animal</tag>
 	</sound>
-	<sound id="odd_animal_s_pant.swf" name="Pant" downloadtype="embed" subtype="soundeffect" duration="2013" enable="Y" is_premium="N" aid="6757" money="0" sharing="0">
+	<sound id="odd_animal_s_pant.mp3" name="Pant" downloadtype="progressive" subtype="soundeffect" duration="2013" enable="Y" is_premium="N" aid="6757" money="0" sharing="0">
 		<tag>Animal</tag>
 	</sound>
-	<sound id="odd_animal_s_pig1.swf" name="Pig 1" downloadtype="embed" subtype="soundeffect" duration="498" enable="Y" is_premium="N" aid="6758" money="0" sharing="0">
+	<sound id="odd_animal_s_pig1.mp3" name="Pig 1" downloadtype="progressive" subtype="soundeffect" duration="498" enable="Y" is_premium="N" aid="6758" money="0" sharing="0">
 		<tag>Animal</tag>
 	</sound>
-	<sound id="odd_animal_s_pig2.swf" name="Pig 2" downloadtype="embed" subtype="soundeffect" duration="707" enable="Y" is_premium="N" aid="6759" money="0" sharing="0">
+	<sound id="odd_animal_s_pig2.mp3" name="Pig 2" downloadtype="progressive" subtype="soundeffect" duration="707" enable="Y" is_premium="N" aid="6759" money="0" sharing="0">
 		<tag>Animal</tag>
 	</sound>
-	<sound id="odd_animal_s_quicadog.swf" name="Quica dog" downloadtype="embed" subtype="soundeffect" duration="211" enable="Y" is_premium="N" aid="6760" money="0" sharing="0">
+	<sound id="odd_animal_s_quicadog.mp3" name="Quica dog" downloadtype="progressive" subtype="soundeffect" duration="211" enable="Y" is_premium="N" aid="6760" money="0" sharing="0">
 		<tag>Animal</tag>
 	</sound>
-	<sound id="odd_animal_s_rooster1.swf" name="Rooster 1" downloadtype="embed" subtype="soundeffect" duration="1517" enable="Y" is_premium="N" aid="6761" money="0" sharing="0">
+	<sound id="odd_animal_s_rooster1.mp3" name="Rooster 1" downloadtype="progressive" subtype="soundeffect" duration="1517" enable="Y" is_premium="N" aid="6761" money="0" sharing="0">
 		<tag>Animal</tag>
 	</sound>
-	<sound id="odd_animal_s_rooster2.swf" name="Rooster 2" downloadtype="embed" subtype="soundeffect" duration="1386" enable="Y" is_premium="N" aid="6762" money="0" sharing="0">
+	<sound id="odd_animal_s_rooster2.mp3" name="Rooster 2" downloadtype="progressive" subtype="soundeffect" duration="1386" enable="Y" is_premium="N" aid="6762" money="0" sharing="0">
 		<tag>Animal</tag>
 	</sound>
-	<sound id="odd_animal_s_tiger1.swf" name="Tiger 1" downloadtype="embed" subtype="soundeffect" duration="551" enable="Y" is_premium="N" aid="6763" money="0" sharing="0">
+	<sound id="odd_animal_s_tiger1.mp3" name="Tiger 1" downloadtype="progressive" subtype="soundeffect" duration="551" enable="Y" is_premium="N" aid="6763" money="0" sharing="0">
 		<tag>Animal</tag>
 	</sound>
-	<sound id="odd_animal_s_tiger2.swf" name="Tiger 2" downloadtype="embed" subtype="soundeffect" duration="1569" enable="Y" is_premium="N" aid="6764" money="0" sharing="0">
+	<sound id="odd_animal_s_tiger2.mp3" name="Tiger 2" downloadtype="progressive" subtype="soundeffect" duration="1569" enable="Y" is_premium="N" aid="6764" money="0" sharing="0">
 		<tag>Animal</tag>
 	</sound>
-	<sound id="odd_animal_s_whale.swf" name="Whale" downloadtype="embed" subtype="soundeffect" duration="1857" enable="Y" is_premium="N" aid="6765" money="0" sharing="0">
+	<sound id="odd_animal_s_whale.mp3" name="Whale" downloadtype="progressive" subtype="soundeffect" duration="1857" enable="Y" is_premium="N" aid="6765" money="0" sharing="0">
 		<tag>Animal</tag>
 	</sound>
-	<sound id="odd_animal_s_yap.swf" name="Yap" downloadtype="embed" subtype="soundeffect" duration="368" enable="Y" is_premium="N" aid="6766" money="0" sharing="0">
+	<sound id="odd_animal_s_yap.mp3" name="Yap" downloadtype="progressive" subtype="soundeffect" duration="368" enable="Y" is_premium="N" aid="6766" money="0" sharing="0">
 		<tag>Animal</tag>
 	</sound>
-	<sound id="strange_human_ahh3.swf" name="Ahh" downloadtype="embed" subtype="soundeffect" duration="890" enable="Y" is_premium="N" aid="6767" money="0" sharing="0">
+	<sound id="strange_human_ahh3.mp3" name="Ahh" downloadtype="progressive" subtype="soundeffect" duration="890" enable="Y" is_premium="N" aid="6767" money="0" sharing="0">
 		<tag>Animal</tag>
 	</sound>
-	<sound id="strange_human_asia1.swf" name="Asia 1" downloadtype="embed" subtype="soundeffect" duration="1622" enable="Y" is_premium="N" aid="6768" money="0" sharing="0">
+	<sound id="strange_human_asia1.mp3" name="Asia 1" downloadtype="progressive" subtype="soundeffect" duration="1622" enable="Y" is_premium="N" aid="6768" money="0" sharing="0">
 		<tag>Female</tag>
 		<tag>Human sounds</tag>
 		<tag>People</tag>
 		<tag>Talk</tag>
 	</sound>
-	<sound id="strange_human_asia2.swf" name="Asia 2" downloadtype="embed" subtype="soundeffect" duration="1334" enable="Y" is_premium="N" aid="6769" money="0" sharing="0">
+	<sound id="strange_human_asia2.mp3" name="Asia 2" downloadtype="progressive" subtype="soundeffect" duration="1334" enable="Y" is_premium="N" aid="6769" money="0" sharing="0">
 		<tag>Female</tag>
 		<tag>Human sounds</tag>
 		<tag>People</tag>
 		<tag>Talk</tag>
 	</sound>
-	<sound id="strange_human_asia3.swf" name="Asia 3" downloadtype="embed" subtype="soundeffect" duration="1543" enable="Y" is_premium="N" aid="6770" money="0" sharing="0">
+	<sound id="strange_human_asia3.mp3" name="Asia 3" downloadtype="progressive" subtype="soundeffect" duration="1543" enable="Y" is_premium="N" aid="6770" money="0" sharing="0">
 		<tag>Female</tag>
 		<tag>Human sounds</tag>
 		<tag>People</tag>
 		<tag>Talk</tag>
 	</sound>
-	<sound id="strange_human_asia4.swf" name="Asia 4" downloadtype="embed" subtype="soundeffect" duration="1230" enable="Y" is_premium="N" aid="6771" money="0" sharing="0">
+	<sound id="strange_human_asia4.mp3" name="Asia 4" downloadtype="progressive" subtype="soundeffect" duration="1230" enable="Y" is_premium="N" aid="6771" money="0" sharing="0">
 		<tag>Female</tag>
 		<tag>Human sounds</tag>
 		<tag>People</tag>
 		<tag>Talk</tag>
 	</sound>
-	<sound id="strange_human_asia5.swf" name="Asia 5" downloadtype="embed" subtype="soundeffect" duration="1804" enable="Y" is_premium="N" aid="6772" money="0" sharing="0">
+	<sound id="strange_human_asia5.mp3" name="Asia 5" downloadtype="progressive" subtype="soundeffect" duration="1804" enable="Y" is_premium="N" aid="6772" money="0" sharing="0">
 		<tag>Female</tag>
 		<tag>Human sounds</tag>
 		<tag>People</tag>
 		<tag>Talk</tag>
 	</sound>
-	<sound id="strange_human_asia6.swf" name="Asia 6" downloadtype="embed" subtype="soundeffect" duration="2144" enable="Y" is_premium="N" aid="6773" money="0" sharing="0">
+	<sound id="strange_human_asia6.mp3" name="Asia 6" downloadtype="progressive" subtype="soundeffect" duration="2144" enable="Y" is_premium="N" aid="6773" money="0" sharing="0">
 		<tag>Female</tag>
 		<tag>Human sounds</tag>
 		<tag>People</tag>
 		<tag>Talk</tag>
 	</sound>
-	<sound id="strange_human_bulletin.swf" name="Strange human bulletin" downloadtype="embed" subtype="soundeffect" duration="1439" enable="Y" is_premium="N" aid="6774" money="0" sharing="0">
+	<sound id="strange_human_bulletin.mp3" name="Strange human bulletin" downloadtype="progressive" subtype="soundeffect" duration="1439" enable="Y" is_premium="N" aid="6774" money="0" sharing="0">
 		<tag>Female</tag>
 		<tag>Human sounds</tag>
 		<tag>People</tag>
 		<tag>Talk</tag>
 	</sound>
-	<sound id="strange_human_hy_yah.swf" name="Hy yah" downloadtype="embed" subtype="soundeffect" duration="0" enable="Y" is_premium="N" aid="6775" money="0" sharing="0">
+	<sound id="strange_human_hy_yah.mp3" name="Hy yah" downloadtype="progressive" subtype="soundeffect" duration="0" enable="Y" is_premium="N" aid="6775" money="0" sharing="0">
 		<tag>Coughs, sighs, laughs</tag>
 		<tag>Human sounds</tag>
 		<tag>Kung-Fu</tag>
 		<tag>Male</tag>
 	</sound>
-	<sound id="strange_human_laff.swf" name="Laugh" downloadtype="embed" subtype="soundeffect" duration="1909" enable="Y" is_premium="N" aid="6776" money="0" sharing="0">
+	<sound id="strange_human_laff.mp3" name="Laugh" downloadtype="progressive" subtype="soundeffect" duration="1909" enable="Y" is_premium="N" aid="6776" money="0" sharing="0">
 		<tag>Coughs, sighs, laughs</tag>
 		<tag>Human sounds</tag>
 		<tag>Male</tag>
 		<tag>People</tag>
 	</sound>
-	<sound id="strange_human_laff1.swf" name="Laugh 1" downloadtype="embed" subtype="soundeffect" duration="1125" enable="Y" is_premium="N" aid="6777" money="0" sharing="0">
+	<sound id="strange_human_laff1.mp3" name="Laugh 1" downloadtype="progressive" subtype="soundeffect" duration="1125" enable="Y" is_premium="N" aid="6777" money="0" sharing="0">
 		<tag>Coughs, sighs, laughs</tag>
 		<tag>Human sounds</tag>
 		<tag>Male</tag>
 		<tag>People</tag>
 	</sound>
-	<sound id="strange_human_laff2.swf" name="Laugh 2" downloadtype="embed" subtype="soundeffect" duration="342" enable="Y" is_premium="N" aid="6778" money="0" sharing="0">
+	<sound id="strange_human_laff2.mp3" name="Laugh 2" downloadtype="progressive" subtype="soundeffect" duration="342" enable="Y" is_premium="N" aid="6778" money="0" sharing="0">
 		<tag>Coughs, sighs, laughs</tag>
 		<tag>Human sounds</tag>
 		<tag>Male</tag>
 		<tag>People</tag>
 	</sound>
-	<sound id="strange_human_laff3.swf" name="Laugh 3" downloadtype="embed" subtype="soundeffect" duration="916" enable="Y" is_premium="N" aid="6779" money="0" sharing="0">
+	<sound id="strange_human_laff3.mp3" name="Laugh 3" downloadtype="progressive" subtype="soundeffect" duration="916" enable="Y" is_premium="N" aid="6779" money="0" sharing="0">
 		<tag>Coughs, sighs, laughs</tag>
 		<tag>Human sounds</tag>
 		<tag>Male</tag>
 		<tag>People</tag>
 	</sound>
-	<sound id="strange_human_mmmm_mmm.swf" name="MMMM MMM" downloadtype="embed" subtype="soundeffect" duration="0" enable="Y" is_premium="N" aid="6780" money="0" sharing="0">
+	<sound id="strange_human_mmmm_mmm.mp3" name="MMMM MMM" downloadtype="progressive" subtype="soundeffect" duration="0" enable="Y" is_premium="N" aid="6780" money="0" sharing="0">
 		<tag>Female</tag>
 		<tag>Human sounds</tag>
 		<tag>People</tag>
 	</sound>
-	<sound id="strange_human_mmmmm1.swf" name="MMMMM" downloadtype="embed" subtype="soundeffect" duration="1204" enable="Y" is_premium="N" aid="6781" money="0" sharing="0">
+	<sound id="strange_human_mmmmm1.mp3" name="MMMMM" downloadtype="progressive" subtype="soundeffect" duration="1204" enable="Y" is_premium="N" aid="6781" money="0" sharing="0">
 		<tag>Female</tag>
 		<tag>Human sounds</tag>
 		<tag>People</tag>
 	</sound>
-	<sound id="strange_human_ooh_lala.swf" name="Ooh la la" downloadtype="embed" subtype="soundeffect" duration="1961" enable="Y" is_premium="N" aid="6782" money="0" sharing="0">
+	<sound id="strange_human_ooh_lala.mp3" name="Ooh la la" downloadtype="progressive" subtype="soundeffect" duration="1961" enable="Y" is_premium="N" aid="6782" money="0" sharing="0">
 		<tag>Female</tag>
 		<tag>Human sounds</tag>
 		<tag>People</tag>
 	</sound>
-	<sound id="strange_human_ooo_ooo.swf" name="OOO OOO" downloadtype="embed" subtype="soundeffect" duration="1857" enable="Y" is_premium="N" aid="6783" money="0" sharing="0">
+	<sound id="strange_human_ooo_ooo.mp3" name="OOO OOO" downloadtype="progressive" subtype="soundeffect" duration="1857" enable="Y" is_premium="N" aid="6783" money="0" sharing="0">
 		<tag>Female</tag>
 		<tag>Human sounds</tag>
 		<tag>People</tag>
 		<tag>Scary</tag>
 	</sound>
-	<sound id="strange_human_ooooo.swf" name="OOOOO" downloadtype="embed" subtype="soundeffect" duration="1151" enable="Y" is_premium="N" aid="6784" money="0" sharing="0">
+	<sound id="strange_human_ooooo.mp3" name="OOOOO" downloadtype="progressive" subtype="soundeffect" duration="1151" enable="Y" is_premium="N" aid="6784" money="0" sharing="0">
 		<tag>Female</tag>
 		<tag>Human sounds</tag>
 		<tag>People</tag>
 	</sound>
-	<sound id="strange_human_pschycoy.swf" name="Pschyco toy" downloadtype="embed" subtype="soundeffect" duration="1543" enable="Y" is_premium="N" aid="6785" money="0" sharing="0">
+	<sound id="strange_human_psychotoy.mp3" name="Psycho toy" downloadtype="progressive" subtype="soundeffect" duration="1543" enable="Y" is_premium="N" aid="6785" money="0" sharing="0">
 		<tag>Human sounds</tag>
 		<tag>Male</tag>
 		<tag>People</tag>
 	</sound>
-	<sound id="strange_human_pwaa.swf" name="Pwaa" downloadtype="embed" subtype="soundeffect" duration="629" enable="Y" is_premium="N" aid="6786" money="0" sharing="0">
+	<sound id="strange_human_pwaa.mp3" name="Pwaa" downloadtype="progressive" subtype="soundeffect" duration="629" enable="Y" is_premium="N" aid="6786" money="0" sharing="0">
 		<tag>Fight</tag>
 		<tag>Human sounds</tag>
 		<tag>Male</tag>
 		<tag>People</tag>
 	</sound>
-	<sound id="strange_human_pygmie1.swf" name="Pygmie 1" downloadtype="embed" subtype="soundeffect" duration="3346" enable="Y" is_premium="N" aid="6787" money="0" sharing="0">
+	<sound id="strange_human_pygmie1.mp3" name="Pygmie 1" downloadtype="progressive" subtype="soundeffect" duration="3346" enable="Y" is_premium="N" aid="6787" money="0" sharing="0">
 		<tag>Human sounds</tag>
 		<tag>Male</tag>
 		<tag>People</tag>
 	</sound>
-	<sound id="strange_human_pygmie2.swf" name="Pygmie 2" downloadtype="embed" subtype="soundeffect" duration="1308" enable="Y" is_premium="N" aid="6788" money="0" sharing="0">
+	<sound id="strange_human_pygmie2.mp3" name="Pygmie 2" downloadtype="progressive" subtype="soundeffect" duration="1308" enable="Y" is_premium="N" aid="6788" money="0" sharing="0">
 		<tag>Human sounds</tag>
 		<tag>Male</tag>
 		<tag>People</tag>
 	</sound>
-	<sound id="strange_human_scarynur.swf" name="Scary nurse" downloadtype="embed" subtype="soundeffect" duration="6167" enable="Y" is_premium="N" aid="6789" money="0" sharing="0">
+	<sound id="strange_human_scarynur.mp3" name="Scary nurse" downloadtype="progressive" subtype="soundeffect" duration="6167" enable="Y" is_premium="N" aid="6789" money="0" sharing="0">
 		<tag>Female</tag>
 		<tag>Human sounds</tag>
 		<tag>People</tag>
 		<tag>Scary</tag>
 	</sound>
-	<sound id="strange_human_sloyodel.swf" name="Slow yodel" downloadtype="embed" subtype="soundeffect" duration="2013" enable="Y" is_premium="N" aid="6790" money="0" sharing="0">
+	<sound id="strange_human_sloyodel.mp3" name="Slow yodel" downloadtype="progressive" subtype="soundeffect" duration="2013" enable="Y" is_premium="N" aid="6790" money="0" sharing="0">
 		<tag>Human sounds</tag>
 		<tag>Male</tag>
 		<tag>People</tag>
 	</sound>
-	<sound id="strange_human_snore.swf" name="Snore 1" downloadtype="embed" subtype="soundeffect" duration="577" enable="Y" is_premium="N" aid="6791" money="0" sharing="0">
-		<tag>Human sounds</tag>
-		<tag>Male</tag>
-		<tag>People</tag>
-		<tag>Sniffs snores</tag>
-	</sound>
-	<sound id="strange_human_snore2.swf" name="Snore 2" downloadtype="embed" subtype="soundeffect" duration="3293" enable="Y" is_premium="N" aid="6792" money="0" sharing="0">
+	<sound id="strange_human_snore.mp3" name="Snore 1" downloadtype="progressive" subtype="soundeffect" duration="577" enable="Y" is_premium="N" aid="6791" money="0" sharing="0">
 		<tag>Human sounds</tag>
 		<tag>Male</tag>
 		<tag>People</tag>
 		<tag>Sniffs snores</tag>
 	</sound>
-	<sound id="strange_human_snort.swf" name="Snort" downloadtype="embed" subtype="soundeffect" duration="342" enable="Y" is_premium="N" aid="6793" money="0" sharing="0">
+	<sound id="strange_human_snore2.mp3" name="Snore 2" downloadtype="progressive" subtype="soundeffect" duration="3293" enable="Y" is_premium="N" aid="6792" money="0" sharing="0">
+		<tag>Human sounds</tag>
+		<tag>Male</tag>
+		<tag>People</tag>
+		<tag>Sniffs snores</tag>
+	</sound>
+	<sound id="strange_human_snort.mp3" name="Snort" downloadtype="progressive" subtype="soundeffect" duration="342" enable="Y" is_premium="N" aid="6793" money="0" sharing="0">
 		<tag>Human sounds</tag>
 		<tag>Male</tag>
 		<tag>People</tag>
 	</sound>
-	<sound id="strange_human_wheeez.swf" name="Wheeez" downloadtype="embed" subtype="soundeffect" duration="2353" enable="Y" is_premium="N" aid="6794" money="0" sharing="0">
+	<sound id="strange_human_wheeez.mp3" name="Wheeez" downloadtype="progressive" subtype="soundeffect" duration="2353" enable="Y" is_premium="N" aid="6794" money="0" sharing="0">
 		<tag>Human sounds</tag>
 		<tag>Male</tag>
 		<tag>People</tag>
 	</sound>
-	<sound id="strange_human_yow_oo.swf" name="Yow oo" downloadtype="embed" subtype="soundeffect" duration="446" enable="Y" is_premium="N" aid="6795" money="0" sharing="0">
+	<sound id="strange_human_yow_oo.mp3" name="Yow oo" downloadtype="progressive" subtype="soundeffect" duration="446" enable="Y" is_premium="N" aid="6795" money="0" sharing="0">
 		<tag>Female</tag>
 		<tag>Human sounds</tag>
 		<tag>People</tag>

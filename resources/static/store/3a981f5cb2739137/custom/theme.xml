@@ -3010,8 +3010,6 @@
 	<prop id="cc_flying_ufo.swf" name="Flying UFO" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="9040" money="0" sharing="0"/>
 	<prop id="cc_foldedchair.swf" name="Folding chair" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="9041" money="0" sharing="0"/>
 	<prop id="cc_lightray.swf" name="Light ray" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="9042" money="0" sharing="0"/>
-	<prop id="cc_mosaic.swf" name="Mosaic" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="9043" money="0" sharing="0"/>
-	<prop id="cc_mosaic_02.swf" name="Mosaic02" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="9044" money="0" sharing="0"/>
 	<prop id="cc_road_block.swf" name="Road block" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="9045" money="0" sharing="0"/>
 	<prop id="cc_table1.swf" name="Table" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="9046" money="0" sharing="0"/>
 	<prop id="bedroom_lamp.swf" name="Lamp" holdable="0" placeable="1" wearable="0" facing="left" thumb="" enable="Y" is_premium="N" aid="8932" money="0" sharing="0"/>

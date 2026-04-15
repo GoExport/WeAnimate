@@ -1,14 +1,9 @@
 <script setup lang="ts">
-import {
-	apiServer,
-	Params,
-	staticPaths,
-	staticServer,
-	swfUrlBase,
-	toAttrString
-} from "../utils/AppInit";
+import { apiServer, Params, staticPaths, staticServer, swfUrlBase, toAttrString } from "../utils/AppInit";
 import extractCharThemeId from "../utils/extractCharThemeId";
+import useAppSettings from "../composables/useAppSettings";
 import { onMounted, onUnmounted, ref, useTemplateRef } from "vue";
+const appSettings = useAppSettings();
 const emit = defineEmits<{
 	ccEnter: [],
 	charSaved: [string],
@@ -79,13 +74,15 @@ function fileDropped(e:DragEvent) {
 function getXml(): string {
 	return swfUrl.endsWith("cc.swf") ? ccObject.value.getXml() : "";
 }
-function displayCreator() {
+async function displayCreator() {
 	emit("ccEnter");
+	await appSettings.loadSettings();
 	swfUrl = swfUrlBase + "/cc.swf";
 	params.movie = swfUrl;
 	showObject.value = true;
 }
-function displayBrowser(themeId:string) {
+async function displayBrowser(themeId:string) {
+	await appSettings.loadSettings();
 	swfUrl = swfUrlBase + "/cc_browser.swf";
 	params.flashvars.themeId = themeId;
 	params.movie = swfUrl;

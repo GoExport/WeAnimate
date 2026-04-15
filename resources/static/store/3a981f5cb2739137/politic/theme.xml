@@ -1795,7 +1795,7 @@
 	<prop id="locker_win.swf" name="Locker win" holdable="0" placeable="1" facing="left" thumb="" enable="N" is_premium="N" aid="2820" money="0" sharing="0"/>
 	<prop id="locker_woodChair.swf" name="Locker woodchair" holdable="0" placeable="1" facing="left" thumb="" enable="N" is_premium="N" aid="2821" money="0" sharing="0"/>
 	<prop id="mosaic.swf" name="Mosaic" holdable="0" placeable="1" facing="left" thumb="" enable="N" is_premium="N" aid="2822" money="0" sharing="0"/>
-	<prop id="mosaic_02.swf" name="Mosaic02" holdable="0" placeable="1" facing="left" thumb="" enable="N" is_premium="N" aid="2823" money="0" sharing="0"/>
+	<prop id="mosaic_02.swf" name="Mosaic 2" holdable="0" placeable="1" facing="left" thumb="" enable="N" is_premium="N" aid="2823" money="0" sharing="0"/>
 	<prop id="mouse.swf" name="Boxing glove" holdable="0" placeable="1" facing="left" thumb="" enable="N" is_premium="N" aid="2824" money="0" sharing="0"/>
 	<prop id="office_carpet.swf" name="Office carpet" holdable="0" placeable="1" facing="left" thumb="" enable="N" is_premium="N" aid="2825" money="0" sharing="0"/>
 	<prop id="office_desk.swf" name="Office desk" holdable="0" placeable="1" facing="left" thumb="" enable="N" is_premium="N" aid="2826" money="0" sharing="0"/>

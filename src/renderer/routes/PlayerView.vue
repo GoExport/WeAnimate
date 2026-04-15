@@ -11,7 +11,6 @@
 	width: 100%;
 	height: 100%;
 }
-
 #full_page_container.popup_mode {
 	background: radial-gradient(#333, #111);
 }
@@ -21,18 +20,10 @@
 </style>
 
 <script setup lang="ts">
-import {
-	apiServer,
-	Params,
-	staticPaths,
-	staticServer,
-	swfUrlBase,
-	toAttrString
-} from "../utils/AppInit";
+import { apiServer, Params, staticPaths, staticServer, swfUrlBase, toAttrString } from "../utils/AppInit";
 import { ref } from "vue";
 import useAppSettings from "../composables/useAppSettings";
 import { useRoute } from "vue-router";
-
 const appSettings = useAppSettings();
 let params:Params = {
 	flashvars: {
@@ -42,7 +33,7 @@ let params:Params = {
 		ctc: "go",
 		goteam_draft_only: "1",
 		isLogin: "Y",
-		isWide: appSettings.get("isWide") ? "1" : "0",
+		isWide: "0",
 		lid: "0",
 		nextUrl: "/",
 		page: "",
@@ -59,13 +50,15 @@ let params:Params = {
 const showObject = ref(false);
 let swfUrl:string;
 
-function displayPlayer(movieId:string) {
+async function displayPlayer(movieId:string) {
+	await appSettings.loadSettings();
+    const wideSetting = appSettings.get("isWide");
+    params.flashvars.isWide = wideSetting === "1" || wideSetting === true ? "1" : "0";
 	swfUrl = swfUrlBase + "/player.swf";
 	params.flashvars.movieId = movieId;
 	params.movie = swfUrl;
 	showObject.value = true;
 }
-
 const route = useRoute();
 const movieId = route.params.movieId as string;
 displayPlayer(movieId);

@@ -214,7 +214,7 @@
 			"gender": "M",
 			"source": "acapela",
 			"arg": "Liam22k_HQ",
-			"desc": "Liam"
+			"desc": "Liam (Acapela)"
 		},
 		"lisa22k": {
 			"country": "AU",
@@ -334,7 +334,7 @@
 			"gender": "M",
 			"source": "acapela",
 			"arg": "Arthur22k_HQ",
-			"desc": "Arthur"
+			"desc": "Arthur (Acapela)"
 		},
 		"arthurteen22k": {
 			"country": "GB",
@@ -342,7 +342,7 @@
 			"gender": "M",
 			"source": "acapela",
 			"arg": "ArthurTeen22k_HQ",
-			"desc": "Arthur (Teen)"
+			"desc": "Arthur (Acapela teen)"
 		},
 		"caleb22k": {
 			"country": "GB",
@@ -406,7 +406,7 @@
 			"gender": "M",
 			"source": "acapela",
 			"arg": "Peter22k_HQ",
-			"desc": "Peter"
+			"desc": "Peter (Acapela)"
 		},
 		"peterhappy22k": {
 			"country": "GB",
@@ -438,7 +438,7 @@
 			"gender": "F",
 			"source": "acapela",
 			"arg": "Rachel22k_HQ",
-			"desc": "Rachel"
+			"desc": "Rachel (Acapela)"
 		},
 		"racheltransport22k": {
 			"country": "GB",
@@ -470,7 +470,7 @@
 			"gender": "M",
 			"source": "acapela",
 			"arg": "Alfie22k_HQ",
-			"desc": "Alfie"
+			"desc": "Alfie (Acapela)"
 		},
 		"amy22k": {
 			"country": "GB",
@@ -782,7 +782,7 @@
 			"gender": "M",
 			"source": "acapela",
 			"arg": "WillLittleCreature22k_HQ",
-			"desc": "Will"
+			"desc": "Will (Little creature)"
 		},
 		"willoldman22k": {
 			"country": "US",
@@ -1478,7 +1478,7 @@
 			"gender": "F",
 			"source": "acapela",
 			"arg": "Anabtob22k_HQ",
-			"desc": "Ana"
+			"desc": "Ana (Acapela)"
 		},
 		"antonio22k": {
 			"country": "ES",
@@ -1502,7 +1502,7 @@
 			"gender": "F",
 			"source": "acapela",
 			"arg": "TaylorSpanish22k_NT",
-			"desc": "Taylor"
+			"desc": "Taylor (Spanish)"
 		},
 		"ines22k": {
 			"country": "ES",
@@ -1526,7 +1526,7 @@
 			"gender": "M",
 			"source": "acapela",
 			"arg": "Carlos22k_HQ",
-			"desc": "Carlos"
+			"desc": "Carlos (Acapela)"
 		},
 		"carmen22k": {
 			"country": "US",
@@ -1542,7 +1542,7 @@
 			"gender": "F",
 			"source": "acapela",
 			"arg": "Daniela22k_HQ",
-			"desc": "Daniela"
+			"desc": "Daniela (Acapela)"
 		},	
 		"diego22k": {
 			"country": "US",
@@ -1550,7 +1550,7 @@
 			"gender": "M",
 			"source": "acapela",
 			"arg": "Diego22k_HQ",
-			"desc": "Diego"
+			"desc": "Diego (Acapela)"
 		},		
 		"emilio22k": {
 			"country": "US",
@@ -1566,7 +1566,7 @@
 			"gender": "F",
 			"source": "acapela",
 			"arg": "TaylorUSSpanish22k_NT",
-			"desc": "Taylor"
+			"desc": "Taylor (Puerto Rican)"
 		},
 		"rodrigo22k": {
 			"country": "US",
@@ -1582,7 +1582,7 @@
 			"gender": "F",
 			"source": "acapela",
 			"arg": "Rosa22k_HQ",
-			"desc": "Rosa"
+			"desc": "Rosa (Acapela)"
 		},
 		"valeria22k": {
 			"country": "US",
@@ -2534,7 +2534,7 @@
 			"gender": "M",
             "source": "bing",
 			"arg": "en-NZ-MitchellNeural",
-			"desc": "Mitchell"
+			"desc": "Mitchell (Azure)"
 		},
 		"en-PH-RosaNeural": {
 			"country": "US",
@@ -2614,7 +2614,7 @@
 			"gender": "M",
             "source": "bing",
 			"arg": "en-US-JasonNeural",
-			"desc": "Jason"
+			"desc": "Jason (Azure)"
 		},
 		"en-US-SaraNeural": {
 			"country": "US",
@@ -2654,7 +2654,7 @@
 			"gender": "F",
             "source": "bing",
 			"arg": "en-US-AnaNeural",
-			"desc": "Ana"
+			"desc": "Ana (Azure)"
 		},
 		"en-US-AshleyNeural": {
 			"country": "US",
@@ -2734,7 +2734,7 @@
 			"gender": "F",
             "source": "bing",
 			"arg": "en-US-MichelleNeural",
-			"desc": "Michelle"
+			"desc": "Michelle (Azure)"
 		},
 		"en-US-MonicaNeural": {
 			"country": "US",
@@ -3182,7 +3182,7 @@
 			"gender": "F",
             "source": "bing",
 			"arg": "es-US-PalomaNeural",
-			"desc": "Paloma"
+			"desc": "Paloma (Azure)"
 		},
 		"es-US-AlonsoNeural": {
 			"country": "US",
@@ -3606,7 +3606,7 @@
 			"gender": "M",
             "source": "bing",
 			"arg": "it-IT-DiegoNeural",
-			"desc": "Diego"
+			"desc": "Diego (Azure)"
 		},
 		"it-IT-BenignoNeural": {
 			"country": "it",
@@ -4942,7 +4942,7 @@
 			"gender": "M",
 			"source": "cepstral",
 			"arg": "Duncan",
-			"desc": "Duncan"
+			"desc": "Duncan (Cepstral)"
 		},
 		"Emily": {
 			"country": "US",
@@ -5022,7 +5022,7 @@
 			"gender": "F",
 			"source": "cepstral",
 			"arg": "Alejandra",
-			"desc": "Alejandra"
+			"desc": "Alejandra (Cepstral)"
 		},
 		"Miguel": {
 			"country": "MX",
@@ -5094,7 +5094,7 @@
 			"gender": "M",
 			"source": "cereproc",
 			"arg": "Adam",
-			"desc": "Adam"
+			"desc": "Adam (Cereproc)"
 		},
 		"alex1": {
 			"country": "DE",
@@ -5118,7 +5118,7 @@
 			"gender": "F",
 			"source": "cereproc",
 			"arg": "Ana",
-			"desc": "Ana"
+			"desc": "Ana (Cereproc)"
 		},
 		"anders1": {
 			"country": "sv",
@@ -5134,7 +5134,7 @@
 			"gender": "M",
 			"source": "cereproc",
 			"arg": "Andrew",
-			"desc": "Andrew"
+			"desc": "Andrew (Cereproc)"
 		},
 		"andy1": {
 			"country": "US",
@@ -5358,7 +5358,7 @@
 			"gender": "F",
 			"source": "cereproc",
 			"arg": "Hannah",
-			"desc": "Hannah"
+			"desc": "Hannah (Cereproc)"
 		},
 		"heather1": {
 			"country": "GB",
@@ -5793,7 +5793,7 @@
             "source": "cobaltspeech",
 			"arg": "LTTS_2300",
 			"lang": "en_US",
-			"desc": "Mitchell"
+			"desc": "Mitchell (Cobalt)"
 		},
 		"LTTS_8123": {
 			"country": "US",
@@ -5820,7 +5820,7 @@
             "source": "cobaltspeech",
 			"arg": "LTTS_4137",
 			"lang": "en_US",
-			"desc": "Sarah"
+			"desc": "Sarah (Cobalt)"
 		},
 		"LTTS_251": {
 			"country": "US",
@@ -6318,7 +6318,7 @@
 			"gender": "F",
 			"source": "googletranslate",
 			"arg": "es-MX",
-			"desc": "Paloma"
+			"desc": "Paloma (Google)"
 		},
  		"su": {
 			"country": "su",
@@ -6479,7 +6479,7 @@
             "source": "onecore",
 			"arg": "Microsoft Australian English (Catherine)",
 			"lang": "en-AU",
-			"desc": "Catherine"
+			"desc": "Catherine (Onecore)"
 		},
 		"james2": {
 			"country": "AU",
@@ -6533,7 +6533,7 @@
             "source": "onecore",
 			"arg": "Microsoft British English (George)",
 			"lang": "en-GB",
-			"desc": "George"
+			"desc": "George (Onecore)"
 		},
 		"hazel": {
 			"country": "GB",
@@ -6551,7 +6551,7 @@
             "source": "onecore",
 			"arg": "Microsoft British English (Susan)",
 			"lang": "en-GB",
-			"desc": "Susan"
+			"desc": "Susan (Onecore)"
 		},
 		"ivan": {
 			"country": "bg",
@@ -6569,7 +6569,7 @@
             "source": "onecore",
 			"arg": "Microsoft Canadian English (Linda)",
 			"lang": "en-CA",
-			"desc": "Linda"
+			"desc": "Linda (Onecore)"
 		},
 		"richard2": {
 			"country": "CA",
@@ -6713,7 +6713,7 @@
             "source": "onecore",
 			"arg": "Microsoft Finnish (Heidi)",
 			"lang": "fi-FI",
-			"desc": "Heidi"
+			"desc": "Heidi (Onecore)"
 		},
 		"hortense": {
 			"country": "FR",
@@ -6956,7 +6956,7 @@
             "source": "onecore",
 			"arg": "Microsoft Polish (Adam)",
 			"lang": "pl-PL",
-			"desc": "Adam"
+			"desc": "Adam (Onecore)"
 		},
 		"paulina3": {
 			"country": "pl",
@@ -7127,7 +7127,7 @@
             "source": "onecore",
 			"arg": "Microsoft US English (Mark)",
 			"lang": "en-US",
-			"desc": "Mark"
+			"desc": "Mark (Onecore)"
 		},
 		"zira": {
 			"country": "US",
@@ -7817,7 +7817,7 @@
 			"gender": "M",
 			"source": "polly",
 			"arg": "Kevin",
-			"desc": "Kevin (PO)"
+			"desc": "Kevin"
 		},
 		"ruth": {
 			"country": "US",
@@ -7873,7 +7873,7 @@
 			"gender": "M",
 			"source": "polly",
 			"arg": "Liam",
-			"desc": "Liam"
+			"desc": "Liam (PO)"
 		},
 		"daniel1": {
 			"country": "DE",
@@ -8225,7 +8225,7 @@
 			"gender": "F",
 			"source": "pollypluswavenet",
 			"arg": "en-AU-Wavenet-A",
-			"desc": "Matilda"
+			"desc": "Matilda (PW)"
 		},
  		"google_jackson": {
 			"country": "AU",
@@ -8457,7 +8457,7 @@
 			"gender": "F",
 			"source": "pollypluswavenet",
 			"arg": "pt-BR-Wavenet-A",
-			"desc": "Ana"
+			"desc": "Ana (PW)"
 		},
  		"google_antonio": {
 			"country": "BR",
@@ -8793,7 +8793,7 @@
 			"gender": "F",
 			"source": "pollypluswavenet",
 			"arg": "en-GB-Wavenet-N",
-			"desc": "Bella"
+			"desc": "Bella (PW)"
 		},
  		"google_courtney": {
 			"country": "AU",
@@ -10041,7 +10041,7 @@
 			"gender": "M",
 			"source": "svox",
 			"arg": "ukenglishmale",
-			"desc": "Oliver"
+			"desc": "Oliver (SVOX)"
 		},
 		"olivia3": {
 			"country": "AU",
@@ -10049,7 +10049,7 @@
 			"gender": "F",
 			"source": "svox",
 			"arg": "auenglishfemale",
-			"desc": "Olivia"
+			"desc": "Olivia (SVOX)"
 		},
  		"angelica": {
 			"country": "MX",
@@ -10065,7 +10065,7 @@
 			"gender": "M",
 			"source": "svox",
 			"arg": "usspanishmale",
-			"desc": "Juan"
+			"desc": "Juan (SVOX)"
 		},
  		"heiwan": {
 			"country": "zh",
@@ -10513,7 +10513,7 @@
             "gender": "M",
             "arg": "en_male_jason",
             "source": "tiktok",
-            "desc": "Jason"
+            "desc": "Jason (Tiktok)"
         },
         "en_male_chris": {
             "country": "US",
@@ -10777,7 +10777,7 @@
             "gender": "F",
             "arg": "BV027_streaming",
             "source": "tiktok",
-            "desc": "Amelia"
+            "desc": "Amelia (Tiktok)"
         },
         "BV028_TOBI_streaming": {
             "country": "US",
@@ -10993,7 +10993,7 @@
             "gender": "F",
             "arg": "es_female_f6",
             "source": "tiktok",
-            "desc": "Alejandra"
+            "desc": "Alejandra (Tiktok)"
         },
         "es_female_fp1": {
             "country": "ES",
@@ -11017,7 +11017,7 @@
             "gender": "F",
             "arg": "es_mx_female_supermom",
             "source": "tiktok",
-            "desc": "Super mamá"
+            "desc": "Super mama"
         },
         "BV065_streaming": {
             "country": "MX",
@@ -11057,7 +11057,7 @@
             "gender": "M",
             "arg": "BV531_streaming",
             "source": "tiktok",
-            "desc": "Carlos"
+            "desc": "Carlos (TikTok)"
         },
         "BV530_streaming": {
             "country": "BR",
@@ -12097,7 +12097,7 @@
 			"gender": "M",
 			"arg": [2, 2, 2],
 			"source": "vocalware",
-			"desc": "Juan"
+			"desc": "Juan (Vocalware)"
 		},
 		"oc_jolie": {
 			"country": "FR",
@@ -12241,7 +12241,7 @@
 			"gender": "F",
 			"arg": [2, 1, 4],
 			"source": "vocalware",
-			"desc": "Elizabeth"
+			"desc": "Elizabeth (Vocalware)"
 		},
 		"oc_catherine": {
 			"country": "GB",
@@ -12305,7 +12305,7 @@
 			"gender": "M",
 			"arg": [2, 2, 6],
 			"source": "vocalware",
-			"desc": "Jorge"
+			"desc": "Jorge (Vocalware)"
 		},
 		"oc_carlos": {
 			"country": "US",
@@ -12313,7 +12313,7 @@
 			"gender": "M",
 			"arg": [2, 2, 7],
 			"source": "vocalware",
-			"desc": "Carlos"
+			"desc": "Carlos (Vocalware)"
 		},
 		"oc_ximena": {
 			"country": "US",
@@ -12321,7 +12321,7 @@
 			"gender": "F",
 			"arg": [2, 2, 10],
 			"source": "vocalware",
-			"desc": "Ximena"
+			"desc": "Ximena (Vocalware)"
 		},
 		"oc_soledad": {
 			"country": "US",
@@ -12345,7 +12345,7 @@
 			"gender": "M",
 			"arg": [2, 2, 4],
 			"source": "vocalware",
-			"desc": "Diego"
+			"desc": "Diego (Vocalware)"
 		},
 		"oc_francisca": {
 			"country": "CL",
@@ -12689,7 +12689,7 @@
 			"gender": "F",
 			"arg": [3, 1, 6],
 			"source": "vocalware",
-			"desc": "Ashley"
+			"desc": "Ashley (Vocalware)"
 		},
 		"oc_beth": {
 			"country": "US",
@@ -12721,7 +12721,7 @@
 			"gender": "F",
 			"arg": [3, 1, 1],
 			"source": "vocalware",
-			"desc": "Kate"
+			"desc": "Kate (Vocalware)"
 		},
 		"oc_paul": {
 			"country": "US",
@@ -12729,7 +12729,7 @@
 			"gender": "M",
 			"arg": [3, 1, 2],
 			"source": "vocalware",
-			"desc": "Paul"
+			"desc": "Paul (Vocalware)"
 		},
 		"oc_bridget": {
 			"country": "GB",
@@ -12737,7 +12737,7 @@
 			"gender": "F",
 			"arg": [3, 1, 4],
 			"source": "vocalware",
-			"desc": "Bridget"
+			"desc": "Bridget (Vocalware)"
 		},
 		"oc_hugh": {
 			"country": "GB",
@@ -12785,7 +12785,7 @@
 			"gender": "F",
 			"arg": [3, 2, 1],
 			"source": "vocalware",
-			"desc": "Violeta"
+			"desc": "Violeta (Vocalware)"
 		},
 		"oc_louis": {
 			"country": "FR",
@@ -13129,7 +13129,7 @@
 			"gender": "F",
 			"arg": [4, 1, 4],
 			"source": "vocalware",
-			"desc": "Karen"
+			"desc": "Karen (Vocalware)"
 		},
 		"oc_lee": {
 			"country": "AU",
@@ -13377,7 +13377,7 @@
 			"gender": "F",
 			"arg": [4, 11, 2],
 			"source": "vocalware",
-			"desc": "Claire"
+			"desc": "Claire (Vocalware)"
 		},
   		"oc_laura": {
 			"country": "nl",
@@ -13609,7 +13609,7 @@
 			"gender": "F",
 			"arg": [1, 2, 1],
 			"source": "vocalware",
-			"desc": "Rosa"
+			"desc": "Rosa (Vocalware)"
 		},
 		"oc_alberto": {
 			"country": "MX",
@@ -14353,7 +14353,7 @@
 			"gender": "M",
 			"source": "watson",
 			"arg": "en-US_EthanNatural",
-			"desc": "Ethan"
+			"desc": "Ethan (Watson)"
 		},
 		"en-US_HenryV3Voice": {
 			"country": "US",
@@ -14393,7 +14393,7 @@
 			"gender": "F",
 			"source": "watson",
 			"arg": "en-US_LisaExpressive",
-			"desc": "Lisa"
+			"desc": "Lisa (Watson expressive)"
 		},
 		"en-US_MichaelV3Voice": {
 			"country": "US",
@@ -14457,7 +14457,7 @@
 			"gender": "F",
 			"source": "watson",
 			"arg": "en-AU_HeidiExpressive",
-			"desc": "Heidi"
+			"desc": "Heidi (Watson expressive)"
 		},	
 		"en-AU_HeidiNatural": {
 			"country": "AU",
@@ -14465,7 +14465,7 @@
 			"gender": "F",
 			"source": "watson",
 			"arg": "en-AU_HeidiNatural",
-			"desc": "Heidi (Nautral)"
+			"desc": "Heidi (Watson)"
 		},	
 		"en-GB_ChloeNatural": {
 			"country": "GB",
@@ -14489,7 +14489,7 @@
 			"gender": "M",
 			"source": "watson",
 			"arg": "en-GB_GeorgeNatural",
-			"desc": "George (Natural)"
+			"desc": "George (Watson)"
 		},
 		"en-GB_KateV3Voice": {
 			"country": "GB",
@@ -14657,7 +14657,7 @@
 			"gender": "F",
 			"source": "watson",
 			"arg": "es-LA_DanielaExpressive",
-			"desc": "Daniela (Watson)"
+			"desc": "Daniela (Watson expressive)"
 		},
 		"es-LA_DanielaNatural": {
 			"country": "MX",
@@ -14665,7 +14665,7 @@
 			"gender": "F",
 			"source": "watson",
 			"arg": "es-LA_DanielaNatural",
-			"desc": "Daniela"
+			"desc": "Daniela (Watson)"
 		},
 		"es-US_SofiaV3Voice": {
 			"country": "US",

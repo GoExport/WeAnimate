@@ -28,13 +28,7 @@
   cursor: pointer;
 }
 .btn.primary {
-  background: #daa5de;
-}
-.dark .btn {
-  background: #42404f;
-}
-.dark .btn.primary {
-  background: #daa5de;
+  background: #f64370;
 }
 </style>
 

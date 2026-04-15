@@ -28,7 +28,7 @@
   cursor: pointer;
 }
 .btn.primary {
-  background: #f64370;
+  background: #daa5de;
 }
 </style>
 

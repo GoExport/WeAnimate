@@ -85,6 +85,16 @@ if errorlevel 1 (
 
 echo.
 echo ========================================
+echo Running binary data patcher...
+echo ========================================
+python tools\patch_binarydata.py
+if errorlevel 1 (
+    echo ERROR: patch_binarydata.py failed.
+    exit /b 1
+)
+
+echo.
+echo ========================================
 echo Done.
 echo Upstream merge is prepared but NOT committed.
 echo Patched SWFs are in your working tree for testing.

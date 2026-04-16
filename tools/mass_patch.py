@@ -17,6 +17,10 @@ TARGETS = [
         "swf": ROOT / "resources" / "static" / "animation" / "414827163ad4eb60" / "go_full.swf",
         "branding": ROOT / "tools" / "brand" / "go_full.swf",
     },
+    {
+        "swf": ROOT / "resources" / "static" / "animation" / "414827163ad4eb60" / "player.swf",
+        "branding": ROOT / "tools" / "brand" / "player.swf",
+    },
 ]
 
 

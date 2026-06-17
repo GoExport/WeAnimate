@@ -29,8 +29,6 @@ npm run build
 # Package for the current platform
 npm run package
 ```
-### This version of Wrapper offline doesn't support censorship and rant videos
-Therefore can't be used for any kinds of rants and "calling out users" types of vids. First Amendment allows users to do whatever they want and you can't change it
 
 Platform-specific packaging scripts are also available:
 

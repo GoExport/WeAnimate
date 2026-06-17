@@ -113,7 +113,7 @@ const createWindow = () => {
         parent: mainWindow,
         modal: true,
         icon: iconPath,
-        title: "Wrapper offline",
+        title: "WeAnimate",
         resizable: false,
         autoHideMenuBar: true,
         show: false,

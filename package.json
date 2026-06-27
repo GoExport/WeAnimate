@@ -13,10 +13,9 @@
     "dev:mac": "cross-env NODE_OPTIONS=--no-deprecation concurrently \"node scripts/build.mjs --dev\" \"vite dev\"",
     "build": "vite build && node scripts/build.mjs",
     "package": "npm run package:win",
-    "package:win": "npx electron-packager dist WeAnimate --icon=dist/favicon.ico --overwrite",
-    "package:mac": "npx electron-packager dist WeAnimate --icon=dist/favicon.icns --overwrite",
-    "package:linux": "npx electron-packager dist WeAnimate --icon=dist/favicon.png --overwrite"
-  },
+    "package:win": "npx electron-packager dist WeAnimate --platform=win32 --arch=x64 --icon=dist/favicon.ico --overwrite",
+    "package:mac": "npx electron-packager dist WeAnimate --platform=darwin --arch=x64 --icon=dist/favicon.icns --overwrite",
+    "package:linux": "npx electron-packager dist WeAnimate --platform=linux --arch=x64 --icon=dist/favicon.png --overwrite"  },
   "engines": {
     "node": ">=16"
   },

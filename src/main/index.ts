@@ -4,12 +4,58 @@ import { createWriteStream } from "fs";
 import { spawn } from "child_process";
 import Directories from "./storage/directories";
 import { dirname, isAbsolute, join, relative, resolve } from "path";
-import { mkdirSync, readFileSync } from "fs";
+import { appendFileSync, mkdirSync, readFileSync } from "fs";
 import settings from "./storage/settings";
 import { startAll } from "./server/index";
 import ExportService from "./server/services/ExportService";
 import { writeFileSync } from "fs";
 const IS_DEV = app.commandLine.getSwitchValue("dev").length > 0;
+
+const MAIN_PROCESS_CRASH_LOG = join(app.getPath("userData"), "main-process-crash.log");
+
+function stringifyUnknownError(value: unknown) {
+	if (value instanceof Error) {
+		return value.stack || `${value.name}: ${value.message}`;
+	}
+
+	if (typeof value === "string") {
+		return value;
+	}
+
+	if (value === null || typeof value === "undefined") {
+		return String(value);
+	}
+
+	try {
+		return JSON.stringify(value, null, 2);
+	} catch {
+		return String(value);
+	}
+}
+
+function logMainProcessCrash(kind: string, error: unknown) {
+	try {
+		mkdirSync(dirname(MAIN_PROCESS_CRASH_LOG), { recursive: true });
+		const stamp = new Date().toISOString();
+		const details = stringifyUnknownError(error);
+		appendFileSync(
+			MAIN_PROCESS_CRASH_LOG,
+			`[${stamp}] ${kind}\n${details}\n\n`,
+			"utf8"
+		);
+	} catch {
+		// Do not throw from crash logging path.
+	}
+}
+
+process.on("uncaughtException", (error) => {
+	logMainProcessCrash("uncaughtException", error);
+});
+
+process.on("unhandledRejection", (reason) => {
+	logMainProcessCrash("unhandledRejection", reason);
+});
+
 startAll();
 const PRELOAD_SOURCE = `const { contextBridge, ipcRenderer } = require("electron");
 contextBridge.exposeInMainWorld("appWindow", {

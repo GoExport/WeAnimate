@@ -1,6 +1,23 @@
 import { app } from "electron";
-import { cpSync, existsSync, mkdirSync } from "fs";
+import { copyFileSync, existsSync, mkdirSync, readdirSync, statSync } from "fs";
 import { join } from "path";
+
+function copyDirectoryRecursiveSync(sourceDir:string, destinationDir:string) {
+	mkdirSync(destinationDir, { recursive: true });
+	const entries = readdirSync(sourceDir);
+
+	for (const entry of entries) {
+		const sourcePath = join(sourceDir, entry);
+		const destinationPath = join(destinationDir, entry);
+		const stats = statSync(sourcePath);
+
+		if (stats.isDirectory()) {
+			copyDirectoryRecursiveSync(sourcePath, destinationPath);
+		} else {
+			copyFileSync(sourcePath, destinationPath);
+		}
+	}
+}
 
 class DirUtil {
 	private static _instance:DirUtil;
@@ -28,12 +45,12 @@ class DirUtil {
 	private seedBundledDefaults() {
 		const staticSource = join(this.appRoot, "static");
 		if (!existsSync(this.static) && existsSync(staticSource)) {
-			cpSync(staticSource, this.static, { recursive: true });
+			copyDirectoryRecursiveSync(staticSource, this.static);
 		}
 
 		const userDataSource = join(this.appRoot, "userdata");
 		if (!existsSync(this.userData) && existsSync(userDataSource)) {
-			cpSync(userDataSource, this.userData, { recursive: true });
+			copyDirectoryRecursiveSync(userDataSource, this.userData);
 		}
 	}
 

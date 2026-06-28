@@ -52,8 +52,8 @@ export default class ExportService {
 			"-theme", clientThemeUrl,
 			"-id", movieId,
 			"-xml", join(Directories.saved, `${movieId}.xml`),
-			"-ugc", join(Directories.static, "store", "3a981f5cb2739137"),
-			"-as", Directories.asset,
+			"-ugc", Directories.asset,
+			"-as", join(Directories.static, "store", "3a981f5cb2739137"),
 			"-f", format,
 			"-out", outputPath
 		];

@@ -3,27 +3,12 @@ import { app, BrowserWindow, Menu, shell, ipcMain, dialog } from "electron";
 import { createWriteStream } from "fs";
 import { spawn } from "child_process";
 import Directories from "./storage/directories";
-import { join } from "path";
-import { rmdirSync, existsSync, readFileSync } from "fs";
+import { dirname, isAbsolute, join, relative, resolve } from "path";
+import { mkdirSync, readFileSync } from "fs";
 import settings from "./storage/settings";
 import { startAll } from "./server/index";
 import ExportService from "./server/services/ExportService";
 import { writeFileSync } from "fs";
-const customTempPath = join(__dirname, "temp");
-app.setPath("userData", customTempPath);
-(() => {
-	try {
-		const appName = app.getName(); 
-		const defaultPath = join(app.getPath("appData"), appName);
-
-		if (existsSync(defaultPath) && defaultPath !== customTempPath) {
-			rmdirSync(defaultPath, { recursive: true });
-			console.log(`\n${appName} default temp folder removed successfully`);
-		}
-	} catch (e: any) {
-		console.log(`\n${appName} default temp folder could not be removed`)
-	}
-})();
 const IS_DEV = app.commandLine.getSwitchValue("dev").length > 0;
 startAll();
 const PRELOAD_SOURCE = `const { contextBridge, ipcRenderer } = require("electron");
@@ -38,12 +23,61 @@ contextBridge.exposeInMainWorld("appWindow", {
 	exportMovie: (data) => ipcRenderer.invoke("export-movie", data),
 });`;
 const getPreloadPath = () => {
-    const localPath = join(__dirname, "preload.js");
-    if (existsSync(localPath)) return localPath;
-    return join(__dirname, "preload.js");
+    return join(app.getPath("userData"), "preload.js");
 };
-const preloadPath = join(__dirname, "preload.js"); 
+const preloadPath = join(app.getPath("userData"), "preload.js");
+mkdirSync(dirname(preloadPath), { recursive: true });
 writeFileSync(preloadPath, PRELOAD_SOURCE, "utf8");
+
+function getMacAppBundleRoot() {
+	if (process.platform !== "darwin") {
+		return null;
+	}
+
+	const paths = [process.execPath, app.getAppPath(), process.resourcesPath];
+	for (const p of paths) {
+		const marker = ".app";
+		const markerIndex = p.indexOf(marker);
+		if (markerIndex !== -1) {
+			return p.slice(0, markerIndex + marker.length);
+		}
+	}
+
+	return null;
+}
+
+function isPathInside(basePath:string, targetPath:string) {
+	const relativePath = relative(basePath, targetPath);
+	if (!relativePath) {
+		return true;
+	}
+	return !relativePath.startsWith("..") && !isAbsolute(relativePath);
+}
+
+function isInsideMacAppBundle(targetPath:string) {
+	if (process.platform !== "darwin") {
+		return false;
+	}
+
+	const bundleRoot = getMacAppBundleRoot();
+	if (!bundleRoot) {
+		return false;
+	}
+
+	const resolvedTarget = resolve(targetPath).toLowerCase();
+	const resolvedBundle = resolve(bundleRoot).toLowerCase();
+	return isPathInside(resolvedBundle, resolvedTarget);
+}
+
+async function showBundleWriteError() {
+	await dialog.showMessageBox(mainWindow, {
+		type: "error",
+		title: "Invalid destination",
+		message: "You cannot save files inside WeAnimate.app.",
+		detail: "Choose a location outside the application bundle, such as your Desktop, Documents, or Downloads folder."
+	});
+}
+
 if (settings.saveLogFiles) {
 	const filePath = join(Directories.log, new Date().valueOf() + ".txt");
 	const writeStream = createWriteStream(filePath);
@@ -231,10 +265,27 @@ const createWindow = () => {
     });
 });
 	ipcMain.handle("show-save-dialog", async (event, options) => {
-		return await dialog.showSaveDialog(mainWindow, options);
+		while (true) {
+			const result = await dialog.showSaveDialog(mainWindow, options);
+			if (result.canceled || !result.filePath) {
+				return result;
+			}
+
+			if (isInsideMacAppBundle(result.filePath)) {
+				await showBundleWriteError();
+				continue;
+			}
+
+			return result;
+		}
 	});
 
 	ipcMain.handle("export-movie", async (event, data) => {
+		if (data?.outputPath && isInsideMacAppBundle(data.outputPath)) {
+			await showBundleWriteError();
+			throw new Error("Cannot export to a path inside WeAnimate.app");
+		}
+
 		const nocturnePath = ExportService.getNocturnePath();
 		const args = ExportService.getExportArgs(data);
 		const logPath = join(Directories.log, `nocturne-${Date.now()}.log`);

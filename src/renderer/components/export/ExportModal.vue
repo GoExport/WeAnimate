@@ -80,14 +80,18 @@ async function exportMovie() {
 		return;
 	}
 
-	await (window as any).appWindow.exportMovie({
-		movieId: props.movie.id,
-		resolution: resolution.value,
-		format: format.value,
-		isWidescreen: isWidescreen.value,
-		outputPath: outputPath.value
-	});
-	emit("userClose");
+	try {
+		await (window as any).appWindow.exportMovie({
+			movieId: props.movie.id,
+			resolution: resolution.value,
+			format: format.value,
+			isWidescreen: isWidescreen.value,
+			outputPath: outputPath.value
+		});
+		emit("userClose");
+	} catch (err) {
+		alert("Export failed. Please choose a location outside WeAnimate.app and try again.");
+	}
 }
 
 function escPress(e: KeyboardEvent) {

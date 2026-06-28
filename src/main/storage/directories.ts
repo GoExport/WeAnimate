@@ -1,10 +1,15 @@
-import { existsSync, mkdirSync } from "fs";
+import { app } from "electron";
+import { cpSync, existsSync, mkdirSync } from "fs";
 import { join } from "path";
 
 class DirUtil {
 	private static _instance:DirUtil;
+	private writableRoot = app.getPath("userData");
+	private appRoot = app.getAppPath();
 
 	constructor() {
+		this.seedBundledDefaults();
+
 		const requiredPaths = [
 			this.userData,
 			this.asset,
@@ -20,6 +25,18 @@ class DirUtil {
 		}
 	}
 
+	private seedBundledDefaults() {
+		const staticSource = join(this.appRoot, "static");
+		if (!existsSync(this.static) && existsSync(staticSource)) {
+			cpSync(staticSource, this.static, { recursive: true });
+		}
+
+		const userDataSource = join(this.appRoot, "userdata");
+		if (!existsSync(this.userData) && existsSync(userDataSource)) {
+			cpSync(userDataSource, this.userData, { recursive: true });
+		}
+	}
+
 	static get instance() {
 		if (!DirUtil._instance) {
 			DirUtil._instance = new DirUtil();
@@ -28,11 +45,11 @@ class DirUtil {
 	}
 
 	get userData() {
-		return join(__dirname, "userdata");
+		return join(this.writableRoot, "userdata");
 	}
 
 	get static() {
-		return join(__dirname, "static");
+		return join(this.writableRoot, "static");
 	}
 
 	get asset() {

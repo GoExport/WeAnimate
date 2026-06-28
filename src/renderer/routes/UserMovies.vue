@@ -8,6 +8,7 @@ import { apiServer } from "../utils/AppInit";
 import type { FieldIdOf, ListFieldColumn, SelectedListSort } from "../interfaces/ListTypes";
 import ListTree from "../components/list/ListTree.vue";
 import type { Movie } from "../interfaces/Movie";
+import ExportModal from "../components/export/ExportModal.vue";
 import MovieRowOptions from "../components/list/options/MovieRowOptions.vue";
 import MovieListRow from "../components/list/MovieListRow.vue";
 import Navbar from "../components/Navbar.vue";
@@ -26,6 +27,7 @@ const { pendingRefresh, zoomLevel } = useListStore();
 const route = useRoute();
 const currentFolder = ref<string>();
 const isLoading = ref(false);
+const exportMovie = ref<Movie | null>(null);
 let listPage:"movie"|"starter";
 const movieList = ref<{
 	folders: [],
@@ -220,7 +222,9 @@ initList();
 				:columns="columns"
 				:selected-sort="selectedSort"
 				@column-resize="columnResized"
-				@sort-change="changeSort"/>
+				@sort-change="changeSort"
+				@export="(m) => exportMovie = m"/>
 		</div>
+		<ExportModal v-if="exportMovie" :movie="exportMovie" @user-close="exportMovie = null" />
 	</div>
 </template>

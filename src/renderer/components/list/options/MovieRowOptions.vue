@@ -7,6 +7,7 @@ import en_US from "../../../locale/en_US";
 import useAppSettings from "../../../composables/useAppSettings";
 const emit = defineEmits<{
   entryDelete: [string[]];
+  export: [Movie];
 }>();
 const props = defineProps<{
   entry: T | string[];
@@ -20,24 +21,6 @@ function settingValue(id: string, fallback: string): string {
     return fallback;
   }
   return value.toString();
-}
-
-function goExportHref() {
-  if (!isSingular) {
-    return "javascript:;";
-  }
-  const movieId = (props.entry as Movie).id;
-  const params = new URLSearchParams({
-    video_id: movieId,
-    service: "local2",
-    no_input: "1",
-    resolution: settingValue("geResolution", "720p"),
-    aspect_ratio: settingValue("geAspect", "16:9"),
-    open_folder: settingValue("geOpenFolder", "false"),
-    use_outro: settingValue("geOutro", "true"),
-    obs_required: settingValue("geRequireObs", "false"),
-  });
-  return `goexport://?${params.toString()}`;
 }
 
 function playBtn_click() {
@@ -108,9 +91,9 @@ function idsAsArray() {
     <a
       v-show="isSingular"
       class="option"
-      :href="goExportHref()"
+      href="javascript:;"
       title="Export"
-      @click.stop
+      @click.stop.prevent="emit('export', props.entry as Movie)"
     >
       <i class="ico cloud"></i>
     </a>

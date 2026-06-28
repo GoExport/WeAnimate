@@ -21,6 +21,7 @@ const emit = defineEmits<{
 	entryCtrlClick: [],
 	entryDblClick: [],
 	entryShiftClick: [],
+	export: [Movie],
 }>();
 const props = defineProps<{
 	checked: boolean,
@@ -111,7 +112,7 @@ return `${day}${ordinal} of ${months[d.getMonth()]} ${d.getFullYear()} - ${hours
 			<span :title="movieInfo(columnId)" v-html="movieInfo(columnId)"></span>
 		</td>
 		<td class="actions hidden" @click.stop>
-			<MovieRowOptions :entry="entry" @entry-delete="deleteBtn_click"/>
+			<MovieRowOptions :entry="entry" @entry-delete="deleteBtn_click" @export="(m) => emit('export', m)"/>
 		</td>
 	</tr>
 </template>

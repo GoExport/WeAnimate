@@ -372,6 +372,7 @@ interface ListData {
 const emit = defineEmits<{
   columnResize: [string, number];
   sortChange: [string];
+  export: [Movie];
 }>();
 const props = defineProps<{
   data: ListData;
@@ -652,6 +653,7 @@ defineExpose({ resetSelection });
             @entry-ctrl-click="entry_ctrlClick(entry.id)"
             @entry-dbl-click="entry_dblClick()"
             @entry-shift-click="entry_shiftClick(entry.id)"
+            @export="(m) => emit('export', m)"
           />
         </template>
       </tbody>

@@ -1,13 +1,14 @@
 const env = Object.assign(process.env, require("../../env.json"), require("../../config.json"));
 import { app, BrowserWindow, Menu, shell, ipcMain, dialog } from "electron";
 import { createWriteStream } from "fs";
+import { spawn } from "child_process";
 import Directories from "./storage/directories";
 import { join } from "path";
 import { rmdirSync, existsSync, readFileSync } from "fs";
 import settings from "./storage/settings";
 import { startAll } from "./server/index";
-import { writeFileSync, existsSync } from "fs";
-import { join } from "path";
+import ExportService from "./server/services/ExportService";
+import { writeFileSync } from "fs";
 const customTempPath = join(__dirname, "temp");
 app.setPath("userData", customTempPath);
 (() => {
@@ -33,6 +34,8 @@ contextBridge.exposeInMainWorld("appWindow", {
 	openGitHub: () => ipcRenderer.send("open-github"),
 	openDataFolder: () => ipcRenderer.send("open-data-folder"),
 	confirmQuit: (message, subtext) => ipcRenderer.invoke("show-quit-dialog", message, subtext),
+	showSaveDialog: (options) => ipcRenderer.invoke("show-save-dialog", options),
+	exportMovie: (data) => ipcRenderer.invoke("export-movie", data),
 });`;
 const getPreloadPath = () => {
     const localPath = join(__dirname, "preload.js");
@@ -227,6 +230,27 @@ const createWindow = () => {
         });
     });
 });
+	ipcMain.handle("show-save-dialog", async (event, options) => {
+		return await dialog.showSaveDialog(mainWindow, options);
+	});
+
+	ipcMain.handle("export-movie", async (event, data) => {
+		const nocturnePath = ExportService.getNocturnePath();
+		const args = ExportService.getExportArgs(data);
+
+		console.log("Launching Nocturne with args:", args);
+		
+		const process_exec = spawn(`"${nocturnePath}"`, args, {
+			detached: true,
+			stdio: "inherit",
+			shell: true,
+			windowsVerbatimArguments: true
+		});
+		
+		process_exec.unref();
+		return { success: true };
+	});
+
 	ipcMain.on("exit", () => process.exit(0));
 	ipcMain.on("open-discord", openDiscord);
 	ipcMain.on("open-faq", openFaq);

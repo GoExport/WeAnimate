@@ -237,23 +237,41 @@ const createWindow = () => {
 	ipcMain.handle("export-movie", async (event, data) => {
 		const nocturnePath = ExportService.getNocturnePath();
 		const args = ExportService.getExportArgs(data);
+		const logPath = join(Directories.log, `nocturne-${Date.now()}.log`);
+		const logStream = createWriteStream(logPath, { flags: "a" });
+		console.log("Nocturne log path:", logPath);
 
 		console.log("Launching Nocturne with args:", args);
+		logStream.write(`Nocturne path: ${nocturnePath}\n`);
+		logStream.write(`Nocturne args: ${JSON.stringify(args)}\n`);
 		
 		const process_exec = spawn(nocturnePath, args, {
-			stdio: "inherit",
-			shell: true
+			stdio: ["ignore", "pipe", "pipe"],
+			shell: false,
+			windowsHide: false,
+		});
+
+		process_exec.stdout?.on("data", (chunk) => {
+			logStream.write(`[stdout] ${chunk.toString()}`);
+		});
+
+		process_exec.stderr?.on("data", (chunk) => {
+			logStream.write(`[stderr] ${chunk.toString()}`);
 		});
 		
 		process_exec.on("error", (err) => {
 			console.error("Failed to launch Nocturne:", err);
+			logStream.write(`[error] ${err.message}\n`);
+			logStream.end();
 		});
 
 		process_exec.on("exit", (code) => {
 			console.log("Nocturne exited with code:", code);
+			logStream.write(`[exit] code=${code ?? "null"}\n`);
+			logStream.end();
 		});
 
-		return { success: true };
+		return { success: true, logPath };
 	});
 
 	ipcMain.on("exit", () => process.exit(0));

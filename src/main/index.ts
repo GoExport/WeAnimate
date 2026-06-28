@@ -240,14 +240,19 @@ const createWindow = () => {
 
 		console.log("Launching Nocturne with args:", args);
 		
-		const process_exec = spawn(`"${nocturnePath}"`, args, {
-			detached: true,
+		const process_exec = spawn(nocturnePath, args, {
 			stdio: "inherit",
-			shell: true,
-			windowsVerbatimArguments: true
+			shell: true
 		});
 		
-		process_exec.unref();
+		process_exec.on("error", (err) => {
+			console.error("Failed to launch Nocturne:", err);
+		});
+
+		process_exec.on("exit", (code) => {
+			console.log("Nocturne exited with code:", code);
+		});
+
 		return { success: true };
 	});
 

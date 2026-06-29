@@ -6,7 +6,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "postinstall": "node scripts/fixModules.js && node scripts/ensureElectronInstall.js",
+    "postinstall": "node scripts/fixModules.js",
     "dev": "npm run dev:win",
     "dev:win": "cross-env NODE_OPTIONS=--no-deprecation concurrently \"node scripts/build.mjs --dev\" \"vite dev\"",
     "dev:linux": "cross-env NODE_OPTIONS=--no-deprecation concurrently \"node scripts/build.mjs --dev\" \"vite dev\"",
@@ -44,7 +44,6 @@
     "electron": "11.5.0",
     "electron-packager": "15.5.1",
     "esbuild": "0.27.0",
-    "extract-zip": "2.0.1",
     "vite": "6.3.6"
   },
   "repository": {

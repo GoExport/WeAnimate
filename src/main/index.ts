@@ -11,7 +11,7 @@ import ExportService from "./server/services/ExportService";
 import { writeFileSync } from "fs";
 const IS_DEV = app.commandLine.getSwitchValue("dev").length > 0;
 
-const MAIN_PROCESS_CRASH_LOG = join(app.getPath("userData"), "main-process-crash.log");
+const MAIN_PROCESS_CRASH_LOG = join(Directories.log, "main-process-crash.log");
 
 function stringifyUnknownError(value: unknown) {
 	if (value instanceof Error) {
@@ -69,9 +69,9 @@ contextBridge.exposeInMainWorld("appWindow", {
 	exportMovie: (data) => ipcRenderer.invoke("export-movie", data),
 });`;
 const getPreloadPath = () => {
-    return join(app.getPath("userData"), "preload.js");
+	return join(Directories.userData, "preload.js");
 };
-const preloadPath = join(app.getPath("userData"), "preload.js");
+const preloadPath = join(Directories.userData, "preload.js");
 mkdirSync(dirname(preloadPath), { recursive: true });
 writeFileSync(preloadPath, PRELOAD_SOURCE, "utf8");
 
@@ -127,6 +127,9 @@ async function showBundleWriteError() {
 if (settings.saveLogFiles) {
 	const filePath = join(Directories.log, new Date().valueOf() + ".txt");
 	const writeStream = createWriteStream(filePath);
+	writeStream.on("error", (err) => {
+		process.stdout.write(`Failed to open log file at ${filePath}: ${stringifyUnknownError(err)}\n`);
+	});
 	console.log = console.error = console.warn = function (c) {
 		writeStream.write(c + "\n");
 		process.stdout.write(c + "\n");

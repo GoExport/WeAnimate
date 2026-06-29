@@ -63,7 +63,8 @@ group.route("GET", /\/go\/character_creator\/(\w+)(\/\w+)?(\/.+)?$/, (req, res) 
 			redirect = `/cc?themeId=${theme}&original_asset_id=${id.substring(1)}${external}`;
 			break;
 		} default: {
-			redirect = `/cc?themeId=${theme}&bs=${type}${external}`;
+			const baseType = defaultTypes[theme] || "guy";
+			redirect = `/cc?themeId=${theme}&bs=${baseType}${external}`;
 			break;
 		}
 	}

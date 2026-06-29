@@ -2,6 +2,42 @@ import { app } from "electron";
 import { copyFileSync, existsSync, mkdirSync, readdirSync, statSync } from "fs";
 import { join } from "path";
 
+function getMacAppBundleRoot() {
+	if (process.platform !== "darwin") {
+		return null;
+	}
+
+	const paths = [process.execPath, app.getAppPath(), process.resourcesPath];
+	for (const p of paths) {
+		const markerIndex = p.indexOf(".app");
+		if (markerIndex !== -1) {
+			return p.slice(0, markerIndex + 4);
+		}
+	}
+
+	return null;
+}
+
+function isPathInside(basePath:string, targetPath:string) {
+	const normalizedBase = basePath.replace(/\\/g, "/").toLowerCase();
+	const normalizedTarget = targetPath.replace(/\\/g, "/").toLowerCase();
+	return normalizedTarget === normalizedBase || normalizedTarget.startsWith(`${normalizedBase}/`);
+}
+
+function resolveWritableRoot() {
+	const userDataPath = app.getPath("userData");
+	const bundleRoot = getMacAppBundleRoot();
+	if (bundleRoot && isPathInside(bundleRoot, userDataPath)) {
+		// Fallback to appData/home in the unlikely event userData resolves inside the app bundle.
+		return join(app.getPath("appData"), app.getName());
+	}
+	return userDataPath;
+}
+
+function sanitizeEnvPathSegment(value: string) {
+	return value.replace(/^\.\//, "");
+}
+
 function copyDirectoryRecursiveSync(sourceDir:string, destinationDir:string) {
 	mkdirSync(destinationDir, { recursive: true });
 	const entries = readdirSync(sourceDir);
@@ -21,7 +57,7 @@ function copyDirectoryRecursiveSync(sourceDir:string, destinationDir:string) {
 
 class DirUtil {
 	private static _instance:DirUtil;
-	private writableRoot = app.getPath("userData");
+	private writableRoot = resolveWritableRoot();
 	private appRoot = app.getAppPath();
 
 	constructor() {
@@ -70,19 +106,19 @@ class DirUtil {
 	}
 
 	get asset() {
-		return join(this.userData, process.env.ASSET_FOLDER);
+		return join(this.userData, sanitizeEnvPathSegment(process.env.ASSET_FOLDER || "ASSETS"));
 	}
 
 	get cache() {
-		return join(this.userData, process.env.CACHE_FOLDER);
+		return join(this.userData, sanitizeEnvPathSegment(process.env.CACHE_FOLDER || "CACHE"));
 	}
 
 	get log() {
-		return join(this.userData, process.env.LOG_FOLDER);
+		return join(this.userData, sanitizeEnvPathSegment(process.env.LOG_FOLDER || "LOGS"));
 	}
 
 	get saved() {
-		return join(this.userData, process.env.SAVED_FOLDER);
+		return join(this.userData, sanitizeEnvPathSegment(process.env.SAVED_FOLDER || "SAVED"));
 	}
 
 	get store() {

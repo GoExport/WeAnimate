@@ -6,7 +6,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "postinstall": "node scripts/fixModules.js",
+    "postinstall": "node scripts/fixModules.js && node scripts/ensureElectronInstall.js",
     "dev": "npm run dev:win",
     "dev:win": "cross-env NODE_OPTIONS=--no-deprecation concurrently \"node scripts/build.mjs --dev\" \"vite dev\"",
     "dev:linux": "cross-env NODE_OPTIONS=--no-deprecation concurrently \"node scripts/build.mjs --dev\" \"vite dev\"",
@@ -34,6 +34,7 @@
     "xmldoc": "2.0.3"
   },
   "devDependencies": {
+    "@electron/get": "1.14.1",
     "@types/fluent-ffmpeg": "2.1.24",
     "@types/formidable": "3.4.5",
     "@types/node": "20.11.13",
@@ -43,6 +44,7 @@
     "electron": "11.5.0",
     "electron-packager": "15.5.1",
     "esbuild": "0.27.0",
+    "extract-zip": "2.0.1",
     "vite": "6.3.6"
   },
   "repository": {
